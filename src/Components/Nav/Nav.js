@@ -5,7 +5,7 @@ import MyLink from "./NavLink/NavLink";
 
 const Nav = () => {
  return (
-  <div>
+  <nav className='nav'>
    <Fragment>
     <MyLink exact to='/'>
      O mnie
@@ -14,7 +14,7 @@ const Nav = () => {
      Copyrights
     </MyLink>
    </Fragment>
-  </div>
+  </nav>
  );
 };
 

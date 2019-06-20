@@ -1,1 +1,8 @@
 @import "../../Scss/Config.scss";
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

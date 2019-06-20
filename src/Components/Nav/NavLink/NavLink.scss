@@ -1,7 +1,19 @@
+@import "../../../Scss/Config.scss";
 
 .nav__item {
-    font-size: 2rem;
-    width: 150px;
-    padding: 5px;
-    border: 1px solid black;
+ display: block;
+ width: 150px;
+ text-align: center;
+ color: $color3;
+ text-decoration: none;
+ font-size: 2rem;
+ padding: 10px;
+ margin-right: 10px;
+ border: 1px solid black;
+ transition: all 0.3s ease-in-out;
+
+ &:hover {
+  color: $color4;
+  background: $color4;
+ }
 }
