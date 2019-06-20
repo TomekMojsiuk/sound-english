@@ -1,0 +1,11 @@
+@import "../../Scss/Config.scss";
+
+.content {
+ height: 500px;
+ width: 100%;
+ background-color: $color2;
+
+ @media all and (min-width: $BreakpointDesktop) {
+    height: 100vh;
+ }
+}
