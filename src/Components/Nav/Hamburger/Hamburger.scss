@@ -19,21 +19,10 @@
   margin-top: 0;
  }
 
- &:active,
- &:focus,
- &:hover {
-  :nth-child(1) {
-   transform: rotate(-45deg);
-   transform-origin: right;
-  }
-  :nth-child(2) {
-   opacity: 0;
-  }
-  :nth-child(3) {
-   transform: rotate(45deg);
-   transform-origin: right;
-  }
- }
+//  &:active,
+//  &:focus,
+//  &:hover 
+
 }
 
 .hamburger__line {
@@ -43,3 +32,17 @@
  margin-top: 12px;
  transition: all 0.3s ease-in-out;
 }
+
+.clicked {
+    :nth-child(1) {
+     transform: rotate(-45deg);
+     transform-origin: right;
+    }
+    :nth-child(2) {
+     opacity: 0;
+    }
+    :nth-child(3) {
+     transform: rotate(45deg);
+     transform-origin: right;
+    }
+   }
