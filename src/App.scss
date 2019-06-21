@@ -17,49 +17,41 @@
 }
 
 .App {
- max-width: $maxWidth;
  width: 100%;
  min-height: 100vh;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
-  
+
  @media all and (min-width: $BreakpointDesktop) {
-    background-color: fade-out($color1, .6);
-    border-radius: 5px;
+  max-width: $maxWidth;
+  background-color: fade-out($color1, 0.6);
+  border-radius: 5px;
   justify-content: flex-start;
   align-items: flex-start;
  }
 }
 
 .content {
-
-    @media all and (min-width: $BreakpointDesktop) {
-
-        // width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-       }
-    
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ @media all and (min-width: $BreakpointDesktop) {
+ }
 }
 
 .flag {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: .9;
-    background: url('./assets/img/flag.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0;
-    z-index: -1;
-}
-
-.logo {
-
+ position: fixed;
+ bottom: 0;
+ right: 0;
+ height: 100%;
+ width: 100%;
+ opacity: 0.9;
+ background: url("./assets/img/flag.png");
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: 0;
+ z-index: -1;
 }

@@ -1,0 +1,45 @@
+@import "../../../Scss/Config.scss";
+
+.hamburger {
+ position: fixed;
+ height: 40px;
+ width: 40px;
+ left: 10px;
+ top: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ z-index: 10;
+
+ @media all and (min-width: $BreakpointDesktop) {
+  display: none;
+ }
+
+ :nth-child(1) {
+  margin-top: 0;
+ }
+
+ &:active,
+ &:focus,
+ &:hover {
+  :nth-child(1) {
+   transform: rotate(-45deg);
+   transform-origin: right;
+  }
+  :nth-child(2) {
+   opacity: 0;
+  }
+  :nth-child(3) {
+   transform: rotate(45deg);
+   transform-origin: right;
+  }
+ }
+}
+
+.hamburger__line {
+ background: $color5;
+ height: 2px;
+ width: 100%;
+ margin-top: 12px;
+ transition: all 0.3s ease-in-out;
+}

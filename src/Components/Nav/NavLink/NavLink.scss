@@ -1,49 +1,46 @@
 @import "../../../Scss/Config.scss";
 
 .nav__item {
+ display: block;
+ position: relative;
+ min-width: 120px;
+ width: 90%;
+ text-align: center;
+ color: $color1;
+ text-decoration: none;
+ padding: 10px;
+ margin-top: 15px;
+ border-bottom: 1px solid fade-out($color1, .7);
+ transition: all 0.3s ease-in-out;
+ font-size: 3rem;
 
-    @media all and (min-width: $BreakpointDesktop) {
-        display: block;
-        position: relative;
-        min-width: 120px;
-        width: auto;
-        text-align: center;
-        // color: $color1;
-        color: black;
-        font-weight: bold;
-        text-decoration: none;
-        font-size: 2rem;
-        padding: 10px;
-        margin-right: 10px;
-        border-bottom: 2px solid $color5;
-        // border-radius: 5px;
-        // background-color: fade-out($color1, .3);
-        transition: all 0.3s ease-in-out;
-       
-        &:after {
-            content: '';
-            position: absolute;
-            border-radius: 5px;
-            bottom: 0;
-            left: 0;
-            height: 0;
-            width: 100%;
-            // background: fade-out($color3, .1);
-            background: $color2;
-            transition: all 0.3s ease-in-out;
-            z-index: -1;
-        }
-       
-        &:hover:after {
-                height: 100%;
-                
-           // color: $color4;
-           // background: $color4;
-          }
-          &:hover {
-       color: $color5;
-       background-color: fade-out($color2, .1);
-       }
-    }
- 
+ @media all and (min-width: $BreakpointDesktop) {
+  width: auto;
+  border-bottom: 1px solid $color5;
+  font-size: 2rem;
+  //color: rgba(0, 0, 0, 0);
+  margin-right: 10px;
+  border-radius: 5px;
+
+  &:after {
+   content: "";
+   position: absolute;
+   border-radius: 5px;
+   bottom: 0;
+   left: 0;
+   height: 0;
+   width: 100%;
+   background: $color2;
+   transition: all 0.3s ease-in-out;
+   z-index: -1;
+  }
+
+  &:hover:after {
+   height: 100%;
+  }
+  &:hover {
+   color: $color5;
+   background-color: fade-out($color2, 0.1);
+  }
+ }
 }
