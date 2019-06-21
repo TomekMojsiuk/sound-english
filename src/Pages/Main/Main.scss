@@ -1,0 +1,12 @@
+@import '../../Scss/Config.scss';
+
+.logo {
+
+    @media all and (min-width: $BreakpointDesktop) {
+        background: url('../../assets/img/logo.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 320px;   
+    }
+}

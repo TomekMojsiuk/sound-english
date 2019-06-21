@@ -3,20 +3,22 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 import "./App.scss";
 
-import Logo from "./Components/Logo/Logo";
-import Content from "./Pages/Content/Content";
+import Nav from "./Components/Nav/Nav";
+import Szkola from "./Pages/Szkola/Szkola";
+import Main from "./Pages/Main/Main";
 
 const App = () => {
  return (
   <div className='App'>
    <BrowserRouter>
-    <Logo />
-    <Content />
-    
-    <Route exact path='/' render={() => ""} />
-
+   <Nav />
+    <div className="content">
+    <Route exact path='/' render={() => <Main />} />
+    <Route exact path='/o-szkole' render={() => <Szkola />} />
     {/* <Route component={NotFound} /> */}
+    </div>
    </BrowserRouter>
+   <div className="flag"></div>
   </div>
  );
 };

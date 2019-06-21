@@ -1,0 +1,13 @@
+@import "../Scss/Config.scss";
+
+.content__box {
+ height: 500px;
+ width: 100%;
+
+ @media all and (min-width: $BreakpointDesktop) { 
+   display: flex;
+   flex-direction: row;
+   margin-top: 15px;
+
+ }
+}
