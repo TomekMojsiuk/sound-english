@@ -12,12 +12,14 @@
 height: 100%;
 background: fade-out($color2, .2);
 transition: all .3s ease-in-out;
+z-index: 1;
 
  @media all and (min-width: $BreakpointDesktop) {
     flex-direction: row;
   position: initial;
   height: 100px;
-  background: fade-out($color2, 0.4);
+  // background: fade-out($color2, 0.4);
+  background: $color2;
  }
 }
 

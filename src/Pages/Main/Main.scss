@@ -8,12 +8,27 @@
  height: 100vh;
  width: 100vw;
 
-
  @media all and (min-width: $BreakpointDesktop) {
   background: url("../../assets/img/logo.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 580px;
-  width: 370px;
+  width: 400px;
+  background-position: center 40px;
+ }
+}
+
+#main {
+ .title {
+    position: fixed;
+    background: #3e4880;
+    color: #ededee;
+    padding: 5px 20px;
+    top: 214px;
+    right: -226px;
+    transform: rotate(90deg);
+    @media all and (min-width: $BreakpointDesktop) {
+        justify-self: center;
+    }
  }
 }

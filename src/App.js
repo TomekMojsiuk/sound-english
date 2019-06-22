@@ -7,6 +7,7 @@ import Nav from "./Components/Nav/Nav";
 import Szkola from "./Pages/Szkola/Szkola";
 import Main from "./Pages/Main/Main";
 import Hamburger from "./Components/Nav/Hamburger/Hamburger";
+import Contact from "./Pages/Contact/Contact";
 
 class App extends React.Component {
  constructor(props) {
@@ -16,7 +17,7 @@ class App extends React.Component {
   };
  }
 
- handleHamburgerClick = (e) => {
+ handleHamburgerClick = () => {
   this.setState(prevState => ({
    isClicked: !prevState.isClicked
   }));
@@ -31,6 +32,7 @@ class App extends React.Component {
      <div className='content'>
       <Route exact path='/' render={() => <Main />} />
       <Route exact path='/o-szkole' render={() => <Szkola />} />
+      <Route exact path='/kontakt' render={() => <Contact />} />
       {/* <Route component={NotFound} /> */}
      </div>
     </BrowserRouter>

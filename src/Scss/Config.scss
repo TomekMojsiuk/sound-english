@@ -1,6 +1,9 @@
 // Font
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 @mixin font {
-    font-family: 'Calibri Light', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 //App max width

@@ -1,0 +1,57 @@
+@import "../../Scss/Config.scss";
+
+h1 {
+    align-self: flex-start;
+}
+
+.contact__info {
+ width: 80%;
+ display: flex;
+ margin: 0 auto;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+ .contact__info--item {
+     width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:last-of-type {
+   h2 {
+    margin: 10px 0;
+    &:first-of-type {
+     margin: 0 0 10px 0;
+    }
+   }
+   align-items: flex-start;
+  }
+ }
+}
+
+.icon {
+ margin: 0 20px 0 0;
+ height: 40px;
+ width: 40px;
+}
+
+.mobile {
+ background: url("../../assets/ico/mobile.svg");
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.email {
+ background: url("../../assets/ico/email.svg");
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.home {
+ background: url("../../assets/ico/home.svg");
+ background-size: contain;
+ background-repeat: no-repeat;
+}

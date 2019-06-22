@@ -9,7 +9,7 @@ class Nav extends React.Component {
  }
 
  render() {
-  const { handleNavDisplay, isClicked } = this.props;
+  const { handleNavDisplay } = this.props;
   return (
    <nav className={handleNavDisplay ? "nav show": "nav"}>
     <Fragment>

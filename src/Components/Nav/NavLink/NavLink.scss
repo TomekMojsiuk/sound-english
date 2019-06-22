@@ -17,20 +17,19 @@
  @media all and (min-width: $BreakpointDesktop) {
   width: auto;
   border-bottom: 1px solid $color5;
-  font-size: 2rem;
-  //color: rgba(0, 0, 0, 0);
+  font-size: 1.5rem;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 0;
+  z-index: 2;
 
   &:after {
    content: "";
    position: absolute;
-   border-radius: 5px;
    bottom: 0;
    left: 0;
    height: 0;
    width: 100%;
-   background: $color2;
+   background: fade-out($color4, .9);
    transition: all 0.3s ease-in-out;
    z-index: -1;
   }
@@ -40,7 +39,7 @@
   }
   &:hover {
    color: $color5;
-   background-color: fade-out($color2, 0.1);
+   border-bottom: 2px solid $color5;
   }
  }
 }
