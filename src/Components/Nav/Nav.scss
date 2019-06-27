@@ -9,20 +9,19 @@
  align-items: center;
  flex-direction: column;
  width: 100%;
-min-height: 100%;
-background: fade-out($color2, .2);
-transition: all .3s ease-in-out;
-z-index: 1;
+ min-height: 100%;
+ background: fade-out($color2, 0.2);
+ transition: all 0.3s ease-in-out;
+ z-index: 1;
 
  @media all and (min-width: $BreakpointDesktop) {
-    flex-direction: row;
+  flex-direction: row;
   position: initial;
   height: 100px;
-  // background: fade-out($color2, 0.4);
   background: $color2;
  }
 }
 
 .show {
-    left: 0;
+ left: 0;
 }

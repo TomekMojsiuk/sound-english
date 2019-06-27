@@ -1,27 +1,69 @@
 @import "../../Scss/Config.scss";
 
 h1 {
- align-self: flex-start;
+//  align-self: center;
+ text-align: center;
+ width: 80%; 
+ @media all and (min-width: $BreakpointDesktop) {
+  align-self: flex-start;
+  text-align: unset;
+  width: unset;
+ }
 }
 
 .contact__info {
- width: 50%;
+ margin-top: 80px;
+ padding: 10px 0;
+ width: 100%;
  display: flex;
- margin: 0 auto;
  flex-direction: column;
  justify-content: center;
- align-items: flex-start;
+ align-items: center;
+
+ @media all and (min-width: $BreakpointDesktop) {
+  margin-top: unset;
+  width: 50%;
+  margin: 0 auto;
+  padding: unset;
+  align-items: flex-start;
+ }
 
  .contact__info--item {
-  width: 100%;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 30px;
   display: flex;
-  flex-direction: row;
-//   justify-content: flex-start;
-//   align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &--details {
-//    width: 100%;
+   p,
+   h2 {
+    text-align: center;
+   }
+   @media all and (min-width: $BreakpointDesktop) {
+    p,
+    h2 {
+     text-align: initial;
+    }
+   }
+
+   .underline {
+       margin: 20px auto;
+    width: 100px;
+    height: 1px;
+    border-bottom: 2px solid $color3;
+
+    @media all and (min-width: $BreakpointDesktop) {
+        margin: 20px 0;
+    }
+   }
+  }
+
+  @media all and (min-width: $BreakpointDesktop) {
+   flex-direction: row;
+   justify-content: initial;
+   padding: 0;
   }
 
   &:last-of-type {
@@ -31,15 +73,22 @@ h1 {
      margin: 0 0 10px 0;
     }
    }
-   align-items: flex-start;
+   align-items: center;
+   @media all and (min-width: $BreakpointDesktop) {
+    align-items: flex-start;
+   }
   }
  }
 }
 
 .icon {
- margin: 0 20px 0 0;
+ margin: 10px 0;
  height: 40px;
  width: 40px;
+
+ @media all and (min-width: $BreakpointDesktop) {
+  margin: 0 20px 0 0;
+ }
 }
 
 .mobile {

@@ -1,8 +1,6 @@
 @import "../Scss/Config.scss";
 
 .content__box {
-
-
  @media all and (min-width: $BreakpointDesktop) {
   width: 100%;
   min-height: 80vh;
@@ -27,6 +25,31 @@
  }
 
  p {
-     font-size: 1.7rem;
+  font-size: 1.7rem;
  }
 }
+
+.flag--addon {
+    
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 59px;
+        width: 81%;
+        background: url('../assets/img/flag.png');
+        background-position: 100% 88%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+    
+        @media all and (min-width: $BreakpointDesktop) {
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            height: 25px;
+            width: 100%;
+            background-position: 100% 88%;
+            background-size: 100%;
+        }
+        
+     }
