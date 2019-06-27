@@ -21,7 +21,7 @@ const Contact = () => {
 
     <div className='contact__info--item'>
      <div className='icon home' />
-     <div>
+     <div className='contact__info--item--details'>
         <h2>{'Siedziba szkoły'}</h2> 
         <p>{'ul. Kościuszki 20'}</p> 
         <p>{'83-400 Kościerzyna'}</p>

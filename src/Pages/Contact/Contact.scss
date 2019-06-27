@@ -1,24 +1,28 @@
 @import "../../Scss/Config.scss";
 
 h1 {
-    align-self: flex-start;
+ align-self: flex-start;
 }
 
 .contact__info {
- width: 80%;
+ width: 50%;
  display: flex;
  margin: 0 auto;
  flex-direction: column;
  justify-content: center;
- align-items: center;
+ align-items: flex-start;
 
  .contact__info--item {
-     width: 100%;
+  width: 100%;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+//   justify-content: flex-start;
+//   align-items: center;
+
+  &--details {
+//    width: 100%;
+  }
 
   &:last-of-type {
    h2 {

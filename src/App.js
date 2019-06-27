@@ -36,7 +36,6 @@ class App extends React.Component {
       {/* <Route component={NotFound} /> */}
      </div>
     </BrowserRouter>
-    <div className='flag' />
    </div>
   );
  }

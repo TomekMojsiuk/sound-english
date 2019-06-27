@@ -43,20 +43,3 @@ width: 100%;
 // align-items: flex-start;
 }
 }
-
-.flag {
- position: fixed;
- bottom: 0;
- right: 0;
- height: 100%;
- width: 100%;
- opacity: 0.9;
- background: url("./assets/img/flag.png");
- background-size: cover;
- background-repeat: no-repeat;
- background-position: 0;
- z-index: -1;
- @media all and (min-width: $BreakpointDesktop) {
-    display: none;
-    }
-}

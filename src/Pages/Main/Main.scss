@@ -19,16 +19,103 @@
 }
 
 #main {
- .title {
-    position: fixed;
-    background: #3e4880;
-    color: #ededee;
-    padding: 5px 20px;
-    top: 214px;
-    right: -226px;
-    transform: rotate(90deg);
+    
+ .banner {
+     display: none;
+  @media all and (min-width: $BreakpointDesktop) {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   border-radius: 10px;
+   margin: 0 auto;
+   align-self: center;
+   background: fade-out($color2, 0.2);
+   width: 70%;
+   min-height: 300px;
+   min-height: 400px;
+   padding: 20px 20px 5px 20px;
+  }
+
+  .nav__item {
+      font-size: 1.2rem;
+      align-self: center;
+      justify-self: flex-end;
+      width: 150px;
+  }
+ }
+
+ .services__list {
+     display: none;
     @media all and (min-width: $BreakpointDesktop) {
-        justify-self: center;
-    }
+        display: initial;
+  list-style: none;
+  margin-left: 30px;
+  // width: 50%;
+  .services__list__item {
+   font-size: 1.7rem;
+   color: $color1;
+   margin: 15px 0 0 0;
+   // border-bottom: 1px solid $color3;
+
+   .underline {
+    width: 40px;
+    height: 1px;
+    margin-top: 5px;
+    border-bottom: 2px solid $color4;
+   }
+  }
+}
+ }
+ 
+ .title {
+  position: fixed;
+  background: $color2;
+  color: #ededee;
+  padding: 5px 20px;
+  top: 214px;
+  right: -226px;
+  transform: rotate(90deg);
+  @media all and (min-width: $BreakpointDesktop) {
+   margin: 0 0 20px 0;
+   position: initial;
+   width: 100%;
+   text-align: center;
+   background: none;
+   color: #ededee;
+   padding: 5px 20px;
+   top: unset;
+   right: unset;
+   transform: rotate(0);
+
+   //    align-self: center;
+   //    position: initial;
+   //    position: absolute;
+   //    top: unset;
+   //    right: 0;
+   //    bottom: 0px;
+   //    background: none;
+   //    /* color: #3e4880; */
+   //    padding: 10px;
+   //    transform: rotate(0deg);
+   //    margin: 0 auto;
+   //    width: 100%;
+  }
+ }
+
+ .flag {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background: url("../../assets/img/flag.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+  z-index: -1;
+  @media all and (min-width: $BreakpointDesktop) {
+   // display: none;
+  }
  }
 }
