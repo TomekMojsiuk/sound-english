@@ -4,34 +4,31 @@ import "./Nav.scss";
 import MyLink from "./NavLink/NavLink";
 
 class Nav extends React.Component {
- constructor(props) {
-  super(props);
- }
 
  render() {
-  const { handleNavDisplay } = this.props;
+  const { handleNavDisplay, handleNavItemClick } = this.props;
   return (
    <nav className={handleNavDisplay ? "nav show": "nav"}>
     <Fragment>
-     <MyLink exact to='/'>
+     <MyLink onClick={handleNavItemClick} exact to='/'>
       Home
      </MyLink>
-     <MyLink exact to='/o-szkole'>
+     <MyLink onClick={handleNavItemClick} exact to='/o-szkole'>
       O szkole
      </MyLink>
-     <MyLink exact to='/oferta'>
+     <MyLink onClick={handleNavItemClick} exact to='/oferta'>
       Oferta i cennik
      </MyLink>
-     <MyLink exact to='/ministudio'>
+     <MyLink onClick={handleNavItemClick} exact to='/ministudio'>
       Ministudio
      </MyLink>
-     <MyLink exact to='/copywriting'>
+     <MyLink onClick={handleNavItemClick} exact to='/copywriting'>
       Copywriting
      </MyLink>
-     <MyLink exact to='/o-mnie'>
+     <MyLink onClick={handleNavItemClick} exact to='/o-mnie'>
       O mnie
      </MyLink>
-     <MyLink exact to='/kontakt'>
+     <MyLink onClick={handleNavItemClick} exact to='/kontakt'>
       Kontakt
      </MyLink>
     </Fragment>

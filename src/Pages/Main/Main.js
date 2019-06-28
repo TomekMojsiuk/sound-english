@@ -8,16 +8,16 @@ class Main extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
-   componentDidMount: false
+   componentDidMount: false,
   };
  }
 
  componentDidMount() {
-  setTimeout(() => {
-   this.setState(prevState => ({
-      componentDidMount: !prevState.componentDidMount
-     }));
-   },2000)
+   setTimeout(() => {
+      this.setState(prevState => ({
+         componentDidMount: !prevState.componentDidMount
+        }));
+      },2000)
  }
 
  render() {

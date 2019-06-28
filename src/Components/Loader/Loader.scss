@@ -1,9 +1,9 @@
 .loader {
  position: fixed;
  top: calc(50% - 100px);
- left: calc(50% - 75px);
- height: 200px;
- width: 89px;
+ left: calc(50% - 45px);
+ height: 199px;
+ width: 88px;
 
  .loader__image--1 {
   position: absolute;
@@ -23,6 +23,7 @@
   left: 0;
   background: url("../../assets/img/loader_black.png");
   background-position: bottom;
+  background-repeat: no-repeat;
   background-size: cover;
   animation: loader 2s infinite ease-out;
  }

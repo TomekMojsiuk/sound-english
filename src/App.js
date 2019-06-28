@@ -23,12 +23,24 @@ class App extends React.Component {
   }));
  };
 
+ handleNavItemClick = () => {
+  setTimeout(() => {
+   this.setState(prevState => ({
+    isClicked: !prevState.isClicked
+   }));
+  }, 500);
+ };
+
  render() {
+  const { isClicked } = this.state;
   return (
    <div className='App'>
-    <Hamburger onClick={this.handleHamburgerClick} isClicked={this.state.isClicked}/>
+    <Hamburger onClick={this.handleHamburgerClick} isClicked={isClicked} />
     <BrowserRouter>
-     <Nav handleNavDisplay={this.state.isClicked}/>
+     <Nav
+      handleNavDisplay={isClicked}
+      handleNavItemClick={this.handleNavItemClick}
+     />
      <div className='content'>
       <Route exact path='/' render={() => <Main />} />
       <Route exact path='/o-szkole' render={() => <Szkola />} />
