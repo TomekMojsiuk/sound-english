@@ -4,13 +4,13 @@
  background: url("../../assets/img/logo.png");
  background-size: contain;
  background-repeat: no-repeat;
- background-position: center 40px;
+ background-position: center;
  height: 100vh;
  width: 100vw;
 
  @media all and (min-width: $BreakpointDesktop) {
   background: url("../../assets/img/logo.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 580px;
   width: 400px;
@@ -30,9 +30,7 @@
    align-self: center;
    background: fade-out($color2, 0.2);
    width: 70%;
-   min-height: 300px;
-   min-height: 400px;
-   padding: 20px 20px 5px 20px;
+   padding: 20px;
   }
 
   .nav__item {
@@ -96,7 +94,6 @@
   background: url("../../assets/img/flag.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0;
   z-index: -1;
  }
 }
