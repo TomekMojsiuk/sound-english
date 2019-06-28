@@ -19,9 +19,8 @@
 }
 
 #main {
-    
  .banner {
-     display: none;
+  display: none;
   @media all and (min-width: $BreakpointDesktop) {
    display: flex;
    flex-direction: column;
@@ -37,36 +36,34 @@
   }
 
   .nav__item {
-      font-size: 1.2rem;
-      align-self: center;
-      justify-self: flex-end;
-      width: 150px;
+   font-size: 1.2rem;
+   align-self: center;
+   justify-self: flex-end;
+   width: 150px;
   }
  }
 
  .services__list {
-     display: none;
-    @media all and (min-width: $BreakpointDesktop) {
-        display: initial;
-  list-style: none;
-  margin-left: 30px;
-  // width: 50%;
-  .services__list__item {
-   font-size: 1.7rem;
-   color: $color1;
-   margin: 15px 0 0 0;
-   // border-bottom: 1px solid $color3;
+  display: none;
+  @media all and (min-width: $BreakpointDesktop) {
+   display: initial;
+   list-style: none;
+   margin-left: 30px;
+   .services__list__item {
+    font-size: 1.7rem;
+    color: $color1;
+    margin: 15px 0 0 0;
 
-   .underline {
-    width: 40px;
-    height: 1px;
-    margin-top: 5px;
-    border-bottom: 2px solid $color4;
+    .underline {
+     width: 40px;
+     height: 1px;
+     margin-top: 5px;
+     border-bottom: 2px solid $color4;
+    }
    }
   }
-}
  }
- 
+
  .title {
   position: fixed;
   background: $color2;
@@ -86,19 +83,6 @@
    top: unset;
    right: unset;
    transform: rotate(0);
-
-   //    align-self: center;
-   //    position: initial;
-   //    position: absolute;
-   //    top: unset;
-   //    right: 0;
-   //    bottom: 0px;
-   //    background: none;
-   //    /* color: #3e4880; */
-   //    padding: 10px;
-   //    transform: rotate(0deg);
-   //    margin: 0 auto;
-   //    width: 100%;
   }
  }
 
@@ -114,8 +98,5 @@
   background-repeat: no-repeat;
   background-position: 0;
   z-index: -1;
-  @media all and (min-width: $BreakpointDesktop) {
-   // display: none;
-  }
  }
 }
