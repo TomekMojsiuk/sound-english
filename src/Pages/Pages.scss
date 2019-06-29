@@ -1,6 +1,7 @@
 @import "../Scss/Config.scss";
 
 .content__box {
+    padding: 10px;
  @media all and (min-width: $BreakpointDesktop) {
   width: 100%;
   min-height: 80vh;
@@ -10,12 +11,25 @@
  }
 
  .main__content {
-    @media all and (min-width: $BreakpointDesktop) {
+    //  width: 100%;
     flex-direction: column;
+    padding: 80px 10px 20px 10px;
+
+    @media all and (min-width: $BreakpointDesktop) {
     padding: 50px;
+    width: 80%;
+    margin: 0 auto;
     }
 }
 
+h1, h2 {
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+    @media all and (min-width: $BreakpointDesktop) { 
+        margin: 20px 0;    
+    }
+}
  h1 {
   font-size: 2.8rem;
   span {
@@ -31,8 +45,14 @@
   }
  }
 
- p {
+ p, ul, li {
   font-size: 1.7rem;
+  margin: 10px 0;
+
+  span {
+      font-size: 1.5em;
+      color: $color4
+  }
  }
 }
 
@@ -48,7 +68,7 @@
  background-repeat: no-repeat;
 
  @media all and (min-width: $BreakpointDesktop) {
-  position: absolute;
+
   top: unset;
   bottom: 0;
   height: 25px;
@@ -56,4 +76,20 @@
   background-position: 100% 88%;
   background-size: 100%;
  }
+}
+
+.text__box {
+
+    display: flex;
+    flex-direction: column;
+
+
+    @media all and (min-width: $BreakpointDesktop) {
+        // width: 70%;
+        margin: 0 auto;
+    }
+    
+    .read--more {
+        display: none;
+    }
 }

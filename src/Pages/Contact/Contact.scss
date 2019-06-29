@@ -1,15 +1,5 @@
 @import "../../Scss/Config.scss";
 
-h1 {
-//  align-self: center;
- text-align: center;
- width: 80%; 
- @media all and (min-width: $BreakpointDesktop) {
-  align-self: flex-start;
-  text-align: unset;
-  width: unset;
- }
-}
 
 .contact__info {
  margin-top: 80px;
@@ -27,6 +17,17 @@ h1 {
   padding: unset;
   align-items: flex-start;
  }
+
+ h1 {
+    //  align-self: center;
+     text-align: center!important;
+     width: 80%;
+     @media all and (min-width: $BreakpointDesktop) {
+      align-self: flex-start;
+      text-align: unset;
+      width: unset;
+     }
+    }
 
  .contact__info--item {
   padding: 10px;
@@ -64,6 +65,10 @@ h1 {
    flex-direction: row;
    justify-content: initial;
    padding: 0;
+  }
+
+  &:first-of-type {
+      margin-top: 0;
   }
 
   &:last-of-type {
