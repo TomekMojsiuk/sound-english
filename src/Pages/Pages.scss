@@ -47,6 +47,7 @@ h1, h2 {
 
  p, ul, li {
   font-size: 1.7rem;
+  line-height: 3rem;
   margin: 10px 0;
 
   span {
@@ -91,5 +92,17 @@ h1, h2 {
     
     .read--more {
         display: none;
+    }
+}
+
+.tiles__box {
+ 
+    display: flex;
+    flex-direction: column;
+
+    @media all and (min-width: $BreakpointDesktop) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 }

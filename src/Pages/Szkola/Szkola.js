@@ -1,9 +1,10 @@
 import React from "react";
-import "../Pages.scss";
+import "../../Pages/Pages.scss";
 import "./Szkola.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
+import Tile from "../../Components/Tile/Tile";
 
 class Szkola extends React.Component {
  constructor(props) {
@@ -24,6 +25,13 @@ class Szkola extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
+
+  let opacity = '.6';
+  let color1 = `rgba(237, 237, 238, ${opacity})`;
+  let color2 = `rgba(62, 72, 128, ${opacity})`;
+  let color3 = `rgba(59, 186, 232, ${opacity})`;
+  let color4 = `rgba(78, 204, 245, ${opacity})`;
+  let color5 = `rgba(238, 49, 83, ${opacity})`;
 
   return componentDidMount ? (
    <div className='content__box'>
@@ -46,7 +54,7 @@ class Szkola extends React.Component {
        wyższy poziom tak umiejętności anglistycznych oraz wokalno –
        instrumentalnych. 
       </p>
-      <p className="read--more">Łącząc w edukacji dwa wspomniane kierunki, przyspiesza
+      <p className="read--more"><span>Ł</span>ącząc w edukacji dwa wspomniane kierunki, przyspiesza
        się wydatnie proces kształcenia, który w związku z muzyką jest także o
        wiele ciekawszy dla uczniów.</p>
       <ReadMore />
@@ -86,33 +94,53 @@ class Szkola extends React.Component {
      </div>
 
      <h1>
-      <span>N</span>IE CZEKAJ, ZADZWOŃ LUB NAPISZ MAILA!
+      <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish!
      </h1>
-     <h2>TYLKO W ”SOUND ENGLISH”:</h2>
-
-     <ul>
-      <li>Indywidualne, profesjonalne podejście do ucznia w każdym wieku</li>
-      <li>Komfortowe warunki nauki</li>
-      <li>
-       Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie
-       amerykańskim bądź brytyjskim – podstawy fonetyki
-      </li>
-      <li>
-       Nauczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych
-      </li>
-      <li>
-       Nauka kreatywnego zastosowania wiedzy językowo – muzycznej. Zacznij
-       tworzyć!
-      </li>
-      <li>
-       Studyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów
-      </li>
-      <li>Podstawowe techniki tłumaczenia ustnego</li>
-      <li>
-       Dowolny system płatności: kwartalny, semestralny albo po każdej lekcji
-      </li>
-      <li>Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta</li>
-     </ul>
+     <div className="tiles__box">
+     <Tile bgColor={color1} 
+     side1Text={<p><span>I</span>ndywidualne podejście</p>}
+     side2Text={'Indywidualne, profesjonalne podejście do ucznia w każdym wieku'}/>
+     
+     <Tile bgColor={color2} 
+     side1Text={<p><span>K</span>omfort pracy</p>}
+     side2Text={'Komfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego'}/>
+     
+     <Tile bgColor={color3} 
+     side1Text={<p><span>W</span>ymowę możesz ćwiczyć również w domu</p>}
+     side2Text={'Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki'}
+     />
+     
+     <Tile bgColor={color5} 
+     side1Text={<p><span>U</span>czysz się słuchając</p>}
+     side2Text={'Nauczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych'}
+     />
+     
+     <Tile bgColor={color4} 
+     side1Text={<p><span>Z</span>acznij tworzyć</p>}
+     side2Text={'Nauka kreatywnego zastosowania wiedzy językowo – muzycznej'}
+     />
+     
+     <Tile bgColor={color1} 
+     side1Text={<p><span>P</span>racuj w studio i dziel się pasją z innymi</p>}
+     side2Text={'Studyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów'}
+     />
+     
+     <Tile bgColor={color2} 
+     side1Text={<p><span>N</span>aucz się tlumaczyć teksty</p>}
+     side2Text={'Podstawowe techniki tłumaczenia ustnego'}
+     />
+     
+     <Tile bgColor={color1} 
+     side1Text={<p><span>P</span>łać tak jak lubisz</p>}
+     side2Text={'Dowolny system płatności: kwartalny, semestralny albo po każdej lekcji'}
+     />
+     
+     <Tile bgColor={color5} 
+     side1Text={'Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta'}
+     side2Text={''}
+     />
+     
+     </div>
     </div>
    </div>
   ) : (

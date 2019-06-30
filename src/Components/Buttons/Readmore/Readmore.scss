@@ -9,6 +9,7 @@
  margin: 15px 0;
  padding: 10px;
  transition: all 0.3s ease-in-out;
+ border-radius: 5px;
  @include boxShadow($color1);
 
  @media all and (min-width: $BreakpointDesktop) {
@@ -19,12 +20,16 @@
   justify-self: flex-end;
   padding: 5px 10px;
   height: 3rem;
+  border-radius: 0;
+  box-shadow: none;
  }
 
  :nth-child(1) {
   font-size: 1.7rem;
-  margin-right: 10px;
   z-index: -1;
+  @media all and (min-width: $BreakpointDesktop) {
+    margin-right: 10px;
+  }
  }
  :nth-child(2) {
   line-height: 2rem;
@@ -33,7 +38,7 @@
   transform: rotate(45deg);
   border-right: 1px solid $color5;
   border-bottom: 1px solid $color5;
-  margin-top: 3px;
+  margin-bottom: -3px;
   z-index: -1;
 
   @media all and (min-width: $BreakpointDesktop) {
@@ -49,7 +54,7 @@
   transform: rotate(45deg);
   border-right: 1px solid $color5;
   border-bottom: 1px solid $color5;
-  margin: -5px 0;
+  // margin: -5px 0;
   z-index: -1;
 
   @media all and (min-width: $BreakpointDesktop) {
@@ -61,8 +66,11 @@
  }
 
  &:hover {
-  border-radius: 5px;
+  
   @include boxShadow($color1);
+  @media all and (min-width: $BreakpointDesktop) {
+    border-radius: 5px;
+}
 
   :nth-child(2) {
     
