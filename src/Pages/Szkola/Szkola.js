@@ -94,7 +94,7 @@ class Szkola extends React.Component {
      </div>
 
      <h1>
-      <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish!
+      <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish:
      </h1>
      <div className="tiles__box">
      <Tile bgColor={color1} 
@@ -106,7 +106,7 @@ class Szkola extends React.Component {
      side2Text={'Komfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego'}/>
      
      <Tile bgColor={color3} 
-     side1Text={<p><span>W</span>ymowę możesz ćwiczyć również w domu</p>}
+     side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
      side2Text={'Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki'}
      />
      
@@ -136,8 +136,8 @@ class Szkola extends React.Component {
      />
      
      <Tile bgColor={color5} 
-     side1Text={'Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta'}
-     side2Text={''}
+     side1Text={<p><span>L</span>iczba spotkań ustalana indywidualnie</p>}
+     side2Text={'Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta'}
      />
      
      </div>
