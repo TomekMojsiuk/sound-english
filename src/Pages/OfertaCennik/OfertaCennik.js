@@ -5,7 +5,7 @@ import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
 import Tile from "../../Components/Tile/Tile";
 
-class Szkola extends React.Component {
+class OfertaCennik extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -37,9 +37,9 @@ class Szkola extends React.Component {
     <div className='main__content'>
      <div className='flag--addon' />
      <h1>
-      <span>O</span> szkole
+      <span>K</span>ursy językowe SOUND ENGLISH
      </h1>
-     <div className='text__box'>
+     {/* <div className='text__box'>
       <p className='read--basic'>
        <span>C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
        szkoła językowa powstała z potrzeby połączenia dwóch wspaniałych,
@@ -90,7 +90,7 @@ class Szkola extends React.Component {
        kursów dla osób W ABSOLUTNIE KAŻDYM WIEKU znajdują się w zakładce OFERTA
        I CENNIK.
       </p>
-     </div>
+     </div> */}
 
      <h1>
       <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish:
@@ -100,43 +100,13 @@ class Szkola extends React.Component {
      side1Text={<p><span>I</span>ndywidualne podejście</p>}
      side2Text={'Indywidualne, profesjonalne podejście do ucznia w każdym wieku'}/>
      
-     <Tile bgColor={color2} 
+     <Tile bgColor={color1} 
      side1Text={<p><span>K</span>omfort pracy</p>}
      side2Text={'Komfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego'}/>
      
-     <Tile bgColor={color3} 
+     <Tile bgColor={color1} 
      side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
      side2Text={'Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki'}
-     />
-     
-     <Tile bgColor={color5} 
-     side1Text={<p><span>U</span>czysz się słuchając</p>}
-     side2Text={'Nauczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych'}
-     />
-     
-     <Tile bgColor={color4} 
-     side1Text={<p><span>Z</span>acznij tworzyć</p>}
-     side2Text={'Nauka kreatywnego zastosowania wiedzy językowo – muzycznej'}
-     />
-     
-     <Tile bgColor={color1} 
-     side1Text={<p><span>P</span>racuj w studio i dziel się pasją z innymi</p>}
-     side2Text={'Studyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów'}
-     />
-     
-     <Tile bgColor={color2} 
-     side1Text={<p><span>N</span>aucz się tlumaczyć teksty</p>}
-     side2Text={'Podstawowe techniki tłumaczenia ustnego'}
-     />
-     
-     <Tile bgColor={color1} 
-     side1Text={<p><span>P</span>łać tak jak lubisz</p>}
-     side2Text={'Dowolny system płatności: kwartalny, semestralny albo po każdej lekcji'}
-     />
-     
-     <Tile bgColor={color5} 
-     side1Text={<p><span>L</span>iczba spotkań ustalana indywidualnie</p>}
-     side2Text={'Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta'}
      />
      
      </div>
@@ -148,4 +118,4 @@ class Szkola extends React.Component {
  }
 }
 
-export default Szkola;
+export default OfertaCennik;
