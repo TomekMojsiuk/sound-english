@@ -27,7 +27,7 @@ class Main extends React.Component {
      componentDidMount?(<div id='main' className='content__box'>
      <div className='flag' />
      <div className='logo' />
-     <div className='content__box'>
+     <div className='main__content'>
       <div className='banner'>
        <h1 className='title'>
         <span>{"C"}</span>
@@ -47,14 +47,6 @@ class Main extends React.Component {
         </li>
         <li className='services__list__item'>
          {"Studio nagrań"}
-         <div className='underline' />
-        </li>
-        <li className='services__list__item'>
-         {"Another item"}
-         <div className='underline' />
-        </li>
-        <li className='services__list__item'>
-         {"Another item"}
          <div className='underline' />
         </li>
        </ul>

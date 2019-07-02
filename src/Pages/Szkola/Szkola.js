@@ -1,6 +1,5 @@
 import React from "react";
 import "../../Pages/Pages.scss";
-import "./Szkola.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
@@ -21,6 +20,7 @@ class Szkola extends React.Component {
     componentDidMount: !prevState.componentDidMount
    }));
   }, 2000);
+
  }
 
  render() {

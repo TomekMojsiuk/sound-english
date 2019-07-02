@@ -10,10 +10,9 @@
 }
 
 #root {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .App {
@@ -30,15 +29,5 @@
   border-radius: 5px;
   justify-content: flex-start;
   align-items: flex-start;
- }
-}
-
-.content {
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- @media all and (min-width: $BreakpointDesktop) {
-  width: 100%;
  }
 }

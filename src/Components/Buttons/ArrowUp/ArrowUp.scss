@@ -1,0 +1,25 @@
+@import '../../../Scss/Config.scss';
+
+.arrow__up--box {
+
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    bottom: 20px;
+    right: 20px;
+    @include boxShadow ($color1);
+    z-index: 5;
+
+    .arow__up {
+
+        height: 20px;
+        width: 20px;
+        margin: 0 auto;
+        margin-top: calc(50% - 6px);
+        transform: rotate(45deg);
+        border-left: 2px solid $color5;
+        border-top: 2px solid $color5;
+
+
+    }
+   }
