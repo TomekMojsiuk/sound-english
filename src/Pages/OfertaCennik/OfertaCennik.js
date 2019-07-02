@@ -1,9 +1,10 @@
 import React from "react";
 import "../../Pages/Pages.scss";
+import "./OfertaCennik.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
-import Tile from "../../Components/Tile/Tile";
+import TilePopUp from "../../Components/TilePopUp/TilePopUp";
 
 class OfertaCennik extends React.Component {
  constructor(props) {
@@ -25,7 +26,7 @@ class OfertaCennik extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  let opacity = '.6';
+  let opacity = ".4";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
   let color2 = `rgba(62, 72, 128, ${opacity})`;
   let color3 = `rgba(59, 186, 232, ${opacity})`;
@@ -39,6 +40,90 @@ class OfertaCennik extends React.Component {
      <h1>
       <span>K</span>ursy językowe SOUND ENGLISH
      </h1>
+
+     <div className='tiles__box'>
+      <TilePopUp
+       mainIconClassName={"up-to-date"}
+       mainText={
+        <h2>
+         <span>U</span>P TO DATE
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>K</span>urs UP TO DATE to zajęcia rozwijająco – utrwalające
+         oparte synchronicznie na programie realizowanym w szkole publicznej
+         (szkoła podstawowa, liceum). Przygotujemy Cię do sprawdzianów, będziemy
+         ćwiczyć aktualny materiał, który przerabiasz w szkole i poszerzymy
+         Twoją wiedzę.
+        </p>
+       }
+       bgColor={color1}
+      />
+
+      <TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <p>
+         <span>H</span>ello there!
+        </p>
+       }
+       popupText={
+        <p>
+         <span>T</span>his is popup window
+        </p>
+       }
+       bgColor={color4}
+      />
+
+<TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <p>
+         <span>H</span>ello there!
+        </p>
+       }
+       popupText={
+        <p>
+         <span>T</span>his is popup window
+        </p>
+       }
+       bgColor={color3}
+      />
+
+<TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <p>
+         <span>H</span>ello there!
+        </p>
+       }
+       popupText={
+        <p>
+         <span>T</span>his is popup window
+        </p>
+       }
+       bgColor={color5}
+      />
+
+<TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <p>
+         <span>H</span>ello there!
+        </p>
+       }
+       popupText={
+        <p>
+         <span>T</span>his is popup window
+        </p>
+       }
+       bgColor={color2}
+      />
+      
+     </div>
+
+
      {/* <div className='text__box'>
       <p className='read--basic'>
        <span>C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
@@ -91,25 +176,6 @@ class OfertaCennik extends React.Component {
        I CENNIK.
       </p>
      </div> */}
-
-     <h1>
-      <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish:
-     </h1>
-     <div className="tiles__box">
-     <Tile bgColor={color1} 
-     side1Text={<p><span>I</span>ndywidualne podejście</p>}
-     side2Text={'Indywidualne, profesjonalne podejście do ucznia w każdym wieku'}/>
-     
-     <Tile bgColor={color1} 
-     side1Text={<p><span>K</span>omfort pracy</p>}
-     side2Text={'Komfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego'}/>
-     
-     <Tile bgColor={color1} 
-     side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
-     side2Text={'Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki'}
-     />
-     
-     </div>
     </div>
    </div>
   ) : (
