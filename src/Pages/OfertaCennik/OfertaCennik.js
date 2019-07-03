@@ -3,7 +3,6 @@ import "../../Pages/Pages.scss";
 import "./OfertaCennik.scss";
 
 import Loader from "../../Components/Loader/Loader";
-import ReadMore from "../../Components/Buttons/Readmore/Readmore";
 import TilePopUp from "../../Components/TilePopUp/TilePopUp";
 
 class OfertaCennik extends React.Component {
@@ -26,7 +25,7 @@ class OfertaCennik extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  let opacity = ".4";
+  let opacity = ".8";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
   let color2 = `rgba(62, 72, 128, ${opacity})`;
   let color3 = `rgba(59, 186, 232, ${opacity})`;
@@ -58,71 +57,128 @@ class OfertaCennik extends React.Component {
          Twoją wiedzę.
         </p>
        }
+       bgColor={color5}
+      />
+
+      <TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <h2>
+         <span>M</span>ATURA EXAM MASTER
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>K</span>ompleksowe przygotowanie do matury podstawowej w nowej
+         formule.
+        </p>
+       }
+       bgColor={color4}
+      />
+
+      <TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <h2>
+         <span>E</span>EXTENDED <br/>MATURA EXAM MASTER
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>K</span>ompleksowe przygotowanie do matury rozszerzonej w nowej
+         formule
+        </p>
+       }
+       bgColor={color2}
+      />
+
+      <TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <h2>
+         <span>F</span>CE WANNABE
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>P</span>rzygotowanie do egzaminu FCE
+        </p>
+       }
        bgColor={color1}
       />
 
       <TilePopUp
        mainIconClassName={""}
        mainText={
-        <p>
-         <span>H</span>ello there!
-        </p>
+        <h2>
+         <span>S</span>OUND ENGLISH COURSE
+        </h2>
        }
        popupText={
         <p>
-         <span>T</span>his is popup window
-        </p>
-       }
-       bgColor={color4}
-      />
-
-<TilePopUp
-       mainIconClassName={""}
-       mainText={
-        <p>
-         <span>H</span>ello there!
-        </p>
-       }
-       popupText={
-        <p>
-         <span>T</span>his is popup window
-        </p>
-       }
-       bgColor={color3}
-      />
-
-<TilePopUp
-       mainIconClassName={""}
-       mainText={
-        <p>
-         <span>H</span>ello there!
-        </p>
-       }
-       popupText={
-        <p>
-         <span>T</span>his is popup window
+         <span>Z</span>ajęcia anglistyczne oparte na autorskim programie
+         dostosowanym do wymagań edukacyjnych uczniów w każdym wieku połączone z
+         elementami edukacji muzycznej (zajęcia wokalne, angielska terminologia
+         muzyczna, podstawy historii muzyki rozrywkowej w kontekście językowym,
+         podstawy pracy studyjnej, rozwijanie muzycznej kreatywności
+         instrumentalnej i wokalnej, promowanie twórczości uczniów, nagrania
+         studyjne).
         </p>
        }
        bgColor={color5}
       />
 
-<TilePopUp
+      <TilePopUp
        mainIconClassName={""}
        mainText={
-        <p>
-         <span>H</span>ello there!
-        </p>
+        <h2>
+         <span>B</span>LUE COLLAR RUSH
+        </h2>
        }
        popupText={
         <p>
-         <span>T</span>his is popup window
+         <span>K</span>urs przyspieszony dla osób wyjeżdżających do pracy
+         zagranicę – nacisk na niezbędne słownictwo i systemy skutecznej
+         komunikacji. Program i system prowadzenia zajęć ustalany jest z
+         klientem na podstawie charakteru pracy, którą zamierza on/ona podjąć
+         zagranicą, a także czasu, który pozostał do wyjazdu.
+        </p>
+       }
+       bgColor={color4}
+      />
+
+      <TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <h2>
+         <span>A</span>BOUT TIME!
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>Z</span>ajęcia dla dorosłych na każdym poziomie trudności
+         (również od zupełnych podstaw!) dostosowane do indywidualnych
+         predyspozycji uczęszczających.
         </p>
        }
        bgColor={color2}
       />
-      
-     </div>
 
+<TilePopUp
+       mainIconClassName={""}
+       mainText={
+        <h2>
+         <span>S</span>OUND MEETS KIDS
+        </h2>
+       }
+       popupText={
+        <p>
+         <span>Z</span>ajęcia dla najmłodszych – angielski przez muzykę i zabawę dźwiękiem.
+        </p>
+       }
+       bgColor={color1}
+      />
+     </div>
 
      {/* <div className='text__box'>
       <p className='read--basic'>
