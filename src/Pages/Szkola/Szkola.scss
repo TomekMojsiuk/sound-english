@@ -1,0 +1,37 @@
+@import "../../Scss/Config.scss";
+
+#szkola {
+
+
+.nav__item {
+    float: right;
+    font-size: 1.4rem;
+    align-self: center;
+    justify-self: flex-end;
+    color: $color2;
+    width: 130px;
+    height: unset;
+    padding: 2px; 
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0%;
+        width: 100%;
+        background: fade-out($color4, .6);
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+       }
+     
+       &:hover:after {
+        height: 100%;
+       }
+       &:hover {
+        color: $color5;
+        border-bottom: 2px solid $color5;
+       }
+   }
+
+}

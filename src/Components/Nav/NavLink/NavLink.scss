@@ -12,17 +12,17 @@
  margin-top: 15px;
  border-bottom: 1px solid fade-out($color1, .7);
  transition: all 0.3s ease-in-out;
- font-size: 3rem;
+ font-size: 1.4rem;
  
  @media all and (orientation: landscape) and (max-width: $BreakpointDesktop) {
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-top: 5px;
    }
 
  @media all and (min-width: $BreakpointDesktop) {
   width: auto;
   border-bottom: 1px solid $color5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-right: 10px;
   border-radius: 0;
   z-index: 2;

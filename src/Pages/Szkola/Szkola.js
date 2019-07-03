@@ -1,9 +1,11 @@
 import React from "react";
 import "../../Pages/Pages.scss";
+import './Szkola.scss';
 
 import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
 import Tile from "../../Components/Tile/Tile";
+import MyLink from '../../Components/Nav/NavLink/NavLink'
 
 class Szkola extends React.Component {
  constructor(props) {
@@ -33,18 +35,20 @@ class Szkola extends React.Component {
   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
   return componentDidMount ? (
-   <div className='content__box'>
+   <div id={'szkola'} className='content__box'>
     <div className='main__content'>
      <div className='flag--addon' />
      <h1>
       <span>O</span> szkole
      </h1>
      <div className='text__box'>
+     <div className="underline"></div>
       <p className='read--basic'>
        <span>C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
        szkoła językowa powstała z potrzeby połączenia dwóch wspaniałych,
        nieuleczalnych pasji: języków obcych oraz muzyki.
       </p>
+      <ReadMore />
       <p className='read--more'>
        <span>N</span>ie od dziś wiadomo, że języki, którymi komunikują się ludzie na całym
        świecie, to tak naprawdę po prostu dźwięki. W związku z tym trening
@@ -56,12 +60,13 @@ class Szkola extends React.Component {
       <p className="read--more"><span>Ł</span>ącząc w edukacji dwa wspomniane kierunki, przyspiesza
        się wydatnie proces kształcenia, który w związku z muzyką jest także o
        wiele ciekawszy dla uczniów.</p>
-      <ReadMore />
      </div>
 
      <div className='text__box'>
+     <div className="underline"></div>
      <p className='read--basic'><span>P</span>rofesjonalny sprzęt muzyczny i studyjny znajdujący się w „SOUND ENGLISH”
        pozwala na niecodzienne rozwinięcie formuły nauczania języka i muzyki</p>
+       <ReadMore />
       <p className='read--more'>
        <span>U</span>czniowie mogą rejestrować swoje postępy w profesjonalnych warunkach.
        Pomaga to zdobyć pierwsze doświadczenia studyjne (utwory nagrywane przez
@@ -71,10 +76,9 @@ class Szkola extends React.Component {
        egzaminu FCE czy wreszcie sprawnych, codziennych rozmów w języku
        angielskim.
       </p>
-      <ReadMore />
       </div>
-
      <div className='text__box'>
+     <div className="underline"></div>
       <p className='read--basic'>
        <span>N</span>ie masz zainteresowań muzycznych? Nic nie szkodzi. Ty również znajdziesz coś
        dla siebie w ofercie <span>S</span>OUND <span>E</span>NGLISH.
@@ -89,8 +93,11 @@ class Szkola extends React.Component {
        efektywną nauką na każdym poziomie trudności. Szczegółowe propozycje
        kursów dla osób W ABSOLUTNIE KAŻDYM WIEKU znajdują się w zakładce OFERTA
        I CENNIK.
+       <MyLink exact to='/oferta'>
+      Oferta i cennik
+     </MyLink>
       </p>
-     </div>
+      </div>
 
      <h1>
       <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish:
@@ -98,45 +105,45 @@ class Szkola extends React.Component {
      <div className="tiles__box">
      <Tile bgColor={color1} 
      side1Text={<p><span>I</span>ndywidualne podejście</p>}
-     side2Text={'Indywidualne, profesjonalne podejście do ucznia w każdym wieku'}/>
+     side2Text={ <p><span>I</span>ndywidualne, profesjonalne podejście do ucznia w każdym wieku</p>}/>
      
      <Tile bgColor={color2} 
      side1Text={<p><span>K</span>omfort pracy</p>}
-     side2Text={'Komfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego'}/>
+     side2Text={<p><span>K</span>omfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego</p>}/>
      
      <Tile bgColor={color3} 
      side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
-     side2Text={'Rejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki'}
+     side2Text={<p><span>R</span>ejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki</p>}
      />
      
      <Tile bgColor={color5} 
      side1Text={<p><span>U</span>czysz się słuchając</p>}
-     side2Text={'Nauczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych'}
+     side2Text={<p><span>N</span>auczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych</p>}
      />
      
      <Tile bgColor={color4} 
      side1Text={<p><span>Z</span>acznij tworzyć</p>}
-     side2Text={'Nauka kreatywnego zastosowania wiedzy językowo – muzycznej'}
+     side2Text={<p><span>N</span>auka kreatywnego zastosowania wiedzy językowo – muzycznej</p>}
      />
      
      <Tile bgColor={color1} 
      side1Text={<p><span>P</span>racuj w studio i dziel się pasją z innymi</p>}
-     side2Text={'Studyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów'}
+     side2Text={<p><span>S</span>tudyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów</p>}
      />
      
      <Tile bgColor={color2} 
      side1Text={<p><span>N</span>aucz się tlumaczyć teksty</p>}
-     side2Text={'Podstawowe techniki tłumaczenia ustnego'}
+     side2Text={<p><span>P</span>odstawowe techniki tłumaczenia ustnego</p>}
      />
      
      <Tile bgColor={color1} 
      side1Text={<p><span>P</span>łać tak jak lubisz</p>}
-     side2Text={'Dowolny system płatności: kwartalny, semestralny albo po każdej lekcji'}
+     side2Text={<p><span>D</span>owolny system płatności: kwartalny, semestralny albo po każdej lekcji</p>}
      />
      
      <Tile bgColor={color5} 
      side1Text={<p><span>L</span>iczba spotkań ustalana indywidualnie</p>}
-     side2Text={'Częstotliwość zajęć w tygodniu dostosowana do potrzeb klienta'}
+     side2Text={<p><span>C</span>zęstotliwość zajęć w tygodniu dostosowana do potrzeb klienta</p>}
      />
      
      </div>
