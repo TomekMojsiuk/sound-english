@@ -155,4 +155,6 @@ class Szkola extends React.Component {
  }
 }
 
+// TODO Szkola - Czy brat Bartka zrobi grafikę do kafelków?
+
 export default Szkola;

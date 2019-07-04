@@ -63,9 +63,7 @@ class Main extends React.Component {
  }
 }
 
-// const Main = () => {
-//  return
-//  );
-// };
+// TODO skonsultować z Bartkiem elementy w bannerze
+
 
 export default Main;

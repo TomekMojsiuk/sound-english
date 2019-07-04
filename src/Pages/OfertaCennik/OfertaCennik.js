@@ -185,7 +185,69 @@ class OfertaCennik extends React.Component {
      <h1>
       <span>C</span>ennik
      </h1>
-     <div className="prices__container"></div>
+
+     <div className='prices__container'>
+      <div className={"left"}>
+       <h2>
+        <span>Z</span>ajęcia indywidualne{" "}
+        <span className={"asterisk"}>&#42;</span>
+       </h2>
+       <div className='underline' />
+       <div className='price__item__list'>
+        <div className='price__item'>
+         <div>Płatność po każdych zajęciach:</div>
+         <div>
+          <span className={"bold"}>40zł</span>
+         </div>
+        </div>
+        <div className='price__item'>
+         <div>Płatność za 5 lekcji z góry:</div>
+         <div>
+          <span className={"bold"}>180zł</span>
+         </div>
+         <div>(20zł rabatu)</div>
+        </div>
+        <div className='price__item'>
+         <div>Płatność za 10 lekcji z góry:</div>
+         <div>
+          <span className={"bold"}>370zł</span>
+         </div>
+         <div>(30zł rabatu)</div>
+        </div>
+       </div>
+      </div>
+      <div className={"right"}>
+       <h2>
+        <span>Z</span>ajęcia grupowe <span className={"asterisk"}>&#42;</span>
+       </h2>
+       <div className='underline' />
+       <div className='price__item__list'>
+        <div className='price__item'>
+         <div>Płatność po każdych zajęciach:</div>
+         <div>
+          <span className={"bold"}>30zł</span>
+         </div>
+        </div>
+        <div className='price__item'>
+         <div>Płatność za 5 lekcji z góry:</div>
+         <div>
+          <span className={"bold"}>130zł</span>
+         </div>
+         <div>(20zł rabatu)</div>
+        </div>
+        <div className='price__item'>
+         <div>Płatność za 10 lekcji z góry:</div>
+         <div>
+          <span className={"bold"}>260zł</span>
+         </div>
+         <div>(40zł rabatu)</div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p className={"footnote"}>
+      <span className={"asterisk"}>&#42;</span> <span>C</span>ena za 1h zegarową
+     </p>
     </div>
    </div>
   ) : (
@@ -193,5 +255,7 @@ class OfertaCennik extends React.Component {
   );
  }
 }
+
+// TODO Oferta i Cennik - Czy brat Bartka zrobi grafikę do kafelków?
 
 export default OfertaCennik;

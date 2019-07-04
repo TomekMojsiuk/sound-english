@@ -19,11 +19,11 @@
  }
 
  @media all and (min-width: $BreakpointDesktop) {
-  width: 40%;
+  width: 34%;
   height: 300px;
 
   &:hover {
-   width: 45%;
+   width: 35%;
    height: 310px;
    box-shadow: unset;
   }
