@@ -1,5 +1,17 @@
+@import '../../Scss/Config.scss';
+.prices__container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+@media all and (min-width: $BreakpointDesktop) {
+
+}
+}
 
 // Icons
 .up-to-date {
     background: url('../../assets/ico/up-to-date.svg');
 }
+
