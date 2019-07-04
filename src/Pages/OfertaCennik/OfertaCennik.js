@@ -34,7 +34,7 @@ class OfertaCennik extends React.Component {
 
   return componentDidMount ? (
    <div className='content__box'>
-    <div className='main__content'>
+    <div id='cennik' className='main__content'>
      <div className='flag--addon' />
      <h1>
       <span>K</span>ursy językowe SOUND ENGLISH
@@ -185,6 +185,7 @@ class OfertaCennik extends React.Component {
      <h1>
       <span>C</span>ennik
      </h1>
+     <h2>Kursy językowe</h2>
 
      <div className='prices__container'>
       <div className={"left"}>
@@ -248,6 +249,32 @@ class OfertaCennik extends React.Component {
      <p className={"footnote"}>
       <span className={"asterisk"}>&#42;</span> <span>C</span>ena za 1h zegarową
      </p>
+
+     <h2 className='h2__header--adjust'>Weź znajomych, a zaoszczędzisz!</h2>
+     <div className='text__box'>
+      <div className='underline' />
+      <p className='read--basic'>
+       <span>G</span>rupa w SOUND ENGLISH to 2 – 4 osoby. Zajęcia grupowe
+       rozpoczynają się z chwilą utworzenia grupy danego kursu. Chętni o
+       rozpoczęciu zajęć grupowych są informowani telefonicznie w chwili
+       utworzenia grupy.
+      </p>
+      <div className='underline' />
+      <p className='read--basic'>
+       <span>A</span>spekty dźwiękowe lekcji odróżniające SOUND ENGLISH od
+       innych szkół językowych (ćwiczenia akcentu, nagrania wypowiedzi) są
+       integralną, częścią zajęć i nie wiążą się z żadnymi dodatkowymi
+       opłatami!!!
+      </p>
+      <h2 className='h2__header--adjust'>Nie czekaj, zadzwoń już dziś!</h2>
+      <div className='underline' />
+      <p className='read--basic'>
+       <span>C</span>eny usług studyjnych (ministudio) i redaktorskich
+       (copywriting) ustalane są po spotkaniu bądź rozmowie organizacyjnej ze
+       zleceniodawcą. Wszystko zależy od charakteru zlecenia i czasu potrzebnego
+       na jego realizację.
+      </p>
+     </div>
     </div>
    </div>
   ) : (

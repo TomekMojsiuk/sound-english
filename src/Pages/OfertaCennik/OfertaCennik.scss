@@ -62,9 +62,6 @@
    clear: both;
   }
 
-  @media all and (min-width: $BreakpointDesktop) {
-  }
-
   .bold {
    color: unset;
    font-size: 1.1em;
@@ -72,6 +69,19 @@
    padding-right: 5px;
   }
  }
+}
+
+#cennik {
+    .text__box {
+        margin-top: 20px;
+        @media all and (min-width: $BreakpointDesktop) {
+            // margin-top: 30px;
+        }
+    }
+
+    .h2__header--adjust {
+        margin: 40px 0 20px 0;
+    }
 }
 
 // Icons
