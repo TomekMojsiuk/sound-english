@@ -28,7 +28,7 @@ class OfertaCennik extends React.Component {
   let opacity = ".8";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
   let color2 = `rgba(62, 72, 128, ${opacity})`;
-  let color3 = `rgba(59, 186, 232, ${opacity})`;
+//   let color3 = `rgba(59, 186, 232, ${opacity})`;
   let color4 = `rgba(78, 204, 245, ${opacity})`;
   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
@@ -80,7 +80,7 @@ class OfertaCennik extends React.Component {
        mainIconClassName={""}
        mainText={
         <h2>
-         <span>E</span>EXTENDED <br />
+         <span>E</span>XTENDED <br />
          MATURA EXAM MASTER
         </h2>
        }

@@ -48,7 +48,6 @@ class Szkola extends React.Component {
        szkoła językowa powstała z potrzeby połączenia dwóch wspaniałych,
        nieuleczalnych pasji: języków obcych oraz muzyki.
       </p>
-      <ReadMore />
       <p className='read--more'>
        <span>N</span>ie od dziś wiadomo, że języki, którymi komunikują się ludzie na całym
        świecie, to tak naprawdę po prostu dźwięki. W związku z tym trening
@@ -60,13 +59,13 @@ class Szkola extends React.Component {
       <p className="read--more"><span>Ł</span>ącząc w edukacji dwa wspomniane kierunki, przyspiesza
        się wydatnie proces kształcenia, który w związku z muzyką jest także o
        wiele ciekawszy dla uczniów.</p>
+       <ReadMore />
      </div>
 
      <div className='text__box'>
      <div className="underline"></div>
      <p className='read--basic'><span>P</span>rofesjonalny sprzęt muzyczny i studyjny znajdujący się w „SOUND ENGLISH”
        pozwala na niecodzienne rozwinięcie formuły nauczania języka i muzyki</p>
-       <ReadMore />
       <p className='read--more'>
        <span>U</span>czniowie mogą rejestrować swoje postępy w profesjonalnych warunkach.
        Pomaga to zdobyć pierwsze doświadczenia studyjne (utwory nagrywane przez
@@ -76,6 +75,7 @@ class Szkola extends React.Component {
        egzaminu FCE czy wreszcie sprawnych, codziennych rozmów w języku
        angielskim.
       </p>
+      <ReadMore />
       </div>
      <div className='text__box'>
      <div className="underline"></div>
@@ -83,7 +83,7 @@ class Szkola extends React.Component {
        <span>N</span>ie masz zainteresowań muzycznych? Nic nie szkodzi. Ty również znajdziesz coś
        dla siebie w ofercie <span>S</span>OUND <span>E</span>NGLISH.
       </p>
-      <ReadMore />
+      
       <p className='read--more'>
        <span>P</span>rzygotowanie do matury, korepetycje poszerzające umiejętności zdobywane
        na lekcjach w szkole podstawowej i liceum, trening do certyfikatu FCE a
@@ -97,6 +97,7 @@ class Szkola extends React.Component {
       Oferta i cennik
      </MyLink>
       </p>
+      <ReadMore />
       </div>
 
      <h1>

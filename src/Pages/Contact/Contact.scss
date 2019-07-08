@@ -48,17 +48,6 @@
      text-align: initial;
     }
    }
-
-   .underline {
-       margin: 20px auto;
-    width: 100px;
-    height: 1px;
-    border-bottom: 2px solid $color3;
-
-    @media all and (min-width: $BreakpointDesktop) {
-        margin: 20px 0;
-    }
-   }
   }
 
   @media all and (min-width: $BreakpointDesktop) {
