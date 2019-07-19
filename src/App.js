@@ -9,6 +9,7 @@ import Main from "./Pages/Main/Main";
 import Hamburger from "./Components/Nav/Hamburger/Hamburger";
 import Contact from "./Pages/Contact/Contact";
 import OfertaCennik from "./Pages/OfertaCennik/OfertaCennik";
+import Ministudio from "./Pages/Ministudio/Ministudio";
 import NotFound from "./Pages/NotFound/NotFound";
 
 class App extends React.Component {
@@ -49,10 +50,11 @@ class App extends React.Component {
      <Route exact path='/o-szkole' render={() => <Szkola />} />
      <Route exact path='/kontakt' render={() => <Contact />} />
      <Route exact path='/oferta' render={() => <OfertaCennik />} />
+     <Route exact path='/ministudio' render={() => <Ministudio />} />
      <Route component={NotFound} />
      </Switch>
     </BrowserRouter>
-    <div className='flag--addon' />
+    {/* <div className='flag--addon' /> */}
    </div>
   );
  }

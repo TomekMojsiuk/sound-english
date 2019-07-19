@@ -75,24 +75,6 @@ class OfertaCennik extends React.Component {
        }
        bgColor={color1}
       />
-
-      {/* <TilePopUp
-       mainIconClassName={""}
-       mainText={
-        <h2>
-         <span>E</span>XTENDED <br />
-         MATURA EXAM MASTER
-        </h2>
-       }
-       popupText={
-        <p>
-         <span>K</span>ompleksowe przygotowanie do matury rozszerzonej w nowej
-         formule
-        </p>
-       }
-       bgColor={color2}
-      /> */}
-
       <TilePopUp
        mainIconClassName={""}
        mainText={

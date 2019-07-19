@@ -109,8 +109,10 @@
  @media all and (min-width: $BreakpointDesktop) {
   top: unset;
   bottom: 0;
+  right: unset;
   height: 25px;
-  width: 100%;
+  width: 1400px;
+  left: calc(50% - 700px);
   background-position: 100% 88%;
   background-size: 100%;
  }

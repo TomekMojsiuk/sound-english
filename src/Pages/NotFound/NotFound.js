@@ -32,7 +32,7 @@ class NotFound extends React.Component {
       {"0"}
       <span>{"4"}</span>
      </h1>
-     <h2>You are allowed to sream and shout now</h2>
+     <h2>You are allowed to sream and shout now!</h2>
      <p>The page you are looking for does not exist.</p>
      <MyLink exact to='/'>
       Get back to reality
