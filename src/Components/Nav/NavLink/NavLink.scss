@@ -43,6 +43,7 @@
    height: 100%;
   }
   &:hover {
+    cursor: pointer;
    color: $color5;
    border-bottom: 2px solid $color5;
   }
