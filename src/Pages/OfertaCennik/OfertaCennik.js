@@ -57,7 +57,7 @@ class OfertaCennik extends React.Component {
          Twoją wiedzę.
         </p>
        }
-       bgColor={color5}
+       bgColor={color1}
       />
 
       <TilePopUp
@@ -69,14 +69,14 @@ class OfertaCennik extends React.Component {
        }
        popupText={
         <p>
-         <span>K</span>ompleksowe przygotowanie do matury podstawowej w nowej
+         <span>K</span>ompleksowe przygotowanie do matury podstawowej i rozszerzonej w nowej
          formule.
         </p>
        }
-       bgColor={color4}
+       bgColor={color1}
       />
 
-      <TilePopUp
+      {/* <TilePopUp
        mainIconClassName={""}
        mainText={
         <h2>
@@ -91,7 +91,7 @@ class OfertaCennik extends React.Component {
         </p>
        }
        bgColor={color2}
-      />
+      /> */}
 
       <TilePopUp
        mainIconClassName={""}
@@ -126,7 +126,7 @@ class OfertaCennik extends React.Component {
          studyjne).
         </p>
        }
-       bgColor={color5}
+       bgColor={color1}
       />
 
       <TilePopUp
@@ -145,7 +145,7 @@ class OfertaCennik extends React.Component {
          zagranicą, a także czasu, który pozostał do wyjazdu.
         </p>
        }
-       bgColor={color4}
+       bgColor={color1}
       />
 
       <TilePopUp
@@ -162,7 +162,7 @@ class OfertaCennik extends React.Component {
          predyspozycji uczęszczających.
         </p>
        }
-       bgColor={color2}
+       bgColor={color1}
       />
 
       <TilePopUp

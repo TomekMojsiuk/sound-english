@@ -1,5 +1,9 @@
 @import "../../Scss/Config.scss";
+#cennik {
 
+.tiles__box {
+    justify-content: space-between;
+}
 .tile__popup {
  display: flex;
  justify-content: space-evenly;
@@ -20,12 +24,12 @@
  }
 
  @media all and (min-width: $BreakpointDesktop) {
-  width: 34%;
-  height: 300px;
+  width: 30%;
+  height: 250px;
 
   &:hover {
-   width: 35%;
-   height: 310px;
+   width: 31%;
+   height: 260px;
    box-shadow: unset;
   }
  }
@@ -113,7 +117,6 @@
 }
 
 .btn__show--more {
-    // cursor: url('../../assets/ico/pointer.png'), auto ;
     cursor: pointer;
  justify-self: center;
  padding: 5px 10px;
@@ -125,4 +128,5 @@
  &:hover {
   border: 1px solid $color2;
  }
+}
 }

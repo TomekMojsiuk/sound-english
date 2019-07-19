@@ -1,35 +1,35 @@
 @import "../Scss/Config.scss";
 
 .content__box {
-    
  @media all and (min-width: $BreakpointDesktop) {
   width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: row;
-padding: 15px 0 0 0;
+  padding: 15px 0 0 0;
  }
 
  .main__content {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 80px 10px 20px 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 80px 10px 20px 10px;
 
-    @media all and (min-width: $BreakpointDesktop) {
-    padding: 50px;
-    width: 80%;
-    margin: 0 auto;
-    }
-}
+  @media all and (min-width: $BreakpointDesktop) {
+   padding: 50px;
+   width: 80%;
+   margin: 0 auto;
+  }
+ }
 
-h1, h2 {
-    margin: 40px 0;
-    width: 100%;
-    text-align: left;
-    @media all and (min-width: $BreakpointDesktop) { 
-        margin: 20px 0 50px 0;    
-    }
-}
+ h1,
+ h2 {
+  display: block;
+  margin: 40px 0;
+  text-align: left;
+  @media all and (min-width: $BreakpointDesktop) {
+   margin: 20px 0 50px 0;
+  }
+ }
  h1 {
   font-size: 2.4rem;
   span {
@@ -46,74 +46,72 @@ h1, h2 {
   }
  }
 
- p, ul, li {
+ p,
+ ul,
+ li {
+  display: block;
   font-size: 1.4rem;
   line-height: 1.8em;
   margin: 10px 0;
 
   span {
-      font-size: 1.5em;
-      color: $color4
+   font-size: 1.5em;
+   color: $color4;
   }
  }
 }
 
 .text__box {
+ display: flex;
+ flex-direction: column;
 
-    display: flex;
-    flex-direction: column;
+ @media all and (min-width: $BreakpointDesktop) {
+  margin: 0 auto;
+ }
 
-
-    @media all and (min-width: $BreakpointDesktop) {
-        margin: 0 auto;
-    }
-    
-    .read--more {
-        display: none;
-    }
+ .read--more {
+  display: none;
+ }
 }
 
 .tiles__box {
- 
-    display: flex;
-    flex-direction: column;
+ display: flex;
+ flex-direction: column;
 
-    @media all and (min-width: $BreakpointDesktop) {
-        flex-direction: row;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
+ @media all and (min-width: $BreakpointDesktop) {
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+ }
 }
 
 .underline {
-    width: 20%;
-    height: 3px;
-    margin-top: 5px;
-    border-bottom: 2px solid $color4;
-   }
+ width: 20%;
+ height: 3px;
+ margin-top: 5px;
+ border-bottom: 2px solid $color4;
+}
 
 // Graphics elements
 
 .flag--addon {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 59px;
-    width: 81%;
-    background: url("../assets/img/flag.png");
-    background-position: 100% 88%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: 8;
-   
-    @media all and (min-width: $BreakpointDesktop) {
-   
-     top: unset;
-     bottom: 0;
-     height: 25px;
-     width: 100%;
-     background-position: 100% 88%;
-     background-size: 100%;
-    }
-   }
+ position: fixed;
+ top: 0;
+ right: 0;
+ height: 59px;
+ width: 81%;
+ background: url("../assets/img/flag.png");
+ background-position: 100% 88%;
+ background-size: 100%;
+ background-repeat: no-repeat;
+ z-index: 8;
 
+ @media all and (min-width: $BreakpointDesktop) {
+  top: unset;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  background-position: 100% 88%;
+  background-size: 100%;
+ }
+}

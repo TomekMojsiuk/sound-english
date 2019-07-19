@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.scss";
 
@@ -9,6 +9,7 @@ import Main from "./Pages/Main/Main";
 import Hamburger from "./Components/Nav/Hamburger/Hamburger";
 import Contact from "./Pages/Contact/Contact";
 import OfertaCennik from "./Pages/OfertaCennik/OfertaCennik";
+import NotFound from "./Pages/NotFound/NotFound";
 
 class App extends React.Component {
  constructor(props) {
@@ -43,12 +44,15 @@ class App extends React.Component {
       handleNavDisplay={isClicked}
       handleNavItemClick={this.handleNavItemClick}
      />
+     <Switch>
      <Route exact path='/' render={() => <Main />} />
      <Route exact path='/o-szkole' render={() => <Szkola />} />
      <Route exact path='/kontakt' render={() => <Contact />} />
      <Route exact path='/oferta' render={() => <OfertaCennik />} />
-     {/* <Route component={NotFound} /> */}
+     <Route component={NotFound} />
+     </Switch>
     </BrowserRouter>
+    <div className='flag--addon' />
    </div>
   );
  }
