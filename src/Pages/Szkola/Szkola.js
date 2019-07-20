@@ -34,8 +34,8 @@ class Szkola extends React.Component {
   let color4 = `rgba(78, 204, 245, ${opacity})`;
   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
-  return componentDidMount ? (
-   <div id={'szkola'} className='content__box'>
+  return(<div id={'szkola'} className='content__box'>
+    {componentDidMount ? "" : <Loader />}
     <div className='main__content'>
      <div className='flag--addon' />
      <h1>
@@ -150,9 +150,7 @@ class Szkola extends React.Component {
      </div>
     </div>
    </div>
-  ) : (
-   <Loader />
-  );
+  )
  }
 }
 

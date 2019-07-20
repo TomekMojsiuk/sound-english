@@ -32,8 +32,8 @@ class OfertaCennik extends React.Component {
   let color4 = `rgba(78, 204, 245, ${opacity})`;
   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
-  return componentDidMount ? (
-   <div className='content__box'>
+  return(<div className='content__box'>
+    {componentDidMount ? "" : <Loader />}
     <div id='cennik' className='main__content'>
      <div className='flag--addon' />
      <h1>
@@ -259,9 +259,7 @@ class OfertaCennik extends React.Component {
      </div>
     </div>
    </div>
-  ) : (
-   <Loader />
-  );
+  )
  }
 }
 

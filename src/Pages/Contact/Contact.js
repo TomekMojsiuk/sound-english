@@ -22,8 +22,8 @@ class Contact extends React.Component {
 
     render () {
       const { componentDidMount } = this.state;
- return (
-    componentDidMount?(<div className='content__box'>
+ return (<div className='content__box'>
+    {componentDidMount ? "" : <Loader />}
     <div className="flag--addon"></div>
   <div className='contact__info'>
    <h1 className='title'>
@@ -57,9 +57,7 @@ class Contact extends React.Component {
     </div>
    </div>
   </div>
-</div>):(<Loader/>)
-  
- );
+</div>)
     }
 };
 

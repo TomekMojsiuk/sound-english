@@ -23,8 +23,8 @@ class NotFound extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
-  return componentDidMount ? (
-   <div id='not__found'>
+  return (<div id='not__found'>
+      {componentDidMount ? "" : <Loader />}
     <div className='bg__img' />
     <div className='content__box'>
      <h1 className='title'>
@@ -40,9 +40,7 @@ class NotFound extends React.Component {
      <div className="logo"></div>
     </div>
    </div>
-  ) : (
-   <Loader />
-  );
+  )
  }
 }
 

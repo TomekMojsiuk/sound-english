@@ -23,8 +23,8 @@ class Main extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  return (
-     componentDidMount?(<div id='main' className='content__box'>
+  return (<div id='main' className='content__box'>
+     {componentDidMount ? "" : <Loader />}
      <div className='flag' />
      <div className='logo' />
      <div className='main__content'>
@@ -55,11 +55,7 @@ class Main extends React.Component {
        </MyLink>
       </div>
      </div>
-    </div>):(
-       <Loader />
-    )
-   
-  );
+    </div>)
  }
 }
 

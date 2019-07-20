@@ -22,8 +22,9 @@ class Ministudio extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
-  return componentDidMount ? (
-   <div id="ministudio" className='content__box'>
+  
+  return <div id="ministudio" className='content__box'>
+     {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
     <div className="studio__img--desktop"></div>
     <div className='main__content'>
@@ -59,9 +60,6 @@ class Ministudio extends React.Component {
     
     </div>
    </div>
-  ) : (
-   <Loader />
-  );
  }
 }
 
