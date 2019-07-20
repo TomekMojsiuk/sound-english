@@ -10,6 +10,7 @@ import Hamburger from "./Components/Nav/Hamburger/Hamburger";
 import Contact from "./Pages/Contact/Contact";
 import OfertaCennik from "./Pages/OfertaCennik/OfertaCennik";
 import Ministudio from "./Pages/Ministudio/Ministudio";
+import Copywriting from "./Pages/Copywriting/Copywriting";
 import NotFound from "./Pages/NotFound/NotFound";
 
 class App extends React.Component {
@@ -51,10 +52,11 @@ class App extends React.Component {
      <Route exact path='/kontakt' render={() => <Contact />} />
      <Route exact path='/oferta' render={() => <OfertaCennik />} />
      <Route exact path='/ministudio' render={() => <Ministudio />} />
+     <Route exact path='/copywriting' render={() => <Copywriting />} />
+     {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
      <Route component={NotFound} />
      </Switch>
     </BrowserRouter>
-    {/* <div className='flag--addon' /> */}
    </div>
   );
  }

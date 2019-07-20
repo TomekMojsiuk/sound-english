@@ -1,0 +1,17 @@
+@import "../../Scss/Config.scss";
+
+#copywriting {
+
+  @media all and (min-width: $BreakpointDesktop) {
+
+  }
+
+  .nav__item {
+      display: initial;
+    width: 165px;
+    height: 1.6rem;
+    margin: 0 0 0 2px;
+    padding: 5px;
+    color: $color2;
+  }
+ }

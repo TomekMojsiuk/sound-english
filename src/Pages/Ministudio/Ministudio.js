@@ -33,7 +33,7 @@ class Ministudio extends React.Component {
       {"inistudio"}
      </h1>
      <div className="studio__img--mobile"></div>
-     <h2>W ramach Ministudio homerecordingowego SOUND ENGLISH oferujemy:</h2>
+     <h2>W ramach Ministudio homerecordingowego SOUND ENGLISH oferuję</h2>
 
      <ul>
       <li>
