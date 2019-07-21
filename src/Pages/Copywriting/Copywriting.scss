@@ -1,17 +1,164 @@
 @import "../../Scss/Config.scss";
 
 #copywriting {
+ @media all and (min-width: $BreakpointDesktop) {
+ }
 
+ h2 {
   @media all and (min-width: $BreakpointDesktop) {
-
-  }
-
-  .nav__item {
-      display: initial;
-    width: 165px;
-    height: 1.6rem;
-    margin: 0 0 0 2px;
-    padding: 5px;
-    color: $color2;
+   margin: 30px 0;
   }
  }
+
+.content__flex__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    @media all and (min-width: $BreakpointDesktop) {
+        flex-direction: row;
+    }
+}
+
+ .nav__item {
+  display: initial;
+  width: 165px;
+  height: 1.6rem;
+  margin: 0 0 0 2px;
+  padding: 5px;
+  color: $color5;
+  font-size: 1.4rem;
+  border-bottom: 1px solid $color2;
+
+  @media all and (min-width: $BreakpointDesktop) {
+   color: $color2;
+   border-bottom: 1px solid $color5;
+   transition: all .1s ease-in-out;
+   &:after {
+    background: fade-out($color4, 0.6);
+   }
+   &:hover {
+    color: $color5;
+    border-bottom: 2px solid $color5;
+   }
+  }
+ }
+
+ .redirect__content--container {
+  @include boxShadow($color2);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center; 
+  height: auto;
+  padding: 30px 0;
+  text-align: center;
+//   float: left;
+  @media all and (min-width: $BreakpointDesktop) {
+    @include boxShadow($color1);
+   height: 170px;
+   width: 50%;
+   padding: 20px;
+   text-align: unset;
+   transition: all .3s ease-in-out;
+
+   &:hover {
+    //    width: 51%;
+       @include boxShadow($color2);
+   }
+
+  }
+
+  .content {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      @media all and (min-width: $BreakpointDesktop) {
+        flex-direction: row;
+        margin-bottom: unset;
+      }
+
+      .text {
+          width: 70%;
+      }
+  }
+
+.icon {
+    height: 80px;
+    width: 80px;
+
+    }
+
+    .nav__item {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        // min-height: unset;
+        line-height: 2.5rem;
+        height: 2.5rem;
+        width: 80px;
+
+        &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+    }
+}
+
+    // .nav__item {
+    //     position: relative;
+    //     padding: 5px;
+    //     // float: left;
+    //     // margin: 0 0 0 20px;
+    //     // float: left;
+    //     // width: 60px;
+    //     // height: 60px;
+    //     min-width: 0;
+    //     width: 80px;
+    //     // border-bottom: 0px;
+     
+    //     &:after {
+    //         position: absolute;
+    //         bottom: 0;
+    //         left: 0;
+    //     //  display: none;
+    //     // padding: 5px;
+    //     }
+     
+    //     &:after:hover {
+    //     //  display: none;
+    //     }
+    //    }
+}
+
+ .copywriting__img {
+  position: relative;
+  background: url("../../assets/img/copywriting.jpg");
+  height: 250px;
+  width: 100%;
+  background-position: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 30px 0;
+
+  @media all and (min-width: $BreakpointDesktop) {
+   height: 350px;
+   width: 100%;
+  }
+
+  &::after {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background: fade-out($color4, 0.9);
+  }
+ }
+
+}

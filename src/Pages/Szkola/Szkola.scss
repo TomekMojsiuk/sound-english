@@ -4,14 +4,12 @@
 
 
 .nav__item {
-    float: right;
-    font-size: 1.4rem;
-    align-self: center;
-    justify-self: flex-end;
-    color: $color2;
-    width: 130px;
-    height: unset;
-    padding: 2px; 
+    display: initial;
+  width: 165px;
+  height: 1.6rem;
+  margin: 0 0 0 2px;
+  padding: 5px;
+  color: $color2;
 
     &:after {
         content: "";

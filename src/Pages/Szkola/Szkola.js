@@ -91,11 +91,11 @@ class Szkola extends React.Component {
        ofercie. Centrum zapewnia indywidualne podejście do każdego ucznia
        (podczas zajęć indywidualnych, a także w małych grupach), które skutkuje
        efektywną nauką na każdym poziomie trudności. Szczegółowe propozycje
-       kursów dla osób W ABSOLUTNIE KAŻDYM WIEKU znajdują się w zakładce OFERTA
-       I CENNIK.
+       kursów dla osób W ABSOLUTNIE KAŻDYM WIEKU znajdują się w zakładce
        <MyLink exact to='/oferta'>
       Oferta i cennik
      </MyLink>
+     .
       </p>
       <ReadMore />
       </div>
