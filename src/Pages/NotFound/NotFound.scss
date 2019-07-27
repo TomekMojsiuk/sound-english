@@ -12,7 +12,7 @@
  z-index: 10;
 
  .main__content {
-     display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -65,9 +65,8 @@
    font-size: 2rem;
    text-align: center;
    @media all and (min-width: $BreakpointDesktop) {
-    // display: inline-block;
-    // align-self: center;
     width: 600px;
+    margin: 30px 0;
    }
   }
 
@@ -80,11 +79,8 @@
    color: $color5;
    @media all and (min-width: $BreakpointDesktop) {
     position: relative;
-    // position: unset;
-    // display: block;
     font-size: 1.8rem;
     width: 250px;
-    // left: calc(50% - 125px);
     left: unset;
     bottom: unset;
     margin-right: unset;
@@ -97,7 +93,6 @@
    height: 200px;
    width: 100%;
    margin: 0 0 40px 0;
-//    width: auto;
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
@@ -105,7 +100,7 @@
    @media all and (min-width: $BreakpointDesktop) {
     height: 210px;
     width: 130px;
-    margin-top: 30px;
+    margin: 30px 0 0 0;
    }
   }
  }

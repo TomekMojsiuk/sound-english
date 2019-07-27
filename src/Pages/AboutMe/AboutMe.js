@@ -34,69 +34,83 @@ class AboutMe extends React.Component {
       {"mnie"}
      </h1>
      <div className='o-mnie__img' />
-
+     <h2>
+      <span>K</span>rótkie bio
+     </h2>
      <p>
-      Oprócz usług związanych z nauczaniem i produkcją dźwięku, które świadczę w
-      ramach szkoły Sound English, zajmuję się również copywritingiem. W
-      dzisiejszych czasach nie trzeba już chyba mówić, że dbałość o jakość
-      tekstu, który prezentujemy, mówi bardzo wiele o nas jako autorze,
-      kontrahencie, czy partnerze biznesowym. Dzisiaj bezbłędny językowo i
-      merytorycznie tekst to już nie rzadkość, a wymagay standard.
+      Nazywam się <span>B</span>artłomiej <span>P</span>iwowarczyk. Urodziłem
+      się 9 stycznia 1991 r, w związku z czym za swoją szczęśliwą liczbę uważam
+      #91, a kolorowy Byk z Chicago Dennis Rodman jest jednym z moich ulubionych
+      koszykarzy.
      </p>
 
      <p>
-      Moje umiejętności redaktorskie rozwijam od lat jako czynny zawodowo
-      dziennikarz i redaktor. Zapraszam Cię do mojego
-      <MyLink exact to='portfolio-dziennikarskie'>
-       portfolio dziennikarskiego,
+      Jestem absolwentem filologii angielskiej (specjalność nauczycielska –
+      literaturoznawstwo) Akademii Pomorskiej w Słupsku i Uniwersytetu
+      Gdańskiego. Obie prace pisałem na temat tekstów piosenek zespołu „Simon
+      &amp; Garfunkel”.
+     </p>
+
+     <p>
+      Mam doświadczenie w pracy nauczycielskiej z podopiecznymi w każdym wieku.
+      Pracowałem w szkole publicznej oraz prywatnej, gdzie prowadziłem między
+      innymi kursy maturalne. W pewnym momencie, z potrzeby niezależności i
+      realizacji własnych wizji założyłem <span>S</span>OUND <span>E</span>
+      NGLISH.
+     </p>
+
+     <h2>
+      <span>P</span>oza językiem
+     </h2>
+     <p>
+      Zajmuję się również działalnością muzyczną. Moja przygoda z muzyką
+      rozpoczęła się 18 lat temu, gdy zacząłem naukę w Szkole Muzycznej I
+      stopnia w Kościerzynie. Jej absolwentem (w klasie akordeonu) zostałem w
+      roku 2005. Wówczas zacząłem kształcić się sam. W rezultacie poza
+      akordeonem opanowałem grę na gitarze, harmonijce ustnej i pianinie.
+      Później nauczyłem się też podstaw nagrywania, masteringu i obsługi
+      kontrolera PAD oraz konsolety DJ.
+     </p>
+
+     <p>
+      Jendak mimo wszystko moim głównym instrumentem jest głos, któremu
+      poświęcam najwięcej czasu. Wielokrotnie brałem udział w warsztatach
+      wokalnych, między innymi z PK Matczukiem, w zajęciach w Słupskim Ośrodku
+      Kultury, czy Akademii Rocka w Gdańsku. W związku z tym w pozajęzykowej
+      pracy dydaktycznej również skupiam się na treningach wokalnych.
+     </p>
+
+     <h2>
+      <span>C</span>o jeszcze o mnie?
+     </h2>
+     <p>
+      Od lat jestem aktywny scenicznie – działający w latach 2006 – 2011 zespół{" "}
+      <i>WZROCK</i> pozwolił mi zdobyć pierwsze rockowo - bluesowe szlify
+      sceniczne, a grająca obecnie grupa <i>No Trudno</i> pozwala mi skutecznie
+      przedłużać tę fascynującą przygodę.
+     </p>
+     <p>
+      Oprócz projektów grupowych działam też solo. Zrealizowałem projekty takie
+      jak <i>WOOPANKA</i> i zajmuję się realizacją nagrań innych artystów.
+      Chcesz posłuchać? Zapraszam Cię na mój profil na{" "}
+      <MyLink exact to='mój kanał yourube'>
+       Youtube
       </MyLink>
-      w którym przeczytasz moje publikacje.
+      , gdzie znajdziesz podsumowanie kilku ładnych lat mojej pracy.
      </p>
-     <h2>
-      <span>W</span> ramach Sound English możesz zamówić:
-     </h2>
-     <div className='content__flex__container'>
-      <ul>
-       <li>
-        <span>W</span>szelkie teksty w językach polskim i angielskim
-       </li>
-       <li>
-        <span>C</span>ontent reklamowy i sprzedażowy
-       </li>
-       <li>
-        <span>A</span>rtykuły tematyczne
-       </li>
-       <li>
-        <span>T</span>łumaczenia tekstów piosenek
-       </li>
-       <li>
-       <span>P</span>rofesjonalne pisma
-      </li>
-       <div className='underline' />
-      </ul>
-      <div className='banner'>
-       <div className='banner__content__box'>
-        <p className='text'>
-         Nie widzisz na liście tego, czego szukasz? Zadzwoń lub napisz do mnie
-         >>
-        </p>
-        <div className='icon mobile' />
-       </div>
-       <MyLink exact to='/kontakt'>
-        Kontakt
-       </MyLink>
-      </div>
-     </div>
-     <h2>
-      {" "}
-      <span>J</span>eśli masz gotowy tekst i potrzebujesz zredagowania lub korekty, zamów
-     </h2>
-     <ul>
-      <li>
-       <span>Z</span>redagowanie gotowego tekstu, pracy akademickiej lub
-       artykułu napisanego przez Ciebie
-      </li>
-     </ul>
+
+     {/* <p>
+      <MyLink exact to='portfolio-dziennikarskie'>
+       portfolio dziennikarskie
+      </MyLink>
+     </p>
+
+     <p>
+      <MyLink exact to='WOOPANKA – PROFIL BANDCAMP'>
+       WOOPANKA – PROFIL BANDCAMP
+      </MyLink>
+     </p> */}
+
     </div>
    </div>
   );

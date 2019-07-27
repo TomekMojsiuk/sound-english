@@ -137,7 +137,7 @@ p > .nav__item {
    border-bottom: 1px solid $color5;
    transition: all 0.1s ease-in-out;
    &:after {
-    background: fade-out($color4, 0.6);
+    background: unset;
    }
    &:hover {
     color: $color5;

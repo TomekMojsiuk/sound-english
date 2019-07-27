@@ -93,7 +93,7 @@ class Szkola extends React.Component {
        efektywną nauką na każdym poziomie trudności. Szczegółowe propozycje
        kursów dla osób W ABSOLUTNIE KAŻDYM WIEKU znajdują się w zakładce
        <MyLink exact to='/oferta'>
-      Oferta i cennik
+      oferta i cennik
      </MyLink>
      .
       </p>
