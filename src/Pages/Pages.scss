@@ -1,6 +1,6 @@
 @import "../Scss/Config.scss";
 
-.content__box {
+.content__wrapper {
  @media all and (min-width: $BreakpointDesktop) {
   width: 100%;
   min-height: 80vh;
@@ -120,3 +120,28 @@
   background-size: 100%;
  }
 }
+
+//Nav item within a paragraph
+p > .nav__item {
+  display: initial;
+  width: 165px;
+  height: 1.6rem;
+  margin: 0 0 0 2px;
+  padding: 5px;
+  color: $color5;
+  font-size: 1.4rem;
+  border-bottom: 1px solid $color2;
+
+  @media all and (min-width: $BreakpointDesktop) {
+   color: $color2;
+   border-bottom: 1px solid $color5;
+   transition: all 0.1s ease-in-out;
+   &:after {
+    background: fade-out($color4, 0.6);
+   }
+   &:hover {
+    color: $color5;
+    border-bottom: 2px solid $color5;
+   }
+  }
+ }

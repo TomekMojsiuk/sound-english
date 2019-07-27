@@ -23,7 +23,7 @@ class Ministudio extends React.Component {
  render() {
   const { componentDidMount } = this.state;
   
-  return <div id="ministudio" className='content__box'>
+  return <div id="ministudio" className='content__wrapper'>
      {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
     <div className="studio__img--desktop"></div>

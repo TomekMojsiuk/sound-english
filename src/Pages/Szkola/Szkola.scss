@@ -3,33 +3,28 @@
 #szkola {
 
 
-.nav__item {
+  .nav__item {
     display: initial;
-  width: 165px;
-  height: 1.6rem;
-  margin: 0 0 0 2px;
-  padding: 5px;
-  color: $color2;
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 0%;
-        width: 100%;
-        background: fade-out($color4, .6);
-        transition: all 0.3s ease-in-out;
-        z-index: -1;
-       }
-     
-       &:hover:after {
-        height: 100%;
-       }
-       &:hover {
-        color: $color5;
-        border-bottom: 2px solid $color5;
-       }
+    width: 165px;
+    height: 1.6rem;
+    margin: 0 0 0 2px;
+    padding: 5px;
+    color: $color5;
+    font-size: 1.4rem;
+    border-bottom: 1px solid $color2;
+  
+    @media all and (min-width: $BreakpointDesktop) {
+     color: $color2;
+     border-bottom: 1px solid $color5;
+     transition: all .1s ease-in-out;
+     &:after {
+      background: unset;
+     }
+     &:hover {
+      color: $color5;
+      border-bottom: 2px solid $color5;
+     }
     }
+   }    
 
 }

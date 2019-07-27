@@ -23,7 +23,7 @@ class Main extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  return (<div id='main' className='content__box'>
+  return (<div id='main' className='content__wrapper'>
      {componentDidMount ? "" : <Loader />}
      <div className='flag' />
      <div className='logo' />

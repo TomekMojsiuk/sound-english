@@ -1,11 +1,11 @@
 import React from "react";
 import "../Pages.scss";
-import "./Copywriting.scss";
+import "./AboutMe.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import MyLink from "../../Components/Nav/NavLink/NavLink";
 
-class Copywriting extends React.Component {
+class AboutMe extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -25,15 +25,15 @@ class Copywriting extends React.Component {
   const { componentDidMount } = this.state;
 
   return (
-   <div id='copywriting' className='content__wrapper'>
+   <div id='o-mnie' className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
     <div className='main__content'>
      <h1 className='title'>
-      <span>{"C"}</span>
-      {"opywriting"}
+      <span>{"O"}</span>
+      {"mnie"}
      </h1>
-     <div className='copywriting__img' />
+     <div className='o-mnie__img' />
 
      <p>
       Oprócz usług związanych z nauczaniem i produkcją dźwięku, które świadczę w
@@ -103,4 +103,4 @@ class Copywriting extends React.Component {
  }
 }
 
-export default Copywriting;
+export default AboutMe;

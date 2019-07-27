@@ -26,18 +26,20 @@ class NotFound extends React.Component {
   return (<div id='not__found'>
       {componentDidMount ? "" : <Loader />}
     <div className='bg__img' />
-    <div className='content__box'>
+    <div className='content__wrapper'>
+    <div className='main__content'>
      <h1 className='title'>
       <span>{"4"}</span>
       {"0"}
       <span>{"4"}</span>
      </h1>
-     <h2>You are allowed to sream and shout now!</h2>
-     <p>The page you are looking for does not exist.</p>
+     <h2>You are allowed to kick and scream now!</h2>
+     <p>The page you are looking for does not exist, or may be undergoing some necessary maintenance.</p>
      <MyLink exact to='/'>
       Get back to reality
      </MyLink>
      <div className="logo"></div>
+     </div>
     </div>
    </div>
   )

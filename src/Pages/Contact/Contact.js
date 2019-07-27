@@ -22,7 +22,7 @@ class Contact extends React.Component {
 
     render () {
       const { componentDidMount } = this.state;
- return (<div className='content__box'>
+ return (<div className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div className="flag--addon"></div>
   <div className='contact__info'>

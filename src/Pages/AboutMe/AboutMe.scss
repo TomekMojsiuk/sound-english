@@ -1,6 +1,6 @@
 @import "../../Scss/Config.scss";
 
-#copywriting {
+#o-mnie {
  @media all and (min-width: $BreakpointDesktop) {
  }
 
@@ -89,7 +89,7 @@
   }
  }
 
- .copywriting__img {
+ .o-mnie__img {
   position: relative;
   background: url("../../assets/img/copywriting.jpg");
   height: 250px;
