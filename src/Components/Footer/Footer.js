@@ -14,6 +14,9 @@ class Footer extends React.Component {
  };
 
  render() {
+
+   const {tomekMojsiuk} = this.props;
+
   return (
    <div id='footer'>
     <div className='footer__content left'>
@@ -28,9 +31,10 @@ class Footer extends React.Component {
      </p>
      <p className='project'>
        Created by
-       <MyLink to='/tomek-mojsiuk' target='_blank'>
+       {/* <MyLink to='/tomek-mojsiuk' target='_blank'>
         Tomasz Mojsiuk
-       </MyLink>
+       </MyLink> */}
+       <a href={tomekMojsiuk} className="nav__item" target="_blank">Tomek Mojsiuk</a>
      </p>
     </div>
 

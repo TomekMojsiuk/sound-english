@@ -90,7 +90,7 @@ class App extends React.Component {
  };
 
  render() {
-  const { isClicked, facebook, youtube } = this.state;
+  const { isClicked, facebook, youtube, tomekMojsiuk } = this.state;
   return (
    <div className='App'>
     <Hamburger onClick={this.handleHamburgerClick} isClicked={isClicked} />
@@ -121,13 +121,13 @@ class App extends React.Component {
       path='/facebook'
       component={() => (window.location.href = this.state.facebook)}
      />
-     <Route
+     {/* <Route
       exact
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
-     />
+     /> */}
 
-     <Footer facebook={facebook} youtube={youtube} />
+     <Footer facebook={facebook} youtube={youtube} tomekMojsiuk={tomekMojsiuk} />
     </BrowserRouter>
    </div>
   );
