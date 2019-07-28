@@ -68,13 +68,13 @@ class App extends React.Component {
  };
 
  handleArrowClick = () => {
-        $("body, html").animate(
-         {
-          scrollTop: $(".content__wrapper").offset().top - 100
-         },
-         600
-        );
- }
+  $("body, html").animate(
+   {
+    scrollTop: $(".content__wrapper").offset().top - 100
+   },
+   600
+  );
+ };
 
  componentDidMount = () => {
   $(window).on("scroll", this.handlaNavbarToggle);

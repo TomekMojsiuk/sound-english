@@ -1,25 +1,38 @@
-@import '../../../Scss/Config.scss';
+@import "../../../Scss/Config.scss";
 
 .arrow__up--box {
+ position: fixed;
+ justify-content: center;
+ align-items: center;
+ height: 50px;
+ width: 100vw;
+ bottom: 0;
+//  border-top: 1px solid $color2;
+ background: fade-out($color2, .7);
+ z-index: 5;
 
-    position: fixed;
-    height: 40px;
-    width: 40px;
-    bottom: 40px;
-    right: 20px;
-    @include boxShadow ($color1);
-    z-index: 5;
+ @media all and (min-width: $BreakpointDesktop) {
+  height: 40px;
+  width: 40px;
+  bottom: 40px;
+  right: 20px;
+  @include boxShadow($color1);
+ }
 
-    .arow__up {
+ .arow__up {
+  height: 20px;
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 18px;
+  transform: rotate(45deg);
+  border-left: 2px solid $color5;
+  border-top: 2px solid $color5;
 
-        height: 20px;
-        width: 20px;
-        margin: 0 auto;
-        margin-top: calc(50% - 6px);
-        transform: rotate(45deg);
-        border-left: 2px solid $color5;
-        border-top: 2px solid $color5;
-
-
-    }
-   }
+  @media all and (min-width: $BreakpointDesktop) {
+   height: 20px;
+   width: 20px;
+   margin: 0 auto;
+   margin-top: calc(50% - 6px);
+  }
+ }
+}
