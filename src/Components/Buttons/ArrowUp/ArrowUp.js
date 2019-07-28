@@ -10,7 +10,7 @@ class ArrowUp extends React.Component {
  render() {
 
     const { onClick } = this.props
-  return (<div className='arrow__up--box' onClick={onClick}>
+  return (<div className='arrow__up--box' onClick={onClick} onFocus={onClick}>
   <div className='arow__up' />
  </div>
   );

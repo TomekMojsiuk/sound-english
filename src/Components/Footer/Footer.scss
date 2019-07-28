@@ -26,7 +26,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-//   border: 1px solid $color5;
 
   @media all and (min-width: $BreakpointDesktop) {
    width: 33%;
@@ -103,9 +102,6 @@ opacity: 1;
  .left {
      .nav__item {
         font-size: 1.1rem;
-        // @media all and (min-width: $BreakpointDesktop) {
-        // font-size: initial;
-        // }
      }
  }
 

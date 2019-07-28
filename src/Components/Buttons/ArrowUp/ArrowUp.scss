@@ -9,7 +9,7 @@
  bottom: 0;
 //  border-top: 1px solid $color2;
  background: fade-out($color2, .7);
- z-index: 5;
+ z-index: 15;
 
  @media all and (min-width: $BreakpointDesktop) {
   height: 40px;
