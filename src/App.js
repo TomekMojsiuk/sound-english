@@ -62,7 +62,7 @@ class App extends React.Component {
   arrow.hide();
 
   if (window.pageYOffset >= 300) {
-   arrow.css("display", "block");
+   arrow.css("display", "flex");
   } else {
    arrow.css("display", "none");
   }
