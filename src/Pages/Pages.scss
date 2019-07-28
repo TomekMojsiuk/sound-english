@@ -1,12 +1,13 @@
 @import "../Scss/Config.scss";
 
 .content__wrapper {
+  min-height: 100vh;
  @media all and (min-width: $BreakpointDesktop) {
   width: 100%;
   min-height: 80vh;
   display: flex;
   flex-direction: row;
-  padding: 15px 0 0 0;
+  padding: 0 0 0 0;
  }
 
  .main__content {

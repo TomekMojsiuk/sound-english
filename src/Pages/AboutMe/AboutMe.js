@@ -35,7 +35,7 @@ class AboutMe extends React.Component {
      </h1>
      <div className='o-mnie__img' />
      <h2>
-      <span>K</span>rótkie bio
+      <span>K</span>rótka biografia
      </h2>
      <p>
       Nazywam się <span>B</span>artłomiej <span>P</span>iwowarczyk. Urodziłem
@@ -92,13 +92,12 @@ class AboutMe extends React.Component {
      <p>
       Oprócz projektów grupowych działam też solo. Zrealizowałem projekty takie
       jak <i>WOOPANKA</i> i zajmuję się realizacją nagrań innych artystów.
-      Chcesz posłuchać? Zapraszam Cię na mój profil na{" "}
-      <MyLink exact to='mój kanał yourube'>
+      Chcesz posłuchać? Zapraszam Cię na mój profil na
+      <MyLink target="_blank" exact to='/youtube'>
        Youtube
       </MyLink>
       , gdzie znajdziesz podsumowanie kilku ładnych lat mojej pracy.
      </p>
-
      {/* <p>
       <MyLink exact to='portfolio-dziennikarskie'>
        portfolio dziennikarskie

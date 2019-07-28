@@ -3,12 +3,15 @@ import "../Pages.scss";
 import "./Main.scss";
 import MyLink from "../../Components/Nav/NavLink/NavLink";
 import Loader from "../../Components/Loader/Loader";
+import $ from 'jquery';
 
 class Main extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
    componentDidMount: false,
+
+   footerMargin: '0',
   };
  }
 
@@ -20,11 +23,20 @@ class Main extends React.Component {
       },2000)
  }
 
- render() {
-  const { componentDidMount } = this.state;
+ setFooterStyle = (value) => {
+   
+   $('#footer').css('margin-bottom', value);
+}
 
+componentWillUnmount() {
+   $('#footer').css('margin-bottom', '25px');
+}
+
+ render() {
+  const { componentDidMount } = this.state; 
   return (<div id='main' className='content__wrapper'>
      {componentDidMount ? "" : <Loader />}
+     {this.setFooterStyle(this.state.footerMargin)}
      <div className='flag' />
      <div className='logo' />
      <div className='main__content'>
@@ -58,8 +70,5 @@ class Main extends React.Component {
     </div>)
  }
 }
-
-// TODO skonsultować z Bartkiem elementy w bannerze
-
 
 export default Main;

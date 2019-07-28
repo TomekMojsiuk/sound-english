@@ -1,0 +1,143 @@
+@import "../../Scss/Config.scss";
+
+#footer {
+ display: flex;
+ flex-direction: column-reverse;
+ justify-content: space-around;
+ align-items: center;
+ height: 100vh;
+ width: 100%;
+ padding: 50px 10px 10px 10px;
+ margin-bottom: 0;
+ background: $color2;
+
+ @media all and (min-width: $BreakpointDesktop) {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+ .footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+//   border: 1px solid $color5;
+
+  @media all and (min-width: $BreakpointDesktop) {
+   width: 33%;
+   height: 100%;
+   flex-direction: row;
+  }
+
+  //   Navigation link in footer styles
+  .nav__item {
+   padding: 5px 5px 8px 5px;
+   margin: 0;
+   font-size: 2rem;
+   color: $color5;
+   width: auto;
+   border-bottom: 1px solid $color1;
+
+   &:after {
+    background: unset;
+   }
+
+   &:hover {
+    border-bottom: 1px solid $color1;
+    color: $color5;
+   }
+
+   @media all and (min-width: $BreakpointDesktop) {
+    font-size: 1.1rem;
+    color: $color1;
+    border-bottom: 1px solid $color5;
+   }
+  }
+
+  .icon {
+      cursor: pointer;
+      position: relative;
+   height: 45px;
+   width: 45px;
+   margin: 0 5px;
+   background-repeat: no-repeat !important;
+   background-position: center !important;
+   background-size: contain !important;
+   
+
+   &::after {
+       content:'';
+       position: absolute;
+       border-radius: 5px;
+       height: 100%;
+       width: 100%;
+       background-color: fade-out($color1, .7);
+       opacity: 0;
+       transition: all .3s ease-in-out;
+   }
+
+   &:hover::after {
+opacity: 1;
+   }
+
+   @media all and (min-width: $BreakpointDesktop) {
+    height: 35px;
+    width: 35px;
+   }
+
+  }
+
+  .facebook {
+   background: url("../../assets/ico/facebook.svg");
+  }
+  .youtube {
+   background: url("../../assets/ico/youtube.svg");
+  }
+ }
+
+ .left {
+     .nav__item {
+        font-size: 1.1rem;
+        // @media all and (min-width: $BreakpointDesktop) {
+        // font-size: initial;
+        // }
+     }
+ }
+
+ .middle {
+    flex-direction: column;
+    @media all and (min-width: $BreakpointDesktop) {
+        
+       }   
+  }
+
+  .right {
+    flex-direction: row;
+    @media all and (min-width: $BreakpointDesktop) {
+        // flex-direction: ;
+    }   
+  }
+ p,
+ ul,
+ li {
+    display: block;
+    font-size: 2rem;
+    line-height: 1.8em;
+    margin: 10px 0;
+    color: $color1;
+    @media all and (min-width: $BreakpointDesktop) {
+        font-size: 1.1rem;
+        
+    }
+
+  span {
+   font-size: 1.5em;
+   color: $color4;
+  }
+ }
+}

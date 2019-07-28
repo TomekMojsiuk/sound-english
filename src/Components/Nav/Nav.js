@@ -1,12 +1,15 @@
 import React, { Fragment } from "react";
+import $ from 'jquery';
 import "./Nav.scss";
 
 import MyLink from "./NavLink/NavLink";
 
 class Nav extends React.Component {
 
+
  render() {
   const { handleNavDisplay, handleNavItemClick } = this.props;
+  
   return (
    <nav className={handleNavDisplay ? "nav show": "nav"}>
     <Fragment>

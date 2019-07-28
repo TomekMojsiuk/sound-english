@@ -25,3 +25,14 @@
 .show {
  left: 0;
 }
+
+.sticky__nav {
+    @media all and (min-width: $BreakpointDesktop) {
+        position: sticky;
+        height: 70px;
+        background: fade-out($color2, .1);
+        .nav__item {
+            margin-top: unset !important;
+        }
+    }
+}
