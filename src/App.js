@@ -29,7 +29,7 @@ class App extends React.Component {
    facebook:
     "https://www.facebook.com/Centrum-J%C4%99zykowo-Muzyczne-Sound-English-256244201961789/",
    youtube: "https://www.youtube.com/user/Bartek091991/videos?app=desktop",
-   tomekMojsiuk: "https://tomekmojsiuk.netlify.com"
+   tomekMojsiuk: "https://tomekmojsiuk.netlify.com/"
   };
  }
 
@@ -78,8 +78,8 @@ class App extends React.Component {
  };
 
  componentDidMount = () => {
-    const arrow = $(".arrow__up--box");
-    arrow.hide();
+  const arrow = $(".arrow__up--box");
+  arrow.hide();
   $(window).on("scroll", this.handlaNavbarToggle);
   $(window).on("scroll", this.handleArrowBehavior);
  };
@@ -126,6 +126,7 @@ class App extends React.Component {
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      />
+
      <Footer facebook={facebook} youtube={youtube} />
     </BrowserRouter>
    </div>
