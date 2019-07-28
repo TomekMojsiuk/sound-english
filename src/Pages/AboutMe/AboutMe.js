@@ -3,7 +3,6 @@ import "../Pages.scss";
 import "./AboutMe.scss";
 
 import Loader from "../../Components/Loader/Loader";
-import MyLink from "../../Components/Nav/NavLink/NavLink";
 
 class AboutMe extends React.Component {
  constructor(props) {
@@ -23,7 +22,7 @@ class AboutMe extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
-
+const { youtubeLink } = this.props
   return (
    <div id='o-mnie' className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
@@ -93,23 +92,9 @@ class AboutMe extends React.Component {
       Oprócz projektów grupowych działam też solo. Zrealizowałem projekty takie
       jak <i>WOOPANKA</i> i zajmuję się realizacją nagrań innych artystów.
       Chcesz posłuchać? Zapraszam Cię na mój profil na
-      <MyLink target="_blank" exact to='/youtube'>
-       Youtube
-      </MyLink>
+      <a href={youtubeLink} className="nav__item" target="_blank" rel="noopener noreferrer">Youtube</a>
       , gdzie znajdziesz podsumowanie kilku ładnych lat mojej pracy.
      </p>
-     {/* <p>
-      <MyLink exact to='portfolio-dziennikarskie'>
-       portfolio dziennikarskie
-      </MyLink>
-     </p>
-
-     <p>
-      <MyLink exact to='WOOPANKA – PROFIL BANDCAMP'>
-       WOOPANKA – PROFIL BANDCAMP
-      </MyLink>
-     </p> */}
-
     </div>
    </div>
   );

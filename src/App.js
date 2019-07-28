@@ -94,7 +94,6 @@ class App extends React.Component {
   return (
    <div className='App'>
     <Hamburger onClick={this.handleHamburgerClick} isClicked={isClicked} />
-    <ArrowUp onClick={this.handleArrowClick} />
     <BrowserRouter>
      <Nav
       handleNavDisplay={isClicked}
@@ -107,9 +106,10 @@ class App extends React.Component {
       <Route exact path='/oferta' render={() => <OfertaCennik />} />
       <Route exact path='/ministudio' render={() => <Ministudio />} />
       <Route exact path='/copywriting' render={() => <Copywriting />} />
-      <Route exact path='/o-mnie' render={() => <AboutMe />} />
+      <Route exact path='/o-mnie' render={() => <AboutMe youtubeLink={youtube} />} />
       {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
+      
      </Switch>
      <Route
       exact
@@ -126,7 +126,7 @@ class App extends React.Component {
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      /> */}
-
+<ArrowUp onClick={this.handleArrowClick} />
      <Footer facebook={facebook} youtube={youtube} tomekMojsiuk={tomekMojsiuk} />
     </BrowserRouter>
    </div>

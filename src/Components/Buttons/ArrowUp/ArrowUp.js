@@ -3,10 +3,6 @@ import React from "react";
 import "./ArrowUp.scss";
 
 class ArrowUp extends React.Component {
-    constructor (props) {
-        super(props)
-    }
-
  render() {
 
     const { onClick } = this.props

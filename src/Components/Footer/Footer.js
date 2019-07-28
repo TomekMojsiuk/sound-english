@@ -35,7 +35,7 @@ class Footer extends React.Component {
        {/* <MyLink to='/tomek-mojsiuk' target='_blank'>
         Tomasz Mojsiuk
        </MyLink> */}
-       <a href={tomekMojsiuk} className="nav__item" target="_blank">Tomek Mojsiuk</a>
+       <a href={tomekMojsiuk} className="nav__item" target="_blank" rel="noopener noreferrer">Tomek Mojsiuk</a>
      </p>
     </div>
 

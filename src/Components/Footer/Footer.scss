@@ -2,6 +2,7 @@
 
 #footer {
  display: flex;
+ //  position: absolute;
  flex-direction: column-reverse;
  justify-content: space-around;
  align-items: center;
@@ -60,36 +61,34 @@
   }
 
   .icon {
-      cursor: pointer;
-      position: relative;
+   cursor: pointer;
+   position: relative;
    height: 45px;
    width: 45px;
    margin: 0 5px;
    background-repeat: no-repeat !important;
    background-position: center !important;
    background-size: contain !important;
-   
 
    &::after {
-       content:'';
-       position: absolute;
-       border-radius: 5px;
-       height: 100%;
-       width: 100%;
-       background-color: fade-out($color1, .7);
-       opacity: 0;
-       transition: all .3s ease-in-out;
+    content: "";
+    position: absolute;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    background-color: fade-out($color1, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
    }
 
    &:hover::after {
-opacity: 1;
+    opacity: 1;
    }
 
    @media all and (min-width: $BreakpointDesktop) {
     height: 35px;
     width: 35px;
    }
-
   }
 
   .facebook {
@@ -102,39 +101,38 @@ opacity: 1;
 
  .left {
   height: 50px;
+  margin-bottom: 90px;
   @media all and (min-width: $BreakpointDesktop) {
-    height: auto;   
-     }   
+   height: auto;
+  }
   .nav__item {
-        font-size: 1.1rem;
-     }
+   font-size: 1.1rem;
+  }
  }
 
  .middle {
-    flex-direction: column;
-    @media all and (min-width: $BreakpointDesktop) {
-     
-       }   
+  flex-direction: column;
+  @media all and (min-width: $BreakpointDesktop) {
   }
+ }
 
-  .right {
-    flex-direction: row;
-    @media all and (min-width: $BreakpointDesktop) {
-        // flex-direction: ;
-    }   
+ .right {
+  flex-direction: row;
+  @media all and (min-width: $BreakpointDesktop) {
+   // flex-direction: ;
   }
+ }
  p,
  ul,
  li {
-    display: block;
-    font-size: 2rem;
-    line-height: 1.8em;
-    margin: 10px 0;
-    color: $color1;
-    @media all and (min-width: $BreakpointDesktop) {
-        font-size: 1.1rem;
-        
-    }
+  display: block;
+  font-size: 2rem;
+  line-height: 1.8em;
+  margin: 10px 0;
+  color: $color1;
+  @media all and (min-width: $BreakpointDesktop) {
+   font-size: 1.1rem;
+  }
 
   span {
    font-size: 1.5em;
