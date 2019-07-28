@@ -2,6 +2,7 @@
 
 .arrow__up--box {
  position: fixed;
+ cursor: pointer;
  justify-content: center;
  align-items: center;
  height: 50px;
@@ -16,8 +17,10 @@
   width: 40px;
   bottom: 40px;
   right: 20px;
+  background: unset;
   @include boxShadow($color1);
  }
+
 
  .arow__up {
   height: 20px;
@@ -34,5 +37,12 @@
    margin: 0 auto;
    margin-top: calc(50% - 6px);
   }
- }
+  }
+
+  &:hover {
+      .arow__up {
+    border-left: 2px solid fade-out($color5, .5);
+    border-top: 2px solid fade-out($color5, .5);
+      }  
 }
+ }

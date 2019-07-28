@@ -60,8 +60,9 @@ class App extends React.Component {
  handleArrowBehavior = () => {
   const arrow = $(".arrow__up--box");
   arrow.hide();
+
   if (window.pageYOffset >= 300) {
-   arrow.css("display", "initial");
+   arrow.css("display", "block");
   } else {
    arrow.css("display", "none");
   }
@@ -77,6 +78,8 @@ class App extends React.Component {
  };
 
  componentDidMount = () => {
+    const arrow = $(".arrow__up--box");
+    arrow.hide();
   $(window).on("scroll", this.handlaNavbarToggle);
   $(window).on("scroll", this.handleArrowBehavior);
  };
