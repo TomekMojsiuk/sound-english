@@ -100,7 +100,11 @@ opacity: 1;
  }
 
  .left {
-     .nav__item {
+  height: 50px;
+  @media all and (min-width: $BreakpointDesktop) {
+    height: auto;   
+     }   
+  .nav__item {
         font-size: 1.1rem;
      }
  }
@@ -108,7 +112,7 @@ opacity: 1;
  .middle {
     flex-direction: column;
     @media all and (min-width: $BreakpointDesktop) {
-        
+     
        }   
   }
 
