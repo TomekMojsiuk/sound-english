@@ -21,7 +21,7 @@ class Szkola extends React.Component {
    this.setState(prevState => ({
     componentDidMount: !prevState.componentDidMount
    }));
-  }, 2000);
+  }, 1000);
  }
 
  render() {

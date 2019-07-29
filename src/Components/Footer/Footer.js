@@ -20,7 +20,7 @@ class Footer extends React.Component {
   return (
    <div id='footer'>
     <div className='footer__content left'>
-     <p><MyLink to='/polityka-prywatnosci' target='_blank'>
+     <p><MyLink to='/polityka-prywatnosci'>
       Polityka prywatności
      </MyLink>
      </p>
