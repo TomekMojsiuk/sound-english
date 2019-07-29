@@ -106,10 +106,13 @@ class App extends React.Component {
       <Route exact path='/oferta' render={() => <OfertaCennik />} />
       <Route exact path='/ministudio' render={() => <Ministudio />} />
       <Route exact path='/copywriting' render={() => <Copywriting />} />
-      <Route exact path='/o-mnie' render={() => <AboutMe youtubeLink={youtube} />} />
+      <Route
+       exact
+       path='/o-mnie'
+       render={() => <AboutMe youtubeLink={youtube} />}
+      />
       {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
-      
      </Switch>
      <Route
       exact
@@ -126,8 +129,12 @@ class App extends React.Component {
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      /> */}
-<ArrowUp onClick={this.handleArrowClick} />
-     <Footer facebook={facebook} youtube={youtube} tomekMojsiuk={tomekMojsiuk} />
+     <ArrowUp onClick={this.handleArrowClick} />
+     <Footer
+      facebook={facebook}
+      youtube={youtube}
+      tomekMojsiuk={tomekMojsiuk}
+     />
     </BrowserRouter>
    </div>
   );
