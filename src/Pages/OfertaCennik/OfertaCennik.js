@@ -3,7 +3,7 @@ import "../../Pages/Pages.scss";
 import "./OfertaCennik.scss";
 
 import Loader from "../../Components/Loader/Loader";
-import TilePopUp from "../../Components/TilePopUp/TilePopUp";
+import TilePopUpDescription from "../../Components/TilePopUpDescription/TilePopUpDescription";
 
 class OfertaCennik extends React.Component {
  constructor(props) {
@@ -41,7 +41,7 @@ class OfertaCennik extends React.Component {
      </h1>
 
      <div className='tiles__box'>
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={"up-to-date"}
        mainText={
         <h2>
@@ -60,8 +60,8 @@ class OfertaCennik extends React.Component {
        bgColor={color1}
       />
 
-      <TilePopUp
-       mainIconClassName={""}
+      <TilePopUpDescription
+       mainIconClassName={"matura"}
        mainText={
         <h2>
          <span>M</span>ATURA EXAM MASTER
@@ -75,7 +75,7 @@ class OfertaCennik extends React.Component {
        }
        bgColor={color1}
       />
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={""}
        mainText={
         <h2>
@@ -90,7 +90,7 @@ class OfertaCennik extends React.Component {
        bgColor={color1}
       />
 
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={""}
        mainText={
         <h2>
@@ -111,7 +111,7 @@ class OfertaCennik extends React.Component {
        bgColor={color1}
       />
 
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={""}
        mainText={
         <h2>
@@ -130,7 +130,7 @@ class OfertaCennik extends React.Component {
        bgColor={color1}
       />
 
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={""}
        mainText={
         <h2>
@@ -147,7 +147,7 @@ class OfertaCennik extends React.Component {
        bgColor={color1}
       />
 
-      <TilePopUp
+      <TilePopUpDescription
        mainIconClassName={""}
        mainText={
         <h2>

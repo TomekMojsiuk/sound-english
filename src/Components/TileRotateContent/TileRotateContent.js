@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./Tile.scss";
+import "./TileRotateContent.scss";
 
-class Tile extends React.Component {
+class TileRotateContent extends React.Component {
  constructor(props) {
   super(props);
   this.state = {};
@@ -20,4 +20,4 @@ class Tile extends React.Component {
  }
 }
 
-export default Tile;
+export default TileRotateContent;
