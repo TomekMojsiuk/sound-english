@@ -4,7 +4,7 @@
  background: url("../../assets/img/logo.png");
  background-size: 90%;
  background-repeat: no-repeat;
- background-position: center ;
+ background-position: center;
  background-size: contain;
  align-self: center;
  height: 90vh;
@@ -22,17 +22,15 @@
 }
 
 #main {
-
-    .main__content {
-        // display: none!important;
-        @media all and (min-width: $BreakpointDesktop) {      
-    display: initial!important;
-    align-self: center;
-        }
-    }
+ .main__content {
+  @media all and (min-width: $BreakpointDesktop) {
+   display: initial !important;
+   align-self: center;
+  }
+ }
 
  .banner {
-     display: none;
+  display: none;
   @media all and (min-width: $BreakpointDesktop) {
    display: flex;
    flex-direction: column;

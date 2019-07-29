@@ -29,7 +29,9 @@ class Main extends React.Component {
 }
 
 componentWillUnmount() {
-   $('#footer').css('margin-bottom', '25px');
+   if (window.matchMedia("(min-width: 740px)").matches) {
+      $('#footer').css('margin-bottom', '24px');
+   }
 }
 
  render() {

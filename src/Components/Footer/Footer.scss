@@ -2,14 +2,12 @@
 
 #footer {
  display: flex;
- //  position: absolute;
  flex-direction: column-reverse;
  justify-content: space-around;
  align-items: center;
  min-height: 100vh;
  width: 100%;
  padding: 50px 10px 10px 10px;
- margin-bottom: 0;
  background: $color2;
 
  @media all and (min-width: $BreakpointDesktop) {
@@ -104,6 +102,7 @@
   margin-bottom: 90px;
   @media all and (min-width: $BreakpointDesktop) {
    height: auto;
+   margin-bottom: unset;
   }
   .nav__item {
    font-size: 1.1rem;
@@ -118,9 +117,6 @@
 
  .right {
   flex-direction: row;
-  @media all and (min-width: $BreakpointDesktop) {
-   // flex-direction: ;
-  }
  }
  p,
  ul,
