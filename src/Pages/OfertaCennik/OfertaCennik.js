@@ -61,7 +61,7 @@ class OfertaCennik extends React.Component {
       />
 
       <TilePopUpDescription
-       mainIconClassName={"matura"}
+       imageClassName={"matura"}
        mainText={
         <h2>
          <span>M</span>ATURA EXAM MASTER

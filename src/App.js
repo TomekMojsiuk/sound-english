@@ -50,7 +50,7 @@ class App extends React.Component {
  handlaNavbarToggle = () => {
   const nav = $("nav");
 
-  if (window.pageYOffset >= 30) {
+  if (window.pageYOffset >= 1) {
    nav.addClass("sticky__nav");
   } else {
    nav.removeClass("sticky__nav");
