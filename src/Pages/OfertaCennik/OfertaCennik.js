@@ -25,9 +25,9 @@ class OfertaCennik extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  let opacity = ".8";
+  let opacity = ".2";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
-//   let color2 = `rgba(62, 72, 128, ${opacity})`;
+  let color2 = `rgba(62, 72, 128, ${opacity})`;
 //   let color3 = `rgba(59, 186, 232, ${opacity})`;
 //   let color4 = `rgba(78, 204, 245, ${opacity})`;
 //   let color5 = `rgba(238, 49, 83, ${opacity})`;
@@ -57,7 +57,7 @@ class OfertaCennik extends React.Component {
          Twoją wiedzę.
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
 
       <TilePopUpDescription
@@ -73,10 +73,10 @@ class OfertaCennik extends React.Component {
          formule.
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
       <TilePopUpDescription
-       mainIconClassName={""}
+       imageClassName={"fce-wannabe"}
        mainText={
         <h2>
          <span>F</span>CE WANNABE
@@ -87,11 +87,11 @@ class OfertaCennik extends React.Component {
          <span>P</span>rzygotowanie do egzaminu FCE
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
 
       <TilePopUpDescription
-       mainIconClassName={""}
+    imageClassName={"se-course"}
        mainText={
         <h2>
          <span>S</span>OUND ENGLISH COURSE
@@ -108,11 +108,11 @@ class OfertaCennik extends React.Component {
          studyjne).
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
 
       <TilePopUpDescription
-       mainIconClassName={""}
+       imageClassName={"bluecollar-rush"}
        mainText={
         <h2>
          <span>B</span>LUE COLLAR RUSH
@@ -127,11 +127,11 @@ class OfertaCennik extends React.Component {
          zagranicą, a także czasu, który pozostał do wyjazdu.
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
 
       <TilePopUpDescription
-       mainIconClassName={""}
+       imageClassName={"about-time"}
        mainText={
         <h2>
          <span>A</span>BOUT TIME!
@@ -144,11 +144,11 @@ class OfertaCennik extends React.Component {
          predyspozycji uczęszczających.
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
 
       <TilePopUpDescription
-       mainIconClassName={""}
+       imageClassName={"sound-meets-kids"}
        mainText={
         <h2>
          <span>S</span>OUND MEETS KIDS
@@ -160,7 +160,7 @@ class OfertaCennik extends React.Component {
          dźwiękiem.
         </p>
        }
-      //  bgColor={color1}
+       bgColor={color2}
       />
      </div>
 
