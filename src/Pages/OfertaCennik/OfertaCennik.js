@@ -42,7 +42,7 @@ class OfertaCennik extends React.Component {
 
      <div className='tiles__box'>
       <TilePopUpDescription
-       mainIconClassName={"up-to-date"}
+       imageClassName={"up-to-date"}
        mainText={
         <h2>
          <span>U</span>P TO DATE
@@ -57,7 +57,7 @@ class OfertaCennik extends React.Component {
          Twoją wiedzę.
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
 
       <TilePopUpDescription
@@ -73,7 +73,7 @@ class OfertaCennik extends React.Component {
          formule.
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
       <TilePopUpDescription
        mainIconClassName={""}
@@ -87,7 +87,7 @@ class OfertaCennik extends React.Component {
          <span>P</span>rzygotowanie do egzaminu FCE
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
 
       <TilePopUpDescription
@@ -108,7 +108,7 @@ class OfertaCennik extends React.Component {
          studyjne).
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
 
       <TilePopUpDescription
@@ -127,7 +127,7 @@ class OfertaCennik extends React.Component {
          zagranicą, a także czasu, który pozostał do wyjazdu.
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
 
       <TilePopUpDescription
@@ -144,7 +144,7 @@ class OfertaCennik extends React.Component {
          predyspozycji uczęszczających.
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
 
       <TilePopUpDescription
@@ -160,7 +160,7 @@ class OfertaCennik extends React.Component {
          dźwiękiem.
         </p>
        }
-       bgColor={color1}
+      //  bgColor={color1}
       />
      </div>
 

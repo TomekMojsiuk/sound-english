@@ -4,6 +4,7 @@
   justify-content: space-between;
  }
  .tile__popup {
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -26,8 +27,6 @@
    position: relative;
    width: 30%;
    height: 250px;
-   //   opacity: .3;
-   //   z-index: 2;
 
    &:hover {
     width: 31%;
@@ -35,21 +34,20 @@
     box-shadow: unset;
    }
   }
+
   // TODO style tile popup image
   .tile__popup__image {
-   height: 50px;
-   width: 50px;
+   position: absolute;
+   height: 101%;
+   width: 100%;
    background-position: center;
-   background-size: contain;
-   background-repeat: no-repeat;
+   background-size: cover;
+   opacity: 0.7;
+   border-radius: 5px;
+   z-index: -1;
+
+   // TODO see if the media query is needed.
    @media all and (min-width: $BreakpointDesktop) {
-    position: absolute;
-    height: 101%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.4;
-    border-radius: 5px;
    }
   }
 
@@ -133,6 +131,8 @@
   border: 1px solid $color1;
   transition: all 0.3s ease-in-out;
   z-index: 5;
+//   @include boxShadow($color2);
+background: fade-out($color2, .2);
 
   &:hover {
    border: 1px solid $color2;
