@@ -19,7 +19,7 @@
   width: 95%;
   height: 300px;
   margin: 10px 0;
-//   padding: 0 10px 20px 10px;
+  //   padding: 0 10px 20px 10px;
   padding: 10px;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
@@ -52,10 +52,6 @@
    opacity: 0.7;
    border-radius: 5px;
    z-index: -1;
-
-   // TODO see if the media query is needed.
-   @media all and (min-width: $BreakpointDesktop) {
-   }
   }
 
   .tile__popup__text {
