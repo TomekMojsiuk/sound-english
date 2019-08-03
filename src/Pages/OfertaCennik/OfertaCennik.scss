@@ -90,7 +90,7 @@
  }
 }
 
-// Images
+// courses images
 
 .matura {
  background: url("../../assets/img/matura.jpg");
@@ -105,18 +105,21 @@
 }
 
 .se-course {
-    background: url("../../assets/img/se_course_2.jpg");
-   }
+ background: url("../../assets/img/se_course_2.jpg");
+}
 
-   .bluecollar-rush {
-    background: url("../../assets/img/bluecollar_rush.jpg");
-   }
+.bluecollar-rush {
+ background: url("../../assets/img/bluecollar_rush.jpg");
+}
 
-   .about-time {
-    background: url("../../assets/img/about_time.jpg");    
-   }
+.about-time {
+ background: url("../../assets/img/about_time.jpg");
+}
 
-   .sound-meets-kids {
-    background: url("../../assets/img/sound_meets_kids.jpg");
-    background-position: -80px !important;     
-   }
+.sound-meets-kids {
+ background: url("../../assets/img/sound_meets_kids.jpg");
+ background-position: -80px !important;
+ @media all and (min-width: $BreakpointDesktop) {
+    background-position: center !important;
+}
+}
