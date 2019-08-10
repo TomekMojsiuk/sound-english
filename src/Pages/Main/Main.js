@@ -21,6 +21,8 @@ class Main extends React.Component {
          componentDidMount: !prevState.componentDidMount
         }));
       },1000)
+
+      this.props.scrollToTop();
  }
 
  setFooterStyle = (value) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./ContactForm.scss";
+import * as emailjs from "emailjs-com"
 import $ from "jquery";
 
 class ContactForm extends React.Component {
@@ -139,8 +140,37 @@ class ContactForm extends React.Component {
   };
 
   if (validateForm(this.state.errors)) {
+
+    const {subject, name, surname, email, message } = this.state;
+
    console.info("Valid Form");
    console.log("Form submitted");
+   
+   let tmeplateParams = {
+    from_name: subject + " od: " + name + " " + surname + " (" + email + ") przez formularz www SE",
+    to_name: "Tomek",
+    message_html: subject + ": " + message,
+    reply_to: name + " " + surname + " " + email 
+   }
+
+   emailjs.send('gmail', 'template_WQ1THUcS', tmeplateParams, 'user_Rq0gA8jCJQUMfSXZEnjuT')
+   .then(res => {
+    toString(res)
+    console.log("Success!", res.status, res.text)
+    // Wyskakujące okno o powodzeniu wysłania fomrmularza!
+   }, err => {
+       toString(err)
+       console.log(err)
+   })
+
+   this.setState ({
+    name: "",
+    surname: "",
+    email: "",
+    subject: "",
+    message: "",
+   })
+
   } else {
    console.error("Invalid Form");
    console.log("Form not submitted");
@@ -150,7 +180,7 @@ class ContactForm extends React.Component {
  render() {
   const { subject, name, surname, email, message } = this.state.errors;
   return (
-   <form onSubmit={this.handleSubmit}>
+   <form onSubmit={this.handleSubmit} method="POST" action="../../form_handler.php">
     <h2>
      <span>S</span>ound <span>E</span>nglish
     </h2>
@@ -194,7 +224,7 @@ class ContactForm extends React.Component {
     <div name='message' className='error__msg'>
      {message}
     </div>
-    <label>
+    <label className='textarea__label'>
      <p>Twoja wiadomość</p>
      <textarea onChange={this.onChangeBehavior} type='text' name='message' />
     </label>

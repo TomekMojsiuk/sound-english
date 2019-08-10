@@ -22,14 +22,14 @@ form {
   align-items: center;
   width: 90%;
   height: 40px;
-  margin: 15px 0;
+  margin: 10px 0;
 
   p {
    position: absolute;
    display: inherit;
    height: inherit;
    margin: 0 10px 0 0;
-   top: calc(50% - 20px);
+   top: calc(50% - 23px);
    left: 10px;
    width: 140px;
    justify-content: flex-start;
@@ -63,8 +63,9 @@ form {
   }
 
   textarea {
-   padding: 20px 10px 0 10px;
-   resize: both;
+   padding: 20px 10px 10px 10px;
+   resize: none;
+height: inherit;
   }
 
   &:active,
@@ -87,6 +88,13 @@ form {
   font-size: 14px;
   color: initial;
  }
+
+ .textarea__label {
+     height: 100px;
+    .input__text--added {
+        opacity: 0;
+       }
+  }
 
  .error__msg {
      color: $color5;

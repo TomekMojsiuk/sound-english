@@ -68,7 +68,7 @@ class App extends React.Component {
   }
  };
 
- handleArrowClick = () => {
+ handlescrollToTop = () => {
   $("body, html").animate(
    {
     scrollTop: $(".content__wrapper").offset().top - 100
@@ -76,6 +76,15 @@ class App extends React.Component {
    600
   );
  };
+
+ handleGoToTop = () => {
+    $("body, html").animate(
+     {
+      scrollTop: $(".content__wrapper").offset().top - 100
+     },
+     0
+    );
+   };
 
  componentDidMount = () => {
   const arrow = $(".arrow__up--box");
@@ -100,16 +109,16 @@ class App extends React.Component {
       handleNavItemClick={this.handleNavItemClick}
      />
      <Switch>
-      <Route exact path='/' render={() => <Main />} />
-      <Route exact path='/o-szkole' render={() => <Szkola />} />
-      <Route exact path='/kontakt' render={() => <Contact />} />
-      <Route exact path='/oferta' render={() => <OfertaCennik />} />
-      <Route exact path='/ministudio' render={() => <Ministudio />} />
-      <Route exact path='/copywriting' render={() => <Copywriting />} />
+      <Route exact path='/' render={() => <Main scrollToTop={this.handleGoToTop} />} />
+      <Route exact path='/o-szkole' render={() => <Szkola scrollToTop={this.handleGoToTop} />} />
+      <Route exact path='/kontakt' render={() => <Contact scrollToTop={this.handleGoToTop} />} />
+      <Route exact path='/oferta' render={() => <OfertaCennik scrollToTop={this.handleGoToTop} />} />
+      <Route exact path='/ministudio' render={() => <Ministudio scrollToTop={this.handleGoToTop} />} />
+      <Route exact path='/copywriting' render={() => <Copywriting scrollToTop={this.handleGoToTop} />} />
       <Route
        exact
        path='/o-mnie'
-       render={() => <AboutMe youtubeLink={youtube} />}
+       render={() => <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />}
       />
       {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
@@ -129,7 +138,7 @@ class App extends React.Component {
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      /> */}
-     <ArrowUp onClick={this.handleArrowClick} />
+     <ArrowUp onClick={this.handlescrollToTop} />
      <Footer
       facebook={facebook}
       youtube={youtube}
