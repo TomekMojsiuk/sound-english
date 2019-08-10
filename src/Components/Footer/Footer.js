@@ -42,6 +42,7 @@ class Footer extends React.Component {
     <div className='footer__content right'>
      <div className='icon facebook' onClick={this.openFacebook} />
      <div className='icon youtube' onClick={this.openYoutube} />
+     
     </div>
    </div>
   );

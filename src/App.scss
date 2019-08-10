@@ -5,7 +5,7 @@
  padding: 0;
  border: 0px;
  box-sizing: border-box;
- font-size: 10px;
+ font-size: $defaultFontSize;
  @include font;
 }
 

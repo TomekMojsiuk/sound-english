@@ -3,6 +3,7 @@ import "../Pages.scss";
 import "./Contact.scss";
 
 import Loader from '../../Components/Loader/Loader'
+import ContactForm from "../../Components/ContactForm/ContactForm";
 
 class Contact extends React.Component {
    constructor (props) {
@@ -56,6 +57,9 @@ class Contact extends React.Component {
 
     </div>
    </div>
+  </div>
+  <div className="contact__form--container">
+  < ContactForm />
   </div>
 </div>)
     }
