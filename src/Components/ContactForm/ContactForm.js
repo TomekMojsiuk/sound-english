@@ -122,43 +122,41 @@ class ContactForm extends React.Component {
     break;
   }
 
-// Update state with errors
+  // Update state with errors
   this.setState({ errors, [name]: value });
  };
 
  handleSubmit = e => {
   e.preventDefault();
 
-  const validateForm = (errors) => {
-    let valid = true;
+  const validateForm = errors => {
+   let valid = true;
+   Object.values(errors).forEach(
+    // if we have an error string set valid to false
+    val => val.length > 0 && (valid = false)
+   );
+   return valid;
+  };
 
-
-        Object.values(errors).forEach(
-      // if we have an error string set valid to false
-      (val) => val.length > 0 && (valid = false)
-    );
-    return valid;
+  if (validateForm(this.state.errors)) {
+   console.info("Valid Form");
+   console.log("Form submitted");
+  } else {
+   console.error("Invalid Form");
+   console.log("Form not submitted");
   }
-
-  if(validateForm(this.state.errors)) {
-    console.info('Valid Form')
-    console.log("Form submitted");
-  }else{
-    console.error('Invalid Form')
-    console.log("Form not submitted");
-  }
-
  };
 
  render() {
-
-    const { subject, name, surname, email, message } = this.state.errors
+  const { subject, name, surname, email, message } = this.state.errors;
   return (
    <form onSubmit={this.handleSubmit}>
     <h2>
      <span>S</span>ound <span>E</span>nglish
     </h2>
-    <div name='name' className='error__msg'>{subject}</div>
+    <div name='name' className='error__msg'>
+     {subject}
+    </div>
     <label>
      <select onChange={this.onChangeBehavior} type='text' name='subject'>
       <option defaultValue value='empty'>
@@ -171,23 +169,31 @@ class ContactForm extends React.Component {
       <option value='Studio'>Nagrania, wynajęcie studio</option>
      </select>
     </label>
-    <div name='name' className='error__msg'>{name}</div>
+    <div name='name' className='error__msg'>
+     {name}
+    </div>
     <label>
      <p>Imię</p>
      <input onChange={this.onChangeBehavior} type='text' name='name' />
      {console.log(this.state.name, this.state.name.length)}
     </label>
-    <div name='surname' className='error__msg'>{surname}</div>
+    <div name='surname' className='error__msg'>
+     {surname}
+    </div>
     <label>
      <p>Nazwisko</p>
      <input onChange={this.onChangeBehavior} type='text' name='surname' />
     </label>
-    <div name='email' className='error__msg'>{email}</div>
+    <div name='email' className='error__msg'>
+     {email}
+    </div>
     <label>
      <p>E-mail</p>
      <input onChange={this.onChangeBehavior} type='email' name='email' />
     </label>
-    <div name='message' className='error__msg'>{message}</div>
+    <div name='message' className='error__msg'>
+     {message}
+    </div>
     <label>
      <p>Twoja wiadomość</p>
      <textarea onChange={this.onChangeBehavior} type='text' name='message' />
