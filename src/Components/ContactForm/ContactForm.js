@@ -12,7 +12,8 @@ class ContactForm extends React.Component {
    email: "",
    subject: "",
    message: "",
-   error: {
+   errors: {
+    subject: "Wybierz temat",
     name: "",
     surname: "",
     email: "",
@@ -22,12 +23,24 @@ class ContactForm extends React.Component {
  }
 
  validateField = e => {
-  // const input = e.target;
+  const subject = $(e.target.parent().find("input[name=subject]"));
+  const name = $(e.target.parent().find("input[name=name]"));
+  const surname = $(e.target.parent().find("input[name=surname]"));
+  const email = $(e.target.parent().find("input[name=email]"));
+  const message = $(e.target.parent().find("input[name=message]"));
   const input = $(e.target.parent().find("input"));
-  // const inputVal = e.target.value;
-  // const inputName = e.target.name;
+
   const inputVal = input.value;
   const inputName = input.name;
+
+  if (
+   subject.length ||
+   name.length ||
+   surname.length ||
+   email.length ||
+   message.length <= 1
+  ) {
+  }
 
   if (inputVal === "") {
    this.setState({
@@ -53,89 +66,141 @@ class ContactForm extends React.Component {
  };
 
  onChangeBehavior = e => {
-  const inputName = e.target.name;
+  //   Grab input value
+  const input = e.target;
+  const { name, value } = e.target;
 
   this.setState({
-   [inputName]: e.target.value
+   [name]: value
   });
 
-  e.target.value.length !== 0
-   ? $(e.target)
+  value.length !== 0
+   ? $(input)
       .parent()
       .find("p")
       .addClass("input__text--added")
       .removeClass("input__text--removed")
-   : $(e.target)
+   : $(input)
       .parent()
       .find("p")
       .addClass("input__text--removed")
       .removeClass("input__text--added");
 
   console.log(
-   e.target.name,
-   this.state[inputName].length,
-   this.state[inputName],
-   this.state.error[inputName]
+   name,
+   this.state[name].length,
+   this.state[name],
+   this.state.errors[name]
   );
+
+  //   Validate fields
+  const { errors } = this.state;
+  const validEmailRegex = RegExp(
+   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+  );
+
+  switch (name) {
+   case "subject":
+    errors.subject = value === "empty" ? "Wybierz odpowiedni temat" : "";
+    break;
+   case "name":
+    errors.name = value.length <= 1 ? "Wpisz poprawne imię" : "";
+    break;
+   case "surname":
+    errors.surname = value.length <= 1 ? "Wpisz poprawne nazwisko" : "";
+    break;
+   case "email":
+    errors.email = validEmailRegex.test(value)
+     ? ""
+     : "Wpisz poprawny adres email";
+    break;
+   case "message":
+    errors.message =
+     value.length <= 1 ? "Nie możesz wysłać pustej wiadomości" : "";
+    break;
+   default:
+    break;
+  }
+
+// Update state with errors
+  this.setState({ errors, [name]: value });
  };
 
  handleSubmit = e => {
   e.preventDefault();
-  this.validateField(e);
-  console.log("Form submitted");
+
+  const validateForm = (errors) => {
+    let valid = true;
+
+
+        Object.values(errors).forEach(
+      // if we have an error string set valid to false
+      (val) => val.length > 0 && (valid = false)
+    );
+    return valid;
+  }
+
+  if(validateForm(this.state.errors)) {
+    console.info('Valid Form')
+    console.log("Form submitted");
+  }else{
+    console.error('Invalid Form')
+    console.log("Form not submitted");
+  }
+
  };
 
  render() {
-  const { errorname, errorsurname, erroremail, errormessage } = this.state;
 
+    const { subject, name, surname, email, message } = this.state.errors
   return (
-    <form onSubmit={this.handleSubmit}>
-     <h2>
-      <span>S</span>ound <span>E</span>nglish
-     </h2>
-     <label>
-      {/* <p>Temat</p> */}
-      <select onChange={this.onChangeBehavior} type='text' name='subject'>
-       <option defaultValue value='empty'>
-        Wybierz temat
-       </option>
-       <option value='Zapytanie ogólne'>Mam pytanie ogólne</option>
-       <option value='Zapisy na zajęcia'>Chcę zapisać się na zajęcia</option>
-       <option value='Odwołanie zajęć'>Chcę odwołać zajęcia</option>
-       <option value='Copywriting'>Copywriting</option>
-       <option value='Studio'>Nagrania, wynajęcie studio</option>
-      </select>
-     </label>
-     <div name='name' className='error__msg' />
-     <label>
-      <p>Imię</p>
-      <input onChange={this.onChangeBehavior} type='text' name='name' />
-      {console.log(this.state.name, this.state.name.length)}
-     </label>
-     <div name='surname' className='error__msg' />
-     <label>
-      <p>Nazwisko</p>
-      <input onChange={this.onChangeBehavior} type='text' name='surname' />
-     </label>
-     <div name='email' className='error__msg' />
-     <label>
-      <p>E-mail</p>
-      <input onChange={this.onChangeBehavior} type='email' name='email' />
-     </label>
-     <div name='message' className='error__msg' />
-     <label>
-      <p>Twoja wiadomość</p>
-      <textarea onChange={this.onChangeBehavior} type='text' name='message' />
-     </label>
-     <button
-      className='btn__submit'
-      type='submit'
-      name='submit'
-      onClick={this.handleSubmit}
-     >
-      Wyślij wiadomość
-     </button>
-    </form>
+   <form onSubmit={this.handleSubmit}>
+    <h2>
+     <span>S</span>ound <span>E</span>nglish
+    </h2>
+    <div name='name' className='error__msg'>{subject}</div>
+    <label>
+     <select onChange={this.onChangeBehavior} type='text' name='subject'>
+      <option defaultValue value='empty'>
+       Wybierz temat
+      </option>
+      <option value='Zapytanie ogólne'>Mam pytanie ogólne</option>
+      <option value='Zapisy na zajęcia'>Chcę zapisać się na zajęcia</option>
+      <option value='Odwołanie zajęć'>Chcę odwołać zajęcia</option>
+      <option value='Copywriting'>Copywriting</option>
+      <option value='Studio'>Nagrania, wynajęcie studio</option>
+     </select>
+    </label>
+    <div name='name' className='error__msg'>{name}</div>
+    <label>
+     <p>Imię</p>
+     <input onChange={this.onChangeBehavior} type='text' name='name' />
+     {console.log(this.state.name, this.state.name.length)}
+    </label>
+    <div name='surname' className='error__msg'>{surname}</div>
+    <label>
+     <p>Nazwisko</p>
+     <input onChange={this.onChangeBehavior} type='text' name='surname' />
+    </label>
+    <div name='email' className='error__msg'>{email}</div>
+    <label>
+     <p>E-mail</p>
+     <input onChange={this.onChangeBehavior} type='email' name='email' />
+    </label>
+    <div name='message' className='error__msg'>{message}</div>
+    <label>
+     <p>Twoja wiadomość</p>
+     <textarea onChange={this.onChangeBehavior} type='text' name='message' />
+    </label>
+    <button
+     className='btn__submit'
+     type='submit'
+     name='submit'
+     onClick={this.handleSubmit}
+    >
+     Wyślij wiadomość
+    </button>
+   </form>
   );
  }
 }
