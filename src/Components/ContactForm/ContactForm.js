@@ -1,70 +1,30 @@
 import React from "react";
 import "./ContactForm.scss";
-import * as emailjs from "emailjs-com"
+import * as emailjs from "emailjs-com";
 import $ from "jquery";
 
 class ContactForm extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
-   recipient: "",
+   formSent: false,
    name: "",
    surname: "",
    email: "",
    subject: "",
    message: "",
    errors: {
-    subject: "Wybierz temat",
-    name: "",
-    surname: "",
-    email: "",
-    message: ""
+    errSubject: "Wybierz temat",
+    errName: "",
+    errSurname: "",
+    errEmail: "",
+    errMessage: ""
    }
   };
  }
 
- validateField = e => {
-  const subject = $(e.target.parent().find("input[name=subject]"));
-  const name = $(e.target.parent().find("input[name=name]"));
-  const surname = $(e.target.parent().find("input[name=surname]"));
-  const email = $(e.target.parent().find("input[name=email]"));
-  const message = $(e.target.parent().find("input[name=message]"));
-  const input = $(e.target.parent().find("input"));
-
-  const inputVal = input.value;
-  const inputName = input.name;
-
-  if (
-   subject.length ||
-   name.length ||
-   surname.length ||
-   email.length ||
-   message.length <= 1
-  ) {
-  }
-
-  if (inputVal === "") {
-   this.setState({
-    error: {
-     [inputName]: "To pole nie może być puste."
-    }
-   });
-  } else {
-   this.setState({
-    error: {
-     [inputName]: ""
-    }
-   });
-  }
-
-  const errorMsg = this.state.error[inputName];
-
-  const showError = $(".error__msg[name=" + inputName + "]");
-
-  showError.html(errorMsg);
-
-  console.log(this.state.error[inputName], showError);
- };
+//  componentDidMount(){
+//  };
 
  onChangeBehavior = e => {
   //   Grab input value
@@ -87,13 +47,6 @@ class ContactForm extends React.Component {
       .addClass("input__text--removed")
       .removeClass("input__text--added");
 
-  console.log(
-   name,
-   this.state[name].length,
-   this.state[name],
-   this.state.errors[name]
-  );
-
   //   Validate fields
   const { errors } = this.state;
   const validEmailRegex = RegExp(
@@ -102,21 +55,21 @@ class ContactForm extends React.Component {
 
   switch (name) {
    case "subject":
-    errors.subject = value === "empty" ? "Wybierz odpowiedni temat" : "";
+    errors.errSubject = value === "empty" ? "Wybierz odpowiedni temat" : "";
     break;
    case "name":
-    errors.name = value.length <= 1 ? "Wpisz poprawne imię" : "";
+    errors.errName = value.length <= 1 ? "Wpisz poprawne imię" : "";
     break;
    case "surname":
-    errors.surname = value.length <= 1 ? "Wpisz poprawne nazwisko" : "";
+    errors.errSurname = value.length <= 1 ? "Wpisz poprawne nazwisko" : "";
     break;
    case "email":
-    errors.email = validEmailRegex.test(value)
+    errors.errEmail = validEmailRegex.test(value)
      ? ""
      : "Wpisz poprawny adres email";
     break;
    case "message":
-    errors.message =
+    errors.errMessage =
      value.length <= 1 ? "Nie możesz wysłać pustej wiadomości" : "";
     break;
    default:
@@ -129,6 +82,7 @@ class ContactForm extends React.Component {
 
  handleSubmit = e => {
   e.preventDefault();
+const { formSent } = this.state;
 
   const validateForm = errors => {
    let valid = true;
@@ -140,55 +94,78 @@ class ContactForm extends React.Component {
   };
 
   if (validateForm(this.state.errors)) {
-
-    const {subject, name, surname, email, message } = this.state;
-
+   const { subject, name, surname, email, message } = this.state;
    console.info("Valid Form");
    console.log("Form submitted");
    
+   this.setState({
+    formSent: true
+   })
+
    let tmeplateParams = {
-    from_name: subject + " od: " + name + " " + surname + " (" + email + ") przez formularz www SE",
+    from_name:
+     subject +
+     " od: " +
+     name +
+     " " +
+     surname +
+     " (" +
+     email +
+     ") przez formularz www SE",
     to_name: "Tomek",
-    message_html: subject + ": " + message,
-    reply_to: name + " " + surname + " " + email 
-   }
+    message_html: subject + ":" + "<br>" + message,
+    reply_to: name + " " + surname + " " + email
+   };
 
-   emailjs.send('gmail', 'template_WQ1THUcS', tmeplateParams, 'user_Rq0gA8jCJQUMfSXZEnjuT')
-   .then(res => {
-    toString(res)
-    console.log("Success!", res.status, res.text)
-    // Wyskakujące okno o powodzeniu wysłania fomrmularza!
-   }, err => {
-       toString(err)
-       console.log(err)
-   })
-
-   this.setState ({
-    name: "",
-    surname: "",
-    email: "",
-    subject: "",
-    message: "",
-   })
-
+   emailjs
+    .send(
+     "gmail",
+     "template_WQ1THUcS",
+     tmeplateParams,
+     "user_Rq0gA8jCJQUMfSXZEnjuT"
+    )
+    .then(
+     res => {
+      toString(res);
+      console.log("Success!", res.status, res.text);
+      // Wyskakujące okno o powodzeniu wysłania fomrmularza!
+     },
+     err => {
+      toString(err);
+      console.log(err);
+     }
+    );
   } else {
    console.error("Invalid Form");
    console.log("Form not submitted");
   }
- };
+
+  if (formSent) {
+    setTimeout(() => {
+      this.setState({
+        subject: "Wybierz temat",
+        name: "",
+        surname: "",
+        email: "",
+        message: ""
+      })
+    }, 1000)}
+ 
+};
 
  render() {
-  const { subject, name, surname, email, message } = this.state.errors;
+  const { errSubject, errName, errSurname, errEmail, errMessage } = this.state.errors;
+  const  { subject, name, surname, email, message } = this.state;
   return (
-   <form onSubmit={this.handleSubmit} method="POST" action="../../form_handler.php">
+   <form onSubmit={this.handleSubmit}>
     <h2>
      <span>S</span>ound <span>E</span>nglish
     </h2>
     <div name='name' className='error__msg'>
-     {subject}
+     {errSubject}
     </div>
     <label>
-     <select onChange={this.onChangeBehavior} type='text' name='subject'>
+     <select onChange={this.onChangeBehavior} type='text' name='subject' value={subject}>
       <option defaultValue value='empty'>
        Wybierz temat
       </option>
@@ -200,33 +177,32 @@ class ContactForm extends React.Component {
      </select>
     </label>
     <div name='name' className='error__msg'>
-     {name}
+     {errName}
     </div>
     <label>
      <p>Imię</p>
-     <input onChange={this.onChangeBehavior} type='text' name='name' />
-     {console.log(this.state.name, this.state.name.length)}
+     <input onChange={this.onChangeBehavior} type='text' name='name' value={name} />
     </label>
     <div name='surname' className='error__msg'>
-     {surname}
+     {errSurname}
     </div>
     <label>
      <p>Nazwisko</p>
-     <input onChange={this.onChangeBehavior} type='text' name='surname' />
+     <input onChange={this.onChangeBehavior} type='text' name='surname' value={surname} />
     </label>
     <div name='email' className='error__msg'>
-     {email}
+     {errEmail}
     </div>
     <label>
      <p>E-mail</p>
-     <input onChange={this.onChangeBehavior} type='email' name='email' />
+     <input onChange={this.onChangeBehavior} type='email' name='email' value={email} />
     </label>
     <div name='message' className='error__msg'>
-     {message}
+     {errMessage}
     </div>
     <label className='textarea__label'>
      <p>Twoja wiadomość</p>
-     <textarea onChange={this.onChangeBehavior} type='text' name='message' />
+     <textarea onChange={this.onChangeBehavior} type='text' name='message' value={message} />
     </label>
     <button
      className='btn__submit'
@@ -236,6 +212,10 @@ class ContactForm extends React.Component {
     >
      Wyślij wiadomość
     </button>
+  <div className='success__msg'>
+    <h2>{ name },</h2>
+    <p>Wtój formularz został wysłany. Dziękuję za kontakt.</p>
+  </div>
    </form>
   );
  }
