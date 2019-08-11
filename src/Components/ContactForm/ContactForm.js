@@ -23,8 +23,8 @@ class ContactForm extends React.Component {
   };
  }
 
-//  componentDidMount(){
-//  };
+ //  componentDidMount(){
+ //  };
 
  onChangeBehavior = e => {
   //   Grab input value
@@ -82,7 +82,7 @@ class ContactForm extends React.Component {
 
  handleSubmit = e => {
   e.preventDefault();
-const { formSent } = this.state;
+  const { formSent } = this.state;
 
   const validateForm = errors => {
    let valid = true;
@@ -97,10 +97,6 @@ const { formSent } = this.state;
    const { subject, name, surname, email, message } = this.state;
    console.info("Valid Form");
    console.log("Form submitted");
-   
-   this.setState({
-    formSent: true
-   })
 
    let tmeplateParams = {
     from_name:
@@ -128,7 +124,21 @@ const { formSent } = this.state;
      res => {
       toString(res);
       console.log("Success!", res.status, res.text);
-      // Wyskakujące okno o powodzeniu wysłania fomrmularza!
+
+      this.setState({
+       formSent: true
+      });
+
+      setTimeout(() => {
+       this.setState({
+        subject: "Wybierz temat",
+        name: "",
+        surname: "",
+        email: "",
+        message: "",
+        formSent: false
+       });
+      }, 6000);
      },
      err => {
       toString(err);
@@ -138,24 +148,31 @@ const { formSent } = this.state;
   } else {
    console.error("Invalid Form");
    console.log("Form not submitted");
+   this.setState({
+    formSent: "error"
+   });
+   setTimeout(() => {
+    this.setState({
+     subject: "Wybierz temat",
+     name: "",
+     surname: "",
+     email: "",
+     message: "",
+     formSent: false
+    });
+   }, 6000);
   }
-
-  if (formSent) {
-    setTimeout(() => {
-      this.setState({
-        subject: "Wybierz temat",
-        name: "",
-        surname: "",
-        email: "",
-        message: ""
-      })
-    }, 1000)}
- 
-};
+ };
 
  render() {
-  const { errSubject, errName, errSurname, errEmail, errMessage } = this.state.errors;
-  const  { subject, name, surname, email, message } = this.state;
+  const {
+   errSubject,
+   errName,
+   errSurname,
+   errEmail,
+   errMessage
+  } = this.state.errors;
+  const { subject, name, surname, email, message } = this.state;
   return (
    <form onSubmit={this.handleSubmit}>
     <h2>
@@ -165,7 +182,12 @@ const { formSent } = this.state;
      {errSubject}
     </div>
     <label>
-     <select onChange={this.onChangeBehavior} type='text' name='subject' value={subject}>
+     <select
+      onChange={this.onChangeBehavior}
+      type='text'
+      name='subject'
+      value={subject}
+     >
       <option defaultValue value='empty'>
        Wybierz temat
       </option>
@@ -181,28 +203,48 @@ const { formSent } = this.state;
     </div>
     <label>
      <p>Imię</p>
-     <input onChange={this.onChangeBehavior} type='text' name='name' value={name} />
+     <input
+      onChange={this.onChangeBehavior}
+      type='text'
+      name='name'
+      value={name}
+     />
     </label>
     <div name='surname' className='error__msg'>
      {errSurname}
     </div>
     <label>
      <p>Nazwisko</p>
-     <input onChange={this.onChangeBehavior} type='text' name='surname' value={surname} />
+     <input
+      onChange={this.onChangeBehavior}
+      type='text'
+      name='surname'
+      value={surname}
+     />
     </label>
     <div name='email' className='error__msg'>
      {errEmail}
     </div>
     <label>
      <p>E-mail</p>
-     <input onChange={this.onChangeBehavior} type='email' name='email' value={email} />
+     <input
+      onChange={this.onChangeBehavior}
+      type='email'
+      name='email'
+      value={email}
+     />
     </label>
     <div name='message' className='error__msg'>
      {errMessage}
     </div>
     <label className='textarea__label'>
      <p>Twoja wiadomość</p>
-     <textarea onChange={this.onChangeBehavior} type='text' name='message' value={message} />
+     <textarea
+      onChange={this.onChangeBehavior}
+      type='text'
+      name='message'
+      value={message}
+     />
     </label>
     <button
      className='btn__submit'
@@ -212,10 +254,32 @@ const { formSent } = this.state;
     >
      Wyślij wiadomość
     </button>
-  <div className='success__msg'>
-    <h2>{ name },</h2>
-    <p>Wtój formularz został wysłany. Dziękuję za kontakt.</p>
-  </div>
+
+    {this.state.formSent ? (
+     <div className='success__msg'>
+      <h2>{name},</h2>
+      <p>Najprawdopodobniej właśnie dostałem od Ciebie wiadomość. Dziękuję za kontakt. Zwykle odpowiadam w przeciągu kilku godzin, więc do usłyszenia.</p>
+      <p>Pozdrawiam</p>
+      <p>Bartłomiej Piwowarczyk</p>
+     </div>
+    ) : (
+     ""
+    )}
+
+    {this.state.formSent === "error" ? (
+     <div className='success__msg'>
+      <h2>{name},</h2>
+      <p>
+       z powodu jakiegoś błędu nie udało się wysłać formularza. Skontaktuj się
+       ze mną telefonicznie, lub pod adresem email: soundenglish@gmail.com.
+      </p>
+      <p>Przepraszam Cię za utrudnienia.</p>
+      <p>Pozdrawiam</p>
+      <p>Bartłomiej Piwowarczyk</p>
+     </div>
+    ) : (
+     ""
+    )}
    </form>
   );
  }

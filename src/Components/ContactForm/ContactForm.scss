@@ -11,8 +11,8 @@ form {
  border-radius: 5px;
  @include boxShadow($color2);
 
- @media all and (min-width: $BreakpointDesktop) { 
-     width: 80%;
+ @media all and (min-width: $BreakpointDesktop) {
+  width: 80%;
  }
 
  label {
@@ -65,7 +65,7 @@ form {
   textarea {
    padding: 20px 10px 10px 10px;
    resize: none;
-height: inherit;
+   height: inherit;
   }
 
   &:active,
@@ -90,14 +90,14 @@ height: inherit;
  }
 
  .textarea__label {
-     height: 100px;
-    .input__text--added {
-        opacity: 0;
-       }
+  height: 100px;
+  .input__text--added {
+   opacity: 0;
   }
+ }
 
  .error__msg {
-     color: $color5;
+  color: $color5;
  }
 
  .btn__submit {
@@ -115,9 +115,25 @@ height: inherit;
  }
 
  .success__msg {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 85%;
+  width: 95%;
+  padding: 20px;
+  background: fade-out($color1, 0);
+  @include boxShadow($color2);
+  border-radius: 5px;
+  z-index: 6;
 
-    position: fixed;
-    
-
+  @media all and (min-width: $BreakpointDesktop) {
+   align-items: center;
+   height: 80%;
+   width: 70%;
+   left: calc(50% - 35%);
+   top: calc(50% - 35%);
+  }
  }
 }
