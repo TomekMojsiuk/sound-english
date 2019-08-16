@@ -23,9 +23,6 @@ class ContactForm extends React.Component {
   };
  }
 
- //  componentDidMount(){
- //  };
-
  onChangeBehavior = e => {
   //   Grab input value
   const input = e.target;
@@ -138,7 +135,7 @@ class ContactForm extends React.Component {
         message: "",
         formSent: false
        });
-      }, 6000);
+      }, 9000);
      },
      err => {
       toString(err);
@@ -160,7 +157,7 @@ class ContactForm extends React.Component {
      message: "",
      formSent: false
     });
-   }, 6000);
+   }, 9000);
   }
  };
 
@@ -257,10 +254,19 @@ class ContactForm extends React.Component {
 
     {this.state.formSent ? (
      <div className='success__msg'>
-      <h2>{name},</h2>
-      <p>Najprawdopodobniej właśnie dostałem od Ciebie wiadomość. Dziękuję za kontakt. Zwykle odpowiadam w przeciągu kilku godzin, więc do usłyszenia.</p>
-      <p>Pozdrawiam</p>
-      <p>Bartłomiej Piwowarczyk</p>
+      <div className='success__msg__content'>
+       <h2>{name},</h2>
+       <p>
+        Dziękuję za kontakt. Najprawdopodobniej właśnie dostałem od Ciebie
+        wiadomość. Zwykle odpowiadam w przeciągu kilku godzin, więc do
+        usłyszenia.
+       </p>
+       <div className="signature">
+       <p>Pozdrawiam</p>
+       <p>Bartłomiej Piwowarczyk</p>
+       <p><span>S</span>ound <span>E</span>nglish School</p>
+       </div>
+      </div>
      </div>
     ) : (
      ""
@@ -268,14 +274,19 @@ class ContactForm extends React.Component {
 
     {this.state.formSent === "error" ? (
      <div className='success__msg'>
-      <h2>{name},</h2>
-      <p>
-       z powodu jakiegoś błędu nie udało się wysłać formularza. Skontaktuj się
-       ze mną telefonicznie, lub pod adresem email: soundenglish@gmail.com.
-      </p>
-      <p>Przepraszam Cię za utrudnienia.</p>
-      <p>Pozdrawiam</p>
-      <p>Bartłomiej Piwowarczyk</p>
+      <div className='success__msg__content'>
+       <h2>{name},</h2>
+       <p>
+        z powodu jakiegoś błędu nie udało się wysłać formularza. Skontaktuj się
+        ze mną telefonicznie, lub pod adresem email: soundenglish@gmail.com.
+       </p>
+       <p>Przepraszam Cię za utrudnienia.</p>
+       <div className="signature">
+       <p>Pozdrawiam</p>
+       <p>Bartłomiej Piwowarczyk</p>
+       <p><span>S</span>ound <span>E</span>nglish School</p>
+       </div>
+      </div>
      </div>
     ) : (
      ""

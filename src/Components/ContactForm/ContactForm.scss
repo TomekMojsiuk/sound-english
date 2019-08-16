@@ -2,6 +2,7 @@
 // Form styles
 
 form {
+    position: relative;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -130,10 +131,27 @@ form {
 
   @media all and (min-width: $BreakpointDesktop) {
    align-items: center;
-   height: 80%;
-   width: 70%;
-   left: calc(50% - 35%);
-   top: calc(50% - 35%);
+   justify-content: center;
+   height: 95%;
+   width:95%;
+  }
+
+  .success__msg__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%; 
+    @media all and (min-width: $BreakpointDesktop) {
+        width: 80%;
+    }
+  }
+  
+  .signature {
+      margin-top: 20px;
+      p {
+          margin:2px 0;
+      }
   }
  }
 }
