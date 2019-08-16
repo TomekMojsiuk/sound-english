@@ -43,7 +43,7 @@ class Copywriting extends React.Component {
       dzisiejszych czasach nie trzeba już chyba mówić, że dbałość o jakość
       tekstu, który prezentujemy, mówi bardzo wiele o nas jako autorze,
       kontrahencie, czy partnerze biznesowym. Dzisiaj bezbłędny językowo i
-      merytorycznie tekst to już nie rzadkość, a wymagay standard.
+      merytorycznie tekst to już nie rzadkość, a wymagany standard.
      </p>
 
      <p>

@@ -80,7 +80,7 @@ const { youtubeLink } = this.props
      </p>
 
      <h2>
-      <span>C</span>o jeszcze o mnie?
+      <span>A</span>ktywna działalność muzyczna
      </h2>
      <p>
       Od lat jestem aktywny scenicznie – działający w latach 2006 – 2011 zespół{" "}
