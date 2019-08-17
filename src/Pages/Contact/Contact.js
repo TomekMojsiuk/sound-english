@@ -29,8 +29,8 @@ class Contact extends React.Component {
     {componentDidMount ? "" : <Loader />}
     <div className="flag--addon"></div>
   <div className='contact__info'>
-   <h1 className='title'>
-    <span>{"B"}</span>{"artłomiej"} <span>{"P"}</span>{"iwowarczyk"}</h1>
+   {/* <h1 className='title'>
+    <span>{"B"}</span>{"artłomiej"} <span>{"P"}</span>{"iwowarczyk"}</h1> */}
    
    <div className='contact__info--item'>
     <div className='icon mobile' />
@@ -46,9 +46,8 @@ class Contact extends React.Component {
     <div className='icon home' />
     <div className='contact__info--item--details'>
        <h2>{'Siedziba szkoły'}</h2>
-       <p>{'ul. Kościuszki 20'}</p> 
+       <p>{'ul. Marii Skłodowskiej Curie 9a'}</p> 
        <p>{'83-400 Kościerzyna'}</p>
-       <p>{'(I piętro budynku LET, wejście od frontu, bocznymi schodami)'}</p>
        <div className="underline"></div>
        <h2>{'Adres korespondencyjny'}</h2>
        <p>{'Centrum Językowo – Muzyczne „SOUND ENGLISH”'}</p> 

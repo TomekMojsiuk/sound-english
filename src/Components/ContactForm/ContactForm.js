@@ -175,6 +175,7 @@ class ContactForm extends React.Component {
     <h2>
      <span>S</span>ound <span>E</span>nglish
     </h2>
+    <p>Masz pytanie? Napisz do nas</p>
     <div name='name' className='error__msg'>
      {errSubject}
     </div>
