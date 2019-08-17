@@ -42,9 +42,11 @@ componentWillUnmount() {
      {componentDidMount ? "" : <Loader />}
      {this.setFooterStyle(this.state.footerMargin)}
      <div className='flag' />
-     <div className='logo' />
+     <div className='logo desktop__hidden' />
      <div className='main__content'>
       <div className='banner'>
+      <div className='logo' />
+      <div className="banner__content">
        <h1 className='title'>
         <span>{"C"}</span>
         {"entrum "}
@@ -54,7 +56,7 @@ componentWillUnmount() {
        </h1>
        <ul className='services__list'>
         <li className='services__list__item'>
-         {"Korepetycje"}
+         {"Kursy językowe na wszystkich poziomach"}
          <div className='underline' />
         </li>
         <li className='services__list__item'>
@@ -69,6 +71,7 @@ componentWillUnmount() {
        <MyLink exact to='/oferta'>
         Oferta i cennik
        </MyLink>
+      </div>
       </div>
      </div>
     </div>)

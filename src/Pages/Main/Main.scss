@@ -15,9 +15,15 @@
   background-size: contain;
   background-repeat: no-repeat;
   align-self: center;
-  height: 70vh;
-  width: 25vw;
+  height: 400px;
+  width: 245px;
   background-position: center;
+ }
+}
+
+.desktop__hidden {
+ @media all and (min-width: $BreakpointDesktop) {
+  display: none;
  }
 }
 
@@ -33,21 +39,38 @@
   display: none;
   @media all and (min-width: $BreakpointDesktop) {
    display: flex;
-   flex-direction: column;
-   justify-content: center;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
    border-radius: 10px;
    margin: 0 auto;
-   background: fade-out($color2, 0.2);
-   width: 70%;
-   padding: 20px;
+   //    background: fade-out($color2, 0.2);
+   //    background: fade-out($color1, 0);
+   background: white;
+   width: 100%;
+   padding: 50px 20px;
   }
+
+  .banner__content {
+      display: flex;
+      flex-direction: column;
+    align-items: flex-start;
+    }
 
   .nav__item {
    font-size: 1.2rem;
-   align-self: center;
-   justify-self: flex-end;
-   width: 150px;
+   color: $color2;
+   align-self: flex-end;
+   width: 100px;
+
+   &:hover {
+       border-top-left-radius: 5px;
+       border-top-right-radius: 5px;
+       color: $color1;
+       background: fade-out($color2, .2);
+   }
   }
+
  }
 
  .services__list {
@@ -55,10 +78,9 @@
   @media all and (min-width: $BreakpointDesktop) {
    display: initial;
    list-style: none;
-   margin-left: 30px;
    .services__list__item {
     font-size: 1.7rem;
-    color: $color1;
+    color: $color2;
     margin: 15px 0 0 0;
 
     .underline {
@@ -72,25 +94,9 @@
  }
 
  .title {
-  position: fixed;
-  background: $color2;
-  color: #ededee;
-  padding: 5px 20px;
-  top: 214px;
-  right: -226px;
-  transform: rotate(90deg);
-  @media all and (min-width: $BreakpointDesktop) {
-   margin: 0 0 20px 0;
-   position: initial;
-   width: 100%;
-   text-align: center;
-   background: none;
-   color: #ededee;
-   padding: 5px 20px;
-   top: unset;
-   right: unset;
-   transform: rotate(0);
-  }
+     font-size: 2.5rem;
+    color: $color2;
+    margin: 10px 0;
  }
 
  .flag {
