@@ -17,7 +17,6 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  width: 100vw;
   padding: 10px;
   z-index: 20;
 
@@ -56,7 +55,6 @@
 
    @media all and (min-width: $BreakpointDesktop) {
     font-size: 3rem;
-    //    text-align: unset;
    }
   }
 
