@@ -129,7 +129,9 @@
 }
 
 //Nav item within a paragraph
-p > .nav__item {
+p > .nav__item,
+p > a,
+li > a {
   display: initial;
   width: 165px;
   height: 1.6rem;

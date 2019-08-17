@@ -16,6 +16,8 @@ import AboutMe from "./Pages/AboutMe/AboutMe";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
 import ArrowUp from "./Components/Buttons/ArrowUp/ArrowUp";
+import Cookies from "./Pages/Cookies/Cookies";
+import Rodo from "./Pages/Rodo/Rodo";
 
 class App extends React.Component {
  constructor(props) {
@@ -120,6 +122,16 @@ class App extends React.Component {
        path='/o-mnie'
        render={() => <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />}
       />
+      <Route
+       exact
+       path='/cookies'
+       render={() => <Cookies scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       exact
+       path='/rodo'
+       render={() => <Rodo scrollToTop={this.handleGoToTop} />}
+      />
       {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
      </Switch>
@@ -133,11 +145,11 @@ class App extends React.Component {
       path='/facebook'
       component={() => (window.location.href = this.state.facebook)}
      />
-     {/* <Route
+     <Route
       exact
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
-     /> */}
+     />
      <ArrowUp onClick={this.handlescrollToTop} />
      <Footer
       facebook={facebook}
