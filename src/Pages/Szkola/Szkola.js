@@ -33,7 +33,7 @@ class Szkola extends React.Component {
   let color1 = `rgba(237, 237, 238, ${opacity})`;
   let color2 = `rgba(62, 72, 128, ${opacity})`;
   // let color3 = `rgba(59, 186, 232, ${opacity})`;
-  // let color4 = `rgba(78, 204, 245, ${opacity})`;
+  let color4 = `rgba(78, 204, 245, ${opacity})`;
   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
   return(<div id={'szkola'} className='content__wrapper'>
@@ -114,37 +114,37 @@ class Szkola extends React.Component {
      side1Text={<p><span>K</span>omfort pracy</p>}
      side2Text={<p><span>K</span>omfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego</p>}/>
      
-     <TileRotateContent bgColor={color5} 
+     <TileRotateContent bgColor={color4} 
      side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
      side2Text={<p><span>R</span>ejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki</p>}
      />
      
-     <TileRotateContent bgColor={color1} 
+     <TileRotateContent bgColor={color5} 
      side1Text={<p><span>U</span>czysz się słuchając</p>}
      side2Text={<p><span>N</span>auczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych</p>}
      />
      
-     <TileRotateContent bgColor={color2} 
+     <TileRotateContent bgColor={color1} 
      side1Text={<p><span>Z</span>acznij tworzyć</p>}
      side2Text={<p><span>N</span>auka kreatywnego zastosowania wiedzy językowo – muzycznej</p>}
      />
      
-     <TileRotateContent bgColor={color5} 
+     <TileRotateContent bgColor={color2} 
      side1Text={<p><span>P</span>racuj w studio i dziel się pasją z innymi</p>}
      side2Text={<p><span>S</span>tudyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów</p>}
      />
      
-     <TileRotateContent bgColor={color1} 
+     <TileRotateContent bgColor={color4} 
      side1Text={<p><span>N</span>aucz się tlumaczyć teksty</p>}
      side2Text={<p><span>P</span>odstawowe techniki tłumaczenia ustnego</p>}
      />
      
-     <TileRotateContent bgColor={color2} 
+     <TileRotateContent bgColor={color5} 
      side1Text={<p><span>P</span>łać tak jak lubisz</p>}
      side2Text={<p><span>D</span>owolny system płatności: kwartalny, semestralny albo po każdej lekcji</p>}
      />
      
-     <TileRotateContent bgColor={color5} 
+     <TileRotateContent bgColor={color1} 
      side1Text={<p><span>L</span>iczba spotkań ustalana indywidualnie</p>}
      side2Text={<p><span>C</span>zęstotliwość zajęć w tygodniu dostosowana do potrzeb klienta</p>}
      />
