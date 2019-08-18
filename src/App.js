@@ -191,7 +191,7 @@ class App extends React.Component {
       }}
       cookieExpiration={{
        years: 0,
-       days: 7,
+       days: 1,
        hours: 0
       }}
       dismissOnScroll={false}
