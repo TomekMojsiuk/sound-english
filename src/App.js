@@ -19,6 +19,10 @@ import ArrowUp from "./Components/Buttons/ArrowUp/ArrowUp";
 import Cookies from "./Pages/Cookies/Cookies";
 import Rodo from "./Pages/Rodo/Rodo";
 
+import CookieBanner from "react-cookie-banner";
+import { get } from "https";
+import MyLink from "./Components/Nav/NavLink/NavLink";
+
 class App extends React.Component {
  constructor(props) {
   super(props);
@@ -80,19 +84,21 @@ class App extends React.Component {
  };
 
  handleGoToTop = () => {
-    $("body, html").animate(
-     {
-      scrollTop: $(".content__wrapper").offset().top - 100
-     },
-     0
-    );
-   };
+  $("body, html").animate(
+   {
+    scrollTop: $(".content__wrapper").offset().top - 100
+   },
+   0
+  );
+ };
 
  componentDidMount = () => {
   const arrow = $(".arrow__up--box");
   arrow.hide();
   $(window).on("scroll", this.handlaNavbarToggle);
   $(window).on("scroll", this.handleArrowBehavior);
+
+  this.handlescrollToTop();
  };
 
  componentWillUnmount = () => {
@@ -111,19 +117,38 @@ class App extends React.Component {
       handleNavItemClick={this.handleNavItemClick}
      />
      <Switch>
-      <Route exact path='/' render={() => <Main scrollToTop={this.handleGoToTop} />} />
-      <Route path='/o-szkole' render={() => <Szkola scrollToTop={this.handleGoToTop} />} />
-      <Route  path='/kontakt' render={() => <Contact scrollToTop={this.handleGoToTop} />} />
-      <Route  path='/oferta' render={() => <OfertaCennik scrollToTop={this.handleGoToTop} />} />
-      <Route  path='/ministudio' render={() => <Ministudio scrollToTop={this.handleGoToTop} />} />
-      <Route  path='/copywriting' render={() => <Copywriting scrollToTop={this.handleGoToTop} />} />
       <Route
-       
-       path='/o-mnie'
-       render={() => <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />}
+       exact
+       path='/'
+       render={() => <Main scrollToTop={this.handleGoToTop} />}
       />
       <Route
-       
+       path='/o-szkole'
+       render={() => <Szkola scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       path='/kontakt'
+       render={() => <Contact scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       path='/oferta'
+       render={() => <OfertaCennik scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       path='/ministudio'
+       render={() => <Ministudio scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       path='/copywriting'
+       render={() => <Copywriting scrollToTop={this.handleGoToTop} />}
+      />
+      <Route
+       path='/o-mnie'
+       render={() => (
+        <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />
+       )}
+      />
+      <Route
        path='/cookies'
        render={() => <Cookies scrollToTop={this.handleGoToTop} />}
       />
@@ -135,7 +160,7 @@ class App extends React.Component {
       {/* <Route path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
      </Switch>
-     
+
      <Route
       path='/youtube'
       render={() => (window.location.href = this.state.youtube)}
@@ -153,6 +178,26 @@ class App extends React.Component {
       facebook={facebook}
       youtube={youtube}
       tomekMojsiuk={tomekMojsiuk}
+     />
+
+     {/* === Cookie banner === */}
+     <CookieBanner
+      className={"cookie__banner"}
+      styles={{
+       banner: {
+        backgroundColor: "rgba(60, 60, 60, 0.8)"
+       },
+       message: { fontWeight: 400 }
+      }}
+      cookieExpiration={{
+       years: 0,
+       days: 7,
+       hours: 0
+      }}
+      dismissOnScroll={false}
+      message='Ta strona wykorzystuje cookies'
+      link={<a href='/cookies'>Polityka Cookies</a>}
+      buttonMessage='Zgoda'
      />
     </BrowserRouter>
    </div>

@@ -28,7 +28,7 @@ class OfertaCennik extends React.Component {
   const { componentDidMount } = this.state;
 
   let opacity = ".2";
-  let color1 = `rgba(237, 237, 238, ${opacity})`;
+  // let color1 = `rgba(237, 237, 238, ${opacity})`;
   let color2 = `rgba(62, 72, 128, ${opacity})`;
 //   let color3 = `rgba(59, 186, 232, ${opacity})`;
 //   let color4 = `rgba(78, 204, 245, ${opacity})`;

@@ -79,7 +79,6 @@ class ContactForm extends React.Component {
 
  handleSubmit = e => {
   e.preventDefault();
-  const { formSent } = this.state;
 
   const validateForm = errors => {
    let valid = true;

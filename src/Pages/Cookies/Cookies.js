@@ -185,7 +185,7 @@ class Cookies extends React.Component {
       <li>
        Informacje o sposobie wyłączenia plików Cookie w najpopularniejszych
        przeglądarkach komputerowych i urządzeń mobilnych znajdują się{" "}
-       <a target='_blank' href='https://www.wikihow.com/Disable-Cookies'>
+       <a target='_blank' rel="noopener noreferrer" href='https://www.wikihow.com/Disable-Cookies'>
         tutaj
        </a>
       </li>
