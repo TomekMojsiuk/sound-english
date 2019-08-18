@@ -2,7 +2,7 @@
 
 .logo {
  background: url("../../assets/img/logo.png");
- background-color: fade-out($color1, .3);
+ background-color: fade-out($color1, 0.3);
  background-size: 60%;
  background-repeat: no-repeat;
  background-position: center;
@@ -48,33 +48,30 @@
    align-items: center;
    border-radius: 10px;
    margin: 0 auto;
-   //    background: fade-out($color2, 0.2);
-   //    background: fade-out($color1, 0);
    background: $color0;
    width: 100%;
    padding: 50px 20px;
   }
 
   .banner__content {
-      display: flex;
-      flex-direction: column;
-    align-items: flex-start;
-    }
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+  }
 
   .nav__item {
    font-size: 1.2rem;
    color: $color2;
    align-self: flex-end;
+   margin: unset;
+   padding: 6px;
    width: 100px;
 
    &:hover {
-       border-top-left-radius: 5px;
-       border-top-right-radius: 5px;
-       color: $color1;
-       background: fade-out($color2, .2);
+    color: $color1;
+    background: fade-out($color2, 0.2);
    }
   }
-
  }
 
  .services__list {
@@ -98,9 +95,9 @@
  }
 
  .title {
-     font-size: 1.7rem;
-    color: $color2;
-    margin: 10px 0;
+  font-size: 1.7rem;
+  color: $color2;
+  margin: 10px 0;
  }
 
  .flag {

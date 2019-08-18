@@ -20,8 +20,6 @@ import Cookies from "./Pages/Cookies/Cookies";
 import Rodo from "./Pages/Rodo/Rodo";
 
 import CookieBanner from "react-cookie-banner";
-import { get } from "https";
-import MyLink from "./Components/Nav/NavLink/NavLink";
 
 class App extends React.Component {
  constructor(props) {
