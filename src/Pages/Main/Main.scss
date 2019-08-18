@@ -2,21 +2,25 @@
 
 .logo {
  background: url("../../assets/img/logo.png");
- background-size: 90%;
+ background-color: fade-out($color1, .3);
+ background-size: 60%;
  background-repeat: no-repeat;
  background-position: center;
- background-size: contain;
- align-self: center;
- height: 90vh;
- width: 90vw;
+ margin-top: calc(50% - 5vh);
+ height: 384px;
+ width: 325px;
+ border-radius: 10px;
 
  @media all and (min-width: $BreakpointDesktop) {
   background: url("../../assets/img/logo.png");
-  background-size: contain;
+  background-color: unset;
+  margin-top: unset;
+  background-size: 80%;
   background-repeat: no-repeat;
   align-self: center;
-  height: 400px;
-  width: 245px;
+  height: 350px;
+  width: 200px;
+
   background-position: center;
  }
 }
@@ -79,7 +83,7 @@
    display: initial;
    list-style: none;
    .services__list__item {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: $color2;
     margin: 15px 0 0 0;
 
@@ -94,7 +98,7 @@
  }
 
  .title {
-     font-size: 2.5rem;
+     font-size: 1.7rem;
     color: $color2;
     margin: 10px 0;
  }
