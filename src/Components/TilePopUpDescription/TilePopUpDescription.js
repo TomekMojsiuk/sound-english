@@ -16,8 +16,6 @@ class TilePopUpDescription extends React.Component {
   this.setState(prevState => ({
    showPopup: !prevState.showPopup
   }));
-
-  console.log(this.state.showPopup);
  };
 
  handleExitPopup = () => {

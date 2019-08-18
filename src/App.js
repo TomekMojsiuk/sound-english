@@ -112,18 +112,18 @@ class App extends React.Component {
      />
      <Switch>
       <Route exact path='/' render={() => <Main scrollToTop={this.handleGoToTop} />} />
-      <Route exact path='/o-szkole' render={() => <Szkola scrollToTop={this.handleGoToTop} />} />
-      <Route exact path='/kontakt' render={() => <Contact scrollToTop={this.handleGoToTop} />} />
-      <Route exact path='/oferta' render={() => <OfertaCennik scrollToTop={this.handleGoToTop} />} />
-      <Route exact path='/ministudio' render={() => <Ministudio scrollToTop={this.handleGoToTop} />} />
-      <Route exact path='/copywriting' render={() => <Copywriting scrollToTop={this.handleGoToTop} />} />
+      <Route path='/o-szkole' render={() => <Szkola scrollToTop={this.handleGoToTop} />} />
+      <Route  path='/kontakt' render={() => <Contact scrollToTop={this.handleGoToTop} />} />
+      <Route  path='/oferta' render={() => <OfertaCennik scrollToTop={this.handleGoToTop} />} />
+      <Route  path='/ministudio' render={() => <Ministudio scrollToTop={this.handleGoToTop} />} />
+      <Route  path='/copywriting' render={() => <Copywriting scrollToTop={this.handleGoToTop} />} />
       <Route
-       exact
+       
        path='/o-mnie'
        render={() => <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />}
       />
       <Route
-       exact
+       
        path='/cookies'
        render={() => <Cookies scrollToTop={this.handleGoToTop} />}
       />
@@ -132,21 +132,19 @@ class App extends React.Component {
        path='/rodo'
        render={() => <Rodo scrollToTop={this.handleGoToTop} />}
       />
-      {/* <Route exact path='/portfolio-dziennikarskie' render={() => ""} /> */}
+      {/* <Route path='/portfolio-dziennikarskie' render={() => ""} /> */}
       <Route component={NotFound} />
      </Switch>
+     
      <Route
-      exact
       path='/youtube'
       render={() => (window.location.href = this.state.youtube)}
      />
      <Route
-      exact
       path='/facebook'
       component={() => (window.location.href = this.state.facebook)}
      />
      <Route
-      exact
       path='/tomek-mojsiuk'
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      />

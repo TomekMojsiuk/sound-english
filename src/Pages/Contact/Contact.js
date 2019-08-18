@@ -13,6 +13,10 @@ class Contact extends React.Component {
       }
    }
 
+   componentWillMount() {
+      
+   }
+
    componentDidMount() {
       setTimeout(() => {
          this.setState(prevState => ({
