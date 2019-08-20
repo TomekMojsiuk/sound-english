@@ -11,6 +11,7 @@ class ContactForm extends React.Component {
    name: "",
    surname: "",
    email: "",
+   phoneNumber: "",
    subject: "",
    message: "",
    errors: {
@@ -18,6 +19,7 @@ class ContactForm extends React.Component {
     errName: "",
     errSurname: "",
     errEmail: "",
+    errPhoneNumber: "",
     errMessage: ""
    }
   };
@@ -65,6 +67,14 @@ class ContactForm extends React.Component {
      ? ""
      : "Wpisz poprawny adres email";
     break;
+    case "phoneNumber":
+      errors.errPhoneNumber = value.length === 0 
+     ? null 
+     : errors.errPhoneNumber = isNaN(value) || value.length < 9 || value.length > 9
+     ? "Wpisz poprawny numer"
+     : null
+
+     break;
    case "message":
     errors.errMessage =
      value.length <= 1 ? "Nie możesz wysłać pustej wiadomości" : "";
@@ -104,17 +114,17 @@ class ContactForm extends React.Component {
      " (" +
      email +
      ") przez formularz www SE",
-    to_name: "Tomek",
+    to_name: "Bartek",
     message_html: subject + ":" + "<br>" + message,
-    reply_to: name + " " + surname + " " + email
+    reply_to: name + " " + surname + "<br>" + email + "<br>" phoneNumber
    };
 
    emailjs
     .send(
      "gmail",
-     "template_WQ1THUcS",
+     "template_quJaKsaU",
      tmeplateParams,
-     "user_Rq0gA8jCJQUMfSXZEnjuT"
+     "user_2vc8gy0BAJr6Mjy0ZkG7D"
     )
     .then(
      res => {
@@ -131,6 +141,7 @@ class ContactForm extends React.Component {
         name: "",
         surname: "",
         email: "",
+        phoneNumber: "",
         message: "",
         formSent: false
        });
@@ -153,6 +164,7 @@ class ContactForm extends React.Component {
      name: "",
      surname: "",
      email: "",
+     phoneNumber: "",
      message: "",
      formSent: false
     });
@@ -166,9 +178,10 @@ class ContactForm extends React.Component {
    errName,
    errSurname,
    errEmail,
+   errPhoneNumber,
    errMessage
   } = this.state.errors;
-  const { subject, name, surname, email, message } = this.state;
+  const { subject, name, surname, email, phoneNumber, message } = this.state;
   return (
    <form onSubmit={this.handleSubmit}>
     <h2>
@@ -231,6 +244,18 @@ class ContactForm extends React.Component {
       value={email}
      />
     </label>
+    <div name='email' className='error__msg'>
+     {errPhoneNumber}
+    </div>
+    <label>
+     <p>Numer telefonu</p>
+     <input
+      onChange={this.onChangeBehavior}
+      type='text'
+      name='phoneNumber'
+      value={phoneNumber}
+     />
+    </label>
     <div name='message' className='error__msg'>
      {errMessage}
     </div>
@@ -261,10 +286,12 @@ class ContactForm extends React.Component {
         wiadomość. Zwykle odpowiadam w przeciągu kilku godzin, więc do
         usłyszenia.
        </p>
-       <div className="signature">
-       <p>Pozdrawiam</p>
-       <p>Bartłomiej Piwowarczyk</p>
-       <p><span>S</span>ound <span>E</span>nglish School</p>
+       <div className='signature'>
+        <p>Pozdrawiam</p>
+        <p>Bartłomiej Piwowarczyk</p>
+        <p>
+         <span>S</span>ound <span>E</span>nglish School
+        </p>
        </div>
       </div>
      </div>
@@ -275,16 +302,18 @@ class ContactForm extends React.Component {
     {this.state.formSent === "error" ? (
      <div className='success__msg'>
       <div className='success__msg__content'>
-       <h2>{name},</h2>
+       <h2>Ups...</h2>
        <p>
-        z powodu jakiegoś błędu nie udało się wysłać formularza. Skontaktuj się
-        ze mną telefonicznie, lub pod adresem email: soundenglish@gmail.com.
+        Wystąpił błąd i nie udało się wysłać formularza. Skontaktuj się
+        ze mną telefonicznie, lub pod adresem email: soundenglishschool@gmail.com.
        </p>
        <p>Przepraszam Cię za utrudnienia.</p>
-       <div className="signature">
-       <p>Pozdrawiam</p>
-       <p>Bartłomiej Piwowarczyk</p>
-       <p><span>S</span>ound <span>E</span>nglish School</p>
+       <div className='signature'>
+        <p>Pozdrawiam</p>
+        <p>Bartłomiej Piwowarczyk</p>
+        <p>
+         <span>S</span>ound <span>E</span>nglish School
+        </p>
        </div>
       </div>
      </div>
