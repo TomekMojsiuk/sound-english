@@ -4,7 +4,7 @@ import "./OfertaCennik.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import TilePopUpDescription from "../../Components/TilePopUpDescription/TilePopUpDescription";
-
+import MyLink from "../../Components/Nav/NavLink/NavLink";
 class OfertaCennik extends React.Component {
  constructor(props) {
   super(props);
@@ -327,12 +327,12 @@ class OfertaCennik extends React.Component {
       <div className={"left"}>
        <h2>
         <span className='initial'>Z</span>ajęcia indywidualne{" "}
-        <span className={"asterisk"}>&#42;</span>
+        {/* <span className={"asterisk"}>&#42;</span> */}
        </h2>
        <div className='underline' />
        <div className='price__item__list'>
         <div className='price__item'>
-         <div>Płatność po każdych zajęciach:</div>
+         <div>Cena za 1h zegarową:</div>
          <div>
           <span className={"bold"}>40zł</span>
          </div>
@@ -342,14 +342,14 @@ class OfertaCennik extends React.Component {
          <div>
           <span className={"bold"}>180zł</span>
          </div>
-         <div>(20zł rabatu)</div>
+         {/* <div>(20zł rabatu)</div> */}
         </div>
         <div className='price__item'>
          <div>Płatność za 10 lekcji z góry:</div>
          <div>
           <span className={"bold"}>370zł</span>
          </div>
-         <div>(30zł rabatu)</div>
+         {/* <div>(30zł rabatu)</div> */}
         </div>
        </div>
       </div>
@@ -361,7 +361,7 @@ class OfertaCennik extends React.Component {
        <div className='underline' />
        <div className='price__item__list'>
         <div className='price__item'>
-         <div>Płatność po każdych zajęciach:</div>
+         <div>Cena za 1h zegarową:</div>
          <div>
           <span className={"bold"}>30zł</span>
          </div>
@@ -371,27 +371,27 @@ class OfertaCennik extends React.Component {
          <div>
           <span className={"bold"}>130zł</span>
          </div>
-         <div>(20zł rabatu)</div>
+         {/* <div>(20zł rabatu)</div> */}
         </div>
         <div className='price__item'>
          <div>Płatność za 10 lekcji z góry:</div>
          <div>
           <span className={"bold"}>260zł</span>
          </div>
-         <div>(40zł rabatu)</div>
+         {/* <div>(40zł rabatu)</div> */}
         </div>
        </div>
       </div>
      </div>
      <p className={"footnote"}>
-      <span className={"asterisk"}>&#42;</span> <span>C</span>ena za 1h zegarową
+      <span className={"asterisk"}>&#42;</span> <span>W</span>{" "}Sound English grupa to już 2 osoby!
      </p>
 
-     <h2 className='h2__header--adjust'>Weź znajomych, a zaoszczędzisz!</h2>
+     <h2 className='h2__header--adjust'>Przyprowadź znajomych, a zaoszczędzisz!</h2>
      <div className='text__box'>
       <div className='underline' />
       <p className='read--basic'>
-       <span className='initial'>G</span>rupa w SOUND ENGLISH to 2 – 4 osoby.
+       <span className='initial'>G</span>rupa w Sound English to 2 – 4 osoby.
        Zajęcia grupowe rozpoczynają się z chwilą utworzenia grupy danego kursu.
        Chętni o rozpoczęciu zajęć grupowych są informowani telefonicznie w
        chwili utworzenia grupy.
@@ -403,7 +403,18 @@ class OfertaCennik extends React.Component {
        wypowiedzi) są integralną, częścią zajęć i nie wiążą się z żadnymi
        dodatkowymi opłatami!!!
       </p>
-      <h2 className='h2__header--adjust'>Nie czekaj, zadzwoń już dziś!</h2>
+      <h2 className='h2__header--adjust'>Nie czekaj, zapisz się już dziś!</h2>
+      <div className='banner'>
+       <div className='banner__content__box'>
+        <p className='text'>
+         Zapisz się na zajęcia. Możesz do nas zadzwonić lub skorzystać z formularza na tej stronie.
+        </p>
+        <div className='icon mobile' />
+       </div>
+       <MyLink exact to='/kontakt'>
+        Formularz kontaktowy
+       </MyLink>
+       </div>
       <div className='underline' />
       <p className='read--basic'>
        <span className='initial'>C</span>eny usług studyjnych (ministudio) i
