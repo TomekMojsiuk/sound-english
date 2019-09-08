@@ -31,15 +31,14 @@ const { youtubeLink } = this.props
     <div className='flag--addon' />
     <div className='main__content'>
      <h1 className='title'>
-      <span>{"O"}</span>
-      {"mnie"}
+      <span className="initial">O</span> mnie
      </h1>
      <div className='o-mnie__img' />
      <h2>
-      <span>K</span>rótka biografia
+      <span className="initial">K</span>rótka biografia
      </h2>
      <p>
-      Nazywam się <span>B</span>artłomiej <span>P</span>iwowarczyk. Urodziłem
+      Nazywam się <span className="initial">B</span>artłomiej <span className="initial">P</span>iwowarczyk. Urodziłem
       się 9 stycznia 1991 r, w związku z czym za swoją szczęśliwą liczbę uważam
       #91, a kolorowy Byk z Chicago Dennis Rodman jest jednym z moich ulubionych
       koszykarzy.
@@ -56,12 +55,12 @@ const { youtubeLink } = this.props
       Mam doświadczenie w pracy nauczycielskiej z podopiecznymi w każdym wieku.
       Pracowałem w szkole publicznej oraz prywatnej, gdzie prowadziłem między
       innymi kursy maturalne. W pewnym momencie, z potrzeby niezależności i
-      realizacji własnych wizji założyłem <span>S</span>OUND <span>E</span>
+      realizacji własnych wizji założyłem <span className="initial">S</span>OUND <span className="initial">E</span>
       NGLISH.
      </p>
 
      <h2>
-      <span>P</span>oza językiem
+      <span className="initial">P</span>oza językiem
      </h2>
      <p>
       Zajmuję się również działalnością muzyczną. Moja przygoda z muzyką
@@ -82,7 +81,7 @@ const { youtubeLink } = this.props
      </p>
 
      <h2>
-      <span>A</span>ktywna działalność muzyczna
+      <span className="initial">A</span>ktywna działalność muzyczna
      </h2>
      <p>
       Od lat jestem aktywny scenicznie – działający w latach 2006 – 2011 zespół{" "}

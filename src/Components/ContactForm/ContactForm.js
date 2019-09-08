@@ -67,13 +67,15 @@ class ContactForm extends React.Component {
      ? ""
      : "Wpisz poprawny adres email";
     break;
-    case "phoneNumber":
-      errors.errPhoneNumber = value.length === 0 
-     ? null 
-     : errors.errPhoneNumber = isNaN(value) || value.length < 9 || value.length > 9
-     ? "Wpisz poprawny numer"
-     : null
-     break;
+   case "phoneNumber":
+    errors.errPhoneNumber =
+     value.length === 0
+      ? null
+      : (errors.errPhoneNumber =
+         isNaN(value) || value.length < 9 || value.length > 9
+          ? "Wpisz poprawny numer"
+          : null);
+    break;
    case "message":
     errors.errMessage =
      value.length <= 1 ? "Nie możesz wysłać pustej wiadomości" : "";
@@ -84,12 +86,12 @@ class ContactForm extends React.Component {
 
   // Update state with errors
   this.setState({ errors, [name]: value });
-};
+ };
 
  handleSubmit = e => {
   e.preventDefault();
 
-//   TODO naprawić wysyłanie formularza bez nr telefonu.
+  //   TODO naprawić wysyłanie formularza bez nr telefonu.
   const validateForm = errors => {
    let valid = true;
    Object.values(errors).forEach(
@@ -185,7 +187,7 @@ class ContactForm extends React.Component {
   return (
    <form onSubmit={this.handleSubmit}>
     <h2>
-     <span>S</span>ound <span>E</span>nglish
+     <span className='initial'>S</span>ound <span>E</span>nglish
     </h2>
     <p>Masz pytanie? Napisz do nas</p>
     <div name='name' className='error__msg'>
@@ -290,7 +292,7 @@ class ContactForm extends React.Component {
         <p>Pozdrawiam</p>
         <p>Bartłomiej Piwowarczyk</p>
         <p>
-         <span>S</span>ound <span>E</span>nglish School
+         <span className='initial'>S</span>ound <span>E</span>nglish School
         </p>
        </div>
       </div>
@@ -304,15 +306,15 @@ class ContactForm extends React.Component {
       <div className='success__msg__content'>
        <h2>Ups...</h2>
        <p>
-        Wystąpił błąd i nie udało się wysłać formularza. Skontaktuj się
-        ze mną telefonicznie, lub pod adresem email: soundenglishschool@gmail.com.
+        Wystąpił błąd i nie udało się wysłać formularza. Skontaktuj się ze mną
+        telefonicznie, lub pod adresem email: soundenglishschool@gmail.com.
        </p>
        <p>Przepraszam Cię za utrudnienia.</p>
        <div className='signature'>
         <p>Pozdrawiam</p>
         <p>Bartłomiej Piwowarczyk</p>
         <p>
-         <span>S</span>ound <span>E</span>nglish School
+         <span className='initial'>S</span>ound <span>E</span>nglish School
         </p>
        </div>
       </div>

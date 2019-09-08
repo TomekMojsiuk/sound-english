@@ -33,9 +33,6 @@ class Contact extends React.Component {
     {componentDidMount ? "" : <Loader />}
     <div className="flag--addon"></div>
   <div className='contact__info'>
-   {/* <h1 className='title'>
-    <span>{"B"}</span>{"artłomiej"} <span>{"P"}</span>{"iwowarczyk"}</h1> */}
-   
    <div className='contact__info--item'>
     <div className='icon mobile' />
     <p>{'+48 605 034 489'}</p>
