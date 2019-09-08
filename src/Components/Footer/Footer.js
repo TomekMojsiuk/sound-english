@@ -14,21 +14,16 @@ class Footer extends React.Component {
  };
 
  render() {
-
-   const {tomekMojsiuk} = this.props;
+  const { tomekMojsiuk } = this.props;
 
   return (
    <div id='footer'>
     <div className='footer__content left'>
      <p>
-     <MyLink to='/cookies'>
-      Polityka Cookies
-     </MyLink>
+      <MyLink to='/cookies'>Polityka Cookies</MyLink>
      </p>
      <p>
-     <MyLink to='/rodo'>
-      RODO
-     </MyLink>
+      <MyLink to='/rodo'>RODO</MyLink>
      </p>
     </div>
 
@@ -37,18 +32,24 @@ class Footer extends React.Component {
       &copy; 2019 <span>S</span>ound <span>E</span>nglish
      </p>
      <p className='project'>
-       Created by
-       {/* <MyLink to='/tomek-mojsiuk' target='_blank'>
+      Created by
+      {/* <MyLink to='/tomek-mojsiuk' target='_blank'>
         Tomasz Mojsiuk
        </MyLink> */}
-       <a href={tomekMojsiuk} className="nav__item" target="_blank" rel="noopener noreferrer">Tomek Mojsiuk</a>
+      <a
+       href={tomekMojsiuk}
+       className='nav__item'
+       target='_blank'
+       rel='noopener noreferrer'
+      >
+       Tomek Mojsiuk
+      </a>
      </p>
     </div>
 
     <div className='footer__content right'>
      <div className='icon facebook' onClick={this.openFacebook} />
      <div className='icon youtube' onClick={this.openYoutube} />
-     
     </div>
    </div>
   );

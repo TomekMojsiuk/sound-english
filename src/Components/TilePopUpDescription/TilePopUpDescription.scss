@@ -78,16 +78,17 @@
    left: calc(5%);
    height: 80vh;
    width: 90%;
-   padding: 50px 15px;
+   padding: 30px 15px;
    border-radius: 5px;
-   background: fade-out($color1, 0);
+   background: $color1;
+   overflow-y: auto;
    z-index: 10;
 
    @media all and (min-width: $BreakpointDesktop) {
     padding: 30px 45px;
-    height: 60vh;
+    height: 450px;
     width: 70%;
-    top: calc(50% - 25vh);
+    top: calc(50% - 150px);
     left: calc(50% - 35%);
    }
 
@@ -131,7 +132,37 @@
     }
    }
    .tile__popup__text {
+    display: block;
     background: unset;
+    height: 95%;
+    width: 100%;
+
+    ul {
+     margin: 0 0 0 15px;
+     li {
+      &::before {
+       content: "";
+       height: 5px;
+       width: 5px;
+       border-radius: 50%;
+       margin: 0 10px 0 0;
+       background: $color5;
+       display: inline-block;
+      }
+     }
+    }
+
+    @media all and (min-width: $BreakpointDesktop) {
+     > div,
+     p,
+     ul,
+     li {
+      font-size: 1.5rem !important;
+     }
+     div > p > span {
+      font-size: 2.4rem !important;
+     }
+    }
    }
   }
  }

@@ -3,50 +3,49 @@ import "../Pages.scss";
 import "./Main.scss";
 import MyLink from "../../Components/Nav/NavLink/NavLink";
 import Loader from "../../Components/Loader/Loader";
-import $ from 'jquery';
+import $ from "jquery";
 
 class Main extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
    componentDidMount: false,
-
-   footerMargin: '0',
+   footerMargin: "0"
   };
  }
 
  componentDidMount() {
-   setTimeout(() => {
-      this.setState(prevState => ({
-         componentDidMount: !prevState.componentDidMount
-        }));
-      },1000)
+  setTimeout(() => {
+   this.setState(prevState => ({
+    componentDidMount: !prevState.componentDidMount
+   }));
+  }, 1000);
 
-      this.props.scrollToTop();
+  this.props.scrollToTop();
  }
 
- setFooterStyle = (value) => {
-   
-   $('#footer').css('margin-bottom', value);
-}
+ setFooterStyle = value => {
+  $("#footer").css("margin-bottom", value);
+ };
 
-componentWillUnmount() {
-   if (window.matchMedia("(min-width: 740px)").matches) {
-      $('#footer').css('margin-bottom', '24px');
-   }
-}
+ componentWillUnmount() {
+  if (window.matchMedia("(min-width: 740px)").matches) {
+   $("#footer").css("margin-bottom", "24px");
+  }
+ }
 
  render() {
-  const { componentDidMount } = this.state; 
-  return (<div id='main' className='content__wrapper'>
-     {componentDidMount ? "" : <Loader />}
-     {this.setFooterStyle(this.state.footerMargin)}
-     <div className='flag' />
-     <div className='logo desktop__hidden' />
-     <div className='main__content'>
-      <div className='banner'>
+  const { componentDidMount } = this.state;
+  return (
+   <div id='main' className='content__wrapper'>
+    {componentDidMount ? "" : <Loader />}
+    {this.setFooterStyle(this.state.footerMargin)}
+    <div className='flag' />
+    <div className='logo desktop__hidden' />
+    <div className='main__content'>
+     <div className='banner'>
       <div className='logo' />
-      <div className="banner__content">
+      <div className='banner__content'>
        <h1 className='title'>
         <span>{"C"}</span>
         {"entrum "}
@@ -72,9 +71,10 @@ componentWillUnmount() {
         Oferta i cennik
        </MyLink>
       </div>
-      </div>
      </div>
-    </div>)
+    </div>
+   </div>
+  );
  }
 }
 

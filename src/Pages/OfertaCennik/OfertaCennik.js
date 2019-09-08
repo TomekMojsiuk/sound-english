@@ -27,14 +27,12 @@ class OfertaCennik extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  let opacity = ".2";
-  // let color1 = `rgba(237, 237, 238, ${opacity})`;
+  // TODO fix code here. Delete opacity and color2 variables. Improve child component.
+  let opacity = "0";
   let color2 = `rgba(62, 72, 128, ${opacity})`;
-//   let color3 = `rgba(59, 186, 232, ${opacity})`;
-//   let color4 = `rgba(78, 204, 245, ${opacity})`;
-//   let color5 = `rgba(238, 49, 83, ${opacity})`;
 
-  return(<div className='content__wrapper'>
+  return (
+   <div className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div id='cennik' className='main__content'>
      <div className='flag--addon' />
@@ -51,13 +49,20 @@ class OfertaCennik extends React.Component {
         </h2>
        }
        popupText={
-        <p>
-         <span>K</span>urs UP TO DATE to zajęcia rozwijająco – utrwalające
-         oparte synchronicznie na programie realizowanym w szkole publicznej
-         (szkoła podstawowa, liceum). Przygotujemy Cię do sprawdzianów, będziemy
-         ćwiczyć aktualny materiał, który przerabiasz w szkole i poszerzymy
-         Twoją wiedzę.
-        </p>
+        <div>
+         <p>
+          <span>K</span>urs UP TO DATE to zajęcia rozwijająco – utrwalające
+          oparte synchronicznie na programie realizowanym w szkole publicznej
+          (szkoła podstawowa, liceum).
+         </p>
+         <p>
+          <span>P</span>rzygotujemy Cię do sprawdzianów, będziemy ćwiczyć
+          aktualny materiał, który przerabiasz w szkole i poszerzymy Twoją
+          wiedzę. Wszystko odbędzie się w przyjemnej atmosferze, w związku z
+          którą szybko poczujesz, że angielski jest fajny, nawet jeśli póki co
+          trudno Ci w to uwierzyć.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -70,10 +75,31 @@ class OfertaCennik extends React.Component {
         </h2>
        }
        popupText={
-        <p>
-         <span>K</span>ompleksowe przygotowanie do matury podstawowej i rozszerzonej w nowej
-         formule.
-        </p>
+        <div>
+         <p>
+          <span>K</span>ompleksowe przygotowanie do matury podstawowej i
+          rozszerzonej w nowej formule. Nauczysz się technik i systemów, które
+          sprawią, że każdy rodzaj zadań maturalnych okaże się prosty i
+          wykonalny.
+         </p>
+         <p>
+          <span>P</span>rzygotowanie do matury rozszerzonej także jest procesem
+          przyjemnym i inspirującym, a kilka prostych rad pomoże Ci uwierzyć, że
+          „rozszerzona” nie znaczy „straszna”.
+         </p>
+         <p>
+          <span>J</span>eśli boisz się matury ustnej, a mówienie po angielsku to
+          dla Ciebie katorga podobna do słuchania polskiego country
+          <span>*</span>, Sound English jest absolutnie miejscem dla Ciebie –
+          poćwiczymy wymowę, płynność wypowiedzi i akcent, a niecodzienny system
+          pracy konwersacyjnej (nagrywanie i analiza własnych słów), pomoże Ci
+          zacząć mówić skutecznie. Wanna try?
+         </p>
+         <p>
+          <span>*</span>Z wyjątkiem zespołu „Babsztyl”. „Babsztyl” jest w
+          porządku, Sound English poleca.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -85,30 +111,59 @@ class OfertaCennik extends React.Component {
         </h2>
        }
        popupText={
-        <p>
-         <span>P</span>rzygotowanie do egzaminu FCE
-        </p>
+        <div>
+         <p>
+          <span>E</span>gzamin First Certificate in English, zwany też B2 First,
+          to nomen omen pierwszy z poważnych egzaminów British Council. Niekiedy
+          może wydawać się kwestią tajemniczą lub trudną, ale (jak zwykle),
+          absolutnie taki nie jest.
+         </p>
+         <p>
+          <span>F</span>CE może być początkiem Twojej poważnej, lingwistycznej
+          drogi egzaminacyjnej. Jak wiadomo „papierki”, choć de facto nie są
+          niezbędne, warto zbierać. Sound English pomoże Ci także w tej kwestii.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
 
       <TilePopUpDescription
-    imageClassName={"se-course"}
+       imageClassName={"se-course"}
        mainText={
         <h2>
          <span>S</span>OUND ENGLISH COURSE
         </h2>
        }
        popupText={
-        <p>
-         <span>Z</span>ajęcia anglistyczne oparte na autorskim programie
-         dostosowanym do wymagań edukacyjnych uczniów w każdym wieku połączone z
-         elementami edukacji muzycznej (zajęcia wokalne, angielska terminologia
-         muzyczna, podstawy historii muzyki rozrywkowej w kontekście językowym,
-         podstawy pracy studyjnej, rozwijanie muzycznej kreatywności
-         instrumentalnej i wokalnej, promowanie twórczości uczniów, nagrania
-         studyjne).
-        </p>
+        <div>
+         <p>
+          <span>T</span>e zajęcia w Sound English to lekcje oparte na autorskim
+          programie dostosowanym do wymagań edukacyjnych uczniów w każdym wieku
+          połączone z elementami edukacji muzycznej:
+          <ul>
+           <li>zajęcia wokalne</li>
+           <li>angielska terminologia muzyczna</li>
+           <li>podstawy historii muzyki rozrywkowej w kontekście językowym</li>
+           <li>podstawy pracy studyjnej</li>
+           <li>rozwijanie muzycznej kreatywności instrumentalnej i wokalnej</li>
+           <li>promowanie twórczości</li>
+           <li>nagrania studyjne</li>
+          </ul>
+         </p>
+         <p>
+          <span>J</span>eśli chcesz uczyć się angielskiego śpiewając i grając, a
+          w międzyczasie zarejestrować swoje postępy na nośnikach audio-video,
+          studio Sound English to idealne miejsce dla Ciebie.
+         </p>
+         <p>
+          <span>P</span>oznasz sprzęt nagrywający, programy obróbki dźwięku,
+          będziesz mogła/mógł sięgnąć po gitarę, bądź usiąść przy klawiszach.
+          Wszystko to powiązane będzie z angielskim słownictwem i rozwojem
+          językowym. To naprawdę możliwe. I w Sound English naprawdę się to
+          dzieje.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -117,17 +172,28 @@ class OfertaCennik extends React.Component {
        imageClassName={"bluecollar-rush"}
        mainText={
         <h2>
-         <span>B</span>LUE COLLAR RUSH
+         <span>W</span>ORKING CLASS HERO
         </h2>
        }
        popupText={
-        <p>
-         <span>K</span>urs przyspieszony dla osób wyjeżdżających do pracy
-         zagranicę – nacisk na niezbędne słownictwo i systemy skutecznej
-         komunikacji. Program i system prowadzenia zajęć ustalany jest z
-         klientem na podstawie charakteru pracy, którą zamierza on/ona podjąć
-         zagranicą, a także czasu, który pozostał do wyjazdu.
-        </p>
+        <div>
+         <p>
+          <span>K</span>urs przyspieszony dla osób wyjeżdżających do pracy
+          zagranicę – kładziemy tu nacisk na niezbędne słownictwo i systemy
+          skutecznej komunikacji, ćwiczenia gramatyczne ograniczając do minimum.
+         </p>
+         <p>
+          <span>P</span>rogram i system prowadzenia zajęć ustalany jest z Tobą
+          na podstawie charakteru pracy, którą zamierzasz podjąć zagranicą, a
+          także czasu, który pozostał do wyjazdu.
+         </p>
+         <p>
+          <span>J</span>eżeli planujesz wyjazd zarobkowy, albo swoją przyszłość
+          na stałe wiążesz z krajem innym niż Polska, a chwilowo Twój angielski
+          kończy się na „Hello” i „Chałupy welcome to”, nie zwlekaj, tylko
+          zadzwoń – możemy sobie pomóc.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -140,11 +206,21 @@ class OfertaCennik extends React.Component {
         </h2>
        }
        popupText={
-        <p>
-         <span>Z</span>ajęcia dla dorosłych na każdym poziomie trudności
-         (również od zupełnych podstaw!) dostosowane do indywidualnych
-         predyspozycji uczęszczających.
-        </p>
+        <div>
+         <p>
+          „<span>D</span>la mnie już raczej za późno, w młodości wmuszano we
+          mnie rosyjski, a angielskiego chyba już nigdy się nie nauczę” – jeśli
+          tego typu słowa powtarzasz nawykowo od wielu lat, czas to zmienić.
+         </p>
+         <p>
+          <span>K</span>urs „About time!” to zajęcia konwersacyjne dostosowane
+          do uczniów w każdym wieku, zgodnie z ich preferencjami i potrzebami.
+         </p>
+         <p>
+          <span>N</span>a wiedzę nigdy nie jest za późno, a na wymówki jest
+          zawsze za wcześnie. Sound English czeka na kontakt!
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -157,10 +233,22 @@ class OfertaCennik extends React.Component {
         </h2>
        }
        popupText={
-        <p>
-         <span>Z</span>ajęcia dla najmłodszych – angielski przez muzykę i zabawę
-         dźwiękiem.
-        </p>
+        <div>
+         <p>
+          <span>J</span>eżeli nie chcesz skracać dziecku dzieciństwa nudnymi,
+          szkolnymi zajęciami językowymi, a jednocześnie chcesz, aby posiadło
+          ciekawą wiedzę anglistyczną w przyjemny sposób, to pełna piosenek i
+          gier przygoda w Sound English będzie dla Ciebie i Twojego dziecka
+          idealnym wyborem.
+         </p>
+         <p>
+          <span>Z</span>ajęcia te są nie tylko odtwórcze (śpiewanie piosenek,
+          zajęcia polisensoryczne), ale także kreatywne. Nie zdziw się, jeśli
+          wierszyki, które od jakiegoś czasu kreśli Twoja latorośl, zmienią się
+          nagle w teksty angielskie połączone z ciekawą melodią. Skąd się to
+          wzięło dowiesz się od małego Twórcy – Twojego dziecka.
+         </p>
+        </div>
        }
        bgColor={color2}
       />
@@ -261,7 +349,7 @@ class OfertaCennik extends React.Component {
      </div>
     </div>
    </div>
-  )
+  );
  }
 }
 

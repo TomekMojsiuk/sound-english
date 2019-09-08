@@ -73,7 +73,6 @@ class ContactForm extends React.Component {
      : errors.errPhoneNumber = isNaN(value) || value.length < 9 || value.length > 9
      ? "Wpisz poprawny numer"
      : null
-
      break;
    case "message":
     errors.errMessage =
@@ -85,11 +84,12 @@ class ContactForm extends React.Component {
 
   // Update state with errors
   this.setState({ errors, [name]: value });
- };
+};
 
  handleSubmit = e => {
   e.preventDefault();
 
+//   TODO naprawić wysyłanie formularza bez nr telefonu.
   const validateForm = errors => {
    let valid = true;
    Object.values(errors).forEach(
@@ -100,7 +100,7 @@ class ContactForm extends React.Component {
   };
 
   if (validateForm(this.state.errors)) {
-   const { subject, name, surname, email, message } = this.state;
+   const { subject, name, surname, email, phoneNumber, message } = this.state;
    console.info("Valid Form");
    console.log("Form submitted");
 
@@ -116,7 +116,7 @@ class ContactForm extends React.Component {
      ") przez formularz www SE",
     to_name: "Bartek",
     message_html: subject + ":" + "<br>" + message,
-    reply_to: name + " " + surname + "<br>" + email + "<br>" phoneNumber
+    reply_to: name + " " + surname + "<br>" + email + "<br>" + phoneNumber
    };
 
    emailjs
