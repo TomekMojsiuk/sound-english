@@ -1,5 +1,9 @@
 @import "../Scss/Config.scss";
 
+span {
+  font-size: inherit;
+}
+
 .content__wrapper {
   
   min-height: 100vh;
@@ -39,7 +43,7 @@
  }
  h1 {
   font-size: 2.4rem;
-  span {
+  .initial {
    font-size: 3rem;
    color: $color3;
   }
@@ -47,7 +51,7 @@
 
  h2 {
   font-size: 2rem;
-  span {
+  .initial {
    font-size: 2.5rem;
    color: $color3;
   }
@@ -64,7 +68,7 @@
         font-size: 1.4rem;
     }
 
-  span {
+    .initial {
    font-size: 1.5em;
    color: $color4;
   }
@@ -154,3 +158,13 @@ li > a {
    }
   }
  }
+
+//  Text decoration classes:
+
+.emphasised__test {
+  font-style: italic;
+}
+
+.initial {
+
+}
