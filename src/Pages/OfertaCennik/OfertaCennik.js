@@ -212,17 +212,19 @@ class OfertaCennik extends React.Component {
        popupText={
         <div>
          <p>
-          „<span className="initial">D</span>la mnie już raczej za późno, w młodości wmuszano we
-          mnie rosyjski, a angielskiego chyba już nigdy się nie nauczę” – jeśli
-          tego typu słowa powtarzasz nawykowo od wielu lat, czas to zmienić.
+          „<span className='initial'>D</span>la mnie już raczej za późno, w
+          młodości wmuszano we mnie rosyjski, a angielskiego chyba już nigdy się
+          nie nauczę” – jeśli tego typu słowa powtarzasz nawykowo od wielu lat,
+          czas to zmienić.
          </p>
          <p>
-          <span className="initial">K</span>urs „About time!” to zajęcia konwersacyjne dostosowane
-          do uczniów w każdym wieku, zgodnie z ich preferencjami i potrzebami.
+          <span className='initial'>K</span>urs „About time!” to zajęcia
+          konwersacyjne dostosowane do uczniów w każdym wieku, zgodnie z ich
+          preferencjami i potrzebami.
          </p>
          <p>
-          <span className="initial">N</span>a wiedzę nigdy nie jest za późno, a na wymówki jest
-          zawsze za wcześnie. Sound English czeka na kontakt!
+          <span className='initial'>N</span>a wiedzę nigdy nie jest za późno, a
+          na wymówki jest zawsze za wcześnie. Sound English czeka na kontakt!
          </p>
         </div>
        }
@@ -374,7 +376,7 @@ class OfertaCennik extends React.Component {
          <div>
           <span className={"bold"}>260zł</span>
          </div>
-         </div>
+        </div>
        </div>
       </div>
      </div>
@@ -387,17 +389,17 @@ class OfertaCennik extends React.Component {
       Przyprowadź znajomych, a zaoszczędzisz!
      </h2>
      <div className='banner'>
-       <div className='banner__content__box'>
-        <p className='text'>
-         Zapisz się na zajęcia. Możesz do nas zadzwonić lub skorzystać z
-         formularza na tej stronie.
-        </p>
-        <div className='icon mobile' />
-       </div>
-       <MyLink exact to='/kontakt'>
-        Formularz kontaktowy
-       </MyLink>
+      <div className='banner__content__box'>
+       <p className='text'>
+        Zapisz się na zajęcia. Możesz do nas zadzwonić lub skorzystać z
+        formularza na tej stronie.
+       </p>
+       <div className='icon mobile' />
       </div>
+      <MyLink exact to='/kontakt'>
+       Formularz kontaktowy
+      </MyLink>
+     </div>
      <div className='text__box'>
       <div className='underline' />
       <p className='read--basic'>
@@ -415,9 +417,9 @@ class OfertaCennik extends React.Component {
       </p>
       <div className='underline' />
       <p className='read--basic'>
-       <span className='initial'>W</span> Sound English realizujmey też
-       inne kursy (np. na wyższe certyfikaty, lub egzaminy typu TOEFL). Jeśli
-       tego, czego szukasz, nie ma w powyższej ofercie, zadzwoń lub napisz i zapytaj.
+       <span className='initial'>W</span> Sound English realizujmey też inne
+       kursy (np. na wyższe certyfikaty, lub egzaminy typu TOEFL). Jeśli tego,
+       czego szukasz, nie ma w powyższej ofercie, zadzwoń lub napisz i zapytaj.
       </p>
       <h2 className='h2__header--adjust'>Nie czekaj, zapisz się już dziś!</h2>
 
