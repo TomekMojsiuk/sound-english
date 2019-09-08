@@ -37,7 +37,7 @@ class OfertaCennik extends React.Component {
     <div id='cennik' className='main__content'>
      <div className='flag--addon' />
      <h1>
-      <span className="initial">K</span>ursy językowe SOUND ENGLISH
+      <span className='initial'>K</span>ursy językowe SOUND ENGLISH
      </h1>
 
      <div className='tiles__box'>
@@ -45,22 +45,22 @@ class OfertaCennik extends React.Component {
        imageClassName={"up-to-date"}
        mainText={
         <h2>
-         <span className="initial">U</span>P TO DATE
+         <span className='initial'>U</span>P TO DATE
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">K</span>urs UP TO DATE to zajęcia rozwijająco – utrwalające
-          oparte synchronicznie na programie realizowanym w szkole publicznej
-          (szkoła podstawowa, liceum).
+          <span className='initial'>K</span>urs UP TO DATE to zajęcia
+          rozwijająco – utrwalające oparte synchronicznie na programie
+          realizowanym w szkole publicznej (szkoła podstawowa, liceum).
          </p>
          <p>
-          <span className="initial">P</span>rzygotujemy Cię do sprawdzianów, będziemy ćwiczyć
-          aktualny materiał, który przerabiasz w szkole i poszerzymy Twoją
-          wiedzę. Wszystko odbędzie się w przyjemnej atmosferze, w związku z
-          którą szybko poczujesz, że angielski jest fajny, nawet jeśli póki co
-          trudno Ci w to uwierzyć.
+          <span className='initial'>P</span>rzygotujemy Cię do sprawdzianów,
+          będziemy ćwiczyć aktualny materiał, który przerabiasz w szkole i
+          poszerzymy Twoją wiedzę. Wszystko odbędzie się w przyjemnej
+          atmosferze, w związku z którą szybko poczujesz, że angielski jest
+          fajny, nawet jeśli póki co trudno Ci w to uwierzyć.
          </p>
         </div>
        }
@@ -71,33 +71,34 @@ class OfertaCennik extends React.Component {
        imageClassName={"matura"}
        mainText={
         <h2>
-         <span className="initial">M</span>ATURA EXAM MASTER
+         <span className='initial'>M</span>ATURA EXAM MASTER
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">K</span>ompleksowe przygotowanie do matury podstawowej i
-          rozszerzonej w nowej formule. Nauczysz się technik i systemów, które
-          sprawią, że każdy rodzaj zadań maturalnych okaże się prosty i
-          wykonalny.
+          <span className='initial'>K</span>ompleksowe przygotowanie do matury
+          podstawowej i rozszerzonej w nowej formule. Nauczysz się technik i
+          systemów, które sprawią, że każdy rodzaj zadań maturalnych okaże się
+          prosty i wykonalny.
          </p>
          <p>
-          <span className="initial">P</span>rzygotowanie do matury rozszerzonej także jest procesem
-          przyjemnym i inspirującym, a kilka prostych rad pomoże Ci uwierzyć, że
-          „rozszerzona” nie znaczy „straszna”.
+          <span className='initial'>P</span>rzygotowanie do matury rozszerzonej
+          także jest procesem przyjemnym i inspirującym, a kilka prostych rad
+          pomoże Ci uwierzyć, że „rozszerzona” nie znaczy „straszna”.
          </p>
          <p>
-          <span className="initial">J</span>eśli boisz się matury ustnej, a mówienie po angielsku to
-          dla Ciebie katorga podobna do słuchania polskiego country
-          <span className="initial">*</span>, Sound English jest absolutnie miejscem dla Ciebie –
-          poćwiczymy wymowę, płynność wypowiedzi i akcent, a niecodzienny system
-          pracy konwersacyjnej (nagrywanie i analiza własnych słów), pomoże Ci
-          zacząć mówić skutecznie. Wanna try?
+          <span className='initial'>J</span>eśli boisz się matury ustnej, a
+          mówienie po angielsku to dla Ciebie katorga podobna do słuchania
+          polskiego country
+          <span className='initial'>*</span>, Sound English jest absolutnie
+          miejscem dla Ciebie – poćwiczymy wymowę, płynność wypowiedzi i akcent,
+          a niecodzienny system pracy konwersacyjnej (nagrywanie i analiza
+          własnych słów), pomoże Ci zacząć mówić skutecznie. Wanna try?
          </p>
          <p>
-          <span className="initial">*</span>Z wyjątkiem zespołu „Babsztyl”. „Babsztyl” jest w
-          porządku, Sound English poleca.
+          <span className='initial'>*</span>Z wyjątkiem zespołu „Babsztyl”.
+          „Babsztyl” jest w porządku, Sound English poleca.
          </p>
         </div>
        }
@@ -107,21 +108,22 @@ class OfertaCennik extends React.Component {
        imageClassName={"fce-wannabe"}
        mainText={
         <h2>
-         <span className="initial">F</span>CE WANNABE
+         <span className='initial'>F</span>CE WANNABE
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">E</span>gzamin First Certificate in English, zwany też B2 First,
-          to nomen omen pierwszy z poważnych egzaminów British Council. Niekiedy
-          może wydawać się kwestią tajemniczą lub trudną, ale (jak zwykle),
-          absolutnie taki nie jest.
+          <span className='initial'>E</span>gzamin First Certificate in English,
+          zwany też B2 First, to nomen omen pierwszy z poważnych egzaminów
+          British Council. Niekiedy może wydawać się kwestią tajemniczą lub
+          trudną, ale (jak zwykle), absolutnie taki nie jest.
          </p>
          <p>
-          <span className="initial">F</span>CE może być początkiem Twojej poważnej, lingwistycznej
-          drogi egzaminacyjnej. Jak wiadomo „papierki”, choć de facto nie są
-          niezbędne, warto zbierać. Sound English pomoże Ci także w tej kwestii.
+          <span className='initial'>F</span>CE może być początkiem Twojej
+          poważnej, lingwistycznej drogi egzaminacyjnej. Jak wiadomo „papierki”,
+          choć de facto nie są niezbędne, warto zbierać. Sound English pomoże Ci
+          także w tej kwestii.
          </p>
         </div>
        }
@@ -132,15 +134,15 @@ class OfertaCennik extends React.Component {
        imageClassName={"se-course"}
        mainText={
         <h2>
-         <span className="initial">S</span>OUND ENGLISH COURSE
+         <span className='initial'>S</span>OUND ENGLISH COURSE
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">T</span>e zajęcia w Sound English to lekcje oparte na autorskim
-          programie dostosowanym do wymagań edukacyjnych uczniów w każdym wieku
-          połączone z elementami edukacji muzycznej:
+          <span className='initial'>T</span>e zajęcia w Sound English to lekcje
+          oparte na autorskim programie dostosowanym do wymagań edukacyjnych
+          uczniów w każdym wieku połączone z elementami edukacji muzycznej:
           <ul>
            <li>zajęcia wokalne</li>
            <li>angielska terminologia muzyczna</li>
@@ -152,16 +154,17 @@ class OfertaCennik extends React.Component {
           </ul>
          </p>
          <p>
-          <span className="initial">J</span>eśli chcesz uczyć się angielskiego śpiewając i grając, a
-          w międzyczasie zarejestrować swoje postępy na nośnikach audio-video,
-          studio Sound English to idealne miejsce dla Ciebie.
+          <span className='initial'>J</span>eśli chcesz uczyć się angielskiego
+          śpiewając i grając, a w międzyczasie zarejestrować swoje postępy na
+          nośnikach audio-video, studio Sound English to idealne miejsce dla
+          Ciebie.
          </p>
          <p>
-          <span className="initial">P</span>oznasz sprzęt nagrywający, programy obróbki dźwięku,
-          będziesz mogła/mógł sięgnąć po gitarę, bądź usiąść przy klawiszach.
-          Wszystko to powiązane będzie z angielskim słownictwem i rozwojem
-          językowym. To naprawdę możliwe. I w Sound English naprawdę się to
-          dzieje.
+          <span className='initial'>P</span>oznasz sprzęt nagrywający, programy
+          obróbki dźwięku, będziesz mogła/mógł sięgnąć po gitarę, bądź usiąść
+          przy klawiszach. Wszystko to powiązane będzie z angielskim słownictwem
+          i rozwojem językowym. To naprawdę możliwe. I w Sound English naprawdę
+          się to dzieje.
          </p>
         </div>
        }
@@ -172,26 +175,27 @@ class OfertaCennik extends React.Component {
        imageClassName={"bluecollar-rush"}
        mainText={
         <h2>
-         <span className="initial">W</span>ORKING CLASS HERO
+         <span className='initial'>W</span>ORKING CLASS HERO
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">K</span>urs przyspieszony dla osób wyjeżdżających do pracy
-          zagranicę – kładziemy tu nacisk na niezbędne słownictwo i systemy
-          skutecznej komunikacji, ćwiczenia gramatyczne ograniczając do minimum.
+          <span className='initial'>K</span>urs przyspieszony dla osób
+          wyjeżdżających do pracy zagranicę – kładziemy tu nacisk na niezbędne
+          słownictwo i systemy skutecznej komunikacji, ćwiczenia gramatyczne
+          ograniczając do minimum.
          </p>
          <p>
-          <span className="initial">P</span>rogram i system prowadzenia zajęć ustalany jest z Tobą
-          na podstawie charakteru pracy, którą zamierzasz podjąć zagranicą, a
-          także czasu, który pozostał do wyjazdu.
+          <span className='initial'>P</span>rogram i system prowadzenia zajęć
+          ustalany jest z Tobą na podstawie charakteru pracy, którą zamierzasz
+          podjąć zagranicą, a także czasu, który pozostał do wyjazdu.
          </p>
          <p>
-          <span className="initial">J</span>eżeli planujesz wyjazd zarobkowy, albo swoją przyszłość
-          na stałe wiążesz z krajem innym niż Polska, a chwilowo Twój angielski
-          kończy się na „Hello” i „Chałupy welcome to”, nie zwlekaj, tylko
-          zadzwoń – możemy sobie pomóc.
+          <span className='initial'>J</span>eżeli planujesz wyjazd zarobkowy,
+          albo swoją przyszłość na stałe wiążesz z krajem innym niż Polska, a
+          chwilowo Twój angielski kończy się na „Hello” i „Chałupy welcome to”,
+          nie zwlekaj, tylko zadzwoń – możemy sobie pomóc.
          </p>
         </div>
        }
@@ -229,24 +233,25 @@ class OfertaCennik extends React.Component {
        imageClassName={"sound-meets-kids"}
        mainText={
         <h2>
-         <span className="initial">S</span>OUND MEETS KIDS
+         <span className='initial'>S</span>OUND MEETS KIDS
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">J</span>eżeli nie chcesz skracać dziecku dzieciństwa nudnymi,
-          szkolnymi zajęciami językowymi, a jednocześnie chcesz, aby posiadło
-          ciekawą wiedzę anglistyczną w przyjemny sposób, to pełna piosenek i
-          gier przygoda w Sound English będzie dla Ciebie i Twojego dziecka
-          idealnym wyborem.
+          <span className='initial'>J</span>eżeli nie chcesz skracać dziecku
+          dzieciństwa nudnymi, szkolnymi zajęciami językowymi, a jednocześnie
+          chcesz, aby posiadło ciekawą wiedzę anglistyczną w przyjemny sposób,
+          to pełna piosenek i gier przygoda w Sound English będzie dla Ciebie i
+          Twojego dziecka idealnym wyborem.
          </p>
          <p>
-          <span className="initial">Z</span>ajęcia te są nie tylko odtwórcze (śpiewanie piosenek,
-          zajęcia polisensoryczne), ale także kreatywne. Nie zdziw się, jeśli
-          wierszyki, które od jakiegoś czasu kreśli Twoja latorośl, zmienią się
-          nagle w teksty angielskie połączone z ciekawą melodią. Skąd się to
-          wzięło dowiesz się od małego Twórcy – Twojego dziecka.
+          <span className='initial'>Z</span>ajęcia te są nie tylko odtwórcze
+          (śpiewanie piosenek, zajęcia polisensoryczne), ale także kreatywne.
+          Nie zdziw się, jeśli wierszyki, które od jakiegoś czasu kreśli Twoja
+          latorośl, zmienią się nagle w teksty angielskie połączone z ciekawą
+          melodią. Skąd się to wzięło dowiesz się od małego Twórcy – Twojego
+          dziecka.
          </p>
         </div>
        }
@@ -256,35 +261,44 @@ class OfertaCennik extends React.Component {
        imageClassName={"guitar-master"}
        mainText={
         <h2>
-         <span className="initial">G</span>uitar classes
+         <span className='initial'>G</span>uitar classes
         </h2>
        }
        popupText={
         <div>
          <p>
-          <span className="initial">W</span> Sound English możesz nauczyć się także grania na
-          gitarze. Nie ma znaczenia Twój wiek, predyspozycje albo doświadczenie
-          muzyczne - grać każdy może, a spróbować wręcz każdy powinien.
+          <span className='initial'>W</span> Sound English możesz nauczyć się
+          także grania na gitarze. Nie ma znaczenia Twój wiek, predyspozycje
+          albo doświadczenie muzyczne - grać każdy może, a spróbować wręcz każdy
+          powinien.
          </p>
          <p>
-          <span className="initial">U</span>czymy w oparciu o program muzyki popularnej, nie męcząc
-          młodych i starszych adeptów muzyką klasyczną. Zajęcia prowadzone są
-          indywidualnie bądź grupowo, <span className="emphasised__test">z dojazdem do ucznia</span>.
+          <span className='initial'>U</span>czymy w oparciu o program muzyki
+          popularnej, nie męcząc młodych i starszych adeptów muzyką klasyczną.
+          Zajęcia prowadzone są indywidualnie bądź grupowo,{" "}
+          <span className='emphasised__test'>z dojazdem do ucznia</span>.
          </p>
          <p>
-          <span className="initial">C</span>o ważne, nasz kurs połączony jest z{" "}
-          <span>LEKCJAMI PRACY STUDYJNEJ</span>, które są nieodpłatne! Ty albo
-          Twoje dziecko pozna sprzęt muzyczny i nagrywający, oswoicie się z
-          pracą w studio i zbuduje własny, dźwiękowy materiał demo.
+          <span className='initial'>C</span>o ważne, nasz kurs połączony jest z{" "}
+          <span className='emphasised__test'>lekcjami pracy studyjnej</span>,
+          które są nieodpłatne! Ty albo Twoje dziecko pozna sprzęt muzyczny i
+          nagrywający, oswoicie się z pracą w studio i zbuduje własny, dźwiękowy
+          materiał demo.
          </p>
          <p>
-          <span className="initial">R</span>ock n' roll, rozwój, kreatywne podejście i dobry
-          początek (bądź rozwinięcie) przygody z muzyką - wszystko to tylko u
-          nas. Zajęcia prowadzi wykwalifikowany, aktywny scenicznie gitarzysta
-          <span>Michał Kleinszmidt</span> - absolwent kierunku Edukacja
-          artystyczna w zakresie sztuki muzycznej Akademii Pomorskiej w Słupsku,
-          obecnie czynnie działający jako gitarzysta i saksofonista zespołu
-          <span>LARES</span>. Zapraszamy!
+          <span className='initial'>R</span>ock n' roll, rozwój, kreatywne
+          podejście i dobry początek (bądź rozwinięcie) przygody z muzyką -
+          wszystko to tylko u nas. Zajęcia prowadzi wykwalifikowany, aktywny
+          scenicznie gitarzysta
+          <span className='emphasised__test'>{" "}Michał Kleinszmidt</span> -
+          absolwent kierunku Edukacja artystyczna w zakresie sztuki muzycznej
+          Akademii Pomorskiej w Słupsku, obecnie czynnie działający jako
+          gitarzysta i saksofonista zespołu
+          <span className='emphasised__test'>{" "}Lares</span>. Zapraszamy!
+         </p>
+         <p>
+          <span className='initial'>K</span>oszt zajęć to{" "}
+          <span className='initial'>250</span> zł miesięcznie
          </p>
         </div>
        }
@@ -293,14 +307,26 @@ class OfertaCennik extends React.Component {
      </div>
 
      <h1>
-      <span className="initial">C</span>ennik
+      <span className='initial'>C</span>ennik
      </h1>
-     <h2>Kursy językowe</h2>
+     <h2>Kursy Sound English</h2>
+     <div className='prices__container'>
+      <div className='stretched'>
+       <div className='price__item__list'>
+        <div className='price__item'>
+         <div>Kurs Guitar Classes</div>
+         <div>
+          <span className={"bold"}>250zł</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
 
      <div className='prices__container'>
       <div className={"left"}>
        <h2>
-        <span className="initial">Z</span>ajęcia indywidualne{" "}
+        <span className='initial'>Z</span>ajęcia indywidualne{" "}
         <span className={"asterisk"}>&#42;</span>
        </h2>
        <div className='underline' />
@@ -329,7 +355,8 @@ class OfertaCennik extends React.Component {
       </div>
       <div className={"right"}>
        <h2>
-        <span className="initial">Z</span>ajęcia grupowe <span className={"asterisk"}>&#42;</span>
+        <span className='initial'>Z</span>ajęcia grupowe{" "}
+        <span className={"asterisk"}>&#42;</span>
        </h2>
        <div className='underline' />
        <div className='price__item__list'>
@@ -364,25 +391,25 @@ class OfertaCennik extends React.Component {
      <div className='text__box'>
       <div className='underline' />
       <p className='read--basic'>
-       <span className="initial">G</span>rupa w SOUND ENGLISH to 2 – 4 osoby. Zajęcia grupowe
-       rozpoczynają się z chwilą utworzenia grupy danego kursu. Chętni o
-       rozpoczęciu zajęć grupowych są informowani telefonicznie w chwili
-       utworzenia grupy.
+       <span className='initial'>G</span>rupa w SOUND ENGLISH to 2 – 4 osoby.
+       Zajęcia grupowe rozpoczynają się z chwilą utworzenia grupy danego kursu.
+       Chętni o rozpoczęciu zajęć grupowych są informowani telefonicznie w
+       chwili utworzenia grupy.
       </p>
       <div className='underline' />
       <p className='read--basic'>
-       <span className="initial">A</span>spekty dźwiękowe lekcji odróżniające SOUND ENGLISH od
-       innych szkół językowych (ćwiczenia akcentu, nagrania wypowiedzi) są
-       integralną, częścią zajęć i nie wiążą się z żadnymi dodatkowymi
-       opłatami!!!
+       <span className='initial'>A</span>spekty dźwiękowe lekcji odróżniające
+       SOUND ENGLISH od innych szkół językowych (ćwiczenia akcentu, nagrania
+       wypowiedzi) są integralną, częścią zajęć i nie wiążą się z żadnymi
+       dodatkowymi opłatami!!!
       </p>
       <h2 className='h2__header--adjust'>Nie czekaj, zadzwoń już dziś!</h2>
       <div className='underline' />
       <p className='read--basic'>
-       <span className="initial">C</span>eny usług studyjnych (ministudio) i redaktorskich
-       (copywriting) ustalane są po spotkaniu bądź rozmowie organizacyjnej ze
-       zleceniodawcą. Wszystko zależy od charakteru zlecenia i czasu potrzebnego
-       na jego realizację.
+       <span className='initial'>C</span>eny usług studyjnych (ministudio) i
+       redaktorskich (copywriting) ustalane są po spotkaniu bądź rozmowie
+       organizacyjnej ze zleceniodawcą. Wszystko zależy od charakteru zlecenia i
+       czasu potrzebnego na jego realizację.
       </p>
      </div>
     </div>
