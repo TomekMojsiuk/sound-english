@@ -20,6 +20,7 @@ import Cookies from "./Pages/Cookies/Cookies";
 import Rodo from "./Pages/Rodo/Rodo";
 
 import CookieBanner from "react-cookie-banner";
+import FacebookFeed from "./Components/SocialMedia/FacebookFeed/FacebookFeed";
 
 class App extends React.Component {
  constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
    displayArrow: false,
    prevScrollPosition: window.pageYOffset,
    scrollNav: false,
+   isMobile: window.innerWidth < 740 ? true : false,
 
    facebook:
     "https://www.facebook.com/Centrum-J%C4%99zykowo-Muzyczne-Sound-English-256244201961789/",
@@ -36,6 +38,12 @@ class App extends React.Component {
    tomekMojsiuk: "https://tomekmojsiuk.netlify.com/"
   };
  }
+
+ handleResize = () => {
+  this.setState({
+   isMobile: window.innerWidth < 740 ? true : false
+  });
+ };
 
  handleHamburgerClick = () => {
   this.setState(prevState => ({
@@ -95,6 +103,7 @@ class App extends React.Component {
   arrow.hide();
   $(window).on("scroll", this.handlaNavbarToggle);
   $(window).on("scroll", this.handleArrowBehavior);
+  $(window).on("resize", this.handleResize);
 
   this.handlescrollToTop();
  };
@@ -102,10 +111,12 @@ class App extends React.Component {
  componentWillUnmount = () => {
   window.removeEventListener("scroll", this.handlaNavbarToggle);
   window.removeEventListener("scroll", this.handleArrowBehavior);
+  window.removeEventListener("resize", this.handleResize);
  };
 
  render() {
-  const { isClicked, facebook, youtube, tomekMojsiuk } = this.state;
+  const { isClicked, facebook, youtube, tomekMojsiuk, isMobile } = this.state;
+  console.log(isMobile);
   return (
    <div className='App'>
     <Hamburger onClick={this.handleHamburgerClick} isClicked={isClicked} />
@@ -172,13 +183,12 @@ class App extends React.Component {
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      />
      <ArrowUp onClick={this.handlescrollToTop} />
+     {!isMobile ? <FacebookFeed isMobile={isMobile} /> : ""}
      <Footer
       facebook={facebook}
       youtube={youtube}
       tomekMojsiuk={tomekMojsiuk}
      />
-
-     {/* === Cookie banner === */}
      <CookieBanner
       className={"cookie__banner"}
       styles={{
