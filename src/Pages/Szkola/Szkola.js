@@ -41,24 +41,24 @@ class Szkola extends React.Component {
     <div className='main__content'>
      <div className='flag--addon' />
      <h1>
-      <span>O</span> szkole
+      <span className="initial">O</span> szkole
      </h1>
      <div className='text__box'>
      <div className="underline"></div>
       <p className='read--basic'>
-       <span>C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
+       <span className="initial">C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
        szkoła językowa powstała z potrzeby połączenia dwóch wspaniałych,
        nieuleczalnych pasji: języków obcych oraz muzyki.
       </p>
       <p className='read--more'>
-       <span>N</span>ie od dziś wiadomo, że języki, którymi komunikują się ludzie na całym
+       <span className="initial">N</span>ie od dziś wiadomo, że języki, którymi komunikują się ludzie na całym
        świecie, to tak naprawdę po prostu dźwięki. W związku z tym trening
        wokalny bardzo ułatwia przyswajanie języka obcego na każdym poziomie
        trudności, a rozwijanie talentów muzycznych pozwala uczniom wejść na
        wyższy poziom tak umiejętności anglistycznych oraz wokalno –
        instrumentalnych. 
       </p>
-      <p className="read--more"><span>Ł</span>ącząc w edukacji dwa wspomniane kierunki, przyspiesza
+      <p className="read--more"><span className="initial">Ł</span>ącząc w edukacji dwa wspomniane kierunki, przyspiesza
        się wydatnie proces kształcenia, który w związku z muzyką jest także o
        wiele ciekawszy dla uczniów.</p>
        <ReadMore />
@@ -66,10 +66,10 @@ class Szkola extends React.Component {
 
      <div className='text__box'>
      <div className="underline"></div>
-     <p className='read--basic'><span>P</span>rofesjonalny sprzęt muzyczny i studyjny znajdujący się w „SOUND ENGLISH”
+     <p className='read--basic'><span className="initial">P</span>rofesjonalny sprzęt muzyczny i studyjny znajdujący się w „SOUND ENGLISH”
        pozwala na niecodzienne rozwinięcie formuły nauczania języka i muzyki</p>
       <p className='read--more'>
-       <span>U</span>czniowie mogą rejestrować swoje postępy w profesjonalnych warunkach.
+       <span className="initial">U</span>czniowie mogą rejestrować swoje postępy w profesjonalnych warunkach.
        Pomaga to zdobyć pierwsze doświadczenia studyjne (utwory nagrywane przez
        uczniów będą brzmiały wyraźnie i profesjonalnie), a także popracować
        dokładnie nad angielską bądź amerykańską wymową, akcentem i płynnością
@@ -82,12 +82,12 @@ class Szkola extends React.Component {
      <div className='text__box'>
      <div className="underline"></div>
       <p className='read--basic'>
-       <span>N</span>ie masz zainteresowań muzycznych? Nic nie szkodzi. Ty również znajdziesz coś
-       dla siebie w ofercie <span>S</span>OUND <span>E</span>NGLISH.
+       <span className="initial">N</span>ie masz zainteresowań muzycznych? Nic nie szkodzi. Ty również znajdziesz coś
+       dla siebie w ofercie <span className="initial">S</span>OUND <span>E</span>NGLISH.
       </p>
       
       <p className='read--more'>
-       <span>P</span>rzygotowanie do matury, korepetycje poszerzające umiejętności zdobywane
+       <span className="initial">P</span>rzygotowanie do matury, korepetycje poszerzające umiejętności zdobywane
        na lekcjach w szkole podstawowej i liceum, trening do certyfikatu FCE a
        także inne, typowo językowe, lecz niebanalne usługi znajdują się w
        ofercie. Centrum zapewnia indywidualne podejście do każdego ucznia
@@ -103,50 +103,50 @@ class Szkola extends React.Component {
       </div>
 
      <h1>
-      <span>T</span>ylko w <span>S</span>ound <span>E</span>nglish:
+      <span className="initial">T</span>ylko w <span className="initial">S</span>ound <span className="initial">E</span>nglish:
      </h1>
      <div className="tiles__box">
      <TileRotateContent bgColor={color1} 
-     side1Text={<p><span>I</span>ndywidualne podejście</p>}
-     side2Text={ <p><span>I</span>ndywidualne, profesjonalne podejście do ucznia w każdym wieku</p>}/>
+     side1Text={<p><span className="initial">I</span>ndywidualne podejście</p>}
+     side2Text={ <p><span className="initial">I</span>ndywidualne, profesjonalne podejście do ucznia w każdym wieku</p>}/>
      
      <TileRotateContent bgColor={color2} 
-     side1Text={<p><span>K</span>omfort pracy</p>}
-     side2Text={<p><span>K</span>omfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego</p>}/>
+     side1Text={<p><span className="initial">K</span>omfort pracy</p>}
+     side2Text={<p><span className="initial">K</span>omfortowe warunki nauki z wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania oraz nowoczesnego sprzętu muzycznego</p>}/>
      
      <TileRotateContent bgColor={color4} 
-     side1Text={<p><span>Ć</span>wicz wymowę również w domu</p>}
-     side2Text={<p><span>R</span>ejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki</p>}
+     side1Text={<p><span className="initial">Ć</span>wicz wymowę również w domu</p>}
+     side2Text={<p><span className="initial">R</span>ejestracja dźwiękowa wymowy i kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy fonetyki</p>}
      />
      
      <TileRotateContent bgColor={color5} 
-     side1Text={<p><span>U</span>czysz się słuchając</p>}
-     side2Text={<p><span>N</span>auczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych</p>}
+     side1Text={<p><span className="initial">U</span>czysz się słuchając</p>}
+     side2Text={<p><span className="initial">N</span>auczanie z szerokim wykorzystaniem elementów muzyczno – dźwiękowych</p>}
      />
      
      <TileRotateContent bgColor={color1} 
-     side1Text={<p><span>Z</span>acznij tworzyć</p>}
-     side2Text={<p><span>N</span>auka kreatywnego zastosowania wiedzy językowo – muzycznej</p>}
+     side1Text={<p><span className="initial">Z</span>acznij tworzyć</p>}
+     side2Text={<p><span className="initial">N</span>auka kreatywnego zastosowania wiedzy językowo – muzycznej</p>}
      />
      
      <TileRotateContent bgColor={color2} 
-     side1Text={<p><span>P</span>racuj w studio i dziel się pasją z innymi</p>}
-     side2Text={<p><span>S</span>tudyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów</p>}
+     side1Text={<p><span className="initial">P</span>racuj w studio i dziel się pasją z innymi</p>}
+     side2Text={<p><span className="initial">S</span>tudyjna rejestracja i promocja twórczości uzdolnionych muzycznie uczniów</p>}
      />
      
      <TileRotateContent bgColor={color4} 
-     side1Text={<p><span>N</span>aucz się tlumaczyć teksty</p>}
-     side2Text={<p><span>P</span>odstawowe techniki tłumaczenia ustnego</p>}
+     side1Text={<p><span className="initial">N</span>aucz się tlumaczyć teksty</p>}
+     side2Text={<p><span className="initial">P</span>odstawowe techniki tłumaczenia ustnego</p>}
      />
      
      <TileRotateContent bgColor={color5} 
-     side1Text={<p><span>P</span>łać tak jak lubisz</p>}
-     side2Text={<p><span>D</span>owolny system płatności: kwartalny, semestralny albo po każdej lekcji</p>}
+     side1Text={<p><span className="initial">P</span>łać tak jak lubisz</p>}
+     side2Text={<p><span className="initial">D</span>owolny system płatności: kwartalny, semestralny albo po każdej lekcji</p>}
      />
      
      <TileRotateContent bgColor={color1} 
-     side1Text={<p><span>L</span>iczba spotkań ustalana indywidualnie</p>}
-     side2Text={<p><span>C</span>zęstotliwość zajęć w tygodniu dostosowana do potrzeb klienta</p>}
+     side1Text={<p><span className="initial">L</span>iczba spotkań ustalana indywidualnie</p>}
+     side2Text={<p><span className="initial">C</span>zęstotliwość zajęć w tygodniu dostosowana do potrzeb klienta</p>}
      />
      
      </div>
@@ -155,7 +155,4 @@ class Szkola extends React.Component {
   )
  }
 }
-
-// TODO Szkola - Czy brat Bartka zrobi grafikę do kafelków?
-
 export default Szkola;
