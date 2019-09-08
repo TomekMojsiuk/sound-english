@@ -212,16 +212,16 @@ class OfertaCennik extends React.Component {
        popupText={
         <div>
          <p>
-          „<span>D</span>la mnie już raczej za późno, w młodości wmuszano we
+          „<span className="initial">D</span>la mnie już raczej za późno, w młodości wmuszano we
           mnie rosyjski, a angielskiego chyba już nigdy się nie nauczę” – jeśli
           tego typu słowa powtarzasz nawykowo od wielu lat, czas to zmienić.
          </p>
          <p>
-          <span>K</span>urs „About time!” to zajęcia konwersacyjne dostosowane
+          <span className="initial">K</span>urs „About time!” to zajęcia konwersacyjne dostosowane
           do uczniów w każdym wieku, zgodnie z ich preferencjami i potrzebami.
          </p>
          <p>
-          <span>N</span>a wiedzę nigdy nie jest za późno, a na wymówki jest
+          <span className="initial">N</span>a wiedzę nigdy nie jest za późno, a na wymówki jest
           zawsze za wcześnie. Sound English czeka na kontakt!
          </p>
         </div>
@@ -290,11 +290,11 @@ class OfertaCennik extends React.Component {
           podejście i dobry początek (bądź rozwinięcie) przygody z muzyką -
           wszystko to tylko u nas. Zajęcia prowadzi wykwalifikowany, aktywny
           scenicznie gitarzysta
-          <span className='emphasised__test'>{" "}Michał Kleinszmidt</span> -
+          <span className='emphasised__test'> Michał Kleinszmidt</span> -
           absolwent kierunku Edukacja artystyczna w zakresie sztuki muzycznej
           Akademii Pomorskiej w Słupsku, obecnie czynnie działający jako
           gitarzysta i saksofonista zespołu
-          <span className='emphasised__test'>{" "}Lares</span>. Zapraszamy!
+          <span className='emphasised__test'> Lares</span>. Zapraszamy!
          </p>
          <p>
           <span className='initial'>K</span>oszt zajęć to{" "}
@@ -327,7 +327,6 @@ class OfertaCennik extends React.Component {
       <div className={"left"}>
        <h2>
         <span className='initial'>Z</span>ajęcia indywidualne{" "}
-        {/* <span className={"asterisk"}>&#42;</span> */}
        </h2>
        <div className='underline' />
        <div className='price__item__list'>
@@ -342,14 +341,12 @@ class OfertaCennik extends React.Component {
          <div>
           <span className={"bold"}>180zł</span>
          </div>
-         {/* <div>(20zł rabatu)</div> */}
         </div>
         <div className='price__item'>
          <div>Płatność za 10 lekcji z góry:</div>
          <div>
           <span className={"bold"}>370zł</span>
          </div>
-         {/* <div>(30zł rabatu)</div> */}
         </div>
        </div>
       </div>
@@ -371,23 +368,36 @@ class OfertaCennik extends React.Component {
          <div>
           <span className={"bold"}>130zł</span>
          </div>
-         {/* <div>(20zł rabatu)</div> */}
         </div>
         <div className='price__item'>
          <div>Płatność za 10 lekcji z góry:</div>
          <div>
           <span className={"bold"}>260zł</span>
          </div>
-         {/* <div>(40zł rabatu)</div> */}
-        </div>
+         </div>
        </div>
       </div>
      </div>
      <p className={"footnote"}>
-      <span className={"asterisk"}>&#42;</span> <span>W</span>{" "}Sound English grupa to już 2 osoby!
+      <span className={"asterisk"}>&#42;</span> <span>W</span> Sound English
+      grupa to już 2 osoby!
      </p>
 
-     <h2 className='h2__header--adjust'>Przyprowadź znajomych, a zaoszczędzisz!</h2>
+     <h2 className='h2__header--adjust'>
+      Przyprowadź znajomych, a zaoszczędzisz!
+     </h2>
+     <div className='banner'>
+       <div className='banner__content__box'>
+        <p className='text'>
+         Zapisz się na zajęcia. Możesz do nas zadzwonić lub skorzystać z
+         formularza na tej stronie.
+        </p>
+        <div className='icon mobile' />
+       </div>
+       <MyLink exact to='/kontakt'>
+        Formularz kontaktowy
+       </MyLink>
+      </div>
      <div className='text__box'>
       <div className='underline' />
       <p className='read--basic'>
@@ -401,20 +411,16 @@ class OfertaCennik extends React.Component {
        <span className='initial'>A</span>spekty dźwiękowe lekcji odróżniające
        SOUND ENGLISH od innych szkół językowych (ćwiczenia akcentu, nagrania
        wypowiedzi) są integralną, częścią zajęć i nie wiążą się z żadnymi
-       dodatkowymi opłatami!!!
+       dodatkowymi opłatami.
+      </p>
+      <div className='underline' />
+      <p className='read--basic'>
+       <span className='initial'>W</span> Sound English realizujmey też
+       inne kursy (np. na wyższe certyfikaty, lub egzaminy typu TOEFL). Jeśli
+       tego, czego szukasz, nie ma w powyższej ofercie, zadzwoń lub napisz i zapytaj.
       </p>
       <h2 className='h2__header--adjust'>Nie czekaj, zapisz się już dziś!</h2>
-      <div className='banner'>
-       <div className='banner__content__box'>
-        <p className='text'>
-         Zapisz się na zajęcia. Możesz do nas zadzwonić lub skorzystać z formularza na tej stronie.
-        </p>
-        <div className='icon mobile' />
-       </div>
-       <MyLink exact to='/kontakt'>
-        Formularz kontaktowy
-       </MyLink>
-       </div>
+
       <div className='underline' />
       <p className='read--basic'>
        <span className='initial'>C</span>eny usług studyjnych (ministudio) i
