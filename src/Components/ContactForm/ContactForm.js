@@ -69,7 +69,7 @@ class ContactForm extends React.Component {
     break;
    case "phoneNumber":
     errors.errPhoneNumber =
-     value.length === 0
+     value.length <= 0
       ? null
       : (errors.errPhoneNumber =
          isNaN(value) || value.length < 9 || value.length > 9
@@ -83,10 +83,9 @@ class ContactForm extends React.Component {
    default:
     break;
   }
-
   // Update state with errors
   this.setState({ errors, [name]: value });
- };
+ }
 
  handleSubmit = e => {
   e.preventDefault();
