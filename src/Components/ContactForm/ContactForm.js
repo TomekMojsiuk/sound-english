@@ -90,7 +90,6 @@ class ContactForm extends React.Component {
  handleSubmit = e => {
   e.preventDefault();
 
-  //   TODO naprawić wysyłanie formularza bez nr telefonu.
   const validateForm = errors => {
    let valid = true;
    Object.values(errors).forEach(
