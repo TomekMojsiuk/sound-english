@@ -40,7 +40,10 @@ class Portfolio extends React.Component {
      <div className='flag--addon' />
      <h1>
       <span className="initial">P</span>ortfolio
-     </h1> 
+     </h1>
+     <div className="group__container">
+       
+       </div> 
     </div>
    </div>
   )
