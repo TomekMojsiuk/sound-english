@@ -70,11 +70,11 @@ class ContactForm extends React.Component {
    case "phoneNumber":
     errors.errPhoneNumber =
      value.length <= 0
-      ? null
+      ? ""
       : (errors.errPhoneNumber =
          isNaN(value) || value.length < 9 || value.length > 9
           ? "Wpisz poprawny numer"
-          : null);
+          : "");
     break;
    case "message":
     errors.errMessage =
@@ -106,15 +106,7 @@ class ContactForm extends React.Component {
    console.log("Form submitted");
 
    let tmeplateParams = {
-    from_name:
-     subject +
-     " od: " +
-     name +
-     " " +
-     surname +
-     " (" +
-     email +
-     ") przez formularz www SE",
+    from_name: subject + " od: " + name + " " + surname + " (" + email + ") przez formularz www SE",
     to_name: "Bartek",
     message_html: subject + ":" + "<br>" + message,
     reply_to: name + " " + surname + "<br>" + email + "<br>" + phoneNumber
@@ -245,7 +237,7 @@ class ContactForm extends React.Component {
       value={email}
      />
     </label>
-    <div name='email' className='error__msg'>
+    <div name='text' className='error__msg'>
      {errPhoneNumber}
     </div>
     <label>
