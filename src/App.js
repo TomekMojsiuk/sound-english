@@ -21,6 +21,7 @@ import Rodo from "./Pages/Rodo/Rodo";
 
 import CookieBanner from "react-cookie-banner";
 import FacebookFeed from "./Components/SocialMedia/FacebookFeed/FacebookFeed";
+import Portfolio from "./Pages/Portfolio/Portfolio";
 
 class App extends React.Component {
  constructor(props) {
@@ -166,7 +167,7 @@ class App extends React.Component {
        path='/rodo'
        render={() => <Rodo scrollToTop={this.handleGoToTop} />}
       />
-      {/* <Route path='/portfolio-dziennikarskie' render={() => ""} /> */}
+      <Route path='/portfolio-dziennikarskie' render={() => <Portfolio scrollToTop={this.handleGoToTop} /> } />
       <Route component={NotFound} />
      </Switch>
 
