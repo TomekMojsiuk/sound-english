@@ -68,7 +68,7 @@ class Main extends React.Component {
         </li>
        </ul>
        <MyLink exact to='/oferta'>
-        Oferta i cennik
+        Sprawdź nasze kursy
        </MyLink>
       </div>
      </div>

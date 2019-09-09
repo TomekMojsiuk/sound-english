@@ -2,26 +2,22 @@
 
 .logo {
  background: url("../../assets/img/logo.png");
- background-color: fade-out($color1, 0.3);
+ background-color: fade-out($color1, 0.6);
  background-size: 60%;
  background-repeat: no-repeat;
  background-position: center;
- margin-top: calc(50% - 5vh);
- height: 384px;
+ align-self: center;
+ margin: 0 auto;
+ height: 80vh;
  width: 325px;
  border-radius: 10px;
 
  @media all and (min-width: $BreakpointDesktop) {
-  background: url("../../assets/img/logo.png");
   background-color: unset;
-  margin-top: unset;
   background-size: 80%;
-  background-repeat: no-repeat;
-  align-self: center;
+  margin: unset;
   height: 350px;
   width: 200px;
-
-  background-position: center;
  }
 }
 
@@ -32,7 +28,9 @@
 }
 
 #main {
+ display: flex;
  .main__content {
+  display: none;
   @media all and (min-width: $BreakpointDesktop) {
    display: initial !important;
    align-self: center;
@@ -65,7 +63,7 @@
    align-self: flex-end;
    margin: unset;
    padding: 6px;
-   width: 100px;
+   //    width: 120px;
 
    &:hover {
     color: $color1;
