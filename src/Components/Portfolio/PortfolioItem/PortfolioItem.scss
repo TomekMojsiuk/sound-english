@@ -1,40 +1,46 @@
 @import "../../../Scss/Config.scss";
 
 .portfolio__item {
- position: relative;
  display: flex;
  flex-direction: column;
  align-items: flex-start;
- height: 200px;
+ min-height: 250px;
  width: 100%;
  margin: 10px 0;
  padding: 10px;
  border-radius: 5px;
+ border-bottom: 2px solid transparent;
  transition: 0.3s all ease-in-out;
  @include boxShadow($color1);
 
  @media all and (min-width: $BreakpointDesktop) {
-  width: 45%;
-  margin: 10px;
+  justify-content: space-between;
+  width: 48%;
+  min-height: 180px;
+  margin: 10px 5px;
  }
 
  &:hover {
   @include boxShadow($color2);
+  border-bottom: 2px solid $color5;
  }
 
  &__title {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
+  font-weight: 800;
   margin: 15px 0 15px 0;
  }
 
  &__summary {
   font-size: 1.4rem;
+  margin: 0 0 20px 0;
+  @media all and (min-width: $BreakpointDesktop) {
+   margin: 10px 0;
+  }
  }
 
  &__button {
   cursor: pointer;
-  position: absolute;
-  bottom: 10px;
   padding: 8px 0;
   width: 90%;
   border: 1px solid transparent;
@@ -48,9 +54,10 @@
 
   @media all and (min-width: $BreakpointDesktop) {
    align-self: flex-end;
+   justify-self: flex-end;
    width: unset;
-   bottom: 15px;
    padding: 5px 10px;
+   margin: 10px;
   }
 
   &:hover {

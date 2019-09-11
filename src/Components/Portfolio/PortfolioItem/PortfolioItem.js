@@ -9,11 +9,22 @@ class PortfolioItem extends React.Component {
   };
  }
  render() {
+  const {
+   key,
+   pathName,
+   title,
+   articleSummary,
+   buttonTxt,
+   handleReadArticle
+  } = this.props;
+  console.log("klucz: " + key);
   return (
-   <div className='portfolio__item'>
-    <div className='portfolio__item__title'>Title</div>
-    <div className='portfolio__item__summary'>Portfolio item summary</div>
-    <div className='portfolio__item__button'>Read more</div>
+   <div key={key} className='portfolio__item' data-path={pathName}>
+    <div className='portfolio__item__title'>{title}</div>
+    <div className='portfolio__item__summary'>{articleSummary}</div>
+    <div className='portfolio__item__button' onClick={handleReadArticle}>
+     {buttonTxt}
+    </div>
    </div>
   );
  }
