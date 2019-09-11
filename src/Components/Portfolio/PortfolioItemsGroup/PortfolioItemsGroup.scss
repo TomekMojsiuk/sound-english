@@ -1,0 +1,14 @@
+.portfolio__items__group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
+
+    &__title {
+        width: 100%;
+    }
+  }

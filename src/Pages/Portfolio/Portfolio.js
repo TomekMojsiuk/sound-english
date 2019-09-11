@@ -4,6 +4,7 @@ import './Portfolio.scss';
 
 import Loader from "../../Components/Loader/Loader";
 import MyLink from '../../Components/Nav/NavLink/NavLink'
+import PortfolioItemsGroup1 from "../../Components/Portfolio/PortfolioItemsGroup/PortfolioItemsGroup1";
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -41,9 +42,7 @@ class Portfolio extends React.Component {
      <h1>
       <span className="initial">P</span>ortfolio
      </h1>
-     <div className="group__container">
-       
-       </div> 
+     <PortfolioItemsGroup1 />
     </div>
    </div>
   )
