@@ -97,5 +97,14 @@ export const PortfolioItems = [
   summary:
    "Czytając po raz wtóry przygody Sherlocka Holmesa spróbowałem odpowiedzieć na to pytanie. [...] Oponenci zapewne stwierdzą, że Sherlock Holmes jest bohaterem nudnym, a jego analityczne zdolności zalatują kiczem i literackim prostactwem dla mas. Każdy ma prawo do własnej opinii, ale nie sposób nie zauważyć niezmiennej popularności twórczości Sir Arthura Conana Doyle’a.",
   writtenFor: "Serwis Reportal"
- }
+ },
+ {
+    id: 12,
+    componentName: "KanyeWestSpiewa",
+    path: "/kanye-west-spiewa",
+    title: "Kanye West śpiewa, czyli trzy choroby rapu",
+    summary:
+     "Dlaczego uznał, że WOLNO MU wziąć na warsztat numer taki jak Bohemian Rhapsody? Dlaczego poczuł się aż tak pewny siebie? Dlaczego założył, że zawyje sobie atonalnie pod odtwarzany w tle klasyczny rockowy numer i w zasadzie nic się nie stanie?",
+    writtenFor: "Serwis Reportal"
+   }
 ];

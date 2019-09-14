@@ -22,10 +22,11 @@ import ZeSzkolyNaScene from "../../Components/Portfolio/PortfolioArticles/ZeSzko
 import PareSlowOMarkuJ from "../../Components/Portfolio/PortfolioArticles/PareSlowOMarkuJ";
 import ObrotowaMagia from "../../Components/Portfolio/PortfolioArticles/ObrotowaMagia";
 import CohenPoNowatorsku from "../../Components/Portfolio/PortfolioArticles/CohenPoNowatorsku";
+// REPORTAL
 import ChristianLaettner from "../../Components/Portfolio/PortfolioArticles/ChristianLaettner";
 import DennisRodman from "../../Components/Portfolio/PortfolioArticles/DennisRodman";
 import SherlockHolmes from "../../Components/Portfolio/PortfolioArticles/SherlockHolmes";
-// REPORTAL
+import KanyeWestSpiewa from "../../Components/Portfolio/PortfolioArticles/KanyeWestSpiewa";
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -93,6 +94,8 @@ class Portfolio extends React.Component {
              return <DennisRodman {...this.props} />;
             case "SherlockHolmes":
              return <SherlockHolmes {...this.props} />;
+            case "KanyeWestSpiewa":
+             return <KanyeWestSpiewa {...this.props} />;
             default:
            }
           }}
