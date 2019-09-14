@@ -1,0 +1,77 @@
+@import "../../../Scss/Config.scss";
+
+.article__container {
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  // text-align: justify;
+  @include font;
+
+  @media all and (min-width: $BreakpointDesktop) {
+    font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-align: justify;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 1.8rem;
+    margin: 10px 0 25px 0;
+    &:first-letter {
+      font-size: 2.5rem; 
+      color: $color4;
+    }
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      content: "";
+      width: 100px;
+      height: 2px;
+      background: $color2;
+    }
+  }
+  h2 {
+    position: relative;
+    font-size: 1.3rem;
+    margin: 0 0 0 10px;
+    &:first-letter {
+      font-size: 2.5rem; 
+      color: $color4;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 3px;
+      height: 100%;
+      background: $color2;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    &:first-letter {
+      font-size: 2rem;
+    }
+    @media all and (min-width: $BreakpointDesktop) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .article__intro {
+   font-weight: 800;
+  }
+
+  .article__signature {
+    text-align: right;
+  }
+
+  .article__footnotes {
+font-size: .8rem;
+line-height: 1.6rem;
+&::first-letter {
+  font-size: 1.5rem;
+}
+  }
+}

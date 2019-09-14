@@ -1,26 +1,38 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+// Styles
 import "../../Pages/Pages.scss";
 import "./Portfolio.scss";
 
+// Database
+import { PortfolioItems } from "../../db";
+
+// Components
 import Loader from "../../Components/Loader/Loader";
-import MyLink from "../../Components/Nav/NavLink/NavLink";
 import Dashboard from "../../Components/Portfolio/Dashboard/Dashboard";
+
+// Articles
 import KimJestMuzykZZawodu from "../../Components/Portfolio/PortfolioArticles/KimJestMuzykZZawodu";
+import DAngelicoGitaryZDusza from "../../Components/Portfolio/PortfolioArticles/DAngelicoGitaryZDusza";
+import FenderMarkaPelnaHistorii from "../../Components/Portfolio/PortfolioArticles/FenderMarkaPelnaHistorii";
+import ReaggePulsSzczeroscHistoria from "../../Components/Portfolio/PortfolioArticles/ReaggePulsSzczeroscHistoria";
+import ZeSzkolyNaScene from "../../Components/Portfolio/PortfolioArticles/ZeSzkolyNaScene";
 
 class Portfolio extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
    componentDidMount: false,
-   btnReadMoreClicked: false
+   btnReadMoreClicked: false,
+   articlesDb: []
   };
  }
 
  componentDidMount() {
   setTimeout(() => {
    this.setState(prevState => ({
-    componentDidMount: !prevState.componentDidMount
+    componentDidMount: !prevState.componentDidMount,
+    articlesDb: PortfolioItems
    }));
   }, 1000);
 
@@ -28,7 +40,7 @@ class Portfolio extends React.Component {
  }
 
  render() {
-  const { componentDidMount } = this.state;
+  const { componentDidMount, articlesDb } = this.state;
 
   let opacity = ".9";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
@@ -44,15 +56,37 @@ class Portfolio extends React.Component {
      <div className='flag--addon' />
      <h2>
       <span className='initial'>P</span>ortfolio
-      </h2>
-      <BrowserRouter>
-      <Route
-       exact
-       path={'/' + ""}
-       render={() => <KimJestMuzykZZawodu />}
-      />
+     </h2>
+     <BrowserRouter>
+      <Switch>
+      {articlesDb.map(article => {
+            console.log(article.componentName);
+            console.log(article.path);
+            return (
+              <Route
+                key={article.path}
+                path={article.path}
+                render={() => {
+                  switch (article.componentName) {
+                    case "KimJestMuzykZZawodu":
+                      return <KimJestMuzykZZawodu />;
+                    case "FenderMarkaPelnaHistorii":
+                      return <FenderMarkaPelnaHistorii />;
+                    case "DAngelicoGitaryZDusza":
+                      return <DAngelicoGitaryZDusza />;
+                    case "ReaggePulsSzczeroscHistoria":
+                      return <ReaggePulsSzczeroscHistoria />;
+                    case "ZeSzkolyNaScene":
+                      return <ZeSzkolyNaScene />;
+                    default:
+                  }
+                }}
+              />
+            );
+          })}
+      </Switch>
+     <Dashboard articlesDb={articlesDb} />
      </BrowserRouter>
-     <Dashboard />
     </div>
    </div>
   );

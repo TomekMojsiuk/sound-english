@@ -1,23 +1,25 @@
 import React, { Suspense, lazy } from "react";
 import "./Dashboard.scss";
 import $ from "jquery";
+
+// Database
 import { PortfolioItems } from "../../../db.js";
 
-const PortfolioItem = lazy(() => import("../PortfolioItem/PortfolioItem"));
+// lazy loading
+const LazyPortfolioItem = lazy(() => import("../PortfolioItem/PortfolioItem"));
 
 class Dashboard extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
-   articlePaths: [],
    readArticle: false
   };
  }
 
  componentDidMount() {
-  this.setState({
-   articlePaths: PortfolioItems
-  });
+//   this.setState({
+//    articlePaths: PortfolioItems
+//   });
  }
 
  handleReadArticle = e => {
@@ -28,7 +30,7 @@ class Dashboard extends React.Component {
 
  render() {
   console.log(this.state.articlePaths);
-  const { articlePaths } = this.state;
+  const { articlesDb } = this.props;
 
   return (
    <div className='portfolio__items__group'>
@@ -36,15 +38,18 @@ class Dashboard extends React.Component {
      Artykuły napisane na stronę salonów muzycznych Riff
     </h2>
     <Suspense fallback={<div>Wczytywanie...</div>}>
-     {articlePaths.map(article => {
+     {articlesDb.map(article => {
+         console.log(article.path);
       return (
-       <PortfolioItem
-        key={article.id.toString()}
+       <LazyPortfolioItem
+        id={article.id}
+        key={article.id}
         handleReadArticle={this.handleReadArticle}
         pathName={article.path}
         title={article.title}
         articleSummary={article.summary}
-        buttonTxt={"Przeczytaj"}
+        linkText={"Przeczytaj"}
+        linkGoTo={article.path}
        />
       );
      })}

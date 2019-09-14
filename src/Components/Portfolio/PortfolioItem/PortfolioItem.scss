@@ -16,7 +16,7 @@
  @media all and (min-width: $BreakpointDesktop) {
   justify-content: space-between;
   width: 48%;
-  min-height: 180px;
+  min-height: 250px;
   margin: 10px 5px;
  }
 
@@ -39,7 +39,7 @@
   }
  }
 
- &__button {
+ &__nav__link {
   cursor: pointer;
   padding: 8px 0;
   width: 90%;
@@ -51,6 +51,7 @@
   align-self: center;
   text-align: center;
   transition: 0.3s all ease-in-out;
+  text-decoration: none;
 
   @media all and (min-width: $BreakpointDesktop) {
    align-self: flex-end;
