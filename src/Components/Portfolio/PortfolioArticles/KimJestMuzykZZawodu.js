@@ -1,5 +1,6 @@
 import React from "react";
 import "./PortfolioArticles.scss";
+import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
 export default function KimJestMuzykZZawodu() {
   return (
@@ -95,6 +96,7 @@ export default function KimJestMuzykZZawodu() {
         poranki w trasie. Stay tuned! Even if hangover destroys your life.
       </p>
       <p className="article__signature">Bartek Piwowarczyk</p>
+      <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
 export default function DAngelicoGitaryZDusza() {
   return (
@@ -121,6 +122,7 @@ export default function DAngelicoGitaryZDusza() {
         zawiedzie.
       </p>
       <p className="article__signature">Bartek Piwowarczyk</p>
+      <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
     </div>
   );
 }

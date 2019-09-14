@@ -2,9 +2,6 @@ import React, { Suspense, lazy } from "react";
 import "./Dashboard.scss";
 import $ from "jquery";
 
-// Database
-import { PortfolioItems } from "../../../db.js";
-
 // lazy loading
 const LazyPortfolioItem = lazy(() => import("../PortfolioItem/PortfolioItem"));
 
@@ -17,9 +14,7 @@ class Dashboard extends React.Component {
  }
 
  componentDidMount() {
-//   this.setState({
-//    articlePaths: PortfolioItems
-//   });
+     this.props.scrollToTop();
  }
 
  handleReadArticle = e => {
@@ -34,9 +29,7 @@ class Dashboard extends React.Component {
 
   return (
    <div className='portfolio__items__group'>
-    <h2 className='portfolio__items__group__title'>
-     Artykuły napisane na stronę salonów muzycznych Riff
-    </h2>
+
     <Suspense fallback={<div>Wczytywanie...</div>}>
      {articlesDb.map(article => {
          console.log(article.path);
@@ -48,7 +41,8 @@ class Dashboard extends React.Component {
         pathName={article.path}
         title={article.title}
         articleSummary={article.summary}
-        linkText={"Przeczytaj"}
+        writtenFor={article.writtenFor}
+        linkText={"Przeczytaj artykuł"}
         linkGoTo={article.path}
        />
       );

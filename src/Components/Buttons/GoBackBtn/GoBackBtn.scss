@@ -1,0 +1,47 @@
+@import "../../../Scss/Config.scss";
+
+.btn__container {
+ display: flex;
+ justify-content: flex-start;
+ width: 100%;
+ padding: 20px 0;
+
+ .btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $color2;
+  border-radius: 5px;
+
+  .arrow {
+   position: absolute;
+   left: 8px;
+   height: 5px;
+   width: 5px;
+   border: 1px solid $color5;
+  }
+  .prev {
+   border-right: none;
+   border-bottom: none;
+   transform: rotate(-45deg);
+  }
+
+  &:hover {
+   border: 1px solid fade-out($color2, 0.5);
+  }
+ }
+
+ .btn__link {
+  width: 100px;
+  height: 20px;
+  padding: unset;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: $color5;
+ }
+}

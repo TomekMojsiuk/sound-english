@@ -1,4 +1,5 @@
 import React from "react";
+import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
 export default function FenderMarkaPelnaHistorii() {
   return (
@@ -129,6 +130,7 @@ export default function FenderMarkaPelnaHistorii() {
         markę. Oby tak dalej!
       </p>
       <p className="article__signature">Bartek Piwowarczyk</p>
+      <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
     </div>
   );
 }

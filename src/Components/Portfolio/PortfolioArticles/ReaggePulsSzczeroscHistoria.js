@@ -1,4 +1,5 @@
 import React from "react";
+import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
 export default function ReaggePulsSzczeroscHistoria() {
   return (
@@ -121,6 +122,7 @@ export default function ReaggePulsSzczeroscHistoria() {
         „Życie Boba Marleya. Catch a Fire” (autor: Timothy White, tłumaczenie:
         Artur Jarosiński, Maciej Magura Góralski, wyd. AXIS MUNDI, 2011).
       </p>
+      <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
     </div>
   );
 }

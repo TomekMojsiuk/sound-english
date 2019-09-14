@@ -1,4 +1,5 @@
 import React from "react";
+import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
 export default function ZeSzkolyNaScene() {
   return (
@@ -119,6 +120,7 @@ export default function ZeSzkolyNaScene() {
         Przyjdź do nas!
       </p>
       <p className="article__signature">Bartek Piwowarczyk</p>
+      <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
     </div>
   );
 }

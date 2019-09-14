@@ -9,7 +9,7 @@ class PortfolioItem extends React.Component {
    pathName,
    title,
    articleSummary,
-   handleReadArticle,
+   writtenFor,
    linkText,
    linkGoTo
   } = this.props;
@@ -22,11 +22,14 @@ class PortfolioItem extends React.Component {
     <div key={"summary." + id} className='portfolio__item__summary'>
      {articleSummary}
     </div>
+    <div className='portfolio__item__written-for'>
+     Artykuł dla: {writtenFor}
+    </div>
     <MyLink
-    className="portfolio__item__nav__link"
+     className='portfolio__item__nav__link'
      key={"button." + id}
-     exact to={linkGoTo}
-     onClick={handleReadArticle}
+     exact
+     to={linkGoTo}
     >
      {linkText}
     </MyLink>
