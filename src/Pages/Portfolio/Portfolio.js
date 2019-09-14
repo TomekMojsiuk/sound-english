@@ -12,7 +12,7 @@ import Loader from "../../Components/Loader/Loader";
 import Dashboard from "../../Components/Portfolio/Dashboard/Dashboard";
 
 // Articles
-// Riff
+// RIFF
 import KimJestMuzykZZawodu from "../../Components/Portfolio/PortfolioArticles/KimJestMuzykZZawodu";
 import DAngelicoGitaryZDusza from "../../Components/Portfolio/PortfolioArticles/DAngelicoGitaryZDusza";
 import FenderMarkaPelnaHistorii from "../../Components/Portfolio/PortfolioArticles/FenderMarkaPelnaHistorii";
@@ -22,6 +22,10 @@ import ZeSzkolyNaScene from "../../Components/Portfolio/PortfolioArticles/ZeSzko
 import PareSlowOMarkuJ from "../../Components/Portfolio/PortfolioArticles/PareSlowOMarkuJ";
 import ObrotowaMagia from "../../Components/Portfolio/PortfolioArticles/ObrotowaMagia";
 import CohenPoNowatorsku from "../../Components/Portfolio/PortfolioArticles/CohenPoNowatorsku";
+import ChristianLaettner from "../../Components/Portfolio/PortfolioArticles/ChristianLaettner";
+import DennisRodman from "../../Components/Portfolio/PortfolioArticles/DennisRodman";
+import SherlockHolmes from "../../Components/Portfolio/PortfolioArticles/SherlockHolmes";
+// REPORTAL
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -68,21 +72,27 @@ class Portfolio extends React.Component {
           render={() => {
            switch (article.componentName) {
             case "KimJestMuzykZZawodu":
-             return <KimJestMuzykZZawodu scrollToTop={scrollToTop} />;
+             return <KimJestMuzykZZawodu {...this.props} />;
             case "FenderMarkaPelnaHistorii":
-             return <FenderMarkaPelnaHistorii scrollToTop={scrollToTop} />;
+             return <FenderMarkaPelnaHistorii {...this.props} />;
             case "DAngelicoGitaryZDusza":
-             return <DAngelicoGitaryZDusza scrollToTop={scrollToTop} />;
+             return <DAngelicoGitaryZDusza {...this.props} />;
             case "ReaggePulsSzczeroscHistoria":
-             return <ReaggePulsSzczeroscHistoria scrollToTop={scrollToTop} />;
+             return <ReaggePulsSzczeroscHistoria {...this.props} />;
             case "ZeSzkolyNaScene":
-             return <ZeSzkolyNaScene scrollToTop={scrollToTop} />;
+             return <ZeSzkolyNaScene {...this.props} />;
             case "PareSlowOMarkuJ":
-             return <PareSlowOMarkuJ scrollToTop={scrollToTop} />;
+             return <PareSlowOMarkuJ {...this.props} />;
             case "ObrotowaMagia":
-             return <ObrotowaMagia scrollToTop={scrollToTop} />;
-             case "CohenPoNowatorsku":
-             return <CohenPoNowatorsku scrollToTop={scrollToTop} />;
+             return <ObrotowaMagia {...this.props} />;
+            case "CohenPoNowatorsku":
+             return <CohenPoNowatorsku {...this.props} />;
+            case "ChristianLaettner":
+             return <ChristianLaettner {...this.props} />;
+            case "DennisRodman":
+             return <DennisRodman {...this.props} />;
+            case "SherlockHolmes":
+             return <SherlockHolmes {...this.props} />;
             default:
            }
           }}

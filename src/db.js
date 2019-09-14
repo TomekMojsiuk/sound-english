@@ -63,11 +63,39 @@ export const PortfolioItems = [
   writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
  },
  {
-    id: 8,
-    componentName: "CohenPoNowatorsku",
-    path: "/cohen-po-nowatorsku",
-    title: "Cohen po nowatorsku",
-    summary: "Recenzja płyty: „Łanuszka / Cohen”. Nowy zestaw pieśni kanadyjskiego mistrza w świeżych przekładach.",
-     writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
-   }
+  id: 8,
+  componentName: "CohenPoNowatorsku",
+  path: "/cohen-po-nowatorsku",
+  title: "Cohen po nowatorsku",
+  summary:
+   "Recenzja płyty: „Łanuszka / Cohen”. Nowy zestaw pieśni kanadyjskiego mistrza w świeżych przekładach.",
+  writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
+ },
+ {
+  id: 9,
+  componentName: "ChristianLaettner",
+  path: "/christian-laettner",
+  title: "Christian Laettner – polski akcent w „Dream Teamie”",
+  summary:
+   "Christian Donald Laettner urodził się 17 sierpnia 1969 roku w miejscowości Angola w stanie Nowy Jork. Jego dziadkowie mówili głównie po polsku, a ojciec uczęszczał do polskiej szkoły. Jego nieprzeciętny wzrost predestynował go do koszykówki...",
+  writtenFor: "Serwis Reportal"
+ },
+ {
+  id: 10,
+  componentName: "DennisRodman",
+  path: "/dennis-rodman",
+  title: "Dennis Rodman – legendarny “Robak” NBA",
+  summary:
+   "Bo Dennis Rodman jest tylko jeden. Niepowtarzalny, szalony, wielki koszykarz. Od 2009 znajduje się w Galerii Sław Ligi NBA, a jego numer 10 zastrzeżony jest przez Detroit Pistons. Wszyscy pamiętają jego zbiórki i fryzury. Pamiętają jaki był wielki. Tak wielki pozostanie w pamięci fanów na zawsze.",
+  writtenFor: "Serwis Reportal"
+ },
+ {
+  id: 11,
+  componentName: "SherlockHolmes",
+  path: "/za-co-kochamy-sherlocka-holmesa",
+  title: "Za co kochamy Sherlocka Holmesa?",
+  summary:
+   "Czytając po raz wtóry przygody Sherlocka Holmesa spróbowałem odpowiedzieć na to pytanie. [...] Oponenci zapewne stwierdzą, że Sherlock Holmes jest bohaterem nudnym, a jego analityczne zdolności zalatują kiczem i literackim prostactwem dla mas. Każdy ma prawo do własnej opinii, ale nie sposób nie zauważyć niezmiennej popularności twórczości Sir Arthura Conana Doyle’a.",
+  writtenFor: "Serwis Reportal"
+ }
 ];
