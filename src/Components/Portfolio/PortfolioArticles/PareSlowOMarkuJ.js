@@ -6,6 +6,7 @@ export default function PareSlowOMarkuJ({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Parę słów o Marku J.</h1>
    <p className='article__intro'>
     <i>

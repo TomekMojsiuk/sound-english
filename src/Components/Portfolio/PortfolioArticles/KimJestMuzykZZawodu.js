@@ -6,6 +6,7 @@ export default function KimJestMuzykZZawodu({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Kim jest muzyk z zawodu?</h1>
    <p className='article__intro'>
     Mówi się, że aby być w czymś dobrym trzeba się w tym kierunku gruntownie

@@ -6,6 +6,7 @@ export default function ObrotowaMagia({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Obrotowa magia</h1>
    <p className='article__intro'>
     Wiruje powoli i dostojnie. Pracuje niespiesznie, niekiedy trudna we

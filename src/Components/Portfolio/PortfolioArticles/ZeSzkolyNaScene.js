@@ -5,6 +5,7 @@ export default function ZeSzkolyNaScene({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Ze szkoły na… scenę, czyli o młodocianych muzycznych geniuszach</h1>
    <p className='article__intro'>
     Często słyszymy, że na sukces w muzyce potrzeba czasu, wytrwałości i

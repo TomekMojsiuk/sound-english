@@ -5,6 +5,7 @@ export default function DAngelicoGitaryZDusza({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>D’ANGELICO - gitary z duszą</h1>
    <p className='article__intro'>
     „Fender, Gibson czy Ibanez?” To proste pytanie zadaje sobie każdy

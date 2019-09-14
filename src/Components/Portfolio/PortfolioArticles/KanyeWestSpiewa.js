@@ -5,6 +5,7 @@ export default function KanyeWestSpiewa({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Kanye West śpiewa, czyli trzy choroby rapu</h1>
    <p className='article__intro'>
     Ostatnie dni w muzyce zdominowane są przez niefortunny (by nie powiedzieć:

@@ -5,6 +5,7 @@ export default function SherlockHolmes({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Za co kochamy Sherlocka Holmesa?</h1>
    <p className='article__intro'>
     Detektyw – geniusz wymyślony i opisany przez Sir Arthura Conana Doyle’a to

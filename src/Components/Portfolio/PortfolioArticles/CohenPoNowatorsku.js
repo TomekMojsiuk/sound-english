@@ -6,6 +6,7 @@ export default function CohenPoNowatorsku({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Cohen po nowatorsku</h1>
    <p className='article__intro'>
     Przez lata monopol na tłumaczenia pieśni L. Cohena miał w Polsce świętej

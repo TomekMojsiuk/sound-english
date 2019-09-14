@@ -5,6 +5,7 @@ export default function ChristianLaettner({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Christian Laettner – polski akcent w „Dream Teamie”</h1>
    <p className='article__intro'>
     Jaką drużyną był występujący na Igrzyskach Olimpijskich w Barcelonie w 1992

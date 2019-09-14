@@ -5,6 +5,7 @@ export default function FenderMarkaPelnaHistorii({scrollToTop}) {
   scrollToTop();
   return (
     <div className="article__container">
+    <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
       <h1>FENDER - marka pełna historii.</h1>
       <p className="article__intro">
         Fender to od dekad firma będąca klasą dla samej siebie. To jej wiosła są

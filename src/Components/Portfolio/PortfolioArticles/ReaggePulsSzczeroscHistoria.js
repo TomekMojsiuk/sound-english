@@ -5,6 +5,7 @@ export default function ReaggePulsSzczeroscHistoria({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Reagge - puls, szczerość i historia.</h1>
    <p className='article__intro'>
     <i>Uderz mnie muzyką!</i> - śpiewał w utworze „Trenchtown Rock”

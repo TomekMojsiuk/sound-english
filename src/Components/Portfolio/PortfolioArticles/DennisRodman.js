@@ -5,6 +5,7 @@ export default function DennisRodman({ scrollToTop }) {
  scrollToTop();
  return (
   <div className='article__container'>
+  <GoBackBtn linkTo={"/portfolio-dziennikarskie"} btnText={"Powrót"} />
    <h1>Dennis Rodman – legendarny “Robak” NBA</h1>
    <p className='article__intro'>
     Każdy fan koszykówki zna to nazwisko. Każdy wie, kto przez długie lata
