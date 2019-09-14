@@ -1,7 +1,8 @@
 import React from "react";
 import GoBackBtn from "../../Buttons/GoBackBtn/GoBackBtn";
 
-export default function FenderMarkaPelnaHistorii() {
+export default function FenderMarkaPelnaHistorii({scrollToTop}) {
+  scrollToTop();
   return (
     <div className="article__container">
       <h1>FENDER - marka pełna historii.</h1>

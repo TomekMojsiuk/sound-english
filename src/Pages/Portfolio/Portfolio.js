@@ -12,11 +12,16 @@ import Loader from "../../Components/Loader/Loader";
 import Dashboard from "../../Components/Portfolio/Dashboard/Dashboard";
 
 // Articles
+// Riff
 import KimJestMuzykZZawodu from "../../Components/Portfolio/PortfolioArticles/KimJestMuzykZZawodu";
 import DAngelicoGitaryZDusza from "../../Components/Portfolio/PortfolioArticles/DAngelicoGitaryZDusza";
 import FenderMarkaPelnaHistorii from "../../Components/Portfolio/PortfolioArticles/FenderMarkaPelnaHistorii";
 import ReaggePulsSzczeroscHistoria from "../../Components/Portfolio/PortfolioArticles/ReaggePulsSzczeroscHistoria";
 import ZeSzkolyNaScene from "../../Components/Portfolio/PortfolioArticles/ZeSzkolyNaScene";
+// CGM.PL
+import PareSlowOMarkuJ from "../../Components/Portfolio/PortfolioArticles/PareSlowOMarkuJ";
+import ObrotowaMagia from "../../Components/Portfolio/PortfolioArticles/ObrotowaMagia";
+import CohenPoNowatorsku from "../../Components/Portfolio/PortfolioArticles/CohenPoNowatorsku";
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -41,7 +46,7 @@ class Portfolio extends React.Component {
 
  render() {
   const { componentDidMount, articlesDb } = this.state;
-  const { scrollToTop } = this.props
+  const { scrollToTop } = this.props;
 
   return (
    <div id='portfolio' className='content__wrapper'>
@@ -63,15 +68,21 @@ class Portfolio extends React.Component {
           render={() => {
            switch (article.componentName) {
             case "KimJestMuzykZZawodu":
-             return <KimJestMuzykZZawodu />;
+             return <KimJestMuzykZZawodu scrollToTop={scrollToTop} />;
             case "FenderMarkaPelnaHistorii":
-             return <FenderMarkaPelnaHistorii />;
+             return <FenderMarkaPelnaHistorii scrollToTop={scrollToTop} />;
             case "DAngelicoGitaryZDusza":
-             return <DAngelicoGitaryZDusza />;
+             return <DAngelicoGitaryZDusza scrollToTop={scrollToTop} />;
             case "ReaggePulsSzczeroscHistoria":
-             return <ReaggePulsSzczeroscHistoria />;
+             return <ReaggePulsSzczeroscHistoria scrollToTop={scrollToTop} />;
             case "ZeSzkolyNaScene":
-             return <ZeSzkolyNaScene />;
+             return <ZeSzkolyNaScene scrollToTop={scrollToTop} />;
+            case "PareSlowOMarkuJ":
+             return <PareSlowOMarkuJ scrollToTop={scrollToTop} />;
+            case "ObrotowaMagia":
+             return <ObrotowaMagia scrollToTop={scrollToTop} />;
+             case "CohenPoNowatorsku":
+             return <CohenPoNowatorsku scrollToTop={scrollToTop} />;
             default:
            }
           }}

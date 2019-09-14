@@ -43,5 +43,31 @@ export const PortfolioItems = [
   summary:
    "Często słyszymy, że na sukces w muzyce potrzeba czasu, wytrwałości i poważnego, życiowego doświadczenia. W historii muzyki nie brakuje jednak twórców, których sukces spotkał wcześniej niż egzaminy na studia.",
   writtenFor: "Salony muzyczne Riff"
- }
+ },
+ {
+  id: 6,
+  componentName: "PareSlowOMarkuJ",
+  path: "/pare-slow-o-marku-j",
+  title: "Parę słów o Marku J.",
+  summary:
+   "Marek Jackowski nie był dla mnie nikim szczególnie bliskim, nigdy go nawet nie spotkałem. A jednak jego, poniekąd pełna sprzeczności postać [...], przenikała do mojego życia dość regularnie.",
+  writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
+ },
+ {
+  id: 7,
+  componentName: "ObrotowaMagia",
+  path: "/obrotowa-magia",
+  title: "Obrotowa magia",
+  summary:
+   "Po pierwsze, słuchanie „z winyla” to pewnego rodzaju misterium i proces. Nie, nie przesadzam. Chcąc posłuchać, trzeba być ostrożnym i dokładnym - w razie wypadku nie da się przecież odzyskać zawartości z kopii zapasowej...",
+  writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
+ },
+ {
+    id: 8,
+    componentName: "CohenPoNowatorsku",
+    path: "/cohen-po-nowatorsku",
+    title: "Cohen po nowatorsku",
+    summary: "Recenzja płyty: „Łanuszka / Cohen”. Nowy zestaw pieśni kanadyjskiego mistrza w świeżych przekładach.",
+     writtenFor: "Portal cgm.pl - Codzienna Gazeta Muzyczna"
+   }
 ];
