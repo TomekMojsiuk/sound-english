@@ -33,9 +33,6 @@ class Footer extends React.Component {
      </p>
      <p className='project'>
       Created by
-      {/* <MyLink to='/tomek-mojsiuk' target='_blank'>
-        Tomasz Mojsiuk
-       </MyLink> */}
       <a
        href={tomekMojsiuk}
        className='nav__item'

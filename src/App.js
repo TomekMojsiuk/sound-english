@@ -118,7 +118,15 @@ class App extends React.Component {
  };
 
  render() {
-  const { isClicked, facebook, youtube, cosWiecej, woopanka, tomekMojsiuk, isMobile } = this.state;
+  const {
+   isClicked,
+   facebook,
+   youtube,
+   cosWiecej,
+   woopanka,
+   tomekMojsiuk,
+   isMobile
+  } = this.state;
   console.log(isMobile);
   return (
    <div className='App'>
@@ -169,7 +177,10 @@ class App extends React.Component {
        path='/rodo'
        render={() => <Rodo scrollToTop={this.handleGoToTop} />}
       />
-      <Route path='/portfolio-dziennikarskie' render={() => <Portfolio scrollToTop={this.handleGoToTop} /> } />
+      <Route
+       path='/portfolio-dziennikarskie'
+       render={() => <Portfolio scrollToTop={this.handleGoToTop} />}
+      />
       <Route component={NotFound} />
      </Switch>
 
@@ -186,11 +197,9 @@ class App extends React.Component {
       component={() => (window.location.href = this.state.tomekMojsiuk)}
      />
      <ArrowUp onClick={this.handlescrollToTop} />
-     {!isMobile ? <FacebookFeed isMobile={isMobile} /> : ""}
+     {!isMobile ? <FacebookFeed {...this.state} /> : ""}
      <Footer
-      facebook={facebook}
-      youtube={youtube}
-      tomekMojsiuk={tomekMojsiuk}
+      {...this.state}
      />
      <CookieBanner
       className={"cookie__banner"}
