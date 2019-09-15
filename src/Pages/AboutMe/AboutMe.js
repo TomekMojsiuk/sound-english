@@ -24,24 +24,24 @@ class AboutMe extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
-const { youtubeLink } = this.props
+  const { youtube, cosWiecej, woopanka } = this.props;
   return (
    <div id='o-mnie' className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
     <div className='main__content'>
      <h1 className='title'>
-      <span className="initial">O</span> mnie
+      <span className='initial'>O</span> mnie
      </h1>
      <div className='o-mnie__img' />
      <h2>
-      <span className="initial">K</span>rótka biografia
+      <span className='initial'>K</span>rótka biografia
      </h2>
      <p>
-      Nazywam się <span className="initial">B</span>artłomiej <span className="initial">P</span>iwowarczyk. Urodziłem
-      się 9 stycznia 1991 r, w związku z czym za swoją szczęśliwą liczbę uważam
-      #91, a kolorowy Byk z Chicago Dennis Rodman jest jednym z moich ulubionych
-      koszykarzy.
+      Nazywam się <span className='initial'>B</span>artłomiej{" "}
+      <span className='initial'>P</span>iwowarczyk. Urodziłem się 9 stycznia
+      1991 r, w związku z czym za swoją szczęśliwą liczbę uważam #91, a kolorowy
+      Byk z Chicago Dennis Rodman jest jednym z moich ulubionych koszykarzy.
      </p>
 
      <p>
@@ -55,12 +55,13 @@ const { youtubeLink } = this.props
       Mam doświadczenie w pracy nauczycielskiej z podopiecznymi w każdym wieku.
       Pracowałem w szkole publicznej oraz prywatnej, gdzie prowadziłem między
       innymi kursy maturalne. W pewnym momencie, z potrzeby niezależności i
-      realizacji własnych wizji założyłem <span className="initial">S</span>OUND <span className="initial">E</span>
+      realizacji własnych wizji założyłem <span className='initial'>S</span>OUND{" "}
+      <span className='initial'>E</span>
       NGLISH.
      </p>
 
      <h2>
-      <span className="initial">P</span>oza językiem
+      <span className='initial'>P</span>oza językiem
      </h2>
      <p>
       Zajmuję się również działalnością muzyczną. Moja przygoda z muzyką
@@ -77,24 +78,54 @@ const { youtubeLink } = this.props
       poświęcam najwięcej czasu. Wielokrotnie brałem udział w warsztatach
       wokalnych, między innymi z PK Matczukiem, w zajęciach w Słupskim Ośrodku
       Kultury, czy Akademii Rocka w Gdańsku. W związku z tym w pozajęzykowej
-      pracy dydaktycznej również skupiam się na treningach wokalnych.
+      pracy dydaktycznej również skupiam się na treningach wokalnych. W 2018 r.
+      uzyskałem państwowe uprawnienia do nauczania muzyki w szkole podstawowej i
+      ponadpodstawowej.
      </p>
 
      <h2>
-      <span className="initial">A</span>ktywna działalność muzyczna
+      <span className='initial'>A</span>ktywna działalność muzyczna
      </h2>
      <p>
       Od lat jestem aktywny scenicznie – działający w latach 2006 – 2011 zespół{" "}
       <i>WZROCK</i> pozwolił mi zdobyć pierwsze rockowo - bluesowe szlify
-      sceniczne, a grająca obecnie grupa <i>No Trudno</i> pozwala mi skutecznie
-      przedłużać tę fascynującą przygodę.
+      sceniczne, a grająca obecnie grupa{" "}
+      <a
+       className='nav__item'
+       href={cosWiecej}
+       target='_blank'
+       rel='noopener noreferrer'
+      >
+       <i>Coś Więcej</i>
+      </a>{" "}
+      pozwala mi skutecznie przedłużać tę fascynującą przygodę.
      </p>
      <p>
       Oprócz projektów grupowych działam też solo. Zrealizowałem projekty takie
-      jak <i>WOOPANKA</i> i zajmuję się realizacją nagrań innych artystów.
-      Chcesz posłuchać? Zapraszam Cię na mój profil na
-      <a href={youtubeLink} className="nav__item" target="_blank" rel="noopener noreferrer">Youtube</a>
+      jak{" "}
+      <a
+       className='nav__item'
+       href={woopanka}
+       target='_blank'
+       rel='noopener noreferrer'
+      >
+       <i>WOOPANKA</i>
+      </a>{" "}
+      i zajmuję się realizacją nagrań innych artystów. Chcesz posłuchać?
+      Zapraszam Cię na mój profil na
+      <a
+       className='nav__item'
+       href={youtube}
+       target='_blank'
+       rel='noopener noreferrer'
+      >
+       Youtube
+      </a>
       , gdzie znajdziesz podsumowanie kilku ładnych lat mojej pracy.
+     </p>
+     <p>
+      Obecnie jestem wokalistą w zespole funkowym oraz pianistą w metalowym
+      tribute bandzie zespołu HIM.
      </p>
     </div>
    </div>

@@ -36,6 +36,8 @@ class App extends React.Component {
    facebook:
     "https://www.facebook.com/Centrum-J%C4%99zykowo-Muzyczne-Sound-English-256244201961789/",
    youtube: "https://www.youtube.com/user/Bartek091991/videos?app=desktop",
+   cosWiecej: "https://coswiecej.bandcamp.com/releases",
+   woopanka: "https://woopanka.bandcamp.com/album/woopanka-ep",
    tomekMojsiuk: "https://tomekmojsiuk.netlify.com/"
   };
  }
@@ -116,7 +118,7 @@ class App extends React.Component {
  };
 
  render() {
-  const { isClicked, facebook, youtube, tomekMojsiuk, isMobile } = this.state;
+  const { isClicked, facebook, youtube, cosWiecej, woopanka, tomekMojsiuk, isMobile } = this.state;
   console.log(isMobile);
   return (
    <div className='App'>
@@ -155,7 +157,7 @@ class App extends React.Component {
       <Route
        path='/o-mnie'
        render={() => (
-        <AboutMe youtubeLink={youtube} scrollToTop={this.handleGoToTop} />
+        <AboutMe {...this.state} scrollToTop={this.handleGoToTop} />
        )}
       />
       <Route
