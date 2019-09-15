@@ -1,10 +1,10 @@
 import React from "react";
 import "../Pages.scss";
-import "./AboutMe.scss";
+import "./NaszZespol.scss";
 
 import Loader from "../../Components/Loader/Loader";
 
-class AboutMe extends React.Component {
+class NaszZespol extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -26,14 +26,15 @@ class AboutMe extends React.Component {
   const { componentDidMount } = this.state;
   const { youtube, cosWiecej, woopanka } = this.props;
   return (
-   <div id='o-mnie' className='content__wrapper'>
+   <div id='nasz-zespol' className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
     <div className='main__content'>
      <h1 className='title'>
-      <span className='initial'>O</span> mnie
+      <span className='initial'>N</span>asz zespół
      </h1>
-     <div className='o-mnie__img' />
+     <h2 className='team-member__name'>Bartłomiej Piwowarczyk</h2>
+     <div className='nasz-zespol__img1' />
      <h2>
       <span className='initial'>K</span>rótka biografia
      </h2>
@@ -43,14 +44,12 @@ class AboutMe extends React.Component {
       1991 r, w związku z czym za swoją szczęśliwą liczbę uważam #91, a kolorowy
       Byk z Chicago Dennis Rodman jest jednym z moich ulubionych koszykarzy.
      </p>
-
      <p>
       Jestem absolwentem filologii angielskiej (specjalność nauczycielska –
       literaturoznawstwo) Akademii Pomorskiej w Słupsku i Uniwersytetu
       Gdańskiego. Obie prace pisałem na temat tekstów piosenek zespołu „Simon
       &amp; Garfunkel”.
      </p>
-
      <p>
       Mam doświadczenie w pracy nauczycielskiej z podopiecznymi w każdym wieku.
       Pracowałem w szkole publicznej oraz prywatnej, gdzie prowadziłem między
@@ -59,7 +58,6 @@ class AboutMe extends React.Component {
       <span className='initial'>E</span>
       NGLISH.
      </p>
-
      <h2>
       <span className='initial'>P</span>oza językiem
      </h2>
@@ -72,7 +70,6 @@ class AboutMe extends React.Component {
       Później nauczyłem się też podstaw nagrywania, masteringu i obsługi
       kontrolera PAD oraz konsolety DJ.
      </p>
-
      <p>
       Jendak mimo wszystko moim głównym instrumentem jest głos, któremu
       poświęcam najwięcej czasu. Wielokrotnie brałem udział w warsztatach
@@ -82,7 +79,6 @@ class AboutMe extends React.Component {
       uzyskałem państwowe uprawnienia do nauczania muzyki w szkole podstawowej i
       ponadpodstawowej.
      </p>
-
      <h2>
       <span className='initial'>A</span>ktywna działalność muzyczna
      </h2>
@@ -127,10 +123,18 @@ class AboutMe extends React.Component {
       Obecnie jestem wokalistą w zespole funkowym oraz pianistą w metalowym
       tribute bandzie zespołu HIM.
      </p>
+     <h2 className='team-member__name'>Michał Kleinszmidt</h2>
+     <div className='nasz-zespol__img2' />
+     <p>
+      Aktywny scenicznie gitarzysta, <span className='initial'>M</span>ichał{" "}
+      <span className='initial'>K</span>leinszmidt - absolwent kierunku Edukacja
+      artystyczna w zakresie sztuki muzycznej Akademii Pomorskiej w Słupsku,
+      obecnie czynnie działający jako gitarzysta i saksofonista zespołu Lares.
+     </p>
     </div>
    </div>
   );
  }
 }
 
-export default AboutMe;
+export default NaszZespol;

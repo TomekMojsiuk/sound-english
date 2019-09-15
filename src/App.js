@@ -12,7 +12,7 @@ import Contact from "./Pages/Contact/Contact";
 import OfertaCennik from "./Pages/OfertaCennik/OfertaCennik";
 import Ministudio from "./Pages/Ministudio/Ministudio";
 import Copywriting from "./Pages/Copywriting/Copywriting";
-import AboutMe from "./Pages/AboutMe/AboutMe";
+import NaszZespol from "./Pages/AboutMe/NaszZespol";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Components/Footer/Footer";
 import ArrowUp from "./Components/Buttons/ArrowUp/ArrowUp";
@@ -120,11 +120,6 @@ class App extends React.Component {
  render() {
   const {
    isClicked,
-   facebook,
-   youtube,
-   cosWiecej,
-   woopanka,
-   tomekMojsiuk,
    isMobile
   } = this.state;
   console.log(isMobile);
@@ -163,9 +158,9 @@ class App extends React.Component {
        render={() => <Copywriting scrollToTop={this.handleGoToTop} />}
       />
       <Route
-       path='/o-mnie'
+       path='/nasz-zespol'
        render={() => (
-        <AboutMe {...this.state} scrollToTop={this.handleGoToTop} />
+        <NaszZespol {...this.state} scrollToTop={this.handleGoToTop} />
        )}
       />
       <Route

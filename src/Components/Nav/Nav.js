@@ -27,8 +27,8 @@ class Nav extends React.Component {
      <MyLink onClick={handleNavItemClick} exact to='/copywriting'>
       Copywriting
      </MyLink>
-     <MyLink onClick={handleNavItemClick} exact to='/o-mnie'>
-      O mnie
+     <MyLink onClick={handleNavItemClick} exact to='/nasz-zespol'>
+      Nasz zespół
      </MyLink>
      <MyLink onClick={handleNavItemClick} exact to='/kontakt'>
       Kontakt
