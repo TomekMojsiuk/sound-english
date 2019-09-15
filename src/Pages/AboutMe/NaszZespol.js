@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "../Pages.scss";
 import "./NaszZespol.scss";
 
@@ -26,6 +26,7 @@ class NaszZespol extends React.Component {
   const { componentDidMount } = this.state;
   const { youtube, cosWiecej, woopanka } = this.props;
   return (
+      <Suspense fallback={<Loader />}>
    <div id='nasz-zespol' className='content__wrapper'>
     {componentDidMount ? "" : <Loader />}
     <div className='flag--addon' />
@@ -133,6 +134,7 @@ class NaszZespol extends React.Component {
      </p>
     </div>
    </div>
+   </Suspense>
   );
  }
 }

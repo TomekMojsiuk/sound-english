@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // Styles
 import "../../Pages/Pages.scss";
@@ -27,9 +27,9 @@ import ChristianLaettner from "../../Components/Portfolio/PortfolioArticles/Chri
 import DennisRodman from "../../Components/Portfolio/PortfolioArticles/DennisRodman";
 import SherlockHolmes from "../../Components/Portfolio/PortfolioArticles/SherlockHolmes";
 import KanyeWestSpiewa from "../../Components/Portfolio/PortfolioArticles/KanyeWestSpiewa";
+// BLUESCITY
 import TheHarpianoShow from "../../Components/Portfolio/PortfolioArticles/TheHarpianoShow";
 import KrzysztofGluch from "../../Components/Portfolio/PortfolioArticles/KrzysztofGluch";
-// BLUESCITY
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -61,6 +61,7 @@ class Portfolio extends React.Component {
     {componentDidMount ? "" : <Loader />}
     <div className='main__content'>
      <div className='flag--addon' />
+     <Suspense fallback={<Loader />}>
      <BrowserRouter>
       <Switch>
        {articlesDb.map(article => {
@@ -109,6 +110,7 @@ class Portfolio extends React.Component {
        <Dashboard articlesDb={articlesDb} scrollToTop={scrollToTop} />
       </Switch>
      </BrowserRouter>
+     </Suspense>
     </div>
    </div>
   );

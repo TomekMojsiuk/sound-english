@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import $ from "jquery";
 
@@ -22,6 +22,7 @@ import Rodo from "./Pages/Rodo/Rodo";
 import CookieBanner from "react-cookie-banner";
 import FacebookFeed from "./Components/SocialMedia/FacebookFeed/FacebookFeed";
 import Portfolio from "./Pages/Portfolio/Portfolio";
+import Loader from "./Components/Loader/Loader";
 
 class App extends React.Component {
  constructor(props) {
@@ -126,6 +127,7 @@ class App extends React.Component {
   return (
    <div className='App'>
     <Hamburger onClick={this.handleHamburgerClick} isClicked={isClicked} />
+    <Suspense fallback={<Loader />}>
     <BrowserRouter>
      <Nav
       handleNavDisplay={isClicked}
@@ -215,6 +217,7 @@ class App extends React.Component {
       buttonMessage='Zgoda'
      />
     </BrowserRouter>
+    </Suspense>
    </div>
   );
  }
