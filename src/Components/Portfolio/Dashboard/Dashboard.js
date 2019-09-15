@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import "./Dashboard.scss";
 import $ from "jquery";
+import Loader from "../../Loader/Loader";
 
 // lazy loading
 const LazyPortfolioItem = lazy(() => import("../PortfolioItem/PortfolioItem"));
@@ -14,7 +15,7 @@ class Dashboard extends React.Component {
  }
 
  componentDidMount() {
-     this.props.scrollToTop();
+  this.props.scrollToTop();
  }
 
  handleReadArticle = e => {
@@ -28,25 +29,56 @@ class Dashboard extends React.Component {
   const { articlesDb } = this.props;
 
   return (
-   <div className='portfolio__items__group'>
-
-    <Suspense fallback={<div>Wczytywanie...</div>}>
-     {articlesDb.map(article => {
-         console.log(article.path);
-      return (
-       <LazyPortfolioItem
-        id={article.id}
-        key={article.id}
-        handleReadArticle={this.handleReadArticle}
-        pathName={article.path}
-        title={article.title}
-        articleSummary={article.summary}
-        writtenFor={article.writtenFor}
-        linkText={"Przeczytaj artykuł"}
-        linkGoTo={article.path}
-       />
-      );
-     })}
+   <div className='portfolio__items__container'>
+    <Suspense fallback={<Loader />}>
+     <div className='portfolio__description'>
+      <h2>
+       <span className='initial'>P</span>ortfolio dziennikarskie
+      </h2>
+      <p>
+       Znajdziesz tu moje publikacje. Zarówno te nowe, jak i starsze, sprzed
+       kilku lat. Oprócz atrykułów opublikowanych na tej stronie, zapraszam Cię
+       również do moich publikacji w zewnętrznych serwisach. Miłego czytania.
+      </p>
+      <p>
+       <a href='https://mostpeculiarman.wordpress.com/' target='_blank'>
+        Blog osobisty
+       </a>{" "}
+       – proza, recenzje, felietony
+      </p>
+      <p>
+       <a
+        href='http://www.cdn.ug.edu.pl/tag/bartek-piwowarczyk'
+        target='_blank'
+       >
+        Artykuły dla portalu CDN
+       </a>{" "}
+       – Gazety Studentów Uniwersytetu Gdańskiego
+      </p>
+      <p>
+       <a href='http://zazyjkultury.pl/?s=Bartek+Piwowarczyk' target='_blank'>
+        Recenzje dla zazyjkultury.pl
+       </a>
+      </p>
+     </div>
+     <div className='portfolio__items__group'>
+      {articlesDb.map(article => {
+       console.log(article.path);
+       return (
+        <LazyPortfolioItem
+         id={article.id}
+         key={article.id}
+         handleReadArticle={this.handleReadArticle}
+         pathName={article.path}
+         title={article.title}
+         articleSummary={article.summary}
+         writtenFor={article.writtenFor}
+         linkText={"Przeczytaj artykuł"}
+         linkGoTo={article.path}
+        />
+       );
+      })}
+     </div>
     </Suspense>
    </div>
   );

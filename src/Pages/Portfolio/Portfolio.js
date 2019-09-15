@@ -27,6 +27,9 @@ import ChristianLaettner from "../../Components/Portfolio/PortfolioArticles/Chri
 import DennisRodman from "../../Components/Portfolio/PortfolioArticles/DennisRodman";
 import SherlockHolmes from "../../Components/Portfolio/PortfolioArticles/SherlockHolmes";
 import KanyeWestSpiewa from "../../Components/Portfolio/PortfolioArticles/KanyeWestSpiewa";
+import TheHarpianoShow from "../../Components/Portfolio/PortfolioArticles/TheHarpianoShow";
+import KrzysztofGluch from "../../Components/Portfolio/PortfolioArticles/KrzysztofGluch";
+// BLUESCITY
 
 class Portfolio extends React.Component {
  constructor(props) {
@@ -58,9 +61,6 @@ class Portfolio extends React.Component {
     {componentDidMount ? "" : <Loader />}
     <div className='main__content'>
      <div className='flag--addon' />
-     <h2>
-      <span className='initial'>P</span>ortfolio
-     </h2>
      <BrowserRouter>
       <Switch>
        {articlesDb.map(article => {
@@ -96,6 +96,10 @@ class Portfolio extends React.Component {
              return <SherlockHolmes {...this.props} />;
             case "KanyeWestSpiewa":
              return <KanyeWestSpiewa {...this.props} />;
+            case "TheHarpianoShow":
+             return <TheHarpianoShow {...this.props} />;
+            case "KrzysztofGluch":
+             return <KrzysztofGluch {...this.props} />;
             default:
            }
           }}

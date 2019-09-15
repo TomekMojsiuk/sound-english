@@ -99,12 +99,30 @@ export const PortfolioItems = [
   writtenFor: "Serwis Reportal"
  },
  {
-    id: 12,
-    componentName: "KanyeWestSpiewa",
-    path: "/kanye-west-spiewa",
-    title: "Kanye West śpiewa, czyli trzy choroby rapu",
-    summary:
-     "Dlaczego uznał, że WOLNO MU wziąć na warsztat numer taki jak Bohemian Rhapsody? Dlaczego poczuł się aż tak pewny siebie? Dlaczego założył, że zawyje sobie atonalnie pod odtwarzany w tle klasyczny rockowy numer i w zasadzie nic się nie stanie?",
-    writtenFor: "Serwis Reportal"
-   }
+  id: 12,
+  componentName: "KanyeWestSpiewa",
+  path: "/kanye-west-spiewa",
+  title: "Kanye West śpiewa, czyli trzy choroby rapu",
+  summary:
+   "Dlaczego uznał, że WOLNO MU wziąć na warsztat numer taki jak Bohemian Rhapsody? Dlaczego poczuł się aż tak pewny siebie? Dlaczego założył, że zawyje sobie atonalnie pod odtwarzany w tle klasyczny rockowy numer i w zasadzie nic się nie stanie?",
+  writtenFor: "Serwis Reportal"
+ },
+ {
+  id: 13,
+  componentName: "TheHarpianoShow",
+  path: "/the-harpiano-show",
+  title: "„The Harpiano Show” – radość i autentyzm w tradycji",
+  summary:
+   "„W muzyce wszystko już było” – lubią mówić ci, którzy sami siebie lubią uważać za znawców. I rzeczywiście, większość zasad harmonicznych, stylistyk i tematów obecnych we współczesnej twórczości zawdzięczamy wykonawcom z poprzednich dekad. Jednak można ciągle, wszystko to, co już było, przedstawiać w sposób ciekawy i wolny od pustego odtwórstwa.",
+  writtenFor: "Portal Bluescity.pl"
+ },
+ {
+  id: 14,
+  componentName: "KrzysztofGluch",
+  path: "/krzysztof-gluch",
+  title: "Krzysztof Głuch - recenzja",
+  summary:
+   "Artysta, którego nikomu „wsłuchanemu” w prawdziwą muzykę przedstawiać nie trzeba. Twórca odpowiedzialny za partie klawiszowe na m.in. niezapomnianych winylach „Young Power” czy pierwszych nagraniach „Shakin’ Dudi” nie spoczywa na laurach...",
+  writtenFor: "Portal Bluescity.pl"
+ }
 ];
