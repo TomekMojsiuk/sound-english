@@ -36,17 +36,19 @@ class Dashboard extends React.Component {
        <span className='initial'>P</span>ortfolio dziennikarskie
       </h2>
       <p>
-       Znajdziesz tu moje publikacje. Zarówno te nowe, jak i starsze, sprzed
-       kilku lat. Oprócz atrykułów opublikowanych na tej stronie, zapraszam Cię
-       również do moich publikacji w zewnętrznych serwisach. Miłego czytania.
+       W pracy dziennikarskiej zajmowałem się głównie muzyką, ale podejmuję też
+       inne, bardzo różne tematy. Oto część mojego dorobku. Znajdziesz tu moje
+       publikacje, zarówno te nowe, jak i starsze, sprzed kilku lat. Oprócz
+       atrykułów opublikowanych na tej stronie, zapraszam Cię również do
+       serwosów zewnętrznych, dla których piszę. Miłego czytania.
       </p>
-      <p>
+      <p className="external__source__link">
        <a href='https://mostpeculiarman.wordpress.com/' target='_blank'>
         Blog osobisty
        </a>{" "}
        – proza, recenzje, felietony
       </p>
-      <p>
+      <p className="external__source__link">
        <a
         href='http://www.cdn.ug.edu.pl/tag/bartek-piwowarczyk'
         target='_blank'
@@ -55,7 +57,7 @@ class Dashboard extends React.Component {
        </a>{" "}
        – Gazety Studentów Uniwersytetu Gdańskiego
       </p>
-      <p>
+      <p className="external__source__link">
        <a href='http://zazyjkultury.pl/?s=Bartek+Piwowarczyk' target='_blank'>
         Recenzje dla zazyjkultury.pl
        </a>
