@@ -278,14 +278,18 @@ class OfertaCennik extends React.Component {
           <span className='initial'>U</span>czymy w oparciu o program muzyki
           popularnej, nie męcząc młodych i starszych adeptów muzyką klasyczną.
           Zajęcia prowadzone są indywidualnie bądź grupowo,{" "}
-          <span className='emphasised__test'>z dojazdem do ucznia</span>.
+          <span className='emphasised__test'>w systemie stacjonarnym</span> (w
+          naszym studio), bądź{" "}
+          <span className='emphasised__test'>z dojazdem do domu ucznia</span>.
          </p>
          <p>
           <span className='initial'>C</span>o ważne, nasz kurs połączony jest z{" "}
-          <span className='emphasised__test'>lekcjami pracy studyjnej</span>,
-          które są nieodpłatne! Ty albo Twoje dziecko pozna sprzęt muzyczny i
-          nagrywający, oswoicie się z pracą w studio i zbuduje własny, dźwiękowy
-          materiał demo.
+          <span className='emphasised__test'>lekcjami pracy studyjnej</span>.
+          Uczniowie uczący się we własnych domach, w ramach postępów zapraszani
+          są do studia Sound English, aby uczyć się pracy studyjnej i
+          zarejestrować swoje wykonania na nośnikach audio. Ty albo Twoje
+          dziecko poznacie sprzęt muzyczny i nagrywający, oswoicie się z pracą w
+          studio i zbuduje własny, dźwiękowy materiał demo.
          </p>
          <p>
           <span className='initial'>R</span>ock n' roll, rozwój, kreatywne
@@ -297,10 +301,6 @@ class OfertaCennik extends React.Component {
           Akademii Pomorskiej w Słupsku, obecnie czynnie działający jako
           gitarzysta i saksofonista zespołu
           <span className='emphasised__test'> Lares</span>. Zapraszamy!
-         </p>
-         <p>
-          <span className='initial'>K</span>oszt zajęć to{" "}
-          <span className='initial'>250</span> zł miesięcznie
          </p>
         </div>
        }
