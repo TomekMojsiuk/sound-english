@@ -141,7 +141,7 @@ class Szkola extends React.Component {
      
      <TileRotateContent bgColor={color5} 
      side1Text={<p><span className="initial">W</span>ygodny system płatności</p>}
-     side2Text={<p><span className="initial">P</span>łać za zajęcia w systemie miesięcznym, kwartalnym lub semestralnym</p>}
+     side2Text={<p><span className="initial">P</span>łać za zajęcia w systemie miesięcznym, gotówką lub przelewem.</p>}
      />
      
      <TileRotateContent bgColor={color1} 

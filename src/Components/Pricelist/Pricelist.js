@@ -92,7 +92,7 @@ export default function Pricelist() {
    </div>
 
    <p className={"footnote"}>
-    <span>P</span>łatność gotówką bądź przelewem do 10 dnia miesiąca, wystawiamy
+    <span>P</span>referowana forma płatności to płatność gotówką bądź przelewem do 10 dnia miesiąca, wystawiamy
     faktury VAT.
    </p>
 
