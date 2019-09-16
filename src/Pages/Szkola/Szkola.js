@@ -136,12 +136,12 @@ class Szkola extends React.Component {
      
      <TileRotateContent bgColor={color4} 
      side1Text={<p><span className="initial">N</span>aucz się tlumaczyć teksty</p>}
-     side2Text={<p><span className="initial">P</span>odstawowe techniki tłumaczenia ustnego</p>}
+     side2Text={<p><span className="initial">P</span>odstawowe techniki tłumaczenia, zarówno ustnego jak i tekstów</p>}
      />
      
      <TileRotateContent bgColor={color5} 
-     side1Text={<p><span className="initial">P</span>łać tak jak lubisz</p>}
-     side2Text={<p><span className="initial">M</span>iesięcznie, kwartalnie lub semestralnie</p>}
+     side1Text={<p><span className="initial">W</span>ygodny system płatności</p>}
+     side2Text={<p><span className="initial">P</span>łać za zajęcia w systemie miesięcznym, kwartalnym lub semestralnym</p>}
      />
      
      <TileRotateContent bgColor={color1} 
