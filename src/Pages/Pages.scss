@@ -67,11 +67,6 @@ span {
     @media all and (min-width: $BreakpointDesktop) {
         font-size: 1.4rem;
     }
-
-    .initial {
-   font-size: 1.5em;
-   color: $color4;
-  }
  }
 }
 
@@ -166,5 +161,6 @@ li > a {
 }
 
 .initial {
-
-}
+  font-size: 1.5em;
+  color: $color4;
+ }

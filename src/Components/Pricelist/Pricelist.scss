@@ -1,0 +1,67 @@
+@import "../../Scss/Config.scss";
+
+#pricelist {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+
+ .pricelist__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ }
+
+ .content__flex__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+  @media all and (min-width: $BreakpointDesktop) {
+   flex-direction: row;
+  }
+ }
+ .pricelist__items__group {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 100%;
+  margin-bottom: 20px;
+  @include boxShadow($color1);
+  @media all and (min-width: $BreakpointDesktop) {
+   width: 48%;
+   margin-bottom: unset;
+  }
+
+  .pricelist__items__group__titile {
+   margin: 10px 0;
+  }
+
+  .pricelist__item {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%;
+
+   &__name {
+    width: 80%;
+    text-align: left;
+   }
+   &__price {
+    width: 20%;
+    text-align: right;
+   }
+  }
+ }
+
+ .footnote {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 5px 0;
+ }
+
+ .asterisk {
+  color: $color5 !important;
+ }
+}

@@ -46,7 +46,7 @@ class Szkola extends React.Component {
      <div className='text__box'>
      <div className="underline"></div>
       <p className='read--basic'>
-       <span className="initial">C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to jednoosobowa, prywatna
+       <span className="initial">C</span>entrum Językowo – Muzyczne „SOUND ENGLISH” to prywatna
        szkoła językowa powstała z potrzeby połączenia dwóch wspaniałych,
        nieuleczalnych pasji: języków obcych oraz muzyki.
       </p>

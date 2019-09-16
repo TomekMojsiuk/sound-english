@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../../Pages/Pages.scss";
 import "./OfertaCennik.scss";
 
 import Loader from "../../Components/Loader/Loader";
 import TilePopUpDescription from "../../Components/TilePopUpDescription/TilePopUpDescription";
 import MyLink from "../../Components/Nav/NavLink/NavLink";
+import Pricelist from "../../Components/Pricelist/Pricelist";
 class OfertaCennik extends React.Component {
  constructor(props) {
   super(props);
@@ -27,7 +28,6 @@ class OfertaCennik extends React.Component {
  render() {
   const { componentDidMount } = this.state;
 
-  // TODO fix code here. Delete opacity and color2 variables. Improve child component.
   let opacity = "0";
   let color2 = `rgba(62, 72, 128, ${opacity})`;
 
@@ -307,84 +307,7 @@ class OfertaCennik extends React.Component {
        bgColor={color2}
       />
      </div>
-
-     <h1>
-      <span className='initial'>C</span>ennik
-     </h1>
-     <h2>Kursy Sound English</h2>
-     <div className='prices__container'>
-      <div className='stretched'>
-       <div className='price__item__list'>
-        <div className='price__item'>
-         <div>Kurs Guitar Classes</div>
-         <div>
-          <span className={"bold"}>250zł</span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-
-     <div className='prices__container'>
-      <div className={"left"}>
-       <h2>
-        <span className='initial'>Z</span>ajęcia indywidualne{" "}
-       </h2>
-       <div className='underline' />
-       <div className='price__item__list'>
-        <div className='price__item'>
-         <div>Cena za 1h zegarową:</div>
-         <div>
-          <span className={"bold"}>40zł</span>
-         </div>
-        </div>
-        <div className='price__item'>
-         <div>Płatność za 5 lekcji z góry:</div>
-         <div>
-          <span className={"bold"}>180zł</span>
-         </div>
-        </div>
-        <div className='price__item'>
-         <div>Płatność za 10 lekcji z góry:</div>
-         <div>
-          <span className={"bold"}>370zł</span>
-         </div>
-        </div>
-       </div>
-      </div>
-      <div className={"right"}>
-       <h2>
-        <span className='initial'>Z</span>ajęcia grupowe{" "}
-        <span className={"asterisk"}>&#42;</span>
-       </h2>
-       <div className='underline' />
-       <div className='price__item__list'>
-        <div className='price__item'>
-         <div>Cena za 1h zegarową:</div>
-         <div>
-          <span className={"bold"}>30zł</span>
-         </div>
-        </div>
-        <div className='price__item'>
-         <div>Płatność za 5 lekcji z góry:</div>
-         <div>
-          <span className={"bold"}>130zł</span>
-         </div>
-        </div>
-        <div className='price__item'>
-         <div>Płatność za 10 lekcji z góry:</div>
-         <div>
-          <span className={"bold"}>260zł</span>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-     <p className={"footnote"}>
-      <span className={"asterisk"}>&#42;</span> <span>W</span> Sound English
-      grupa to już 2 osoby!
-     </p>
-
+     <Pricelist />
      <h2 className='h2__header--adjust'>
       Przyprowadź znajomych, a zaoszczędzisz!
      </h2>
