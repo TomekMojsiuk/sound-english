@@ -3,7 +3,7 @@
 #ministudio {
  .studio__img--desktop {
   @media all and (min-width: $BreakpointDesktop) {
-   background: url("../../assets/img/ministudio.jpg");
+   background: url("../../assets/img/SE_ministudio.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -16,24 +16,24 @@
 
  .studio__img--mobile {
   position: relative;
-  background: url("../../assets/img/ministudio.jpg");
+  background: url("../../assets/img/SE_ministudio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 250px;
+  background-position: 0px -110px;
+  height: 300px;
   margin: 0;
   padding: 0;
 
-  &:after {
-   content: "";
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
-   background: fade-out($color2, 0.6);
-   z-index: 1;
-  }
+//   &:after {
+//    content: "";
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    height: 100%;
+//    width: 100%;
+//    background: fade-out($color2, 0.8);
+//    z-index: 1;
+//   }
 
   @media all and (min-width: $BreakpointDesktop) {
    background: unset;
