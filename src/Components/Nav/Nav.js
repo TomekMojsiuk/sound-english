@@ -19,7 +19,7 @@ class Nav extends React.Component {
       O szkole
      </MyLink>
      <MyLink onClick={handleNavItemClick} exact to='/oferta'>
-      Oferta i cennik
+      Nasze kursy
      </MyLink>
      <MyLink onClick={handleNavItemClick} exact to='/ministudio'>
       Ministudio

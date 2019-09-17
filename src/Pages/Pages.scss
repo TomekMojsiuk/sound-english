@@ -130,7 +130,10 @@ span {
 //Nav item within a paragraph
 p > .nav__item,
 p > a,
-li > a {
+li > a,
+// div > a,
+// .nav__item 
+{
   display: initial;
   width: 165px;
   height: 1.6rem;
@@ -139,6 +142,7 @@ li > a {
   color: $color5;
   font-size: 1.4rem;
   border-bottom: 1px solid $color2;
+  text-decoration: none;
 
   @media all and (min-width: $BreakpointDesktop) {
    color: $color2;

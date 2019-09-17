@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../Pages/Pages.scss";
 import "./Szkola.scss";
 
@@ -31,6 +32,7 @@ class Szkola extends React.Component {
 
  render() {
   const { componentDidMount } = this.state;
+  const { photographerFacebook } = this.props;
 
   let opacity = ".9";
   let color1 = `rgba(237, 237, 238, ${opacity})`;
@@ -112,7 +114,7 @@ class Szkola extends React.Component {
        trudności. Szczegółowe propozycje kursów dla osób W ABSOLUTNIE KAŻDYM
        WIEKU znajdują się w zakładce
        <MyLink exact to='/oferta'>
-        oferta i cennik
+        Nasze kursy
        </MyLink>
        .
       </p>
@@ -125,170 +127,168 @@ class Szkola extends React.Component {
       nglish:
      </h1>
      <div className='tiles__box'>
-      
-       <img
-        className='img__vertical img__float--left'
-        src={SE_recording_studio}
+      <img
+       className='img__vertical img__float--left'
+       src={SE_recording_studio}
+      />
+      <div className='tiles__items'>
+       <TileRotateContent
+        bgColor={color1}
+        side1Text={
+         <p>
+          <span className='initial'>I</span>ndywidualne podejście
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>I</span>ndywidualne, profesjonalne podejście
+          do ucznia w każdym wieku
+         </p>
+        }
        />
-       <div className='tiles__items'>
-        <TileRotateContent
-         bgColor={color1}
-         side1Text={
-          <p>
-           <span className='initial'>I</span>ndywidualne podejście
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>I</span>ndywidualne, profesjonalne
-           podejście do ucznia w każdym wieku
-          </p>
-         }
-        />
 
-        <TileRotateContent
-         bgColor={color2}
-         side1Text={
-          <p>
-           <span className='initial'>K</span>omfort pracy
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>K</span>omfortowe warunki nauki z
-           wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania
-           oraz nowoczesnego sprzętu muzycznego
-          </p>
-         }
-        />
-
-        <TileRotateContent
-         bgColor={color4}
-         side1Text={
-          <p>
-           <span className='initial'>Ć</span>wicz wymowę również w domu
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>R</span>ejestracja dźwiękowa wymowy i
-           kształcenie akcentu w systemie amerykańskim bądź brytyjskim –
-           podstawy fonetyki
-          </p>
-         }
-        />
-       </div>
-      </div>
-      
-      <div className='tiles__box'>
-       <img
-        className='img__vertical img__float--right'
-        src={SE_ministudio}
+       <TileRotateContent
+        bgColor={color2}
+        side1Text={
+         <p>
+          <span className='initial'>K</span>omfort pracy
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>K</span>omfortowe warunki nauki z
+          wykorzystaniem zarówno tradycyjnych, jak i autorskich metod nauczania
+          oraz nowoczesnego sprzętu muzycznego
+         </p>
+        }
        />
-       <div className='tiles__items'>
-        <TileRotateContent
-         bgColor={color5}
-         side1Text={
-          <p>
-           <span className='initial'>U</span>czysz się słuchając
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>N</span>auczanie z szerokim wykorzystaniem
-           elementów muzyczno – dźwiękowych
-          </p>
-         }
-        />
 
-        <TileRotateContent
-         bgColor={color1}
-         side1Text={
-          <p>
-           <span className='initial'>Z</span>acznij tworzyć
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>N</span>auka kreatywnego zastosowania
-           wiedzy językowo – muzycznej
-          </p>
-         }
-        />
-
-        <TileRotateContent
-         bgColor={color2}
-         side1Text={
-          <p>
-           <span className='initial'>P</span>racuj w studio i dziel się pasją z
-           innymi
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>S</span>tudyjna rejestracja i promocja
-           twórczości uzdolnionych muzycznie uczniów
-          </p>
-         }
-        />
-       </div>
-      </div>
-
-      <div className='tiles__box'>
-       <img
-        className='img__vertical img__float--left'
-        src={SE_mics}
+       <TileRotateContent
+        bgColor={color4}
+        side1Text={
+         <p>
+          <span className='initial'>Ć</span>wicz wymowę również w domu
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>R</span>ejestracja dźwiękowa wymowy i
+          kształcenie akcentu w systemie amerykańskim bądź brytyjskim – podstawy
+          fonetyki
+         </p>
+        }
        />
-       <div className='tiles__items'>
-        <TileRotateContent
-         bgColor={color4}
-         side1Text={
-          <p>
-           <span className='initial'>N</span>aucz się tlumaczyć teksty
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>P</span>odstawowe techniki tłumaczenia,
-           zarówno ustnego jak i tekstów
-          </p>
-         }
-        />
-
-        <TileRotateContent
-         bgColor={color5}
-         side1Text={
-          <p>
-           <span className='initial'>W</span>ygodny system płatności
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>P</span>łać za zajęcia w systemie
-           miesięcznym, gotówką lub przelewem.
-          </p>
-         }
-        />
-
-        <TileRotateContent
-         bgColor={color1}
-         side1Text={
-          <p>
-           <span className='initial'>L</span>iczba spotkań ustalana
-           indywidualnie
-          </p>
-         }
-         side2Text={
-          <p>
-           <span className='initial'>C</span>zęstotliwość zajęć w tygodniu
-           dostosowana do potrzeb klienta
-          </p>
-         }
-        />
-       </div>
       </div>
      </div>
+
+     <div className='tiles__box'>
+      <img className='img__vertical img__float--right' src={SE_ministudio} />
+      <div className='tiles__items'>
+       <TileRotateContent
+        bgColor={color5}
+        side1Text={
+         <p>
+          <span className='initial'>U</span>czysz się słuchając
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>N</span>auczanie z szerokim wykorzystaniem
+          elementów muzyczno – dźwiękowych
+         </p>
+        }
+       />
+
+       <TileRotateContent
+        bgColor={color1}
+        side1Text={
+         <p>
+          <span className='initial'>Z</span>acznij tworzyć
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>N</span>auka kreatywnego zastosowania wiedzy
+          językowo – muzycznej
+         </p>
+        }
+       />
+
+       <TileRotateContent
+        bgColor={color2}
+        side1Text={
+         <p>
+          <span className='initial'>P</span>racuj w studio i dziel się pasją z
+          innymi
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>S</span>tudyjna rejestracja i promocja
+          twórczości uzdolnionych muzycznie uczniów
+         </p>
+        }
+       />
+      </div>
      </div>
+
+     <div className='tiles__box'>
+      <img className='img__vertical img__float--left' src={SE_mics} />
+      <div className='tiles__items'>
+       <TileRotateContent
+        bgColor={color4}
+        side1Text={
+         <p>
+          <span className='initial'>N</span>aucz się tlumaczyć teksty
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>P</span>odstawowe techniki tłumaczenia,
+          zarówno ustnego jak i tekstów
+         </p>
+        }
+       />
+
+       <TileRotateContent
+        bgColor={color5}
+        side1Text={
+         <p>
+          <span className='initial'>W</span>ygodny system płatności
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>P</span>łać za zajęcia w systemie
+          miesięcznym, gotówką lub przelewem.
+         </p>
+        }
+       />
+
+       <TileRotateContent
+        bgColor={color1}
+        side1Text={
+         <p>
+          <span className='initial'>L</span>iczba spotkań ustalana indywidualnie
+         </p>
+        }
+        side2Text={
+         <p>
+          <span className='initial'>C</span>zęstotliwość zajęć w tygodniu
+          dostosowana do potrzeb klienta
+         </p>
+        }
+       />
+      </div>
+     </div>
+     <p className='credentials'>
+      Zdjęcia wnętrz Sound English wykonała{" "}
+      <a href={photographerFacebook} target='_blank' rel='noopener noreferrer'>
+       Julia Tusk
+      </a>
+     </p>
+    </div>
+   </div>
   );
  }
 }

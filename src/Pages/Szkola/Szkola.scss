@@ -62,4 +62,22 @@
   width: 270px;
   height: ($oSzkolePhotoHeight / 3.1);
  }
+
+ .credentials {
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-size: 1.4rem;
+  a {
+   font-size: 1.5rem;
+   margin: 10px 0;
+  }
+
+  @media all and (min-width: $BreakpointDesktop) {
+    text-align: left;
+   font-size: 1rem;
+   a {
+    font-size: 1rem;
+   }
+  }
+ }
 }
