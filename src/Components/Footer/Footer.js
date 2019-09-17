@@ -31,7 +31,7 @@ class Footer extends React.Component {
      <p className='copyrights'>
       &copy; 2019 <span>S</span>ound <span>E</span>nglish
      </p>
-     <p className='project'>
+     <p>
       Created by
       <a
        href={tomekMojsiuk}
