@@ -10,10 +10,10 @@
 }
 
 #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // cursor: url('assets/ico/pointer.png'), auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ // cursor: url('assets/ico/pointer.png'), auto;
 }
 
 .App {
@@ -26,30 +26,43 @@
 
  @media all and (min-width: $BreakpointDesktop) {
   max-width: $maxWidth;
-//   background-color: fade-out($color1, 0.6);
+  //   background-color: fade-out($color1, 0.6);
   border-radius: 5px;
   justify-content: flex-start;
   align-items: flex-start;
  }
 
  .cookie__banner {
-   position: sticky !important;
-   bottom: 0;
-   background-color: fade-out($color5, .1) !important;
+  position: fixed !important;
+  bottom: 0;
+  background-color: fade-out($color5, 0.1) !important;
+  height: 100px !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  @media all and (min-width: $BreakpointDesktop) {
+   height: unset !important;
+  }
 
-   .cookie-message {
-    font-size: 1.2rem !important;
+  .cookie-message {
+   font-size: 1.2rem !important;
+  }
+  a {
+   color: $color2 !important;
+   padding: 0 0 2px 0 !important;
+   text-decoration: none !important;
+   border-bottom: 1px solid $color2;
+  }
+  .button-close {
+   position: unset !important;
+   padding: 2px 25px !important;
+   background-color: fade-out($color2, 0.1) !important;
+   color: $color1 !important;
+   @media all and (min-width: $BreakpointDesktop) {
+    position: absolute !important;
    }
-   a {
-     color: $color2 !important;
-     padding: 0 0 2px 0 !important;
-     text-decoration: none !important;
-     border-bottom: 1px solid $color2;
-   }
-   .button-close {
-     padding: 2px 25px !important;
-     background-color: fade-out($color2, .1) !important;
-     color: $color1 !important;
-   }
+  }
  }
 }
