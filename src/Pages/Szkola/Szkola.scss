@@ -1,67 +1,65 @@
 @import "../../Scss/Config.scss";
 
 #szkola {
+ $tileGroupCOntainerHeight: 500px;
 
-  $tileGroupCOntainerHeight: 500px;
+ .nav__item {
+  display: initial;
+  width: 165px;
+  height: 1.6rem;
+  margin: 0 0 0 2px;
+  padding: 5px;
+  color: $color5;
+  font-size: 1.4rem;
+  border-bottom: 1px solid $color2;
 
-  .nav__item {
-    display: initial;
-    width: 165px;
-    height: 1.6rem;
-    margin: 0 0 0 2px;
-    padding: 5px;
+  @media all and (min-width: $BreakpointDesktop) {
+   color: $color2;
+   border-bottom: 1px solid $color5;
+   transition: all 0.1s ease-in-out;
+   &:after {
+    background: unset;
+   }
+   &:hover {
     color: $color5;
-    font-size: 1.4rem;
-    border-bottom: 1px solid $color2;
-  
-    @media all and (min-width: $BreakpointDesktop) {
-     color: $color2;
-     border-bottom: 1px solid $color5;
-     transition: all .1s ease-in-out;
-     &:after {
-      background: unset;
-     }
-     &:hover {
-      color: $color5;
-      border-bottom: 2px solid $color5;
-     }
-    }
-   }    
+    border-bottom: 2px solid $color5;
+   }
+  }
+ }
 
-   //  Images
+ //  Images
 
-.img__vertical {
+ .img__vertical {
   width: 100%;
+  @include boxShadow($color1);
+  border-radius: 5px;
   @media all and (max-width: $Breakpoint965) {
-    margin: 0 0 10px 0;
+   margin: 0 0 10px 0;
   }
   @media all and (min-width: $BreakpointDesktop) {
-    height: $oSzkolePhotoHeight;
-    width: unset;
-}
+   height: $oSzkolePhotoHeight;
+   width: unset;
+  }
+ }
 
-}
+ // Tiles section
+ .tiles__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 
-// Tiles section
-   .tiles__box {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     align-items: center;
-    //  height: $oSzkolePhotoHeight;
+  @media all and (min-width: $BreakpointDesktop) {
+   flex-direction: row;
 
-     @media all and (min-width: $BreakpointDesktop) {
-      flex-direction: row;
-      
-      &:nth-of-type(even) {
-        flex-direction: row-reverse;
-       }
-    }
-    }
+   &:nth-of-type(even) {
+    flex-direction: row-reverse;
+   }
+  }
+ }
 
-    .tile {
-      width: 270px;
-      height: ($oSzkolePhotoHeight / 3.1);
-    }
-
+ .tile {
+  width: 270px;
+  height: ($oSzkolePhotoHeight / 3.1);
+ }
 }
