@@ -15,8 +15,8 @@
  @include boxShadow($color1);
 
  @media all and (min-width: $BreakpointDesktop) {
-  width: 30%;
-  height: 200px;
+  min-height: unset;
+ max-height: unset;
  }
 
  .side1 {

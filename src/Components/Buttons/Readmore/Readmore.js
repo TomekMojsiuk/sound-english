@@ -3,7 +3,7 @@ import $ from "jquery";
 
 import "./Readmore.scss";
 
-class ReadMore extends React.Component {
+class ReadMoreBtn extends React.Component {
  constructor(props) {
   super(props);
   this.state = {
@@ -33,4 +33,4 @@ class ReadMore extends React.Component {
  }
 }
 
-export default ReadMore;
+export default ReadMoreBtn;
