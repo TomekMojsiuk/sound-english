@@ -31,7 +31,15 @@
    //  Images
 
 .img__vertical {
-  height: $oSzkolePhotoHeight;
+  width: 100%;
+  @media all and (max-width: $Breakpoint965) {
+    margin: 0 0 10px 0;
+  }
+  @media all and (min-width: $BreakpointDesktop) {
+    height: $oSzkolePhotoHeight;
+    width: unset;
+}
+
 }
 
 // Tiles section
@@ -40,6 +48,7 @@
      flex-direction: column;
      justify-content: space-evenly;
      align-items: center;
+    //  height: $oSzkolePhotoHeight;
 
      @media all and (min-width: $BreakpointDesktop) {
       flex-direction: row;
@@ -52,7 +61,7 @@
 
     .tile {
       width: 270px;
-      height: ($oSzkolePhotoHeight / 3.1)
+      height: ($oSzkolePhotoHeight / 3.1);
     }
 
 }
