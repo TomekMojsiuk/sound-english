@@ -1,0 +1,19 @@
+@import '../../Scss/Config.scss';
+
+.photo__slider {
+  $Sliderheight: 60vh;
+
+  display: flex;
+  flex-direction: row;
+  
+
+  position: fixed;
+  top: $Sliderheight / 3;
+  left: 0;
+  padding: 50px;
+  height: $Sliderheight;
+  width: 99vw;
+  background: $color2;
+
+
+}

@@ -6,6 +6,7 @@ import Loader from "../../Components/Loader/Loader";
 import ReadMore from "../../Components/Buttons/Readmore/Readmore";
 import TileRotateContent from "../../Components/TileRotateContent/TileRotateContent";
 import MyLink from '../../Components/Nav/NavLink/NavLink'
+import PhotoSlider from "../../Components/PhotoSlider/PhotoSlider";
 
 class Szkola extends React.Component {
  constructor(props) {
@@ -40,6 +41,7 @@ class Szkola extends React.Component {
     {componentDidMount ? "" : <Loader />}
     <div className='main__content'>
      <div className='flag--addon' />
+     <PhotoSlider />
      <h1>
       <span className="initial">O</span> szkole
      </h1>
