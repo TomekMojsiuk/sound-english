@@ -33,6 +33,7 @@
 
  .cookie__banner {
   position: fixed !important;
+  left: 0;
   bottom: 0;
   background-color: fade-out($color5, 0.1) !important;
   height: 100px !important;
@@ -42,6 +43,7 @@
   justify-content: space-evenly;
   align-items: center;
   @media all and (min-width: $BreakpointDesktop) {
+    
    height: unset !important;
   }
 
@@ -49,6 +51,7 @@
    font-size: 1.2rem !important;
   }
   a {
+      font-size: 1.2rem;
    color: $color2 !important;
    padding: 0 0 2px 0 !important;
    text-decoration: none !important;
