@@ -7,32 +7,56 @@ import img3 from '../../assets/img/PhotoGalery/SE_ministudio.jpg';
 import img4 from '../../assets/img/PhotoGalery/SE_recording_studio.jpg';
 import img5 from '../../assets/img/PhotoGalery/SE_room_view.jpg';
 
-const PhotoSlider = (props) => {
+const PhotoSlider = () => {
+  const [imgIndex, setImgIndex] = useState(0);
 
-  const [img, setImg] = useState({
-    img: '1'
+  // Grab all images
+  const photos = document.querySelectorAll('.slide__img');
+
+  useEffect(() => {
+    photos.forEach(function(element, index) {
+      if (index === imgIndex) {
+        setTimeout(() => {
+          element.classList.add('show__img');
+        }, 500);
+      } else {
+        element.classList.remove('show__img');
+      }
+    });
   });
 
   useEffect(() => {
-    const photos = document.querySelectorAll('img');
-    console.log(photos);
+    if (imgIndex === photos.length) {
+      setImgIndex(0);
+    }
+    if (imgIndex === -1) {
+      setImgIndex(photos.length - 1);
+    }
+  });
 
-    photos.forEach(function(element, index) {
-      console.log(index);
-    });
-  }, []);
+  // Buttons actions Click
+  const imgPrev = () => setImgIndex(imgIndex + -1);
+  const imgNext = () => setImgIndex(imgIndex + 1);
 
   const images = (
     <Fragment>
-      <img src={img1} alt='english grammar charts' />
-      <img src={img2} alt='microphones standing on a table' />
-      <img src={img3} alt='Sound English studio space' />
-      <img src={img4} alt='Sound English recording room' />
-      <img src={img5} alt='Sound English classroom' />
+      <img className='slide__img' src={img1} alt='english grammar charts' />
+      <img className='slide__img' src={img2} alt='microphones standing on a table' />
+      <img className='slide__img' src={img3} alt='Sound English studio space' />
+      <img className='slide__img' src={img4} alt='Sound English recording room' />
+      <img className='slide__img' src={img5} alt='Sound English classroom' />
     </Fragment>
   );
 
-  return <div className='photo__slider'>{images}</div>;
+  return (
+    <div className='slider__photos'>
+      {images}
+      <div className='slider__buttons'>
+        <button onClick={imgPrev}>&#10094;</button>
+        <button onClick={imgNext}>&#10095;</button>
+      </div>
+    </div>
+  );
 };
 
 export default PhotoSlider;

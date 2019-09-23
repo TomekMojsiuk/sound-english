@@ -1,30 +1,73 @@
 @import '../../Scss/Config.scss';
 
-.photo__slider {
-  $Sliderheight: 80vh;
+$transitionDuration: .3s;
+
+.slider__photos {
+  $Sliderheight: 95vh;
+  $Sliderwidth: 90vw;
   $imgHeight: $Sliderheight / 1.1;
 
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center; 
-
-
+  align-items: center;
   position: fixed;
-  top: $Sliderheight / 5;
-  left: 0;
+  width: $Sliderwidth;
+  top: 2.5vh;
+  left: 5vw;
   padding: 10px;
   height: $Sliderheight;
-  width: 99vw;
-  background: $color2;
+  background: $color1;
+  z-index: 10;
 
   img {
-      height: $imgHeight;
-      margin: 0 10px;
+    position: absolute;
+    opacity: 0;
+    max-height: $imgHeight;
+    max-width: $Sliderwidth;
+    height: auto;
+    width: auto;
+    transition: all $transitionDuration ease-in-out;
   }
 
-  .img__visible {
-    
+  .hide__img {
+    display: none;
+    transition: all $transitionDuration ease-in-out;
   }
 
+  .show__img {
+    opacity: 1;
+    transition: all $transitionDuration ease-in-out;
+  }
+}
+
+.slider__buttons {
+  position: relative;
+  width: 100%;
+  top: calc(50% - 50%);
+
+  button {
+    position: absolute;
+    padding: 0 10px;
+    height: 50px;
+    border: 1px solid $color5;
+    border-radius: 5px;
+    background: unset;
+    color: $color2;
+    outline: none;
+    transition: all $transitionDuration ease-in-out;
+    &:nth-of-type(1) {
+      // align-self: flex-start;
+      left: 10px;
+    }
+    &:nth-of-type(2) {
+      // align-self: flex-end;
+      right: 10px;
+    }
+
+    &:hover {
+      background: fade-out($color5, 0.5);
+    }
+  }
 }
