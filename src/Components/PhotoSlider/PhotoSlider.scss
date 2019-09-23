@@ -1,12 +1,11 @@
 @import '../../Scss/Config.scss';
 
-$transitionDuration: .3s;
+$transitionDuration: 0.3s;
 
 .slider__photos {
   $Sliderheight: 95vh;
-  $Sliderwidth: 90vw;
+  $Sliderwidth: 95vw;
   $imgHeight: $Sliderheight / 1.1;
-
 
   display: flex;
   flex-direction: column;
@@ -15,19 +14,19 @@ $transitionDuration: .3s;
   position: fixed;
   width: $Sliderwidth;
   top: 2.5vh;
-  left: 5vw;
+  left: 2.5vw;
   padding: 10px;
   height: $Sliderheight;
-  background: $color1;
+  background: fade-out($color1, 0.1);
   z-index: 10;
 
   img {
     position: absolute;
     opacity: 0;
-    max-height: $imgHeight;
-    max-width: $Sliderwidth;
     height: auto;
     width: auto;
+    max-height: $imgHeight;
+    max-width: $Sliderwidth;
     transition: all $transitionDuration ease-in-out;
   }
 
@@ -53,21 +52,19 @@ $transitionDuration: .3s;
     height: 50px;
     border: 1px solid $color5;
     border-radius: 5px;
-    background: unset;
-    color: $color2;
+    background: fade-out($color2, 0.7);
+    color: $color5;
     outline: none;
     transition: all $transitionDuration ease-in-out;
     &:nth-of-type(1) {
-      // align-self: flex-start;
       left: 10px;
     }
     &:nth-of-type(2) {
-      // align-self: flex-end;
       right: 10px;
     }
 
     &:hover {
-      background: fade-out($color5, 0.5);
+      background: fade-out($color2, 0.1);
     }
   }
 }
