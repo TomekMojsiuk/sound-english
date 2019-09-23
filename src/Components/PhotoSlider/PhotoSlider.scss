@@ -44,12 +44,13 @@ $transitionDuration: 0.3s;
 .slider__buttons {
   position: relative;
   width: 100%;
-  top: calc(50% - 50%);
+  height: 140px;
+  // top: calc(0);
 
   button {
     position: absolute;
     padding: 0 10px;
-    height: 50px;
+    height: inherit;
     border: 1px solid $color5;
     border-radius: 5px;
     background: fade-out($color2, 0.7);
