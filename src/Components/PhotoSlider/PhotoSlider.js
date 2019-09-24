@@ -16,9 +16,7 @@ const PhotoSlider = () => {
   useEffect(() => {
     photos.forEach(function(element, index) {
       if (index === imgIndex) {
-        setTimeout(() => {
-          element.classList.add('show__img');
-        }, 500);
+        element.classList.add('show__img');
       } else {
         element.classList.remove('show__img');
       }
@@ -34,9 +32,30 @@ const PhotoSlider = () => {
     }
   });
 
-  // Buttons actions Click
+  // Buttons actions onClick
   const imgPrev = () => setImgIndex(imgIndex + -1);
   const imgNext = () => setImgIndex(imgIndex + 1);
+
+  // OnKeyPress behavior - arrow keys
+  const onKeyPressEvent = (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      imgPrev();
+    }
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      imgNext();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('keydown', onKeyPressEvent);
+    return () => {
+      window.removeEventListener('keydown', onKeyPressEvent);
+    };
+  });
+
+  console.log(imgIndex);
 
   const images = (
     <Fragment>
@@ -50,6 +69,7 @@ const PhotoSlider = () => {
 
   return (
     <div className='slider__photos'>
+        <div className="slider__exit"/>
       {images}
       <div className='slider__buttons'>
         <button onClick={imgPrev}>&#10094;</button>

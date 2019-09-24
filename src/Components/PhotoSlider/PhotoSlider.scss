@@ -3,31 +3,51 @@
 $transitionDuration: 0.3s;
 
 .slider__photos {
+  // Variables
   $Sliderheight: 95vh;
-  $Sliderwidth: 95vw;
+  $SliderheightMobile: 100vh;
+  $SliderwidthMobile: 100vw;
+  $SliderwidthDesktop: 80vw;
   $imgHeight: $Sliderheight / 1.1;
 
+  // Styles
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
-  width: $Sliderwidth;
-  top: 2.5vh;
-  left: 2.5vw;
+  top: 0;
+  left: 0;
+  width: $SliderwidthMobile;
+  height: $SliderheightMobile;
   padding: 10px;
-  height: $Sliderheight;
   background: fade-out($color1, 0.1);
-  z-index: 10;
+  z-index: 20;
+
+  @media all and (min-width: $BreakpointDesktop) {
+    // justify-content: center;
+    top: 2.5vh;
+    left: calc(10vw);
+    width: $SliderwidthDesktop;
+    height: $Sliderheight;
+    z-index: 10;
+  }
 
   img {
     position: absolute;
     opacity: 0;
     height: auto;
-    width: auto;
+    width: 95%;
     max-height: $imgHeight;
-    max-width: $Sliderwidth;
+    max-width: calc($SliderwidthMobile - 20px);
     transition: all $transitionDuration ease-in-out;
+    @media all and (min-width: $BreakpointDesktop) {
+      max-width: $SliderwidthDesktop;
+      width: auto;
+    }
+    @media screen and (orientation: 'landscape') {
+      width: auto;
+    }
   }
 
   .hide__img {
@@ -42,30 +62,83 @@ $transitionDuration: 0.3s;
 }
 
 .slider__buttons {
-  position: relative;
-  width: 100%;
-  height: 140px;
-  // top: calc(0);
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  height: 40px;
+
+  @media all and (min-width: $BreakpointDesktop) {
+    display: unset;
+    position: relative;
+    width: 100%;
+    height: 140px;
+  }
 
   button {
-    position: absolute;
-    padding: 0 10px;
+    padding: 10px 40px;
     height: inherit;
-    border: 1px solid $color5;
+    border: 1px solid $color1;
     border-radius: 5px;
-    background: fade-out($color2, 0.7);
-    color: $color5;
+    background: fade-out($color2, 0.1);
+    color: $color1;
     outline: none;
     transition: all $transitionDuration ease-in-out;
-    &:nth-of-type(1) {
-      left: 10px;
-    }
-    &:nth-of-type(2) {
-      right: 10px;
+    @media all and (min-width: $BreakpointDesktop) {
+      position: absolute;
+      padding: 0 10px;
+      &:nth-of-type(1) {
+        left: 10px;
+      }
+      &:nth-of-type(2) {
+        right: 10px;
+      }
     }
 
     &:hover {
-      background: fade-out($color2, 0.1);
+      background: fade-out($color2, 0.2);
+      border: 1px solid $color5;
+    }
+  }
+}
+
+.slider__exit {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  height: 35px;
+  width: 35px;
+  transition: all $transitionDuration ease-in-out;
+  @media all and (min-width: $BreakpointDesktop) {
+    top: 20px;
+    right: 20px;
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background: $color5;
+    transform-origin: center;
+    transition: all $transitionDuration ease-in-out;
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    &::after,
+    &::before {
+      background: fade-out($color5, 0.5);
+      height: 105%;
     }
   }
 }
