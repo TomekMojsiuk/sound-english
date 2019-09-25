@@ -1,130 +1,129 @@
-@import "../Scss/Config.scss";
+@import '../Scss/Config.scss';
 
 span {
   font-size: inherit;
 }
 
 .content__wrapper {
-  
   min-height: 100vh;
   width: 100%;
   padding: 10px 20px;
-  
-  @media all and (min-width: $BreakpointDesktop) {
-  width: 100%;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
- }
-
- .main__content {
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 80px 10px 20px 10px;
 
   @media all and (min-width: $BreakpointDesktop) {
-   padding: 50px;
-   width: 80%;
-   margin: 0 auto;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
   }
- }
 
- h1,
- h2 {
-  display: block;
-  margin: 30px 0;
-  text-align: left;
-  @media all and (min-width: $BreakpointDesktop) {
-   margin: 20px 0 50px 0;
-  }
- }
- h1 {
-  font-size: 2.4rem;
-  .initial {
-   font-size: 3rem;
-   color: $color3;
-  }
- }
+  .main__content {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 80px 10px 20px 10px;
 
- h2 {
-  font-size: 2rem;
-  .initial {
-   font-size: 2.5rem;
-   color: $color3;
+    @media all and (min-width: $BreakpointDesktop) {
+      padding: 50px;
+      width: 80%;
+      margin: 0 auto;
+    }
   }
- }
 
- p,
- ul,
- li {
+  h1,
+  h2 {
+    display: block;
+    margin: 30px 0;
+    text-align: left;
+    @media all and (min-width: $BreakpointDesktop) {
+      margin: 20px 0 50px 0;
+    }
+  }
+  h1 {
+    font-size: 2.4rem;
+    .initial {
+      font-size: 3rem;
+      color: $color3;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    .initial {
+      font-size: 2.5rem;
+      color: $color3;
+    }
+  }
+
+  p,
+  ul,
+  li {
     display: block;
     font-size: 1.5rem;
     line-height: 1.8em;
     margin: 10px 0;
     @media all and (min-width: $BreakpointDesktop) {
-        font-size: 1.4rem;
+      font-size: 1.4rem;
     }
- }
+  }
 }
 
 .text__box {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
- @media all and (min-width: $BreakpointDesktop) {
-  margin: 0 auto;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    margin: 0 auto;
+  }
 
- .read--more {
-  display: none;
- }
+  .read--more {
+    display: none;
+  }
 }
 
 .tiles__box {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
- @media all and (min-width: $BreakpointDesktop) {
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
 
 .underline {
- width: 20%;
- height: 3px;
- margin: 5px 0 20px 0;
- border-bottom: 2px solid $color4;
+  width: 20%;
+  height: 3px;
+  margin: 5px 0 20px 0;
+  border-bottom: 2px solid $color4;
 }
 
 // Graphics elements
 
 .flag--addon {
- position: fixed;
- top: 0;
- right: 0;
- height: 59px;
- width: 100%;
- background: url("../assets/img/flag.png");
- background-position: 100% 88%;
- background-size: 100%;
- background-repeat: no-repeat;
- z-index: 8;
-
- @media all and (min-width: $BreakpointDesktop) {
-  top: unset;
-  bottom: 0;
-  right: unset;
-  height: 25px;
-  width: 1400px;
-  left: calc(50% - 700px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 59px;
+  width: 100%;
+  background: url('../assets/img/flag.png');
   background-position: 100% 88%;
   background-size: 100%;
- }
+  background-repeat: no-repeat;
+  z-index: 8;
+
+  @media all and (min-width: $BreakpointDesktop) {
+    top: unset;
+    bottom: 0;
+    right: unset;
+    height: 25px;
+    width: 1400px;
+    left: calc(50% - 700px);
+    background-position: 100% 88%;
+    background-size: 100%;
+  }
 }
 
 //Nav item within a paragraph
@@ -141,18 +140,18 @@ li > a {
   border-bottom: 1px solid $color2;
 
   @media all and (min-width: $BreakpointDesktop) {
-   color: $color2;
-   border-bottom: 1px solid $color5;
-   transition: all 0.1s ease-in-out;
-   &:after {
-    background: unset;
-   }
-   &:hover {
-    color: $color5;
-    border-bottom: 2px solid $color5;
-   }
+    color: $color2;
+    border-bottom: 1px solid $color5;
+    transition: all 0.1s ease-in-out;
+    &:after {
+      background: unset;
+    }
+    &:hover {
+      color: $color5;
+      border-bottom: 2px solid $color5;
+    }
   }
- }
+}
 
 //  Text decoration classes:
 
@@ -163,4 +162,20 @@ li > a {
 .initial {
   font-size: 1.5em;
   color: $color4;
- }
+}
+
+.photo__gallery__display {
+  cursor: pointer;
+  padding: 10px;
+  margin: 30px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  color: $color1;
+  transition: all 0.3s ease-in-out;
+  background: fade-out($color2, 0.4);
+
+  &:hover {
+    background: fade-out($color2, 0.6);
+  }
+}
