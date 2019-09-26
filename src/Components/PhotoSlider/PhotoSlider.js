@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect, Suspense } from 'react';
 import './PhotoSlider.scss';
 
 import img1 from '../../assets/img/PhotoGalery/SE_chart_view.jpg';
@@ -6,6 +6,7 @@ import img2 from '../../assets/img/PhotoGalery/SE_mics.jpg';
 import img3 from '../../assets/img/PhotoGalery/SE_ministudio.jpg';
 import img4 from '../../assets/img/PhotoGalery/SE_recording_studio.jpg';
 import img5 from '../../assets/img/PhotoGalery/SE_room_view.jpg';
+import Loader from '../Loader/Loader';
 
 const PhotoSlider = (props) => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -58,6 +59,7 @@ const PhotoSlider = (props) => {
   });
 
   const images = (
+    <Suspense fallback={<Loader />}>
     <Fragment>
       <img className='slide__img' src={img1} alt='english grammar charts' />
       <img className='slide__img' src={img2} alt='microphones standing on a table' />
@@ -65,6 +67,7 @@ const PhotoSlider = (props) => {
       <img className='slide__img' src={img4} alt='Sound English recording room' />
       <img className='slide__img' src={img5} alt='Sound English classroom' />
     </Fragment>
+    </Suspense>
   );
 
   return (
