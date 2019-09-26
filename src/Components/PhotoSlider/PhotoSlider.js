@@ -59,7 +59,7 @@ const PhotoSlider = (props) => {
   });
 
   const images = (
-    <Suspense fallback={<Loader />}>
+    
     <Fragment>
       <img className='slide__img' src={img1} alt='english grammar charts' />
       <img className='slide__img' src={img2} alt='microphones standing on a table' />
@@ -67,13 +67,14 @@ const PhotoSlider = (props) => {
       <img className='slide__img' src={img4} alt='Sound English recording room' />
       <img className='slide__img' src={img5} alt='Sound English classroom' />
     </Fragment>
-    </Suspense>
   );
 
   return (
     <div className='slider__photos'>
       <div className='slider__exit' onClick={props.handleShowPhotoGallery} />
+      <Suspense fallback={<Loader />}>
       {images}
+      </Suspense>
       <div className='slider__buttons'>
         <button onClick={imgPrev}>&#10094;</button>
         <button onClick={imgNext}>&#10095;</button>
