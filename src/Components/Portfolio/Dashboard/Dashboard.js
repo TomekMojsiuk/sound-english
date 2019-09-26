@@ -14,10 +14,6 @@ class Dashboard extends React.Component {
   };
  }
 
- componentDidMount() {
-  this.props.scrollToTop();
- }
-
  handleReadArticle = e => {
   const portfolioItem = $(e.target).parent();
   const itemName = portfolioItem.data("path");

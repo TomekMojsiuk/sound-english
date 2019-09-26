@@ -49,7 +49,8 @@ class Portfolio extends React.Component {
    }));
   }, 1000);
 
-  this.props.scrollToTop();
+    this.props.scrollToTop();
+
  }
 
  render() {
@@ -107,7 +108,7 @@ class Portfolio extends React.Component {
          />
         );
        })}
-       <Dashboard articlesDb={articlesDb} scrollToTop={scrollToTop} />
+       <Dashboard articlesDb={articlesDb} scrollToTop={scrollToTop}/>
       </Switch>
      </BrowserRouter>
      </Suspense>
