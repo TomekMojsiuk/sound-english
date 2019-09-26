@@ -38,7 +38,7 @@ $transitionDuration: 0.3s;
     height: auto;
     width: 95%;
     max-height: $imgHeight;
-    max-width: calc($sliderWidthMobile - 20px);
+    max-width: $sliderWidthMobile - .5vw;
     transition: all $transitionDuration ease-in-out;
     @media all and (min-width: $BreakpointDesktop) {
       max-width: ($sliderWidthDesktop - 2vw);
