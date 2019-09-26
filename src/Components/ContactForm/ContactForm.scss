@@ -1,167 +1,167 @@
-@import "../../Scss/Config.scss";
+@import '../../Scss/Config.scss';
 // Form styles
 
 form {
-    position: relative;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding: 10px;
- width: 100%;
- border-radius: 5px;
- @include boxShadow($color2);
-
- @media all and (min-width: $BreakpointDesktop) {
-  width: 80%;
- }
-
- h2 {
-     margin: 10px 0 !important;
- }
-
- label {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 90%;
-  height: 40px;
-  margin: 10px 0;
-
-  p {
-   position: absolute;
-   display: inherit;
-   height: inherit;
-   margin: 0 10px 0 0;
-   top: calc(50% - 23px);
-   left: 10px;
-   width: 140px;
-   justify-content: flex-start;
-   z-index: 1;
-   transition: all 0.5s ease-in-out;
-  }
-
-  select,
-  input,
-  textarea,
-  option {
-   outline: none;
-   border: 1px solid $color2;
-   display: inherit;
-   width: 100%;
-   height: 4.5rem;
-   padding: 15px 10px 2px 10px;
-   font-size: 1.4rem;
-   border-radius: 5px;
-   transition: all 0.5s ease-in-out;
-
-   &:active,
-   &:focus-within {
-    border: 1px solid $color3;
-   }
-  }
-
-  select {
-   padding: 5px 10px;
-   height: 30px;
-  }
-
-  textarea {
-   padding: 20px 10px 10px 10px;
-   resize: none;
-   height: inherit;
-  }
-
-  &:active,
-  &:focus-within {
-   p {
-    top: -6px;
-    font-size: 9px;
-   }
-  }
- }
-
- .input__text--added {
-  top: -6px;
-  font-size: 9px;
-  color: lightgrey;
- }
-
- .input__text--removed {
-  top: calc(50% - 20px);
-  font-size: 14px;
-  color: initial;
- }
-
- .textarea__label {
-  height: 100px;
-  .input__text--added {
-   opacity: 0;
-  }
- }
-
- .error__msg {
-  color: $color5;
- }
-
- .btn__submit {
-  margin: 10px 0;
-  padding: 15px 0;
-  width: 100%;
-  border: 1px solid $color4;
-  border-radius: 5px;
-  background: transparent;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-   border: 1px solid $color5;
-  }
-
-  @media all and (min-width: $BreakpointDesktop) {
-    padding: 10px;
-    width: auto;
-  }
- }
-
- .success__msg {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  height: 85%;
-  width: 95%;
-  padding: 20px;
-  background: fade-out($color1, 0);
-  @include boxShadow($color2);
+  align-items: center;
+  padding: 10px;
+  width: 100%;
   border-radius: 5px;
-  z-index: 6;
+  @include boxShadow($color2);
 
   @media all and (min-width: $BreakpointDesktop) {
-   align-items: center;
-   justify-content: center;
-   height: 95%;
-   width:95%;
+    width: 80%;
   }
 
-  .success__msg__content {
+  h2 {
+    margin: 10px 0 !important;
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    margin: 10px 0;
+
+    p {
+      position: absolute;
+      display: inherit;
+      height: inherit;
+      margin: 0 10px 0 0;
+      top: calc(50% - 23px);
+      left: 10px;
+      width: 140px;
+      justify-content: flex-start;
+      z-index: 1;
+      transition: all 0.5s ease-in-out;
+    }
+
+    select,
+    input,
+    textarea,
+    option {
+      outline: none;
+      border: 1px solid $color2;
+      display: inherit;
+      width: 100%;
+      height: 4.5rem;
+      padding: 15px 10px 2px 10px;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+
+      &:active,
+      &:focus-within {
+        border: 1px solid $color3;
+      }
+    }
+
+    select {
+      padding: 5px 10px;
+      height: 30px;
+    }
+
+    textarea {
+      padding: 20px 10px 10px 10px;
+      resize: none;
+      height: inherit;
+    }
+
+    &:active,
+    &:focus-within {
+      p {
+        top: -6px;
+        font-size: 9px;
+      }
+    }
+  }
+
+  .input__text--added {
+    top: -6px;
+    font-size: 9px;
+    color: lightgrey;
+  }
+
+  .input__text--removed {
+    top: calc(50% - 20px);
+    font-size: 14px;
+    color: initial;
+  }
+
+  .textarea__label {
+    height: 100px;
+    .input__text--added {
+      opacity: 0;
+    }
+  }
+
+  .error__msg {
+    color: $color5;
+  }
+
+  .btn__submit {
+    margin: 10px 0;
+    padding: 15px 0;
+    width: 100%;
+    border: 1px solid $color4;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid $color5;
+    }
+
+    @media all and (min-width: $BreakpointDesktop) {
+      padding: 10px;
+      width: auto;
+    }
+  }
+
+  .success__msg {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 100%; 
+    height: 85%;
+    width: 95%;
+    padding: 20px;
+    background: fade-out($color1, 0);
+    @include boxShadow($color2);
+    border-radius: 5px;
+    z-index: 6;
+
     @media all and (min-width: $BreakpointDesktop) {
-        width: 80%;
+      align-items: center;
+      justify-content: center;
+      height: 95%;
+      width: 95%;
     }
-  }
-  
-  .signature {
+
+    .success__msg__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      @media all and (min-width: $BreakpointDesktop) {
+        width: 80%;
+      }
+    }
+
+    .signature {
       margin-top: 20px;
       p {
-          margin:2px 0;
+        margin: 2px 0;
       }
+    }
   }
- }
 }

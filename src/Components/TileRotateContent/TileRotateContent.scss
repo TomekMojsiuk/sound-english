@@ -1,65 +1,65 @@
-@import "../../Scss/Config.scss";
+@import '../../Scss/Config.scss';
 
 .tile {
- position: relative;
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100%;
- min-height: 230px;
- max-height: 250px;
- margin: 10px 0;
- border-radius: 5px;
- transition: all 0.8s ease-in-out;
- cursor: default;
- @include boxShadow($color1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 230px;
+  max-height: 250px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: all 0.8s ease-in-out;
+  cursor: default;
+  @include boxShadow($color1);
 
- @media all and (min-width: $BreakpointDesktop) {
-  width: 30%;
-  height: 200px;
- }
-
- .side1 {
-  opacity: 1;
- }
-
- .side2 {
-  opacity: 0;
-  transform: rotateY(180deg);
- }
-
- &:hover,
- &:focus {
-  transform: rotateY(180deg);
+  @media all and (min-width: $BreakpointDesktop) {
+    width: 30%;
+    height: 200px;
+  }
 
   .side1 {
-   opacity: 0;
+    opacity: 1;
   }
 
   .side2 {
-   opacity: 1;
+    opacity: 0;
+    transform: rotateY(180deg);
   }
- }
 
- .side1,
- .side2 {
-   position: absolute;
-   display: flex;
-  justify-content: center;
-  align-items: center; 
-  text-align: center;
-  padding: 10px;
-  position: absolute;
-  width: 90%;
-  min-height: 70%;
-  background: fade-out(white, .5);
-  border-radius: 5px;
-  font-size: 1.7rem;
-  transition: all 1s ease-in-out;
+  &:hover,
+  &:focus {
+    transform: rotateY(180deg);
 
-  span {
-    color: $color2;
-    font-weight: 600;
+    .side1 {
+      opacity: 0;
+    }
+
+    .side2 {
+      opacity: 1;
+    }
   }
- }
+
+  .side1,
+  .side2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 90%;
+    min-height: 70%;
+    background: fade-out(white, 0.5);
+    border-radius: 5px;
+    font-size: 1.7rem;
+    transition: all 1s ease-in-out;
+
+    span {
+      color: $color2;
+      font-weight: 600;
+    }
+  }
 }

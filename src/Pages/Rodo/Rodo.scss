@@ -1,33 +1,33 @@
-@import "../../Scss/Config.scss";
+@import '../../Scss/Config.scss';
 
 #rodo {
- h2 {
-  margin-bottom: 5px;
- }
- .underline {
-  margin: 0;
- }
-
- li {
-  font-size: inherit;
-  text-transform: initial;
-  span {
-   font-size: inherit;
-   color: $color5;
+  h2 {
+    margin-bottom: 5px;
   }
- }
-
- .address__info {
-  padding: 0 0 0 15px;
-  border-left: 2px solid $color4;
-  @media all and (min-width: $BreakpointDesktop) {
-   padding: 0 0 0 10px;
+  .underline {
+    margin: 0;
   }
- }
- .nav__item {
-  display: block;
-  width: 280px;
-  color: $color2;
-  border-bottom: 1px solid $color5;
- }
+
+  li {
+    font-size: inherit;
+    text-transform: initial;
+    span {
+      font-size: inherit;
+      color: $color5;
+    }
+  }
+
+  .address__info {
+    padding: 0 0 0 15px;
+    border-left: 2px solid $color4;
+    @media all and (min-width: $BreakpointDesktop) {
+      padding: 0 0 0 10px;
+    }
+  }
+  .nav__item {
+    display: block;
+    width: 280px;
+    color: $color2;
+    border-bottom: 1px solid $color5;
+  }
 }

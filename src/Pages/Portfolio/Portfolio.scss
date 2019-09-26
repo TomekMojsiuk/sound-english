@@ -1,7 +1,6 @@
-@import "../../Scss/Config.scss";
+@import '../../Scss/Config.scss';
 
 #portfolio {
-
   .nav__item {
     display: initial;
     width: 165px;
@@ -11,19 +10,18 @@
     color: $color5;
     font-size: 1.4rem;
     border-bottom: 1px solid $color2;
-  
-    @media all and (min-width: $BreakpointDesktop) {
-     color: $color2;
-     border-bottom: 1px solid $color5;
-     transition: all .1s ease-in-out;
-     &:after {
-      background: unset;
-     }
-     &:hover {
-      color: $color5;
-      border-bottom: 2px solid $color5;
-     }
-    }
-   }    
 
+    @media all and (min-width: $BreakpointDesktop) {
+      color: $color2;
+      border-bottom: 1px solid $color5;
+      transition: all 0.1s ease-in-out;
+      &:after {
+        background: unset;
+      }
+      &:hover {
+        color: $color5;
+        border-bottom: 2px solid $color5;
+      }
+    }
+  }
 }

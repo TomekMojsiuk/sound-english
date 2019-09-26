@@ -1,65 +1,64 @@
-@import "../../../Scss/Config.scss";
+@import '../../../Scss/Config.scss';
 
 .hamburger {
- position: fixed;
- height: 30px;
- width: 40px;
- left: 10px;
- top: 15px;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- z-index: 10;
+  position: fixed;
+  height: 30px;
+  width: 40px;
+  left: 10px;
+  top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
 
-//  &::after {
-//     content: "";
-//     position: absolute;
-//     top: -15px;
-//     left: -10px;
-//     height: 59px;
-//     width: 62px;
-//      background: fade-out($color2, 0.2);
-//      z-index: -1;
-//  transition: all 0.3s ease-in-out;
+  //  &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: -15px;
+  //     left: -10px;
+  //     height: 59px;
+  //     width: 62px;
+  //      background: fade-out($color2, 0.2);
+  //      z-index: -1;
+  //  transition: all 0.3s ease-in-out;
 
-//  }
+  //  }
 
- @media all and (min-width: $BreakpointDesktop) {
-  display: none;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    display: none;
+  }
 
- :nth-child(1) {
-  margin-top: 0;
- }
+  :nth-child(1) {
+    margin-top: 0;
+  }
 }
 
 .hamburger__line {
- background: $color1;
- height: 3px;
- width: 100%;
- transition: all 0.3s ease-in-out;
+  background: $color1;
+  height: 3px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .clicked {
- :nth-child(1) {
-  transform: rotate(-45deg);
-  transform-origin: right;
-  height: 2px;
-  background: $color5;
- }
- :nth-child(2) {
-  opacity: 0;
- }
- :nth-child(3) {
-  transform: rotate(45deg);
-  transform-origin: right;
-  height: 2px;
-  background: $color5;
+  :nth-child(1) {
+    transform: rotate(-45deg);
+    transform-origin: right;
+    height: 2px;
+    background: $color5;
+  }
+  :nth-child(2) {
+    opacity: 0;
+  }
+  :nth-child(3) {
+    transform: rotate(45deg);
+    transform-origin: right;
+    height: 2px;
+    background: $color5;
+  }
 
-}
+  //  &:after {
+  //     background: fade-out($color2, 1);
 
-//  &:after {
-//     background: fade-out($color2, 1);
-     
-//  }
+  //  }
 }

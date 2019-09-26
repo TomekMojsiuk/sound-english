@@ -1,64 +1,64 @@
-@import "../../../Scss/Config.scss";
+@import '../../../Scss/Config.scss';
 
 #facebook {
- display: none;
- @media all and (min-width: $BreakpointDesktop) {
-  position: fixed;
-  top: 110px;
-  right: -380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 550px;
-  width: 380px;
-  background: fade-out($color2, 0.2);
-  border-radius: 5px;
-  border-top-left-radius: 0;
-  transition: all 0.3s ease-in-out;
-  z-index: 100;
- }
-
- .icon {
-  cursor: pointer;
-  height: 45px;
-  width: 45px;
-  background: url("../../../assets/ico/facebook.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  &::after {
-   content: "";
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   background-color: fade-out($color1, 0.7);
-   opacity: 0;
-   transition: all 0.3s ease-in-out;
-  }
-
-  &:hover::after {
-   opacity: 1;
-  }
-
+  display: none;
   @media all and (min-width: $BreakpointDesktop) {
-   position: absolute;
-   top: 0;
-   left: -45px;
-   height: 45px;
-   width: 45px;
+    position: fixed;
+    top: 110px;
+    right: -380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 380px;
+    background: fade-out($color2, 0.2);
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
   }
- }
 
- iframe {
-  width: 340px;
-  height: 500px;
-  border: 1px solid $color3;
-  border-radius: 5px;
-  overflow: hidden;
- }
+  .icon {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    background: url('../../../assets/ico/facebook.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: fade-out($color1, 0.7);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    @media all and (min-width: $BreakpointDesktop) {
+      position: absolute;
+      top: 0;
+      left: -45px;
+      height: 45px;
+      width: 45px;
+    }
+  }
+
+  iframe {
+    width: 340px;
+    height: 500px;
+    border: 1px solid $color3;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 }
 
 .slide--left {
- right: 10px !important;
+  right: 10px !important;
 }

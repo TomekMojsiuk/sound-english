@@ -1,51 +1,51 @@
-@import "../../../Scss/Config.scss";
+@import '../../../Scss/Config.scss';
 
 .nav__item {
- display: block;
- position: relative;
- min-width: 120px;
- width: 90%;
- text-align: center;
- color: $color1;
- text-decoration: none;
- padding: 10px;
- margin-top: 15px;
- border-bottom: 1px solid fade-out($color1, .7);
- transition: all 0.3s ease-in-out;
- font-size: 2rem;
- 
- @media all and (orientation: landscape) and (max-width: $BreakpointDesktop) {
+  display: block;
+  position: relative;
+  min-width: 120px;
+  width: 90%;
+  text-align: center;
+  color: $color1;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 15px;
+  border-bottom: 1px solid fade-out($color1, 0.7);
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+
+  @media all and (orientation: landscape) and (max-width: $BreakpointDesktop) {
     font-size: 1.4rem;
     margin-top: 5px;
-   }
-
- @media all and (min-width: $BreakpointDesktop) {
-  width: auto;
-  border-bottom: 1px solid $color5;
-  font-size: 1.2rem;
-  margin-right: 10px;
-  border-radius: 0;
-  z-index: 2;
-
-  &:after {
-   content: "";
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   height: 0;
-   width: 100%;
-   background: fade-out($color4, .9);
-   transition: all 0.3s ease-in-out;
-   z-index: -1;
   }
 
-  &:hover:after {
-   height: 100%;
+  @media all and (min-width: $BreakpointDesktop) {
+    width: auto;
+    border-bottom: 1px solid $color5;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border-radius: 0;
+    z-index: 2;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      background: fade-out($color4, 0.9);
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover:after {
+      height: 100%;
+    }
+    &:hover {
+      cursor: pointer;
+      color: $color5;
+      border-bottom: 2px solid $color5;
+    }
   }
-  &:hover {
-    cursor: pointer;
-   color: $color5;
-   border-bottom: 2px solid $color5;
-  }
- }
 }

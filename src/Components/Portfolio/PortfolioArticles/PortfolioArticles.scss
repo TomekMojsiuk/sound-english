@@ -1,81 +1,81 @@
-@import "../../../Scss/Config.scss";
+@import '../../../Scss/Config.scss';
 
 .article__container,
 i,
 a,
 b {
- font-size: 1.5rem;
- line-height: 2.3rem;
- @include font;
-
- @media all and (min-width: $BreakpointDesktop) {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-  text-align: justify;
- }
-
- h1 {
-  position: relative;
-  font-size: 2rem;
-  margin: 0px 0 25px 0;
-  &:first-letter {
-   font-size: 2.5rem;
-   color: $color4;
-  }
- }
-
- h2 {
-  position: relative;
-  font-size: 2rem;
-  margin: 30px 0 30px 10px;
-
-  &:first-letter {
-   font-size: 2.5rem;
-   color: $color4;
-  }
-  &:after {
-   content: "";
-   position: absolute;
-   top: 0;
-   left: -10px;
-   width: 3px;
-   height: 100%;
-   background: $color2;
-  }
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  @include font;
 
   @media all and (min-width: $BreakpointDesktop) {
-   margin: 20px 0 20px 10px;
-   font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    text-align: justify;
   }
- }
 
- p {
-  &:first-letter {
-   font-size: 2rem;
+  h1 {
+    position: relative;
+    font-size: 2rem;
+    margin: 0px 0 25px 0;
+    &:first-letter {
+      font-size: 2.5rem;
+      color: $color4;
+    }
   }
- }
 
- a {
-  text-decoration: none;
-  height: unset;
-  margin: unset;
-  padding: 0 0 3px 0;
- }
+  h2 {
+    position: relative;
+    font-size: 2rem;
+    margin: 30px 0 30px 10px;
 
- .article__intro {
-  font-weight: 800;
- }
+    &:first-letter {
+      font-size: 2.5rem;
+      color: $color4;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 3px;
+      height: 100%;
+      background: $color2;
+    }
 
- .article__signature {
-  text-align: right;
- }
-
- .article__footnotes {
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  margin: 40px 0 0 0;
-  &::first-letter {
-   font-size: 1.5rem;
+    @media all and (min-width: $BreakpointDesktop) {
+      margin: 20px 0 20px 10px;
+      font-size: 1.6rem;
+    }
   }
- }
+
+  p {
+    &:first-letter {
+      font-size: 2rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    height: unset;
+    margin: unset;
+    padding: 0 0 3px 0;
+  }
+
+  .article__intro {
+    font-weight: 800;
+  }
+
+  .article__signature {
+    text-align: right;
+  }
+
+  .article__footnotes {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    margin: 40px 0 0 0;
+    &::first-letter {
+      font-size: 1.5rem;
+    }
+  }
 }

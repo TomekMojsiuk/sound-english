@@ -1,49 +1,49 @@
-@import "../../../Scss/Config.scss";
+@import '../../../Scss/Config.scss';
 
 .arrow__up--box {
- position: fixed;
- cursor: pointer;
- justify-content: center;
- align-items: center;
- height: 50px;
- width: 100vw;
- bottom: 0;
- left: 0;
- background: fade-out($color2, 0.7);
- z-index: 10;
-
- @media all and (min-width: $BreakpointDesktop) {
-  height: 40px;
-  width: 40px;
-  bottom: 40px;
-  right: 20px;
-  left: unset;
-  background: unset;
-  @include boxShadow($color1);
- }
-
- .arow__up {
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  margin: 0 auto;
-  margin-top: 5px;
-  transform: rotate(45deg);
-  border-left: 2px solid $color5;
-  border-top: 2px solid $color5;
+  position: fixed;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  background: fade-out($color2, 0.7);
+  z-index: 10;
 
   @media all and (min-width: $BreakpointDesktop) {
-   height: 20px;
-   width: 20px;
-   margin: 0 auto;
-   margin-top: calc(50% - 15px);
+    height: 40px;
+    width: 40px;
+    bottom: 40px;
+    right: 20px;
+    left: unset;
+    background: unset;
+    @include boxShadow($color1);
   }
- }
 
- &:hover {
   .arow__up {
-   border-left: 2px solid fade-out($color5, 0.5);
-   border-top: 2px solid fade-out($color5, 0.5);
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 5px;
+    transform: rotate(45deg);
+    border-left: 2px solid $color5;
+    border-top: 2px solid $color5;
+
+    @media all and (min-width: $BreakpointDesktop) {
+      height: 20px;
+      width: 20px;
+      margin: 0 auto;
+      margin-top: calc(50% - 15px);
+    }
   }
- }
+
+  &:hover {
+    .arow__up {
+      border-left: 2px solid fade-out($color5, 0.5);
+      border-top: 2px solid fade-out($color5, 0.5);
+    }
+  }
 }

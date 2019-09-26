@@ -1,113 +1,113 @@
-@import "../../Scss/Config.scss";
+@import '../../Scss/Config.scss';
 
 .logo {
- background: url("../../assets/img/logo.png");
- background-color: fade-out($color1, 0.6);
- background-size: 60%;
- background-repeat: no-repeat;
- background-position: center;
- align-self: center;
- margin: 0 auto;
- height: 80vh;
- width: 325px;
- border-radius: 10px;
+  background: url('../../assets/img/logo.png');
+  background-color: fade-out($color1, 0.6);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  margin: 0 auto;
+  height: 80vh;
+  width: 325px;
+  border-radius: 10px;
 
- @media all and (min-width: $BreakpointDesktop) {
-  background-color: unset;
-  background-size: 80%;
-  margin: unset;
-  height: 350px;
-  width: 200px;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    background-color: unset;
+    background-size: 80%;
+    margin: unset;
+    height: 350px;
+    width: 200px;
+  }
 }
 
 .desktop__hidden {
- @media all and (min-width: $BreakpointDesktop) {
-  display: none;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    display: none;
+  }
 }
 
 #main {
- display: flex;
- .main__content {
-  display: none;
-  @media all and (min-width: $BreakpointDesktop) {
-   display: initial !important;
-   align-self: center;
-  }
- }
-
- .banner {
-  display: none;
-  @media all and (min-width: $BreakpointDesktop) {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items: center;
-   border-radius: 10px;
-   margin: 0 auto;
-   background: $color0;
-   width: 100%;
-   padding: 50px 20px;
-  }
-
-  .banner__content {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-  }
-
-  .nav__item {
-   font-size: 1.2rem;
-   color: $color2;
-   align-self: flex-end;
-   margin: unset;
-   padding: 6px;
-   //    width: 120px;
-
-   &:hover {
-    color: $color1;
-    background: fade-out($color2, 0.2);
-   }
-  }
- }
-
- .services__list {
-  display: none;
-  @media all and (min-width: $BreakpointDesktop) {
-   display: initial;
-   list-style: none;
-   .services__list__item {
-    font-size: 1.2rem;
-    color: $color2;
-    margin: 15px 0 0 0;
-
-    .underline {
-     width: 40px;
-     height: 1px;
-     margin-top: 5px;
-     border-bottom: 2px solid $color4;
+  display: flex;
+  .main__content {
+    display: none;
+    @media all and (min-width: $BreakpointDesktop) {
+      display: initial !important;
+      align-self: center;
     }
-   }
   }
- }
 
- .title {
-  font-size: 1.7rem;
-  color: $color2;
-  margin: 10px 0;
- }
+  .banner {
+    display: none;
+    @media all and (min-width: $BreakpointDesktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 10px;
+      margin: 0 auto;
+      background: $color0;
+      width: 100%;
+      padding: 50px 20px;
+    }
 
- .flag {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-  background: url("../../assets/img/flag.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
- }
+    .banner__content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav__item {
+      font-size: 1.2rem;
+      color: $color2;
+      align-self: flex-end;
+      margin: unset;
+      padding: 6px;
+      //    width: 120px;
+
+      &:hover {
+        color: $color1;
+        background: fade-out($color2, 0.2);
+      }
+    }
+  }
+
+  .services__list {
+    display: none;
+    @media all and (min-width: $BreakpointDesktop) {
+      display: initial;
+      list-style: none;
+      .services__list__item {
+        font-size: 1.2rem;
+        color: $color2;
+        margin: 15px 0 0 0;
+
+        .underline {
+          width: 40px;
+          height: 1px;
+          margin-top: 5px;
+          border-bottom: 2px solid $color4;
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.7rem;
+    color: $color2;
+    margin: 10px 0;
+  }
+
+  .flag {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background: url('../../assets/img/flag.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
 }

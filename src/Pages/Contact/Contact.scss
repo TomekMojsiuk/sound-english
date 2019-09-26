@@ -1,120 +1,118 @@
-@import "../../Scss/Config.scss";
-
+@import '../../Scss/Config.scss';
 
 .contact__info {
- margin-top: 80px;
- padding: 10px 0;
- width: 100%;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  margin-top: 80px;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
- @media all and (min-width: $BreakpointDesktop) {
-  margin-top: unset;
-  width: 50%;
-  margin: 0 auto;
-  padding: unset;
-  padding-left: 100px;
-  align-items: flex-start;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    margin-top: unset;
+    width: 50%;
+    margin: 0 auto;
+    padding: unset;
+    padding-left: 100px;
+    align-items: flex-start;
+  }
 
- h1 {
+  h1 {
     //  align-self: center;
-     text-align: center!important;
-     width: 80%;
-     @media all and (min-width: $BreakpointDesktop) {
+    text-align: center !important;
+    width: 80%;
+    @media all and (min-width: $BreakpointDesktop) {
       align-self: flex-start;
       text-align: unset;
       width: unset;
-     }
+    }
+  }
+
+  .contact__info--item {
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--details {
+      p,
+      h2 {
+        text-align: center;
+      }
+      @media all and (min-width: $BreakpointDesktop) {
+        p,
+        h2 {
+          text-align: initial;
+        }
+      }
     }
 
- .contact__info--item {
-  padding: 10px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  &--details {
-   p,
-   h2 {
-    text-align: center;
-   }
-   @media all and (min-width: $BreakpointDesktop) {
-    p,
-    h2 {
-     text-align: initial;
+    @media all and (min-width: $BreakpointDesktop) {
+      flex-direction: row;
+      margin-top: 30px;
+      justify-content: initial;
+      padding: 0;
     }
-   }
-  }
 
-  @media all and (min-width: $BreakpointDesktop) {
-   flex-direction: row;
-   margin-top: 30px;
-   justify-content: initial;
-   padding: 0;
-  }
-
-  &:first-of-type {
-      margin-top: 0;
-  }
-
-  &:last-of-type {
-   h2 {
-    margin: 10px 0;
     &:first-of-type {
-     margin: 0 0 10px 0;
+      margin-top: 0;
     }
-   }
-   align-items: center;
-   @media all and (min-width: $BreakpointDesktop) {
-    align-items: flex-start;
-   }
+
+    &:last-of-type {
+      h2 {
+        margin: 10px 0;
+        &:first-of-type {
+          margin: 0 0 10px 0;
+        }
+      }
+      align-items: center;
+      @media all and (min-width: $BreakpointDesktop) {
+        align-items: flex-start;
+      }
+    }
   }
- }
 }
 
 .icon {
- margin: 10px 0;
- height: 40px;
- width: 40px;
+  margin: 10px 0;
+  height: 40px;
+  width: 40px;
 
- @media all and (min-width: $BreakpointDesktop) {
-  margin: 0 20px 0 0;
- }
+  @media all and (min-width: $BreakpointDesktop) {
+    margin: 0 20px 0 0;
+  }
 }
 
 .mobile {
- background: url("../../assets/ico/mobile.svg");
- background-size: contain;
- background-repeat: no-repeat;
+  background: url('../../assets/ico/mobile.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .email {
- background: url("../../assets/ico/email.svg");
- background-size: contain;
- background-repeat: no-repeat;
+  background: url('../../assets/ico/email.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .home {
- background: url("../../assets/ico/home.svg");
- background-size: contain;
- background-repeat: no-repeat;
+  background: url('../../assets/ico/home.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .contact__form--container {
-   
-    display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 100%; 
- padding: 0 0 20px 0;
- 
- @media all and (min-width: $BreakpointDesktop) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 20px 0;
+
+  @media all and (min-width: $BreakpointDesktop) {
     width: 50%;
-   }
+  }
 }
