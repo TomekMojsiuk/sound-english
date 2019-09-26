@@ -4,11 +4,11 @@ $transitionDuration: 0.3s;
 
 .slider__photos {
   // Variables
-  $Sliderheight: 95vh;
-  $SliderheightMobile: 100vh;
-  $SliderwidthMobile: 100vw;
-  $SliderwidthDesktop: 80vw;
-  $imgHeight: $Sliderheight / 1.1;
+  $sliderHeight: 95vh;
+  $sliderHeightMobile: 100vh;
+  $sliderWidthMobile: 100vw;
+  $sliderWidthDesktop: 80vw;
+  $imgHeight: ($sliderHeight / 1.1);
 
   // Styles
   display: flex;
@@ -18,8 +18,8 @@ $transitionDuration: 0.3s;
   position: fixed;
   top: 0;
   left: 0;
-  width: $SliderwidthMobile;
-  height: $SliderheightMobile;
+  width: $sliderWidthMobile;
+  height: $sliderHeightMobile;
   padding: 10px;
   background: fade-out($color1, 0.1);
   z-index: 20;
@@ -27,8 +27,8 @@ $transitionDuration: 0.3s;
   @media all and (min-width: $BreakpointDesktop) {
     top: 2.5vh;
     left: calc(10vw);
-    width: $SliderwidthDesktop;
-    height: $Sliderheight;
+    width: $sliderWidthDesktop;
+    height: $sliderHeight;
     z-index: 10;
   }
 
@@ -38,10 +38,10 @@ $transitionDuration: 0.3s;
     height: auto;
     width: 95%;
     max-height: $imgHeight;
-    max-width: calc($SliderwidthMobile - 20px);
+    max-width: calc($sliderWidthMobile - 20px);
     transition: all $transitionDuration ease-in-out;
     @media all and (min-width: $BreakpointDesktop) {
-      max-width: ($SliderwidthDesktop - 2vw);
+      max-width: ($sliderWidthDesktop - 2vw);
       max-height: $imgHeight / 1.05;
       width: auto;
     }
