@@ -29,16 +29,7 @@ const PhotoSlider = (props) => {
     if (imgIndex === -1) {
       setImgIndex(photos.length - 1);
     }
-  });
-
-  //   useEffect(() => {
-  //     // if (imgIndex === photos.length) {
-  //     //   setImgIndex(0);
-  //     // }
-  //     // if (imgIndex === -1) {
-  //     //   setImgIndex(photos.length - 1);
-  //     // }
-  //   });
+  }, [imgIndex]);
 
   // Buttons actions onClick
   const imgPrev = () => setImgIndex(imgIndex + -1);
@@ -85,7 +76,7 @@ const PhotoSlider = (props) => {
         <button onClick={imgNext}>&#10095;</button>
       </div>
       <p className='credentials'>
-        Zdjęcia wnętrz Sound English wykonała{' '}
+        Fot.
         <a
           href={'https://www.facebook.com/jullss.julia/?ref=profile_intro_card'}
           target='_blank'

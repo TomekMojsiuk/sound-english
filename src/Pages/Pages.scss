@@ -171,10 +171,10 @@ li > a {
   text-align: center;
   border-radius: 5px;
   font-size: 1.4rem;
-  color: $color1;
+  color: $color2;
   transition: all 0.3s ease-in-out;
-  background: fade-out($color2, 0.4);
-
+  @include boxShadow($color1);
+  
   &:hover {
     background: fade-out($color2, 0.6);
   }

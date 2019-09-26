@@ -144,10 +144,22 @@ $transitionDuration: 0.3s;
 
   .credentials {
     position: absolute;
-    bottom: 5px;
-    left: 10px;
+    bottom: 55px;
+    right: 10px;
+    color: $color4;
     a {
+      color: $color4;
       text-decoration: none;
+    }
+    
+    @media all and (min-width: $BreakpointDesktop) {
+      bottom: 5px;
+      right: unset;
+      left: 10px;
+      color: $color2;
+      a {
+        color: initial;
+      }
     }
   }
 }
