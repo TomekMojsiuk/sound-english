@@ -321,7 +321,7 @@ class OfertaCennik extends React.Component {
             </p>
             <div className='underline' />
             <p className='read--basic'>
-              <span className='initial'>W</span> Sound English realizujmey też inne kursy (np. na
+              <span className='initial'>W</span> Sound English realizujemy też inne kursy (np. na
               wyższe certyfikaty, lub egzaminy typu TOEFL). Jeśli tego, czego szukasz, nie ma w
               powyższej ofercie, zadzwoń lub napisz i zapytaj.
             </p>

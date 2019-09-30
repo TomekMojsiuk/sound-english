@@ -101,7 +101,7 @@ class NaszZespol extends React.Component {
               , gdzie znajdziesz podsumowanie kilku ładnych lat mojej pracy.
             </p>
             <p>
-              Obecnie jestem wokalistą w zespole funkowym oraz pianistą w metalowym tribute bandzie
+              Obecnie jestem wokalistą w zespole funkowym <i>FUNK CRUSADE</i> oraz pianistą w metalowym tribute bandzie
               zespołu HIM.
             </p>
             <h2 className='team-member__name'>Michał Kleinszmidt</h2>
