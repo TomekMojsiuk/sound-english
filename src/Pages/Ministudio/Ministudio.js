@@ -29,7 +29,7 @@ class Ministudio extends React.Component {
       <div id='ministudio' className='content__wrapper'>
         {componentDidMount ? '' : <Loader />}
         <div className='flag--addon' />
-        <div className='studio__img--desktop'></div>
+        <div className='studio__img--desktop' />
         <div className='main__content'>
           <h1 className='title'>
             <span className='initial'>M</span>inistudio
