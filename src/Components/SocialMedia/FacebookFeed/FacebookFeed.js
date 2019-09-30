@@ -12,15 +12,26 @@ class FacebookFeed extends React.Component {
 
   handleFeedVisivle = () => {
     this.setState((prevState) => ({
-      isFeedVisivle: !prevState.isFeedVisivle
+      // isFeedVisivle: !prevState.isFeedVisivle
+      isFeedVisivle: true
+    }));
+  };
+
+  handleFeedHide = () => {
+    this.setState((prevState) => ({
+      isFeedVisivle: false
     }));
   };
 
   render() {
     const { isFeedVisivle } = this.state;
     return (
-      <div id='facebook' className={isFeedVisivle ? 'slide--left' : ''}>
-        <div className='icon' onMouseOver={this.handleFeedVisivle} />
+      <div
+        id='facebook'
+        onMouseOver={this.handleFeedVisivle}
+        onMouseOut={this.handleFeedHide}
+        className={isFeedVisivle ? 'slide--left' : ''}>
+        <div className='icon' />
         <Suspense fallback={<Loader />}>
           <Facebook />
         </Suspense>

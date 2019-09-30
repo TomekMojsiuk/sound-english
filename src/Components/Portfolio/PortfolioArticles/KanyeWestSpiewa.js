@@ -40,7 +40,7 @@ export default function KanyeWestSpiewa({ scrollToTop }) {
         zacząć od początku, przyjrzyjmy się{' '}
         <a
           href='https://www.youtube.com/results?search_query=kanye+west+glastonbury+bohemian+rhapsody'
-          target='_blank'>
+          target='_blank' rel="noopener noreferrer">
           nagraniu samego incydentu
         </a>
         .
@@ -106,7 +106,7 @@ export default function KanyeWestSpiewa({ scrollToTop }) {
         radzę usiąść i zaopatrzyć się w worek na wymioty (uwaga –{' '}
         <a
           href='https://www.youtube.com/results?search_query=jay+z+glastonbury+wonderwall'
-          target='_blank'>
+          target='_blank' rel="noopener noreferrer">
           dwie minuty męki
         </a>
         !).
@@ -175,7 +175,7 @@ export default function KanyeWestSpiewa({ scrollToTop }) {
       </p>
       <p>
         A na sam koniec proponuję przypomnieć sobie (lub poznać){' '}
-        <a href='https://www.youtube.com/watch?v=lAuvHaABS5A' target='_blank'>
+        <a href='https://www.youtube.com/watch?v=lAuvHaABS5A' target='_blank' rel="noopener noreferrer">
           oryginał
         </a>{' '}
         w wykonaniu Queen. To pozwoli ostatecznie stwierdzić, co zrobił w Glastonbury Kanye West. I

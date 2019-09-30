@@ -71,7 +71,10 @@ export default function ReaggePulsSzczeroscHistoria({ scrollToTop }) {
         Po omówieniu źródeł, historii i specyfiki muzyki reggae, warto przyjrzeć się praktyce. Samo
         zapuszczenie dredów i zaopatrzenie się w odpowiednią ilość kolorowych akcesoriów nie uczyni
         z nikogo muzyka reagge. Gdy już zaopatrzysz się w jedną z{' '}
-        <a href='http://riff.net.pl/157-gitary-elektryczne' target='_blank'>
+        <a
+          href='http://riff.net.pl/157-gitary-elektryczne'
+          target='_blank'
+          rel='noopener noreferrer'>
           gitar dostępnych w Salonach Muzycznych RIFF
         </a>{' '}
         i zechcesz zagrać na niej w stylu jamajskim, konieczna będzie zmiana w podejściu do

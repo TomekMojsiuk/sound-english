@@ -69,7 +69,7 @@ export default function DAngelicoGitaryZDusza({ scrollToTop }) {
       </p>
       <p>
         Istotną kwestią w przypadku gitar d’Angelico znajdujących się w{' '}
-        <a href='http://riff.net.pl/306_d-angelico' target='_blank'>
+        <a href='http://riff.net.pl/306_d-angelico' target='_blank' rel='noopener noreferrer'>
           ofercie Salonów Muzycznych RIFF
         </a>{' '}
         jest ich przystępna cena. Za około 6-7 tysięcy złotych możecie zdobyć wiosło, którego
@@ -79,19 +79,22 @@ export default function DAngelicoGitaryZDusza({ scrollToTop }) {
         takich jak wyposażona w mostek Bigsby Vibrato{' '}
         <a
           href='http://riff.net.pl/gitary-elektryczne/43464-d-angelico-ex-175-blk.html'
-          target='_blank'>
+          target='_blank'
+          rel='noopener noreferrer'>
           EX-175 BLK
         </a>
         , przez pachnącą klasyką lat trzydziestych, posiadającą dwa humbuckery Kent Armstrong{' '}
         <a
           href='http://riff.net.pl/gitary-elektryczne/43470-d-angelico-ex-dh-vs.html'
-          target='_blank'>
+          target='_blank'
+          rel='noopener noreferrer'>
           EX-DH VS
         </a>{' '}
         po nowatorskie, inspirowane historią modele takie jak{' '}
         <a
           href='http://riff.net.pl/gitary-elektryczne/43880-d-angelico-exl-1-nat.html'
-          target='_blank'>
+          target='_blank'
+          rel='noopener noreferrer'>
           EXL-1 NAT
         </a>
         . Z pewnością każdy, nawet bardzo wymagający gitarzysta, znajdzie w naszej ofercie coś dla

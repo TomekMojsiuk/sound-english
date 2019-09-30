@@ -73,7 +73,7 @@ export default function ZeSzkolyNaScene({ scrollToTop }) {
         Pukackiego (do którego podobno sam zgłosił chęć współpracy) szybko zyskał renomę, na którą
         inni pracują latami. Pierwszy album wydał jako gitarzysta „Anti Tank Nun”, czyli pobocznego
         zespołu Titusa, nota bene aktywnie współpracującego z{' '}
-        <a href='http://antitanknun.com/band/' target='_blank'>
+        <a href='http://antitanknun.com/band/' target='_blank' rel='noopener noreferrer'>
           Salonami Muzycznymi RIFF
         </a>
         . Ta świetna płyta była tylko punktem zapalnym jego kariery. Rok po jej wydaniu kapela
