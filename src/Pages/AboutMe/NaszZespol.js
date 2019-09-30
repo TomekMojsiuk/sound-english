@@ -35,7 +35,7 @@ class NaszZespol extends React.Component {
               <span className='initial'>N</span>asz zespół
             </h1>
             <h2 className='team-member__name'>Bartłomiej Piwowarczyk</h2>
-            <div className='nasz-zespol__img1' />
+            <div className='nasz-zespol__img img1' />
             <h2>
               <span className='initial'>K</span>rótka biografia
             </h2>
@@ -105,7 +105,7 @@ class NaszZespol extends React.Component {
               zespołu HIM.
             </p>
             <h2 className='team-member__name'>Michał Kleinszmidt</h2>
-            <div className='nasz-zespol__img2' />
+            <div className='nasz-zespol__img img2' />
             <p>
               Aktywny scenicznie gitarzysta, <span className='initial'>M</span>ichał{' '}
               <span className='initial'>K</span>leinszmidt - absolwent kierunku Edukacja artystyczna

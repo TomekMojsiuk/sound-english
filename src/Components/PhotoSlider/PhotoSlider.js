@@ -59,7 +59,6 @@ const PhotoSlider = (props) => {
   });
 
   const images = (
-    
     <Fragment>
       <img className='slide__img' src={img1} alt='english grammar charts' />
       <img className='slide__img' src={img2} alt='microphones standing on a table' />
@@ -72,9 +71,7 @@ const PhotoSlider = (props) => {
   return (
     <div className='slider__photos'>
       <div className='slider__exit' onClick={props.handleShowPhotoGallery} />
-      <Suspense fallback={<Loader />}>
-      {images}
-      </Suspense>
+      <Suspense fallback={<Loader />}>{images}</Suspense>
       <div className='slider__buttons'>
         <button onClick={imgPrev}>&#10094;</button>
         <button onClick={imgNext}>&#10095;</button>

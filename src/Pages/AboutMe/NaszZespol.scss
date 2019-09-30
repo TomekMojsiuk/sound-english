@@ -38,36 +38,30 @@
     }
   }
 
-  .nasz-zespol__img1 {
-    position: relative;
+  .img1 {
     background: url('../../assets/img/bartek_piwowarczyk.jpg');
-    height: 250px;
-    width: 100%;
-    background-position: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 0 30px 0;
-
     @media all and (min-width: $BreakpointDesktop) {
-      height: 400px;
-      width: 50%;
-      margin: 0 20px 0 0;
-      background-position: center;
+      margin: 0 20px 0 0 !important;
       float: left;
     }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: fade-out($color4, 0.9);
+    @media all and (max-width: $BreakpointDesktop) and (orientation: 'landscape') {
+      background-position: 0px -60px !important;
     }
   }
 
-  .nasz-zespol__img2 {
+  .img2 {
+    background: url('../../assets/img/michal_kleinszmidt.jpeg');
+    @media all and (min-width: $BreakpointDesktop) {
+      margin: 0 0 0 20px !important;
+      float: right;
+    }
+    @media all and (max-width: $BreakpointDesktop) and (orientation: 'landscape') {
+      background-position: 0px -150px !important;
+    }
+  }
+
+  .nasz-zespol__img {
     position: relative;
-    background: url('../../assets/img/michal_kleinszmidt.jpg');
     height: 250px;
     width: 100%;
     background-position: 0;
@@ -78,9 +72,8 @@
     @media all and (min-width: $BreakpointDesktop) {
       height: 400px;
       width: 50%;
-      margin: 0 0 0 20px;
+      background-size: cover;
       background-position: center;
-      float: right;
     }
 
     &::after {
